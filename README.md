@@ -1,5 +1,5 @@
-#Магазин сантехники SanGallery  
-######CMS WordPress
+# Магазин сантехники SanGallery  
+###### CMS WordPress
 
 Файлы стилей класть в папку  
 
