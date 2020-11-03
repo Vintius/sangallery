@@ -1,0 +1,16 @@
+2020-10-20T13:41:01+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\Features\Onboarding.php на строке 572
+
+2020-10-20T14:10:20+00:00 CRITICAL syntax error, unexpected ';', expecting ')' в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\wp-crontrol\wp-crontrol.php(1584) : eval()'d code на строке 33
+
+2020-10-20T15:53:16+00:00 CRITICAL Object of class WP_Post could not be converted to string в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\wp-crontrol\wp-crontrol.php(1584) : eval()'d code на строке 33
+
+2020-10-20T15:54:22+00:00 CRITICAL Object of class WP_Post could not be converted to string в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\wp-crontrol\wp-crontrol.php(1584) : eval()'d code на строке 33
+
+2020-10-20T15:54:29+00:00 CRITICAL Object of class WP_Post could not be converted to string в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\wp-crontrol\wp-crontrol.php(1584) : eval()'d code на строке 33
+
+2020-10-20T16:12:07+00:00 CRITICAL Object of class WP_Post could not be converted to string в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\wp-crontrol\wp-crontrol.php(1584) : eval()'d code на строке 33
+
+2020-10-20T16:12:36+00:00 CRITICAL Object of class WP_Post could not be converted to string в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\wp-crontrol\wp-crontrol.php(1584) : eval()'d code на строке 33
+
+2020-10-20T16:14:09+00:00 CRITICAL Object of class WP_Post could not be converted to string в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\wp-crontrol\wp-crontrol.php(1584) : eval()'d code на строке 33
+

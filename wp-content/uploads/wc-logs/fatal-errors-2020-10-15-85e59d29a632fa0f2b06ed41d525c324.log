@@ -1,0 +1,75 @@
+2020-10-15T08:44:36+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 462
+
+2020-10-15T13:54:03+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:446
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): wc_myprice_show(5300)
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(206): WP_Hook->apply_filters(5300, Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(577): apply_filters('raw_woocommerce...', 5300)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-cart.php(1954): wc_price(5300)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\templates\cart\cart.php(99): WC_Cart->get_product_price(Object(WC_Product_Simple))
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('F:\\WebPrjcts\\wo...')
+#6 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-sho в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 446
+
+2020-10-15T13:55:33+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:446
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): wc_myprice_show(5300)
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(206): WP_Hook->apply_filters(5300, Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(577): apply_filters('raw_woocommerce...', 5300)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-cart.php(1954): wc_price(5300)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\templates\cart\cart.php(99): WC_Cart->get_product_price(Object(WC_Product_Simple))
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('F:\\WebPrjcts\\wo...')
+#6 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-sho в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 446
+
+2020-10-15T14:53:36+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:502
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): cart_new_price('<span class="wo...', NULL)
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(206): WP_Hook->apply_filters('<span class="wo...', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-cart.php(1954): apply_filters('woocommerce_car...', '<span class="wo...', Object(WC_Product_Simple))
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\templates\cart\cart.php(99): WC_Cart->get_product_price(Object(WC_Product_Simple))
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('F:\\WebPrjcts\\wo...')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 502
+
+2020-10-15T15:29:51+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:501
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): cart_new_price('<span class="wo...', Object(WC_Product_Simple))
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(206): WP_Hook->apply_filters('<span class="wo...', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-cart.php(1954): apply_filters('woocommerce_car...', '<span class="wo...', Object(WC_Product_Simple))
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\templates\cart\cart.php(99): WC_Cart->get_product_price(Object(WC_Product_Simple))
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('F:\\WebPrjcts\\wo...')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php( в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 501
+
+2020-10-15T15:30:44+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:501
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): cart_new_price('<span class="wo...', Object(WC_Product_Simple))
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(206): WP_Hook->apply_filters('<span class="wo...', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-cart.php(1954): apply_filters('woocommerce_car...', '<span class="wo...', Object(WC_Product_Simple))
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\templates\cart\cart.php(99): WC_Cart->get_product_price(Object(WC_Product_Simple))
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('F:\\WebPrjcts\\wo...')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php( в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 501
+
+2020-10-15T15:50:38+00:00 CRITICAL Uncaught Error: Undefined class constant 'id' in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:501
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): cart_new_price('<span class="wo...', Object(WC_Product_Simple))
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(206): WP_Hook->apply_filters('<span class="wo...', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-cart.php(1954): apply_filters('woocommerce_car...', '<span class="wo...', Object(WC_Product_Simple))
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\templates\cart\cart.php(99): WC_Cart->get_product_price(Object(WC_Product_Simple))
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('F:\\WebPrjcts\\wo...')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('c в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 501
+
+2020-10-15T16:54:35+00:00 CRITICAL Object of class WC_Cart could not be converted to string в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 518
+
+2020-10-15T17:01:00+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Cart as array in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:518
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): cart_item_subtotal_recount('<span class="wo...', Object(WC_Product_Simple), 2, Object(WC_Cart))
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(206): WP_Hook->apply_filters('<span class="wo...', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-cart.php(1993): apply_filters('woocommerce_car...', '<span class="wo...', Object(WC_Product_Simple), 2, Object(WC_Cart))
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\templates\cart\cart.php(127): WC_Cart->get_product_subtotal(Object(WC_Product_Simple), 2)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('F:\\WebPrjcts\\wo...')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 518
+
+2020-10-15T17:05:45+00:00 CRITICAL Object of class WC_Cart could not be converted to string в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 518
+
+2020-10-15T17:45:36+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\query-monitor\classes\Util.php на строке 454
+
+2020-10-15T17:55:30+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\query-monitor\classes\Util.php на строке 457
+

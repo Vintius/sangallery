@@ -1,0 +1,837 @@
+# Translation of Plugins - Discount Rules for WooCommerce - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Discount Rules for WooCommerce - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-06-21 19:01:03+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Discount Rules for WooCommerce - Stable (latest release)\n"
+
+#: v1/view/view-pricing-rules.php:885 v1/includes/discount-base.php:1103
+msgid "Same product"
+msgstr "Тот же товар"
+
+#: v1/includes/pricing-rules.php:3351
+msgid "same product"
+msgstr "тот же товар"
+
+#: v1/view/includes/sub-menu.php:11
+msgid "Condition"
+msgstr "Условие"
+
+#: v1/view/view-pricing-rules.php:551 v1/view/view-cart-rules.php:381
+#: v1/view/view-cart-rules.php:383 v1/includes/discount-base.php:1157
+msgid "Purchased amount"
+msgstr "Количество купленных"
+
+#: v1/view/view-pricing-rules.php:309
+msgid "Check this box if the rule should not apply to items on sale."
+msgstr "Отметьте этот флажок, если правила не должны применяться к товаров на распродаже."
+
+#: v1/view/view-pricing-rules.php:298
+msgid "Exclude sale items"
+msgstr "Исключить элементы на распродаже"
+
+#: v1/view/view-pricing-rules.php:263
+msgid "Check this box to count quantities cumulatively across attribute"
+msgstr "Отметьте этот флажок, чтобы подсчитать суммарное количество по атрибуту"
+
+#: v1/view/view-pricing-rules.php:746 v1/includes/discount-base.php:1088
+msgid "Max Quantity"
+msgstr "Максимальное количество"
+
+#: v1/view/view-pricing-rules.php:739 v1/includes/discount-base.php:1087
+msgid "Min Quantity"
+msgstr "Минимальное количество"
+
+#: v1/view/view-cart-rules.php:172 v1/includes/discount-base.php:1131
+msgid "Type"
+msgstr "Тип"
+
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:79
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:307 v1/view/pricing-rules.php:222
+#: v1/view/cart-rules.php:192
+msgid "Delete"
+msgstr "Удалить"
+
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:13 v1/view/pricing-rules.php:99
+#: v1/view/cart-rules.php:68
+msgid "Add New Rule"
+msgstr "Добавить новое правило"
+
+#: v2/App/Helpers/SurveyForm.php:290 v1/includes/survey.php:288
+msgid "Close"
+msgstr "Закрыть"
+
+#: v1/view/pricing-rules.php:80
+msgid "Price Rules"
+msgstr "Правила для цен"
+
+#: v1/view/view-cart-rules.php:152
+msgid "Add Condition"
+msgstr "Добавить условие"
+
+#: v1/view/view-pricing-rules.php:74 v1/view/view-pricing-rules.php:744
+#: v1/view/view-pricing-rules.php:897 v1/view/view-pricing-rules.php:920
+#: v1/view/view-pricing-rules.php:927 v1/view/view-cart-rules.php:92
+#: v1/includes/discount-base.php:1090
+msgid "ex. 1"
+msgstr "например, 1"
+
+#: v1/view/view-pricing-rules.php:751 v1/view/view-pricing-rules.php:879
+#: v1/includes/discount-base.php:1092
+msgid "ex. 50"
+msgstr "например, 50"
+
+#: v1/view/view-pricing-rules.php:328
+msgid "Customers"
+msgstr "Клиенты"
+
+#: v1/view/pricing-rules.php:139 v1/view/pricing-rules.php:249
+#: v1/view/cart-rules.php:109 v1/view/cart-rules.php:219
+msgid "Order"
+msgstr "Заказ"
+
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:112
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:338 v1/view/pricing-rules.php:129
+#: v1/view/pricing-rules.php:239 v1/view/cart-rules.php:99
+#: v1/view/cart-rules.php:209
+msgid "Start Date"
+msgstr "Дата начала"
+
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:114
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:340 v1/view/pricing-rules.php:130
+#: v1/view/pricing-rules.php:240 v1/view/cart-rules.php:100
+#: v1/view/cart-rules.php:210
+msgid "Expired On"
+msgstr "Истекает"
+
+#: v1/view/view-pricing-rules.php:94 v1/view/view-cart-rules.php:110
+msgid "Rule Description"
+msgstr "Описание правила"
+
+#: v2/App/Controllers/Admin/Tabs/Statistics.php:37
+#: v1/view/view-pricing-rules.php:81 v1/view/view-cart-rules.php:98
+msgid "Rule Name"
+msgstr "Имя правила"
+
+#: v1/view/view-cart-rules.php:149
+msgid "Cart Conditions"
+msgstr "Условия корзины"
+
+#: v1/view/view-pricing-rules.php:105
+msgid "Method"
+msgstr "Метод"
+
+#: v1/view/view-cart-rules.php:60
+msgid "New Cart Rule"
+msgstr "Новое правило корзины"
+
+#: v1/view/view-cart-rules.php:62
+msgid "Edit Cart Rule"
+msgstr "Редактировать правило корзины"
+
+#: v1/view/view-pricing-rules.php:202
+msgid "All products"
+msgstr "Все товары"
+
+#: v1/view/view-pricing-rules.php:206
+msgid "Specific products"
+msgstr "Указанные товары"
+
+#: v1/view/view-pricing-rules.php:212 v1/view/view-pricing-rules.php:214
+msgid "Specific categories"
+msgstr "Указанные категории"
+
+#: v1/view/view-pricing-rules.php:221 v1/view/view-pricing-rules.php:223
+msgid "Specific attributes"
+msgstr "Указанные атрибуты"
+
+#: v1/view/view-pricing-rules.php:188
+msgid "Discount Conditions"
+msgstr "Условия скидки"
+
+#: v1/view/view-cart-rules.php:289 v1/includes/discount-base.php:1147
+msgid "Customer Email"
+msgstr "Email клиента"
+
+#: v1/view/view-cart-rules.php:246 v1/includes/discount-base.php:1141
+msgid "Categories in cart"
+msgstr "Категории в корзине"
+
+#: v1/view/view-cart-rules.php:241
+msgid "Categories In Cart"
+msgstr "Категории в корзине"
+
+#: v1/view/view-cart-rules.php:196 v1/includes/discount-base.php:1138
+msgid "Quantity Sum"
+msgstr "Суммарное количество"
+
+#: v1/view/cart-rules.php:48
+msgid "Cart Rules"
+msgstr "Правила корзины"
+
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:77
+#: v2/App/Controllers/Admin/Settings.php:418 v1/view/pricing-rules.php:163
+#: v1/view/settings_promotion.php:65 v1/view/settings_promotion.php:100
+#: v1/view/cart-rules.php:133 v1/includes/discount-base.php:1128
+msgid "Enable"
+msgstr "Включить"
+
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:78
+#: v2/App/Controllers/Admin/Settings.php:416 v1/view/pricing-rules.php:160
+#: v1/view/cart-rules.php:130 v1/includes/discount-base.php:1129
+msgid "Disable"
+msgstr "Отключить"
+
+#: v1/view/view-cart-rules.php:267 v1/includes/discount-base.php:1143
+msgid "Customer Details (must be logged in)"
+msgstr "Информация о клиенте (должен быть залогинен)"
+
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:302 v1/view/pricing-rules.php:211
+#: v1/view/cart-rules.php:181
+msgid "Edit"
+msgstr "Редактировать"
+
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:129
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:355 v1/view/pricing-rules.php:144
+#: v1/view/pricing-rules.php:254 v1/view/view-cart-rules.php:700
+#: v1/view/cart-rules.php:114 v1/view/cart-rules.php:224
+#: v1/includes/discount-base.php:1168
+msgid "Action"
+msgstr "Действие"
+
+#: v1/view/view-cart-rules.php:791 v1/view/view-cart-rules.php:793
+msgid "Product Discount"
+msgstr "Скидка на товар"
+
+#: v1/view/view-pricing-rules.php:892 v1/includes/discount-base.php:1109
+msgid "Free quantity"
+msgstr "Свободное количество"
+
+#: v1/view/view-cart-rules.php:176 v1/includes/discount-base.php:1132
+msgid "Cart Subtotal"
+msgstr "Подытог"
+
+#: v1/view/view-pricing-rules.php:794 v1/view/view-pricing-rules.php:796
+#: v1/view/view-cart-rules.php:782 v1/view/view-cart-rules.php:784
+#: v1/includes/discount-base.php:1097
+msgid "Price Discount"
+msgstr "Бесплатная доставка"
+
+#: v1/includes/discount-base.php:1119
+msgid "and"
+msgstr "и"
+
+#: v2/App/Views/Admin/Tabs/settings.php:15 v1/view/view-pricing-rules.php:47
+#: v1/view/view-cart-rules.php:65 v1/view/settings.php:38
+#: v1/view/includes/sub-menu.php:9 v1/view/includes/cart-menu.php:9
+msgid "General"
+msgstr "Общие"
+
+#: v1/view/view-pricing-rules.php:131 v1/view/view-cart-rules.php:122
+msgid "Period of Rule Active. Format: month/day/Year Hour:Min"
+msgstr "Период активности правила. Формат: месяц/день/год час:мин"
+
+#: v1/view/view-pricing-rules.php:148
+msgid "To - Leave Empty if No Expiry"
+msgstr "До - Оставьте пустым, если нет срока действия"
+
+#: v1/view/view-pricing-rules.php:193
+msgid "Apply To"
+msgstr "Применить к"
+
+#: v1/view/view-pricing-rules.php:44
+msgid "Edit Price Rule"
+msgstr "Изменить правило цены"
+
+#: v1/view/view-pricing-rules.php:42
+msgid "New Price Rule"
+msgstr "Новое правило цены"
+
+#: v1/view/view-cart-rules.php:811
+msgid "value :"
+msgstr "значение:"
+
+#: v1/view/view-cart-rules.php:800 v1/view/view-cart-rules.php:802
+msgid "Free shipping"
+msgstr "Бесплатная доставка"
+
+#: v1/view/view-pricing-rules.php:974 v1/view/view-cart-rules.php:701
+#: v1/includes/discount-base.php:1124
+msgid "Remove"
+msgstr "Удалить"
+
+#: v1/view/view-cart-rules.php:317 v1/view/view-cart-rules.php:319
+#: v1/includes/discount-base.php:1151
+msgid "Billing city"
+msgstr "Город"
+
+#: v1/view/view-cart-rules.php:186 v1/includes/discount-base.php:1135
+msgid "Cart Item Count"
+msgstr "Количество товаров в корзине"
+
+#: v1/view/view-pricing-rules.php:700 v1/view/view-pricing-rules.php:1019
+#: v1/view/view-cart-rules.php:749 v1/view/view-cart-rules.php:846
+msgid "Previous"
+msgstr "Предыдущий"
+
+#: v1/view/view-pricing-rules.php:786 v1/view/view-cart-rules.php:776
+#: v1/includes/discount-base.php:1096
+msgid "Percentage Discount"
+msgstr "Процентная скидка"
+
+#: v1/view/view-cart-rules.php:323 v1/includes/discount-base.php:1152
+msgid "Customer Shipping Details"
+msgstr "Детали доставки клиента"
+
+#: v1/view/view-cart-rules.php:311 v1/includes/discount-base.php:1150
+msgid "Customer Billing Details"
+msgstr "Детали оплаты клиента"
+
+#: v1/view/view-pricing-rules.php:130 v1/view/view-cart-rules.php:121
+msgid "Validity"
+msgstr "Диапазон"
+
+#: v1/view/view-cart-rules.php:417 v1/includes/discount-base.php:1161
+msgid "Coupon applied"
+msgstr "Купон применяется"
+
+#: v1/view/view-pricing-rules.php:183 v1/view/view-pricing-rules.php:701
+#: v1/view/view-cart-rules.php:145 v1/view/view-cart-rules.php:750
+msgid "Next"
+msgstr "Следующий"
+
+#: v1/view/view-pricing-rules.php:346 v1/view/view-pricing-rules.php:348
+msgid "Only Given"
+msgstr "Только заданные"
+
+#: v1/view/view-cart-rules.php:295 v1/view/view-cart-rules.php:297
+msgid "Email with TLD (Eg: edu)"
+msgstr "Email с TLD (например: edu)"
+
+#: v1/view/view-cart-rules.php:305 v1/view/view-cart-rules.php:307
+#: v1/includes/discount-base.php:1149
+msgid "Email with Domain (Eg: gmail.com)"
+msgstr "Email c доменом (например: gmail.com)"
+
+#: v1/view/view-cart-rules.php:273 v1/view/view-cart-rules.php:275
+#: v1/includes/discount-base.php:1144
+msgid "User in list"
+msgstr "Пользователь в списке"
+
+#: v1/view/view-cart-rules.php:283 v1/view/view-cart-rules.php:285
+#: v1/includes/discount-base.php:1145
+msgid "User role in list"
+msgstr "Роль пользователя в списке"
+
+#: v1/view/view-cart-rules.php:349 v1/view/view-cart-rules.php:351
+#: v1/includes/discount-base.php:1146
+msgid "Shipping country in list"
+msgstr "Страна доставки в списке"
+
+#: v1/view/view-cart-rules.php:214 v1/view/view-cart-rules.php:217
+#: v1/includes/discount-base.php:1140
+msgid "Total number of quantities in the cart less than"
+msgstr "Общее количество элементов в корзине меньше, чем"
+
+#: v1/view/view-cart-rules.php:202 v1/view/view-cart-rules.php:205
+#: v1/includes/discount-base.php:1139
+msgid "Total number of quantities in the cart at least"
+msgstr "Общее количество элементов в корзине не менее"
+
+#: v1/view/view-cart-rules.php:193 v1/includes/discount-base.php:1137
+msgid "Number of line items in the cart (not quantity) less than"
+msgstr "Количество товаров (не элементов) в корзине меньше, чем"
+
+#: v1/view/view-cart-rules.php:189 v1/includes/discount-base.php:1136
+msgid "Number of line items in the cart (not quantity) at least"
+msgstr "Количество товаров (не элементов) в корзине не менее"
+
+#: v1/view/view-pricing-rules.php:249
+msgid "Check this box to apply child category(ies)"
+msgstr "Отметьте этот флажок, чтобы применить к дочерним категориям"
+
+#: v1/view/view-cart-rules.php:339 v1/view/view-cart-rules.php:341
+#: v1/includes/discount-base.php:1153
+msgid "Shipping state"
+msgstr "Штат доставки"
+
+#: v1/view/view-cart-rules.php:183 v1/includes/discount-base.php:1134
+msgid "Subtotal less than"
+msgstr "Подытог меньше, чем"
+
+#: v1/view/view-cart-rules.php:179 v1/includes/discount-base.php:1133
+msgid "Subtotal at least"
+msgstr "Итог не менее"
+
+#: v1/view/view-pricing-rules.php:922 v1/includes/discount-base.php:1117
+msgid "Item quantity"
+msgstr "Количество элементов"
+
+#: v1/view/view-pricing-rules.php:915 v1/includes/discount-base.php:1114
+msgid "Item count"
+msgstr "Количество товаров"
+
+#: v1/includes/discount-base.php:1123
+msgid "as discount"
+msgstr "как скидка"
+
+#: v1/view/pricing-rules.php:95 v1/view/cart-rules.php:63
+msgid "You Reach Max. Rule Limit"
+msgstr "Максимально возможное количество ценовых правил"
+
+#: v1/view/view-pricing-rules.php:752 v1/includes/discount-base.php:1094
+msgid "Adjustment Type"
+msgstr "Тип регулировки"
+
+#: v1/view/view-cart-rules.php:139
+msgid "To"
+msgstr "До"
+
+#: v1/view/view-pricing-rules.php:246
+msgid "Check this box to count quantities cumulatively across category(ies)"
+msgstr "Установите этот флажок, чтобы подсчитать кумулятивно количество по рубрике(ах)"
+
+#: v1/view/view-pricing-rules.php:591 v1/view/view-pricing-rules.php:650
+#: v1/view/view-cart-rules.php:648 v1/includes/discount-base.php:1166
+msgid "Less than or equal to"
+msgstr "Меньше или равно"
+
+#: v1/view/view-pricing-rules.php:590 v1/view/view-cart-rules.php:647
+#: v1/includes/discount-base.php:1165
+msgid "Greater than or equal to"
+msgstr "Больше или равно"
+
+#: v1/view/view-pricing-rules.php:516
+msgid "Supported in WooCommerce 3.x"
+msgstr "Поддерживается в WooCommerce 3.x"
+
+#: v2/App/Conditions/CartSubTotal.php:17 v2/App/Helpers/Helper.php:159
+#: v1/view/view-pricing-rules.php:484
+msgid "Subtotal"
+msgstr "Подытог"
+
+#: v1/view/view-pricing-rules.php:506
+msgid "Enter the amount"
+msgstr "Введите сумму"
+
+#: v1/view/view-pricing-rules.php:911 v1/includes/discount-base.php:1112
+msgid "Dynamic item count"
+msgstr "Динамическое количество элементов"
+
+#: v1/view/view-pricing-rules.php:501
+msgid "Subtotal atleast"
+msgstr "Подытог не менее"
+
+#: v1/includes/pricing-rules.php:3366
+msgid " quantity of cheapest item "
+msgstr "количество самых дешевых элементов"
+
+#: v1/includes/pricing-rules.php:3255 v1/includes/pricing-rules.php:3259
+msgid " quantity of product(s) - "
+msgstr "количество товаров"
+
+#: v1/view/view-pricing-rules.php:339 v1/view/view-pricing-rules.php:673
+msgid "All"
+msgstr "Все"
+
+#: v1/includes/pricing-rules.php:3257
+msgid " after first "
+msgstr "после первого"
+
+#: v1/includes/pricing-rules.php:3253
+msgid " first "
+msgstr "первый"
+
+#: v1/view/view-pricing-rules.php:674
+msgid "First quantity(s)"
+msgstr "Первые"
+
+#: v1/view/view-pricing-rules.php:675
+msgid "Skip first quantity(s)"
+msgstr "Пропустить первые"
+
+#: v1/view/settings_cart_rules.php:85
+msgid "Enable free shipping option"
+msgstr "Включить опцию бесплатной доставки"
+
+#: v1/view/settings_cart_rules.php:129
+msgid "Free Shipping title"
+msgstr "Заголовок бесплатной доставки"
+
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:197
+#: v1/view/settings_cart_rules.php:126 v1/view/documentation.php:63
+msgid "Free Shipping"
+msgstr "Бесплатная доставка"
+
+#: v1/view/settings_cart_rules.php:122
+msgid "Free shipping text to be displayed"
+msgstr "Отображаемый текст для бесплатной доставки"
+
+#: v1/view/settings_cart_rules.php:108
+msgid "Use Woo-Discount free shipping"
+msgstr "Использовать бесплатную доставку Woo-Discount"
+
+#: v1/view/settings_cart_rules.php:105
+msgid "Use Woocommerce free shipping"
+msgstr "Использовать бесплатную доставку Woocommerce"
+
+#: v2/App/Views/Admin/Tabs/settings.php:366
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:252 v1/view/pricing-rules.php:194
+#: v1/view/settings_cart_rules.php:95 v1/view/settings_cart_rules.php:102
+#: v1/view/settings_price_rules.php:169 v1/view/settings_promotion.php:22
+#: v1/view/settings_promotion.php:62 v1/view/settings_promotion.php:97
+#: v1/view/settings_promotion.php:132 v1/view/cart-rules.php:164
+#: v1/includes/discount-base.php:209
+msgid "Disabled"
+msgstr "Отключено"
+
+#: v1/view/settings_price_rules.php:8
+msgid "Price rules settings"
+msgstr "Настройки правил цен"
+
+#: v1/view/view-pricing-rules.php:373 v1/view/view-pricing-rules.php:409
+#: v1/view/view-pricing-rules.php:500 v1/view/view-pricing-rules.php:549
+msgid "Do not use"
+msgstr "Не использовать"
+
+#: v1/view/settings_cart_rules.php:8
+msgid "Cart rules settings"
+msgstr "Настройки правил корзины"
+
+#: v2/App/Views/Admin/Tabs/settings.php:283 v2/App/Helpers/Helper.php:168
+#: v1/view/view-pricing-rules.php:394
+msgid "Coupon"
+msgstr "Купон"
+
+#: v1/view/settings_general.php:74
+msgid "Force refresh the cart widget while add and remove item to cart"
+msgstr "Принудительное обновление виджета корзины после добавления и удаления элементов из корзины"
+
+#: v1/includes/pricing-rules.php:3370
+msgid "from the category "
+msgstr "из категории"
+
+#: v2/App/Views/Admin/Tabs/help.php:12
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:58 v1/view/pricing-rules.php:85
+#: v1/view/documentation.php:21 v1/view/cart-rules.php:53
+msgid "Documentation"
+msgstr "Документация"
+
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:56 v1/view/pricing-rules.php:84
+#: v1/view/cart-rules.php:52
+msgid "View Examples"
+msgstr "Посмотреть примеры"
+
+#: v1/view/view-pricing-rules.php:956 v1/includes/discount-base.php:1120
+msgid "100% percent"
+msgstr "100 процентов"
+
+#: v1/view/includes/footer.php:7
+msgid "Please contact our support team"
+msgstr "Обратитесь в нашу службу поддержки"
+
+#: v1/view/view-pricing-rules.php:957 v1/includes/discount-base.php:1121
+msgid "Limited percent"
+msgstr "Ограниченный процент"
+
+#: v2/App/Views/Admin/Tabs/DiscountRule.php:389 v1/view/template/sidebar.php:7
+msgid "Looking for more features? Upgrade to PRO"
+msgstr "Ищете дополнительные возможности? Обновитесь до PRO"
+
+#: v1/includes/pricing-rules.php:3348
+msgid "% discount in "
+msgstr "% скидки в"
+
+#: v2/App/Views/Admin/Tabs/settings.php:59
+#: v2/App/Views/Admin/Tabs/settings.php:90
+#: v2/App/Views/Admin/Tabs/settings.php:105
+#: v2/App/Views/Admin/Tabs/settings.php:176
+#: v2/App/Views/Admin/Tabs/settings.php:272
+#: v2/App/Views/Admin/Tabs/settings.php:303
+#: v2/App/Views/Admin/Tabs/settings.php:341
+#: v2/App/Views/Admin/Tabs/settings.php:398
+#: v2/App/Views/Admin/Rules/DiscountBatch/Main.php:48
+#: v1/view/settings_price_rules.php:87 v1/view/settings_price_rules.php:99
+#: v1/view/settings_price_rules.php:111 v1/view/settings_price_rules.php:152
+#: v1/view/settings_general.php:63 v1/view/settings_general.php:80
+#: v1/view/settings_general.php:114 v1/view/settings_performance.php:22
+msgid "No"
+msgstr "Нет"
+
+#: v2/App/Views/Admin/Tabs/settings.php:55
+#: v2/App/Views/Admin/Tabs/settings.php:86
+#: v2/App/Views/Admin/Tabs/settings.php:101
+#: v2/App/Views/Admin/Tabs/settings.php:173
+#: v2/App/Views/Admin/Tabs/settings.php:268
+#: v2/App/Views/Admin/Tabs/settings.php:297
+#: v2/App/Views/Admin/Tabs/settings.php:335
+#: v2/App/Views/Admin/Tabs/settings.php:393
+#: v2/App/Views/Admin/Rules/DiscountBatch/Main.php:43
+#: v1/view/settings_price_rules.php:86 v1/view/settings_price_rules.php:98
+#: v1/view/settings_price_rules.php:110 v1/view/settings_price_rules.php:151
+#: v1/view/settings_general.php:62 v1/view/settings_general.php:79
+#: v1/view/settings_general.php:113 v1/view/settings_performance.php:21
+msgid "Yes"
+msgstr "Да"
+
+#: v1/includes/pricing-rules.php:3346
+msgid "Get "
+msgstr "Получить"
+
+#: v1/includes/pricing-rules.php:3363
+msgid " cheapest item "
+msgstr "самый дешевый элемент"
+
+#: v1/includes/pricing-rules.php:3361
+msgid " quantity of any "
+msgstr "количество любых"
+
+#: v1/view/view-pricing-rules.php:273 v1/view/view-cart-rules.php:232
+#: v1/includes/discount-base.php:1188
+msgid "Exclude products"
+msgstr "Исключить товары"
+
+#: v1/includes/discount-base.php:1105
+msgid "Any one cheapest from all products"
+msgstr "Любой из самых дешевых"
+
+#: v1/includes/discount-base.php:1104
+msgid "Any one cheapest from selected"
+msgstr "Любой из самых дешевых среди выбранных"
+
+#: v1/includes/pricing-rules.php:3356
+msgid "any cheapest one of "
+msgstr "любой самый дешевый из"
+
+#: v1/includes/pricing-rules.php:3353
+msgid "any cheapest one from cart"
+msgstr "любой самый дешевый из корзины"
+
+#: v1/helper/woo-function.php:528 v1/helper/woo-function.php:540
+msgid "Search for a user&hellip;"
+msgstr "Поиск пользователей&hellip;"
+
+#: v1/helper/woo-function.php:485 v1/helper/woo-function.php:495
+msgid "Search for a product&hellip;"
+msgstr "Поиск товаров&hellip;"
+
+#: v2/App/Controllers/Admin/Settings.php:308 v1/helper/general-helper.php:48
+msgid "Guest"
+msgstr "Гость"
+
+#: v1/view/view-pricing-rules.php:362
+msgid "User roles"
+msgstr "Роли пользователей"
+
+#: v1/view/view-pricing-rules.php:315 v1/view/view-pricing-rules.php:383
+#: v1/view/view-pricing-rules.php:473 v1/view/view-pricing-rules.php:525
+#: v1/view/view-pricing-rules.php:561 v1/view/settings_cart_rules.php:92
+#: v1/view/settings_price_rules.php:313
+msgid "Supported in PRO version"
+msgstr "Доступно в PRO-версии"
+
+#: v2/App/Controllers/Admin/Settings.php:435 v1/view/view-pricing-rules.php:654
+#: v1/view/view-pricing-rules.php:657 v1/view/view-pricing-rules.php:677
+#: v1/includes/discount-base.php:1089
+msgid "Quantity"
+msgstr "Количество"
+
+#: v1/includes/pricing-rules.php:3215
+msgid " Quantity "
+msgstr " Количество "
+
+#: v1/includes/pricing-rules.php:3212 v1/includes/pricing-rules.php:3218
+msgid " Quantity"
+msgstr " Количество"
+
+#: v1/view/view-pricing-rules.php:642 v1/includes/pricing-rules.php:3208
+msgid "Buy"
+msgstr "Купить"
+
+#: v1/view/view-pricing-rules.php:1012
+msgid "Percent"
+msgstr "Процент"
+
+#: v1/view/view-pricing-rules.php:680
+msgid " Product(s) "
+msgstr "Товар(ы)"
+
+#: v1/view/view-pricing-rules.php:144 v1/view/view-pricing-rules.php:652
+#: v1/view/view-cart-rules.php:135
+msgid "From"
+msgstr "С"
+
+#: v1/view/view-pricing-rules.php:656
+msgid "to"
+msgstr "до"
+
+#: v1/view/view-pricing-rules.php:651
+msgid "Equal"
+msgstr "Равно"
+
+#: v1/view/view-pricing-rules.php:660
+msgid "Product(s) from"
+msgstr "Товары из"
+
+#: v1/includes/pricing-rules.php:3231
+msgid " any "
+msgstr "любой"
+
+#: v1/includes/pricing-rules.php:3231
+msgid " products from "
+msgstr "товары из"
+
+#: v1/includes/pricing-rules.php:3238
+msgid " in each products"
+msgstr "в каждом товаре"
+
+#: v1/view/view-pricing-rules.php:644
+msgid "Any"
+msgstr "Любой"
+
+#: v1/view/view-pricing-rules.php:645
+msgid "Each"
+msgstr "Каждый"
+
+#: v1/view/view-pricing-rules.php:646
+msgid "Combine"
+msgstr "Скомбинировать"
+
+#: v2/App/Views/Admin/Rules/Discounts/Cart.php:33
+#: v2/App/Views/Admin/Rules/Discounts/simple.php:31
+#: v1/view/view-pricing-rules.php:874 v1/view/view-pricing-rules.php:1014
+#: v1/view/view-cart-rules.php:462 v1/includes/discount-base.php:1100
+msgid "Value"
+msgstr "Значение"
+
+#: v1/view/view-pricing-rules.php:1013
+msgid "Fixed"
+msgstr "Фиксированное"
+
+#: v1/includes/pricing-rules.php:3212
+msgid " less than or equal to "
+msgstr "меньше, чем или равно"
+
+#: v1/includes/pricing-rules.php:3222
+msgid " or more Quantity"
+msgstr "или больше количество"
+
+#: v2/App/Views/Admin/Rules/Manage.php:209
+#: v2/App/Views/Admin/Rules/Discounts/Bulk.php:59
+#: v2/App/Controllers/Admin/Settings.php:443 v1/view/view-pricing-rules.php:708
+#: v1/view/view-cart-rules.php:756 v1/view/template/discount-table.php:42
+#: v1/view/includes/sub-menu.php:13 v1/view/includes/cart-menu.php:13
+msgid "Discount"
+msgstr "Скидка"
+
+#: v1/view/pricing-rules.php:128 v1/view/pricing-rules.php:238
+#: v1/view/template/discount-table.php:36 v1/view/cart-rules.php:98
+#: v1/view/cart-rules.php:208
+msgid "Name"
+msgstr "Имя"
+
+#: v1/view/template/discount-table.php:74
+msgid "No Active Discounts."
+msgstr "Нет активных скидок."
+
+#: v1/view/template/discount-table.php:39
+msgid "Range"
+msgstr "Диапазон"
+
+#: v1/view/settings_cart_rules.php:136
+msgid "Draft"
+msgstr "Черновик"
+
+#: v1/view/settings_general.php:13
+msgid "License Key :"
+msgstr "Лицензионный ключ :"
+
+#: v1/view/settings_general.php:6
+msgid "General Settings"
+msgstr "Общие настройки"
+
+#: v1/view/settings_general.php:32 v1/helper/purchase.php:188
+msgid "License key seems to be Invalid. Please enter a valid license key"
+msgstr "Недопустимый лицензионный ключ. Введите действующий лицензионный ключ"
+
+#: v2/App/Views/Admin/Tabs/settings.php:549
+#: v1/view/settings_price_rules.php:137 v1/view/settings_price_rules.php:211
+#: v1/view/settings_price_rules.php:229 v1/view/settings_price_rules.php:247
+#: v1/view/settings_price_rules.php:265
+msgid "Don't Show"
+msgstr "Не показывать"
+
+#: v2/App/Views/Admin/Tabs/settings.php:546
+#: v1/view/settings_price_rules.php:208 v1/view/settings_price_rules.php:226
+#: v1/view/settings_price_rules.php:244 v1/view/settings_price_rules.php:262
+#: v1/includes/discount-base.php:1173
+msgid "Show"
+msgstr "Показывать"
+
+#: v1/view/view-cart-rules.php:772
+msgid "Discount Type :"
+msgstr "Тип скидки :"
+
+#: v1/view/settings_price_rules.php:163
+msgid "Discount Table :"
+msgstr "Таблица скидок :"
+
+#: v2/App/Helpers/Helper.php:162 v2/App/Helpers/ProOptions.php:192
+#: v2/App/Helpers/ProOptions.php:200 v2/App/Helpers/ProOptions.php:208
+#: v2/App/Helpers/ProOptions.php:216 v2/App/Helpers/ProOptions.php:224
+#: v2/App/Helpers/ProOptions.php:232 v1/view/view-pricing-rules.php:536
+#: v1/view/view-cart-rules.php:365 v1/includes/discount-base.php:1156
+msgid "Purchase History"
+msgstr "История покупок"
+
+#: v1/view/settings_cart_rules.php:21
+msgid "Discount Coupon Name"
+msgstr "Имя купона на скидку"
+
+#: v1/view/settings_cart_rules.php:59 v1/view/settings_price_rules.php:32
+msgid "Apply first matched rule"
+msgstr "Применить первое найденное правило"
+
+#: v1/view/settings_cart_rules.php:65 v1/view/settings_cart_rules.php:67
+#: v1/view/settings_price_rules.php:38 v1/view/settings_price_rules.php:40
+msgid "Apply all matched rules"
+msgstr "Применить все найденные правила"
+
+#: v1/view/settings_cart_rules.php:74 v1/view/settings_cart_rules.php:76
+#: v1/view/settings_price_rules.php:47 v1/view/settings_price_rules.php:49
+msgid "Apply biggest discount"
+msgstr "Применить самую большую скидку"
+
+#: v1/view/settings_cart_rules.php:53
+msgid "Rule Setup for Cart:"
+msgstr "Настройка правила для корзины:"
+
+#: v1/view/settings_cart_rules.php:146
+msgid "Exclude Draft products in product select box."
+msgstr "Исключить черновики товаров из списка выбора."
+
+#. Author URI of the plugin
+msgid "https://www.flycart.org"
+msgstr "https://www.flycart.org"
+
+#. Author of the plugin
+msgid "Flycart Technologies LLP"
+msgstr "Flycart Technologies LLP"
+
+#. Plugin URI of the plugin
+msgid "http://www.flycart.org"
+msgstr "http://www.flycart.org"
+
+#. Plugin Name of the plugin
+#: v2/App/Controllers/Admin/Settings.php:40
+#: v2/App/Controllers/Admin/Settings.php:41 v1/view/includes/menu.php:6
+#: v1/view/includes/sub-menu.php:5 v1/view/includes/cart-menu.php:5
+#: v1/helper/purchase.php:25
+msgid "Woo Discount Rules"
+msgstr "Woo Discount Rules"

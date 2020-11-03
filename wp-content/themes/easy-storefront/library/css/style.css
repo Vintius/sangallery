@@ -1,0 +1,6 @@
+#yith-quick-view-modal {
+  z-index: 100000;
+}
+.select2-container--open {
+  z-index: 10000;
+}

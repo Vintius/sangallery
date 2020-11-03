@@ -1,0 +1,2 @@
+2020-10-08T14:26:28+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\API\Reports\Orders\Stats\DataStore.php на строке 8
+

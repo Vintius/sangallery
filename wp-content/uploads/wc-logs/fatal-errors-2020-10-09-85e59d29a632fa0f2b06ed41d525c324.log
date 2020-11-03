@@ -1,0 +1,108 @@
+2020-10-09T12:08:44+00:00 CRITICAL Uncaught Error: Call to undefined function split() in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:361
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(249): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(142): apply_filters_ref_array('woocommerce_get...', Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(129): WC_Deprecated_Filter_Hooks->trigger_hook('woocommerce_get...', Array)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-deprecated-hooks.php(75): WC_Deprecated_Filter_Hooks->handle_deprecated_hook('woocommerce_pro...', 'woocommerce_get...', Array, '')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): WC_D в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 361
+
+2020-10-09T12:11:13+00:00 CRITICAL Uncaught Error: Call to undefined function split() in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:363
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(249): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(142): apply_filters_ref_array('woocommerce_get...', Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(129): WC_Deprecated_Filter_Hooks->trigger_hook('woocommerce_get...', Array)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-deprecated-hooks.php(75): WC_Deprecated_Filter_Hooks->handle_deprecated_hook('woocommerce_pro...', 'woocommerce_get...', Array, '')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): WC_D в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 363
+
+2020-10-09T12:11:55+00:00 CRITICAL Uncaught Error: Call to undefined function split() in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:363
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(249): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(142): apply_filters_ref_array('woocommerce_get...', Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(129): WC_Deprecated_Filter_Hooks->trigger_hook('woocommerce_get...', Array)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-deprecated-hooks.php(75): WC_Deprecated_Filter_Hooks->handle_deprecated_hook('woocommerce_pro...', 'woocommerce_get...', Array, '')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): WC_D в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 363
+
+2020-10-09T12:14:34+00:00 CRITICAL Uncaught Error: Call to undefined function split() in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:363
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(249): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(142): apply_filters_ref_array('woocommerce_get...', Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(129): WC_Deprecated_Filter_Hooks->trigger_hook('woocommerce_get...', Array)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-deprecated-hooks.php(75): WC_Deprecated_Filter_Hooks->handle_deprecated_hook('woocommerce_pro...', 'woocommerce_get...', Array, '')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): WC_D в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 363
+
+2020-10-09T12:14:50+00:00 CRITICAL Uncaught Error: Call to undefined function split() in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:363
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('215.00')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(249): WP_Hook->apply_filters('215.00', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(142): apply_filters_ref_array('woocommerce_get...', Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(129): WC_Deprecated_Filter_Hooks->trigger_hook('woocommerce_get...', Array)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-deprecated-hooks.php(75): WC_Deprecated_Filter_Hooks->handle_deprecated_hook('woocommerce_pro...', 'woocommerce_get...', Array, '215.00')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-h в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 363
+
+2020-10-09T12:15:02+00:00 CRITICAL Uncaught Error: Call to undefined function split() in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:363
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(249): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(142): apply_filters_ref_array('woocommerce_get...', Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(129): WC_Deprecated_Filter_Hooks->trigger_hook('woocommerce_get...', Array)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-deprecated-hooks.php(75): WC_Deprecated_Filter_Hooks->handle_deprecated_hook('woocommerce_pro...', 'woocommerce_get...', Array, '')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): WC_D в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 363
+
+2020-10-09T12:15:13+00:00 CRITICAL Uncaught Error: Call to undefined function split() in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:363
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(249): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(142): apply_filters_ref_array('woocommerce_get...', Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(129): WC_Deprecated_Filter_Hooks->trigger_hook('woocommerce_get...', Array)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-deprecated-hooks.php(75): WC_Deprecated_Filter_Hooks->handle_deprecated_hook('woocommerce_pro...', 'woocommerce_get...', Array, '')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): WC_D в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 363
+
+2020-10-09T12:15:24+00:00 CRITICAL Uncaught Error: Call to undefined function split() in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:363
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(249): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(142): apply_filters_ref_array('woocommerce_get...', Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(129): WC_Deprecated_Filter_Hooks->trigger_hook('woocommerce_get...', Array)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-deprecated-hooks.php(75): WC_Deprecated_Filter_Hooks->handle_deprecated_hook('woocommerce_pro...', 'woocommerce_get...', Array, '')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): WC_D в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 363
+
+2020-10-09T12:15:32+00:00 CRITICAL Uncaught Error: Call to undefined function split() in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:363
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(249): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(142): apply_filters_ref_array('woocommerce_get...', Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(129): WC_Deprecated_Filter_Hooks->trigger_hook('woocommerce_get...', Array)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-deprecated-hooks.php(75): WC_Deprecated_Filter_Hooks->handle_deprecated_hook('woocommerce_pro...', 'woocommerce_get...', Array, '')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): WC_D в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 363
+
+2020-10-09T15:02:08+00:00 CRITICAL Uncaught Error: Call to undefined function split() in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:363
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(249): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(142): apply_filters_ref_array('woocommerce_get...', Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(129): WC_Deprecated_Filter_Hooks->trigger_hook('woocommerce_get...', Array)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-deprecated-hooks.php(75): WC_Deprecated_Filter_Hooks->handle_deprecated_hook('woocommerce_pro...', 'woocommerce_get...', Array, '')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): WC_D в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 363
+
+2020-10-09T15:04:02+00:00 CRITICAL Uncaught Error: Call to undefined function split() in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:363
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(249): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(142): apply_filters_ref_array('woocommerce_get...', Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(129): WC_Deprecated_Filter_Hooks->trigger_hook('woocommerce_get...', Array)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-deprecated-hooks.php(75): WC_Deprecated_Filter_Hooks->handle_deprecated_hook('woocommerce_pro...', 'woocommerce_get...', Array, '')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): WC_D в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 363
+
+2020-10-09T15:05:40+00:00 CRITICAL Uncaught Error: Call to undefined function split() in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:363
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(249): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(142): apply_filters_ref_array('woocommerce_get...', Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(129): WC_Deprecated_Filter_Hooks->trigger_hook('woocommerce_get...', Array)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-deprecated-hooks.php(75): WC_Deprecated_Filter_Hooks->handle_deprecated_hook('woocommerce_pro...', 'woocommerce_get...', Array, '')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): WC_D в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 363
+

@@ -1,0 +1,224 @@
+# Translation of Themes - Easy Storefront in Russian
+# This file is distributed under the same license as the Themes - Easy Storefront package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-05-17 17:45:34+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: ru\n"
+"Project-Id-Version: Themes - Easy Storefront\n"
+
+#. Description of the theme
+msgid "Easy Storefront is a responsive and fully customizable template with tons of features. The theme can be used to develop business, WooCommerce or Easy Digital download shopping cart - store front, portfolio and others web sites. The Flexibility and Theme Options such as WooCommerce integration, Product Slider, Product Grid, Header & footer Customization, typography features provided in theme will amaze you. Looking for a Feature rich Store front theme? Look no further! See the demo, The only theme you will ever need: https://wordpress.org/themes/easy-storefront/ For more information about Easy Storefront please go to https://www.ceylonthemes.com/product/wordpress-storefront-theme"
+msgstr "Easy Storefront - это гибкий и полностью настраиваемый шаблон со множеством возможностей. Эта тема может использоваться для создания и развития  сайтов для бизнеса, интернет магазинов на Woocommerce или Easy Digital, продающих сайтов, портфолио и т.п. Вас несомненно поразят гибкость и обилие настроек, таких как интеграция с Woocommerce, Слайдер Товаров, Сетка Товаров, настройка Шапки и Подвала и настройка шрифтов. Ищете многофункциональную тему для интернет магазина? Больше не ищите! Посмотрите демо и вам понадобится только одна тема : https://wordpress.org/themes/easy-storefront/. Для более подробной информации о Easy Storefront зайдите на https://www.ceylonthemes.com/product/wordpress-storefront-theme "
+
+#. Theme Name of the theme
+msgid "Easy Storefront"
+msgstr "Easy Storefront"
+
+#: functions.php:114
+msgid "Tutorial & Free Demo"
+msgstr "Инструкции и бесплатное демо"
+
+#: functions.php:116
+msgid "1) Customize -> Theme Option customize Slider, Navigation, Banner sections, Header Widgets. 2) Use a page builder and Drag and drop Theme:Product Categories widget. Use free demo content and start editing."
+msgstr "1) Настройте Опции Темы, настройте Слайдер, Навигацию, область Баннер, Виджеты Шапки. 2) Используйте конструктор страниц для перетаскивания Виджета \"Тема:Виджет Категории Товаров\". Используйте бесплатное демо и начинайте творить. "
+
+#: functions.php:112
+msgid "Rate Us"
+msgstr "Оцените нас"
+
+#: searchform.php:19
+msgctxt "submit button"
+msgid "Search"
+msgstr "Поиск"
+
+#: searchform.php:18
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Поиск и помощь"
+
+#: searchform.php:16
+msgctxt "label"
+msgid "Search for:"
+msgstr "Поиск :"
+
+#: footer.php:69
+msgid "Google-Plus"
+msgstr "Google-Plus"
+
+#: footer.php:22
+msgid "Footer"
+msgstr "Подвал "
+
+#: inc/slider-options.php:138
+msgid "Select Banner"
+msgstr "Выбрать Баннер "
+
+#: inc/slider-options.php:126
+msgid "Slider Height (Max)"
+msgstr "Высота Слайдера (макс) "
+
+#: inc/slider-options.php:107
+msgid "Select Product Category"
+msgstr "Выберите Категорию Товаров "
+
+#: inc/slider-options.php:94
+msgid "Select Products with featured image"
+msgstr "Выберите Товары с помощью картинки"
+
+#: inc/slider-options.php:89
+msgid "Select Posts with featured image"
+msgstr "Выберите Посты с помощью картинки"
+
+#: inc/slider-options.php:66
+msgid "Slider animation speed(ms)"
+msgstr "Скорость анимации Слайдера (мс) "
+
+#: inc/slider-options.php:54
+msgid "Fade"
+msgstr "Затемнение"
+
+#: inc/slider-options.php:53
+msgid "Slide"
+msgstr "Скольжение"
+
+#: inc/slider-options.php:49
+msgid "Slider Effects"
+msgstr "Эффекты скольжения "
+
+#: inc/slider-options.php:36
+msgid "Product Categories to show in Navigation"
+msgstr "Категории Товаров для показа в Навигаторе "
+
+#: inc/slider-options.php:19
+msgid "Show Home Product Slider and Navigation"
+msgstr "Показывать Слайдер и Навигацию Товаров на Главной странице "
+
+#: inc/slider-options.php:7
+msgid "Display a product slider and product categories in front page template. Slider, navigation widget and more options, Go Pro version."
+msgstr "Показывать Слайдер с Товарами и Категории Товаров на шаблоне главной страницы. Слайдер, виджет навигации и больше опций, переход на Про версию. "
+
+#: inc/slider-options.php:6
+msgid "Product Slider, Navigation & Banner"
+msgstr "Слайдер Товаров, Навигация и Баннер"
+
+#: inc/woocommerce-functions.php:41
+msgid "Max Items to Show:"
+msgstr "Максимальное кол-во для показа :"
+
+#: inc/woocommerce-functions.php:15
+msgid "THEME: Product Navigation"
+msgstr "ТЕМА: Навигатор по Товарам"
+
+#: inc/woocommerce-functions.php:13
+msgid "Display product navigation through categories."
+msgstr "Показывать навигатор товаров через категории. "
+
+#: inc/settings.php:59
+msgid "Contact us"
+msgstr "Обратная связь"
+
+#: inc/settings.php:34
+msgid "More details"
+msgstr "Подробнее"
+
+#: templates/post-carousal-section.php:28
+msgid "Product Categories"
+msgstr "Категории Товаров"
+
+#: header.php:90
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: footer.php:66 header.php:89
+msgid "Skype"
+msgstr "Skype"
+
+#: footer.php:63 header.php:88
+msgid "Twitter"
+msgstr "Twitter"
+
+#: footer.php:60 header.php:87
+msgid "Facebook"
+msgstr "Facebook"
+
+#: header.php:86
+msgid "My Account"
+msgstr "Мой аккаунт"
+
+#: header.php:26
+msgid "Skip to content"
+msgstr "Перейти к содержимому"
+
+#: functions.php:309
+msgid "Add widgets to appear in Header."
+msgstr "Добавить виджеты в Шапку. "
+
+#: functions.php:307
+msgid "Home Page Header Widgets"
+msgstr "Виджеты для Шапки Главной Страницы"
+
+#: functions.php:242
+msgid "6 Widgets"
+msgstr "6 Виджетов "
+
+#: functions.php:241
+msgid "4 Widgets"
+msgstr "4 Виджета"
+
+#: functions.php:240
+msgid "3 Widgets"
+msgstr "3 Виджета"
+
+#: functions.php:239
+msgid "2 Widgets"
+msgstr "2 Виджета "
+
+#: functions.php:238
+msgid "1 Widgets"
+msgstr "1 Виджет"
+
+#: functions.php:234
+msgid "Select Number of Widgets"
+msgstr "Выбрать Количество Виджетов "
+
+#: functions.php:220
+msgid "Home Header Widgets"
+msgstr "Виджеты Шапки Главной Страницы "
+
+#: functions.php:213
+msgid "Select Top banner (Page)"
+msgstr "Выбрать Верхний баннер (Страница) "
+
+#: functions.php:199
+msgid "Top Banner"
+msgstr "Верхний Баннер"
+
+#: functions.php:163
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:142
+msgid "See Premium Features"
+msgstr "Посмотреть Премиум Возможности"
+
+#: functions.php:115
+msgid "Dismiss"
+msgstr "Игнорировать"
+
+#. Author URI of the theme
+msgid "https://www.ceylonthemes.com/"
+msgstr "https://www.ceylonthemes.com/"
+
+#. Author of the theme
+msgid "ceylonthemes"
+msgstr "ceylonthemes"
+
+#. Theme URI of the theme
+msgid "https://www.ceylonthemes.com/product/wordpress-storefront-theme"
+msgstr "https://www.ceylonthemes.com/product/wordpress-storefront-theme"

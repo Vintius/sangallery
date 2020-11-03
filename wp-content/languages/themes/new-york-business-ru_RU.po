@@ -1,0 +1,1238 @@
+# Translation of Themes - New York Business in Russian
+# This file is distributed under the same license as the Themes - New York Business package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-05-18 13:11:36+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: ru\n"
+"Project-Id-Version: Themes - New York Business\n"
+
+#. Description of the theme
+msgid "New York Business is the perfect theme for your business with professionalism. It will enable you to create almost any type of website such a blog, portfolio, any scale business website and WooCommerce store front, Easy digital download site with a beautiful & unique design. The theme is developed using bootstrap framework and render nicely on any device. Work with the most popular page builders as Elementor, Beaver Builder, Brizy, Visual Composer, Divi, SiteOrigin, etc... The Features such as WooCommerce integration, WooCommerce product sliders and product grids, Header Contact, Social, Home Slider, Header & footer Customization, typography features provided in theme will amaze you. Looking for a Feature rich Business theme? Look no further! See the demo, only theme you will ever need: https://wordpress.org/themes/new-york-business/ For more information about New York Business please go to https://www.ceylonthemes.com/product/new-york-business-pro"
+msgstr "New York Business - прекрасная, профессиональная тема для вашего бизнеса. Она позволит вам создать любой сайт, такой как новостной блог, портфолио, любой вид коммерческого сайта, магазин на движке Woocommerce или Easy Digital Downloads с привлекательным и уникальным дизайном. Тема создавалась с помощью bootstrap framework и отлично отрисовывается на любых устройствах. Работает с большинством известных конструкторов страниц, таких как Elementor, Beaver Builder, Brizy, Visual Composer, Divi, Site Origin и т. п. Вас несомненно поразят такие возможности как интеграция с Woocommerce, слайдеры и сетки товаров, верхний колонтитул с контактами, ссылки на социальные сети, слайдер на главной странице, настройка шапки и подвала и настройка шрифтов. Ищете насыщенную возможностями тему для сайта? Ваш поиск окончен! Посмотрите демо, и единственная тема, которая Вам понадобится - это https://wordpress.org/themes/new-york-business/  Для более подробной информации о теме посетите https://www.ceylonthemes.com/product/new-york-business-pro "
+
+#. Theme Name of the theme
+msgid "New York Business"
+msgstr "New York Business"
+
+#: functions.php:377
+msgid "Install Page Builder Plugin and drag and drop, THEME:Product Category Grids | Slider Widgets to pages. See Appearance - Customize - Themes Options for customization."
+msgstr "Установите Конструктор страниц и встройте виджет THEME:Product Category Grids | Slider на страницу. Смотрите Внешний вид - Настройка - Опции Темы для настройки. "
+
+#: inc/customizer/slider.php:7
+msgid "Slider widget and 20+ Widgets, Go Pro version."
+msgstr "Виджет слайдера и более 20 других Виджетов в версии ПРО"
+
+#: inc/widget-product-categories.php:165
+msgid "Unlimited products, WooCommerce products by feature, on sales, featured products, category meta, Top sales (slider and grid widgets), Mailchimp Subscribe, Featured post slider, counter, stats, countdown timer, testimonial, news and 20+ premium widgets Go Pro version"
+msgstr "Преимущества Про версии: неограниченные товары, сортировка товаров Woocommerce по свойствам, по продажам, рекомендуемые товары, мета тэги, топ продаж (виджеты сетки и слайдера), подписка в сервисе Mailchimp, слайдер рекомендуемые посты, счётчик, статистика, таймер обратного отсчёта, отзывы, новости и более 20 профессиональных виджетов. "
+
+#: inc/template-functions.php:95 inc/template-functions.php:278
+msgid "Sale!"
+msgstr "Распродажа!"
+
+#: inc/widget-product-categories.php:160
+msgid "Slider Speed (ms):"
+msgstr "Скорость слайдера (мс):"
+
+#: inc/widget-product-categories.php:156
+msgid "Display Products as a Carousal"
+msgstr "Отобразить Товары как Карусель"
+
+#: inc/widget-product-categories.php:138
+msgid "Number of colums:"
+msgstr "Количество колонок:"
+
+#: inc/widget-product-categories.php:133
+msgid "Image Height (px):"
+msgstr "Высота изображения (px):"
+
+#: inc/widget-product-categories.php:129
+msgid "Process Sub Categories (Operator IN)"
+msgstr "Обрабатывать Субкатегории (Оператор IN) "
+
+#: inc/widget-product-categories.php:121
+msgid "Select Product Category:"
+msgstr "Выбрать категории товаров:"
+
+#: inc/widget-product-categories.php:106 inc/widget-product-categories.php:109
+msgid "Any"
+msgstr "Любой"
+
+#: inc/widget-product-categories.php:16
+msgid "THEME:Product Categories"
+msgstr "ТЕМА:Категории товаров"
+
+#: inc/widget-product-categories.php:14
+msgid "Display product categories as colums."
+msgstr "Отображать категории товаров как колонны."
+
+#: inc/widget-search.php:60
+msgid "Search Products..."
+msgstr "Искать товары..."
+
+#: inc/widget-search.php:59
+msgid "Search for"
+msgstr "Искать"
+
+#: inc/widget-search.php:40
+msgid "All Categories"
+msgstr "Все категории"
+
+#: inc/widget-search.php:22
+msgid "Display Product categories with a search box"
+msgstr "Показать Категории товаров в окне поиска"
+
+#: inc/widget-search.php:19
+msgid "Product Search Widget"
+msgstr "Виджет поиска товаров"
+
+#: footer.php:75
+msgid "Google-Plus"
+msgstr "Google+"
+
+#: footer.php:28
+msgid "Footer"
+msgstr "Нижняя часть"
+
+#: header.php:92
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: header.php:91 footer.php:72
+msgid "Skype"
+msgstr "Skype"
+
+#: header.php:90 footer.php:69
+msgid "Twitter"
+msgstr "Twitter"
+
+#: header.php:89 footer.php:66
+msgid "Facebook"
+msgstr "Facebook"
+
+#: header.php:86
+msgid "My Account"
+msgstr "Мой аккаунт"
+
+#: header.php:26
+msgid "Skip to content"
+msgstr "Перейти к содержимому"
+
+#: inc/customizer/footer.php:21
+msgid "Footer Bottom Text"
+msgstr "Текст внизу подвала"
+
+#: inc/customizer/footer.php:9
+msgid "Customize footer. Add widgets Go Customizer -> Widgets. Background image, background color, Footer bottom link and background color customization Go Pro version."
+msgstr "Настройте подвал. Чтобы добавить виджеты, откройте Customizer -> Виджеты. Чтобы изменять фоновое изображение, цвет фона, нижнюю ссылку и настройку фонового цвета перейдите на версию ПРО"
+
+#: inc/customizer/footer.php:8
+msgid "Customize Footer"
+msgstr "Настроить подвал"
+
+#: inc/customizer/header.php:90
+msgid "My Account Link"
+msgstr "Ссылка на Мой Аккаунт"
+
+#: inc/customizer/header.php:77
+msgid "Work Hours:"
+msgstr "Часы Работы:"
+
+#: inc/customizer/header.php:64
+msgid "Email:"
+msgstr "Электронная почта:"
+
+#: inc/customizer/header.php:51
+msgid "Address"
+msgstr "Адрес"
+
+#: inc/customizer/header.php:37
+msgid "Phone:"
+msgstr "Телефон:"
+
+#: inc/customizer/header.php:24
+msgid "Hide Mini Header"
+msgstr "Скрыть мини-заголовок"
+
+#: inc/customizer/header.php:8
+msgid "Add contact details to be displayed in top header and contact section and My Account Link"
+msgstr "Добавьте контактные данные, которые будут отображаться в верхнем заголовке и разделе контактов, а также ссылку на мой аккаунт"
+
+#: inc/customizer/header.php:7
+msgid "Header"
+msgstr "Заголовок"
+
+#: inc/customizer/contact.php:38
+msgid "Section Subtitle"
+msgstr "Подзаголовок раздела"
+
+#: inc/customizer/contact.php:25
+msgid "Section Title"
+msgstr "Заголовок раздела"
+
+#: inc/customizer/contact.php:15
+msgid "Contact Us"
+msgstr "Связаться с нами"
+
+#: inc/customizer/contact.php:9
+msgid "Add all your contact details. Create a page from contact page template. Add contact details, contact form shortcode to page content."
+msgstr "Добавьте все ваши контактные данные. Создайте страницу из шаблона страницы контакта. Добавьте контактные данные, шорткод контактной формы к содержимому страницы."
+
+#: inc/customizer/contact.php:8
+msgid "Contact"
+msgstr "Контакты"
+
+#: inc/customizer/social.php:79
+msgid "Pinterest Link"
+msgstr "Ссылка Pinterest"
+
+#: inc/customizer/social.php:67
+msgid "Skype Link"
+msgstr "Ссылка на Skype"
+
+#: inc/customizer/social.php:54
+msgid "Twitter Link"
+msgstr "Ссылка на Twitter"
+
+#: inc/customizer/social.php:42
+msgid "Facebook Link"
+msgstr "Ссылка в Facebook "
+
+#: inc/customizer/social.php:21
+msgid "Open Social Links in New Tab"
+msgstr "Открыть Социальные сети в Новом окне"
+
+#: inc/customizer/social.php:9
+msgid "Display social icons and links in site header and footer. More social links Go Pro version."
+msgstr "Отображение иконок и ссылок соц. сетей вверху и внизу сайта. Больше ссылок на соц. сети доступно в ПРО версии."
+
+#: inc/customizer/social.php:8
+msgid "Social"
+msgstr "Соцсети"
+
+#: inc/customizer/fonts.php:39
+msgid "Body Font Family"
+msgstr "Семейство шрифтов для тела страницы"
+
+#: inc/customizer/fonts.php:23
+msgid "Headings Font Family"
+msgstr "Семейство шрифтов для заголовков"
+
+#: inc/customizer/fonts.php:9
+msgid "500+ google fonts - Go Pro version."
+msgstr "500+ шрифтов Google в Про версии "
+
+#: inc/customizer/fonts.php:8
+msgid "Fonts"
+msgstr "Шрифты"
+
+#: inc/customizer/slider.php:125
+msgid "Slider Height (Max)"
+msgstr "Высота слайдера (Макс)"
+
+#: inc/customizer/slider.php:106
+msgid "Select Category"
+msgstr "Выберите категорию"
+
+#: inc/customizer/slider.php:91
+msgid "Select post with featured image"
+msgstr "Выберите пост с изображением"
+
+#: inc/customizer/slider.php:86
+msgid "Select Posts with featured image"
+msgstr "Выберите посты с изображением"
+
+#: inc/customizer/slider.php:79
+msgid "Featured Button text"
+msgstr "текст кнопки Рекомендации"
+
+#: inc/customizer/slider.php:48
+msgid "Slider animation speed(ms)"
+msgstr "Скорость анимации слайдера (мс)"
+
+#: inc/customizer/slider.php:36
+msgid "Fade"
+msgstr "Затемнение"
+
+#: inc/customizer/slider.php:35
+msgid "Slide"
+msgstr "Скольжение"
+
+#: inc/customizer/slider.php:31
+msgid "Slider Effects"
+msgstr "Эффекты слайдера"
+
+#: inc/customizer/slider.php:18
+msgid "Enable home slider"
+msgstr "Включить слайдер на главной странице "
+
+#: inc/customizer/slider.php:6
+msgid "Home Featured Slider"
+msgstr "Слайдер с рекомендациями на домашней странице"
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/class-tgm-plugin-activation.php:3522
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Установка плагина %1$s (%2$d/%3$d)"
+
+#: inc/class-tgm-plugin-activation.php:3520
+msgid "All installations have been completed."
+msgstr "Все установки завершены."
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:3519
+msgid "%1$s installed successfully."
+msgstr "%1$s был успешно установлен."
+
+#: inc/class-tgm-plugin-activation.php:3517
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Начался процесс установки, он может занять некоторое время, особенно на медленных серверах, будьте терпеливы."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/class-tgm-plugin-activation.php:3514
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Установка и активация плагина %1$s (%2$d/%3$d)"
+
+#: inc/class-tgm-plugin-activation.php:3512
+msgid "All installations and activations have been completed."
+msgstr "Все процедуры установки и активации завершены."
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:3511
+#: inc/class-tgm-plugin-activation.php:3519
+msgid "Hide Details"
+msgstr "Скрыть подробности"
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:3511
+#: inc/class-tgm-plugin-activation.php:3519
+msgid "Show Details"
+msgstr "Показать подробности"
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:3511
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s был успешно установлен и активирован."
+
+#: inc/class-tgm-plugin-activation.php:3509
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Началась установка и активация. Этот процесс может занять некоторое время, особенно на медленных серверах, будьте терпеливы."
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:3505
+msgid "The installation of %1$s failed."
+msgstr "Установка %1$s не удалась."
+
+#. translators: 1: plugin name, 2: error message.
+#: inc/class-tgm-plugin-activation.php:3503
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Возникла ошибка при установке %1$s: <strong>%2$s</strong>."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/class-tgm-plugin-activation.php:3500
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Обновление плагина %1$s (%2$d/%3$d)"
+
+#: inc/class-tgm-plugin-activation.php:3160
+msgid "Plugin activation failed."
+msgstr "Активация плагина не удалась."
+
+#: inc/class-tgm-plugin-activation.php:2936
+msgid "No plugins are available to be activated at this time."
+msgstr "Сейчас нет доступных плагинов для активации."
+
+#: inc/class-tgm-plugin-activation.php:2910
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "Не выбрано плагинов для активации. Действий не требуется."
+
+#: inc/class-tgm-plugin-activation.php:2804
+msgid "No plugins are available to be updated at this time."
+msgstr "Сейчас нет доступных плагинов для обновления."
+
+#: inc/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be installed at this time."
+msgstr "Сейчас нет доступных плагинов для установки."
+
+#: inc/class-tgm-plugin-activation.php:2761
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "Не выбрано плагинов для обновления. Действий не требуется."
+
+#: inc/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "Не выбрано плагинов для установки. Действий не требуется."
+
+#: inc/class-tgm-plugin-activation.php:2728
+msgid "Activate"
+msgstr "Активировать"
+
+#: inc/class-tgm-plugin-activation.php:2725
+msgid "Update"
+msgstr "Обновить"
+
+#: inc/class-tgm-plugin-activation.php:2719
+msgid "Install"
+msgstr "Установить"
+
+#: inc/class-tgm-plugin-activation.php:2686
+msgid "Upgrade message from the plugin author:"
+msgstr "Сообщение об обновлении от автора плагина:"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/class-tgm-plugin-activation.php:2616
+msgid "Activate %2$s"
+msgstr "Активация %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/class-tgm-plugin-activation.php:2610
+msgid "Update %2$s"
+msgstr "Обновление %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/class-tgm-plugin-activation.php:2605
+msgid "Install %2$s"
+msgstr "Установка %2$s"
+
+#: inc/class-tgm-plugin-activation.php:2556
+msgid "Status"
+msgstr "Состояние"
+
+#: inc/class-tgm-plugin-activation.php:2555
+msgid "Version"
+msgstr "Версия"
+
+#: inc/class-tgm-plugin-activation.php:2551
+msgid "Type"
+msgstr "Тип"
+
+#: inc/class-tgm-plugin-activation.php:2550
+msgid "Source"
+msgstr "Источник"
+
+#: inc/class-tgm-plugin-activation.php:2549
+msgid "Plugin"
+msgstr "Плагин"
+
+#: inc/class-tgm-plugin-activation.php:2535
+msgid "No plugins to install, update or activate."
+msgstr "Нет плагинов для установки, обновления или активации."
+
+#: inc/class-tgm-plugin-activation.php:2512
+msgid "Available version:"
+msgstr "Доступная версия:"
+
+#: inc/class-tgm-plugin-activation.php:2500
+msgid "Minimum required version:"
+msgstr "Минимально требуемая версия:"
+
+#: inc/class-tgm-plugin-activation.php:2492
+msgid "Installed version:"
+msgstr "Установленная версия:"
+
+#: inc/class-tgm-plugin-activation.php:2484
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "неизвестна"
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2402
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] "Для активации: <span class=\"count\">(%s)</span>"
+msgstr[1] "Для активации: <span class=\"count\">(%s)</span>"
+msgstr[2] "Для активации: <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2398
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] "Доступно обновление: <span class=\"count\">(%s)</span>"
+msgstr[1] "Доступно обновление: <span class=\"count\">(%s)</span>"
+msgstr[2] "Доступно обновление: <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2394
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] "Для установки: <span class=\"count\">(%s)</span>"
+msgstr[1] "Для установки: <span class=\"count\">(%s)</span>"
+msgstr[2] "Для установки: <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2390
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "Все: <span class=\"count\">(%s)</span>"
+msgstr[1] "Все: <span class=\"count\">(%s)</span>"
+msgstr[2] "Все: <span class=\"count\">(%s)</span>"
+
+#. translators: 1: install status, 2: update status
+#: inc/class-tgm-plugin-activation.php:2344
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#: inc/class-tgm-plugin-activation.php:2335
+msgid "Update recommended"
+msgstr "Рекомендуется обновление"
+
+#: inc/class-tgm-plugin-activation.php:2332
+msgid "Requires Update"
+msgstr "Требуется обновление"
+
+#: inc/class-tgm-plugin-activation.php:2329
+msgid "Required Update not Available"
+msgstr "Требуемое обновление недоступно"
+
+#: inc/class-tgm-plugin-activation.php:2323
+msgid "Active"
+msgstr "Активирован"
+
+#: inc/class-tgm-plugin-activation.php:2321
+msgid "Installed But Not Activated"
+msgstr "Установлен, но не активирован"
+
+#: inc/class-tgm-plugin-activation.php:2317
+msgid "Not Installed"
+msgstr "Не установленный"
+
+#: inc/class-tgm-plugin-activation.php:2300
+msgid "Pre-Packaged"
+msgstr "Предварительно упакованный"
+
+#: inc/class-tgm-plugin-activation.php:2297
+msgid "External Source"
+msgstr "Внешний источник"
+
+#: inc/class-tgm-plugin-activation.php:2294
+msgid "WordPress Repository"
+msgstr "Каталог WordPress"
+
+#: inc/class-tgm-plugin-activation.php:2278
+msgid "Recommended"
+msgstr "Рекомендуется"
+
+#: inc/class-tgm-plugin-activation.php:2275
+msgid "Required"
+msgstr "Требуется"
+
+#. translators: %s: version number
+#: inc/class-tgm-plugin-activation.php:1984
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: inc/class-tgm-plugin-activation.php:1121
+#: inc/class-tgm-plugin-activation.php:2950
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "и"
+
+#: inc/class-tgm-plugin-activation.php:937
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr "Внешний пакет плагина содержит более одного файла вне отдельной папки."
+
+#: inc/class-tgm-plugin-activation.php:934
+#: inc/class-tgm-plugin-activation.php:937
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr "Пожалуйста, обратитесь к поставщику плагина с просьбой создать пакет своего плагина в соответствии с руководством WordPress."
+
+#: inc/class-tgm-plugin-activation.php:934
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr "Внешний пакет плагина не содержит папку с требуемым ярлыком и переименование не сработало."
+
+#: inc/class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr "Требуется обновление"
+
+#: inc/class-tgm-plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "Для совместимости с темой требуется обновление этого плагина."
+
+#: inc/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr "Пожалуйста, обратитесь к администратору этого сайта за помощью."
+
+#: inc/class-tgm-plugin-activation.php:396
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr "Имеются один или более требуемых или рекомендуемых плагинов для установки, обновления или активации."
+
+#: functions.php:376 inc/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr "Скрыть эту заметку"
+
+#. translators: 1: dashboard link.
+#: inc/class-tgm-plugin-activation.php:394
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Все плагины были успешно установлены и активированы. %1$s"
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:392
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr "Плагин не активирован. Тема требует более новую версию %s. Пожалуйста, обновите плагин."
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:390
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "Действие не требовалось. Плагин %1$s уже активен."
+
+#: inc/class-tgm-plugin-activation.php:388
+#: inc/class-tgm-plugin-activation.php:2954
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] "Этот плагин активирован:"
+msgstr[1] "Эти плагины активированы:"
+msgstr[2] "Эти плагины активированы:"
+
+#: inc/class-tgm-plugin-activation.php:387
+#: inc/class-tgm-plugin-activation.php:3161
+msgid "Plugin activated successfully."
+msgstr "Плагин активирован."
+
+#: inc/class-tgm-plugin-activation.php:386
+#: inc/class-tgm-plugin-activation.php:827
+#: inc/class-tgm-plugin-activation.php:2535
+#: inc/class-tgm-plugin-activation.php:3582
+msgid "Return to the Dashboard"
+msgstr "Вернуться в консоль"
+
+#: inc/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr "Вернуться к установке требуемых плагинов"
+
+#: inc/class-tgm-plugin-activation.php:380
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Начало активации плагина"
+msgstr[1] "Начало активации плагинов"
+msgstr[2] "Начало активации плагинов"
+
+#: inc/class-tgm-plugin-activation.php:375
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "Начало обновления плагина"
+msgstr[1] "Начало обновления плагинов"
+msgstr[2] "Начало обновления плагинов"
+
+#: inc/class-tgm-plugin-activation.php:370
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Начало установки плагина"
+msgstr[1] "Начало установки плагинов"
+msgstr[2] "Начало установки плагинов"
+
+#. translators: 1: plugin name(s).
+#: inc/class-tgm-plugin-activation.php:364
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "Этот рекомендуемый плагин сейчас деактивирован: %1$s."
+msgstr[1] "Эти рекомендуемые плагины сейчас деактивированы: %1$s."
+msgstr[2] "Эти рекомендуемые плагины сейчас деактивированы: %1$s."
+
+#. translators: 1: plugin name(s).
+#: inc/class-tgm-plugin-activation.php:358
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "Этот требуемый плагин сейчас деактивирован: %1$s."
+msgstr[1] "Эти требуемые плагины сейчас деактивированы: %1$s."
+msgstr[2] "Эти требуемые плагины сейчас деактивированы: %1$s."
+
+#. translators: 1: plugin name(s).
+#: inc/class-tgm-plugin-activation.php:352
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "Доступно обновление плагина: %1$s."
+msgstr[1] "Доступны обновления плагинов: %1$s."
+msgstr[2] "Доступны обновления плагинов: %1$s."
+
+#. translators: 1: plugin name(s).
+#: inc/class-tgm-plugin-activation.php:346
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] "Этот плагин для максимальной совместимости с темой должен быть обновлен на последюю версию: %1$s."
+msgstr[1] "Эти плагины для максимальной совместимости с темой должны быть обновлены на последюю версию: %1$s."
+msgstr[2] "Эти плагины для максимальной совместимости с темой должны быть обновлены на последюю версию: %1$s."
+
+#. translators: 1: plugin name(s).
+#: inc/class-tgm-plugin-activation.php:340
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Эта тема рекомендует следующий плагин: %1$s."
+msgstr[1] "Эта тема рекомендует следующие плагины: %1$s."
+msgstr[2] "Эта тема рекомендует следующие плагины: %1$s."
+
+#. translators: 1: plugin name(s).
+#: inc/class-tgm-plugin-activation.php:334
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Эта тема требует следующий плагин: %1$s."
+msgstr[1] "Эта тема требует следующие плагины: %1$s."
+msgstr[2] "Эта тема требует следующие плагины: %1$s."
+
+#: inc/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr "Что-то пошло не так с API плагинов."
+
+#. translators: %s: plugin name.
+#: inc/class-tgm-plugin-activation.php:332
+msgid "Updating Plugin: %s"
+msgstr "Обновление плагина: %s"
+
+#. translators: %s: plugin name.
+#: inc/class-tgm-plugin-activation.php:330
+msgid "Installing Plugin: %s"
+msgstr "Установка плагина: %s"
+
+#: inc/class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr "Установить плагины"
+
+#: inc/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr "Установить требуемые плагины"
+
+#: inc/template-tags.php:394
+msgid "View your whishlist"
+msgstr "Просмотр списка желаний"
+
+#: inc/template-tags.php:355 inc/template-tags.php:373
+msgid "Cart View"
+msgstr "Просмотр Корзины"
+
+#: inc/template-tags.php:336 inc/template-tags.php:338
+msgid "Free!"
+msgstr "Бесплатно!"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:185
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Изменить<span class=\"screen-reader-text\"> «%s»</span>"
+
+#: inc/template-tags.php:155
+msgid "Tags"
+msgstr "Теги"
+
+#: inc/template-tags.php:150
+msgid "Categories"
+msgstr "Рубрики"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:133 inc/template-tags.php:135
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:114
+msgid "Posted on"
+msgstr "Опубликовано"
+
+#. translators: %s: post date
+#: inc/template-tags.php:113
+msgid "<span class=\"screen-reader-text\">%1$s</span> %2$s"
+msgstr "<span class=\"screen-reader-text\">%1$s</span> %2$s"
+
+#: inc/template-tags.php:76
+msgctxt "post author"
+msgid "By %s"
+msgstr "От %s"
+
+#: inc/template-tags.php:57
+msgid "Tile Vertically"
+msgstr "Замостить по вертикали"
+
+#: inc/template-tags.php:56
+msgid "Tile Horizontally"
+msgstr "Замостить по горизонтали"
+
+#: inc/template-tags.php:55
+msgid "Tile"
+msgstr "Замостить"
+
+#: inc/template-tags.php:54
+msgid "No Repeat"
+msgstr "Не повторять"
+
+#: inc/template-tags.php:30
+msgid "-- Disable --"
+msgstr "-- Выключен --"
+
+#: inc/template-tags.php:29
+msgid "Testimonial"
+msgstr "Отзыв"
+
+#: inc/template-tags.php:28
+msgid "Team"
+msgstr "Команда"
+
+#: inc/template-tags.php:27
+msgid "News~Events"
+msgstr "Новости~События"
+
+#: inc/template-tags.php:26
+msgid "Service"
+msgstr "Сервис"
+
+#: inc/template-tags.php:25
+msgid "Top Rated Products"
+msgstr "Товары с высшим рейтингом"
+
+#: inc/template-tags.php:24
+msgid "Best Selling Products"
+msgstr "Самые продаваемые товары"
+
+#: inc/template-tags.php:23
+msgid "Home Shop"
+msgstr "Домашняя страница магазина "
+
+#: inc/template-tags.php:22
+msgid "Onsale Products"
+msgstr "Товары в продаже"
+
+#: inc/template-tags.php:21
+msgid "Featured Products"
+msgstr "Рекомендуемый товар"
+
+#: inc/template-tags.php:20
+msgid "Banner"
+msgstr "Баннер"
+
+#: inc/template-tags.php:19
+msgid "Home Slider"
+msgstr "Домашний Слайдер"
+
+#: inc/icon-functions.php:25
+msgid "Please define an fontawesome icon filename."
+msgstr "Пожалуйста задайте имя файла значка."
+
+#: inc/icon-functions.php:20
+msgid "Please define default parameters in the form of an array."
+msgstr "Пожалуйста определите параметры по умолчанию для массива."
+
+#: inc/customizer.php:494
+msgid " Go Premium Version or Donate "
+msgstr "Перейдите на Премиум версию или сделайте Пожертвование"
+
+#: inc/customizer.php:484
+msgid "*  Drag and Drop page design and Page builder template"
+msgstr "* Перетаскивание дизайна страницы и шаблонов конструктора "
+
+#: inc/customizer.php:480
+msgid "*  Site content, Header and footer Width Adjustment"
+msgstr "* Настройка ширины Шапки, подвала и содержимого страницы"
+
+#: inc/customizer.php:476
+msgid "*  Sticky navigation"
+msgstr "* \"Липкое\" меню навигации"
+
+#: inc/customizer.php:472
+msgid "*  One page home template"
+msgstr "* Шаблон одностраничного сайта"
+
+#: inc/customizer.php:468
+msgid "*  More accessibility features"
+msgstr "* Больше возможностей доступа "
+
+#: inc/customizer.php:463
+msgid "*  Contact Template"
+msgstr "* Шаблон \"контакты\" "
+
+#: inc/customizer.php:458
+msgid "*  All templates customizable"
+msgstr "* Настройка всех шаблонов"
+
+#: inc/customizer.php:453
+msgid "*  Translation Ready"
+msgstr "* Поддержка переводов"
+
+#: inc/customizer.php:449
+msgid "*  500 + Google Fonts"
+msgstr "*  500 + шрифтов из Google Fonts"
+
+#: inc/customizer.php:445
+msgid "*  More footer customizations"
+msgstr "* Больше настроек подвала "
+
+#: inc/customizer.php:441
+msgid "*  Unlimited Color Schemes"
+msgstr "* Неограниченные цветовые схемы "
+
+#: inc/customizer.php:437
+msgid "*  Custom Page selection in featured areas on all templates, any page design with default editor, Site orign, Elementor, divi ect: can be added to featured sections."
+msgstr "* Настраиваемый выбор страниц во всех зонах шаблонов, любой дизайн страницы в редакторе по умолчанию, в Site Origin, Elementor, Divi и т.п. можно добавить в любые зоны. "
+
+#: inc/customizer.php:433
+msgid "*  Unlimited Colour selections"
+msgstr "* Неограниченный выбор цветов"
+
+#: inc/customizer.php:429
+msgid "*  Unlimited Team members"
+msgstr "* Неограниченные группы пользователей"
+
+#: inc/customizer.php:425
+msgid "*  Unlimited Testimonials/Sliders"
+msgstr "* Неограниченные слайдеры/отзывы"
+
+#: inc/customizer.php:421
+msgid "*  Unlimited News/Events"
+msgstr "* Неограниченные новости/события "
+
+#: inc/customizer.php:417
+msgid "*  Unlimited services"
+msgstr "* Неограниченный сервис "
+
+#: inc/customizer.php:412
+msgid "* 20+ Widgets (service, team, slider, contact, MailChimp subscribe, 5+ WooCommerce product sliders &grids, counter(animated), progressbar(animated), accordion(animated) etc: )"
+msgstr "* Более 20 виджетов (сервис, команда, слайдер, контакты, подписка MailChimp, более 5 Woocommerce слайдеров и сеток, счётчик (анимированный), шкала прогресса (анимированная) и т.д.:) "
+
+#: inc/customizer.php:407
+msgid "* Product Widgets including featured, by category, top sales, product by review, latest products, product slider, featured slider, banner and contact, service, team etc:"
+msgstr "* Виджеты для товаров, включая рекомендации, лучшие продажи, товары по отзывам, последние поступления, слайдер продуктов, слайдер рекомендованных товаров, баннер и контакты, сервис, команда и т.п."
+
+#: inc/customizer.php:403
+msgid "* Woocommerce, YITH wishlist integration.)"
+msgstr "* Интеграция с Woocommerce и  YITH wishlist "
+
+#: inc/customizer.php:399
+msgid "* 12 months customer support, and free updates for each theme purchase for single domain"
+msgstr "* Служба поддержки в течении 12 месяцев и бесплатные обновления для каждой купленной темы в одном домене "
+
+#: inc/customizer.php:395
+msgid "New York Business Pro Version"
+msgstr "Версия New York Business Pro "
+
+#: inc/customizer.php:385
+msgid "Upgrade to Premium Version"
+msgstr "Обновить до полной версии"
+
+#: inc/customizer.php:223
+msgid "None"
+msgstr "Нет"
+
+#: inc/customizer.php:92
+msgid "Theme specific customization options"
+msgstr "Опции настройки для Темы"
+
+#: inc/customizer.php:91
+msgid "Theme Options"
+msgstr "Опции Темы"
+
+#: inc/customizer.php:81
+msgid "Left Sidebar"
+msgstr "Левая боковая панель"
+
+#: inc/customizer.php:80
+msgid "Right Sidebar"
+msgstr "Правая боковая панель"
+
+#: inc/customizer.php:76
+msgid "Sidebar position"
+msgstr "Положение боковой панели"
+
+#: inc/customizer.php:63
+msgid "Display single post in one column (No Sidebar)"
+msgstr "Отображать один пост в одной колонке (без боковой панели) "
+
+#: inc/customizer.php:62
+msgid "One Column Single Post Layout"
+msgstr "Площадка для поста в одну колонку "
+
+#: inc/customizer.php:49
+msgid "Enable or disable Box layout mode. Default is fluid layout."
+msgstr "Включение или отключение \"коробочного\" режима отображения. По умолчанию выбрано непрерывное отображение. "
+
+#: inc/customizer.php:48
+msgid "Enable box layout mode"
+msgstr "Включить \"коробочный\" макет. "
+
+#: inc/customizer.php:37
+msgid "Change site layout. Change Single Post display layout, Default is two columns (with sidebar). In pages - use full width template to hide sidebar"
+msgstr "Изменение макета сайта. Изменение макета поста в одну колонку. По умолчанию используется две колонки (с боковой панелью). Используйте шаблон \"на всю ширину\" чтобы спрятать боковую панель на странице. "
+
+#: inc/customizer.php:36
+msgid "Layout"
+msgstr "Макет"
+
+#: inc/customizer.php:23
+msgid "New York Business Premium"
+msgstr "New York Business Premium"
+
+#: inc/customizer.php:13
+msgid "Go Premium Version"
+msgstr "Go Pro версия"
+
+#: inc/settings.php:45
+msgid "Contact us"
+msgstr "Обратная связь"
+
+#: inc/settings.php:29 inc/customizer/slider.php:73
+msgid "More details"
+msgstr "Больше деталей"
+
+#: inc/widget-posts.php:64
+msgid "Hide Widget Title"
+msgstr "Скрыть Заголовок Виджета"
+
+#: inc/widget-posts.php:59
+msgid "Number of posts to Show:"
+msgstr "Количество записей:"
+
+#: inc/widget-search.php:77 inc/widget-posts.php:55
+msgid "Title:"
+msgstr "Название:"
+
+#: inc/widget-posts.php:29 inc/widget-posts.php:48
+msgid "Recent Posts"
+msgstr "Последние записи"
+
+#: inc/widget-posts.php:22
+msgid "Display latest_posts with featured image and Meta"
+msgstr "Показывать latest_posts с поставляемым изображением и метаданными"
+
+#: inc/widget-posts.php:19 inc/widget-posts.php:72
+msgid "Advanced Recent Posts"
+msgstr "Улучшенный новый пост"
+
+#. Template Name of the theme
+msgid "Left-Sidebar"
+msgstr "Левая боковая панель"
+
+#: comments.php:74
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: comments.php:54
+msgid "Reply"
+msgstr "Ответить"
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:33
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s ответ к «%2$s»"
+msgstr[1] "%1$s ответа к «%2$s»"
+msgstr[2] "%1$s ответов к «%2$s»"
+
+#. translators: %s: post title
+#: comments.php:29
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr "Один ответ к «%s»"
+
+#: 404.php:30
+msgid "Search again?"
+msgstr "Искать заново?"
+
+#: 404.php:29
+msgid "404"
+msgstr "404"
+
+#: 404.php:23
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ой! Страница не найдена."
+
+#: index.php:63
+msgid "Next page"
+msgstr "Следующая страница"
+
+#: index.php:62
+msgid "Previous page"
+msgstr "Предыдущая страница"
+
+#: search.php:59
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Извините, по вашему запросу ничего не найдено. Попробуйте другие ключевые слова."
+
+#. Template Name of the theme
+msgid "Full-Width"
+msgstr "На всю ширину"
+
+#: functions.php:568
+msgid "Collapse child menu"
+msgstr "Свернуть подменю"
+
+#: functions.php:567
+msgid "Expand child menu"
+msgstr "Раскрыть подменю"
+
+#: functions.php:478
+msgid "Add widgets here to appear in Home Blog section."
+msgstr "Добавьте виджеты здесь, чтобы они появились в разделе \"Личный блог\"."
+
+#: functions.php:476
+msgid "Home Blog"
+msgstr "Личный Блог"
+
+#: functions.php:462
+msgid "Footer 4"
+msgstr "Подвал 4"
+
+#: functions.php:450
+msgid "Footer 3"
+msgstr "Подвал 3"
+
+#: functions.php:438
+msgid "Footer 2"
+msgstr "Подвал 2"
+
+#: functions.php:428 functions.php:440 functions.php:452 functions.php:464
+msgid "Add widgets here to appear in your footer."
+msgstr "Добавьте виджеты сюда, для помещения их в подвал сайта."
+
+#: functions.php:426
+msgid "Footer 1"
+msgstr "Подвал 1"
+
+#: functions.php:416
+msgid "Add widgets here to appear in your woocommerce pages."
+msgstr "Добавьте сюда виджеты для их помещения на страницы woocommerce"
+
+#: functions.php:414 sidebar-woocommerce.php:16
+msgid "Woocommerce Sidebar"
+msgstr "Боковая панель Woocommerce"
+
+#: functions.php:403
+msgid "Add widgets here to appear in your sidebar on blog posts, archives and pages."
+msgstr "Добавить виджеты, которые появятся на боковой панели в записях блога и страницах архива."
+
+#: functions.php:401
+msgid "Main Sidebar"
+msgstr "Главная боковая колонка"
+
+#: functions.php:257
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:124 functions.php:214
+msgid "Footer Menu"
+msgstr "Меню подвала"
+
+#: functions.php:59
+msgid "Can't activate the theme. New York Business Theme requires Minimum PHP version 5.6"
+msgstr "Невозможно применить тему. Тема Нью Йорк Бизнес требует PHP версии 5.6 или выше"
+
+#: sidebar.php:17
+msgid "Blog Sidebar"
+msgstr "Боковая панель блога"
+
+#. Template Name of the theme
+msgid "Contact-Page"
+msgstr "Страница контактов"
+
+#: searchform.php:19
+msgctxt "submit button"
+msgid "Search"
+msgstr "Поиск"
+
+#: searchform.php:18
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Поиск &hellip;"
+
+#: searchform.php:16
+msgctxt "label"
+msgid "Search for:"
+msgstr "Искать:"
+
+#: woocommerce/add-to-cart.php:32
+msgid "Wishlist"
+msgstr "Список желаний"
+
+#: template-parts/header/subheader.php:19
+msgid "Page not Found"
+msgstr "Страница не найдена"
+
+#: template-parts/header/subheader.php:17
+msgid "Search Results"
+msgstr "Результаты поиска"
+
+#: template-parts/post/content-excerpt.php:32
+msgid "by "
+msgstr "от"
+
+#. translators: %s: Name of current post
+#: functions.php:507 template-parts/post/content.php:60
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Читать далее<span class=\"screen-reader-text\"> «%s»</span>"
+
+#: template-parts/post/content-none.php:30
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Запрошенную информацию найти не удалось. Возможно, будет полезен поиск по сайту."
+
+#. translators: %s: post link
+#: template-parts/post/content-none.php:25
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Готовы опубликовать свою первую запись? <a href=\"%1$s\">Начните здесь</a>."
+
+#: template-parts/post/content-none.php:16
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: template-parts/navigation/navigation-top.php:18
+msgid "Menu"
+msgstr "Меню"
+
+#: functions.php:117 functions.php:206
+#: template-parts/navigation/navigation-top.php:13
+msgid "Top Menu"
+msgstr "Верхнее меню"
+
+#: full-width.php:30 template-parts/page/content-page.php:22
+#: template-parts/post/content.php:67 left-sidebar.php:38
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: template-parts/slider-section.php:39
+msgid "Create a page from home-page template and start customizing"
+msgstr "Создайте страницу из шаблона домашней страницы и начните настройку"
+
+#: template-parts/slider-section.php:37
+msgid "No Image"
+msgstr "Нет изображения"
+
+#. Template Name of the theme
+msgid "Blog-Page"
+msgstr "Страница блога"
+
+#: search.php:52 archive.php:64 index.php:64
+msgid "Page"
+msgstr "Страница"
+
+#: blog-page.php:58 single.php:47 search.php:51 comments.php:64 archive.php:63
+#: index.php:63
+msgid "Next"
+msgstr "Далее"
+
+#: blog-page.php:58 single.php:47 search.php:51 archive.php:63 index.php:63
+msgid "Next Post"
+msgstr "Следующая запись"
+
+#: blog-page.php:57 blog-page.php:58 search.php:50 search.php:51 archive.php:62
+#: archive.php:63
+msgid "View"
+msgstr "Просмотр"
+
+#: blog-page.php:57 single.php:46 search.php:50 comments.php:63 archive.php:62
+#: index.php:62
+msgid "Previous"
+msgstr "Предыдущий"
+
+#: blog-page.php:57 single.php:46 search.php:50 archive.php:62 index.php:62
+msgid "Previous Post"
+msgstr "Предыдущая запись"
+
+#. Author URI of the theme
+msgid "https://www.ceylonthemes.com"
+msgstr "https://www.ceylonthemes.com"
+
+#. Author of the theme
+msgid "Ceylon Themes"
+msgstr "Ceylon Themes"
+
+#. Theme URI of the theme
+msgid "https://www.ceylonthemes.com/product/new-york-business-pro/"
+msgstr "https://www.ceylonthemes.com/product/new-york-business-pro/"

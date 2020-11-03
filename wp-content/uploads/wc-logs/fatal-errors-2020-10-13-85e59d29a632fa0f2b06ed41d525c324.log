@@ -1,0 +1,69 @@
+2020-10-13T08:38:29+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on null in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:458
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): wc_myprice_product_field('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-product-data-general.php(71): do_action('woocommerce_pro...')
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\meta-boxes\class-wc-meta-box-product-data.php(42): include('F:\\WebPrjcts\\wo...')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-product-data-panel.php(51): WC_Meta_Box_Product_Data::output_tabs()
+#6 F:\WebPrjcts\wordpress\WP-test\www\wp-content\ в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 458
+
+2020-10-13T08:39:55+00:00 CRITICAL Object of class WP_Post could not be converted to string в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 458
+
+2020-10-13T10:45:38+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:452
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): wc_myprice_product_field('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-product-data-general.php(71): do_action('woocommerce_pro...')
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\meta-boxes\class-wc-meta-box-product-data.php(42): include('F:\\WebPrjcts\\wo...')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-product-data-panel.php(51): WC_Meta_Box_Product_Data::output_tabs()
+#6 F:\WebPrjcts\wordpress\WP-test\www\wp-content\ в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 452
+
+2020-10-13T10:46:05+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:452
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): wc_myprice_product_field('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-product-data-general.php(71): do_action('woocommerce_pro...')
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\meta-boxes\class-wc-meta-box-product-data.php(42): include('F:\\WebPrjcts\\wo...')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-product-data-panel.php(51): WC_Meta_Box_Product_Data::output_tabs()
+#6 F:\WebPrjcts\wordpress\WP-test\www\wp-content\ в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 452
+
+2020-10-13T10:46:20+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:452
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(287): wc_myprice_product_field('')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-product-data-general.php(71): do_action('woocommerce_pro...')
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\meta-boxes\class-wc-meta-box-product-data.php(42): include('F:\\WebPrjcts\\wo...')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-product-data-panel.php(51): WC_Meta_Box_Product_Data::output_tabs()
+#6 F:\WebPrjcts\wordpress\WP-test\www\wp-content\ в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 452
+
+2020-10-13T15:09:34+00:00 CRITICAL Uncaught Error: Call to undefined function split() in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:449
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('11820')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(249): WP_Hook->apply_filters('11820', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(142): apply_filters_ref_array('woocommerce_get...', Array)
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\class-wc-deprecated-filter-hooks.php(129): WC_Deprecated_Filter_Hooks->trigger_hook('woocommerce_get...', Array)
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-deprecated-hooks.php(75): WC_Deprecated_Filter_Hooks->handle_deprecated_hook('woocommerce_pro...', 'woocommerce_get...', Array, '11820')
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 449
+
+2020-10-13T16:37:07+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:447
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('11820')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(206): WP_Hook->apply_filters('11820', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-data.php(751): apply_filters('woocommerce_pro...', '11820', Object(WC_Product_Simple))
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-product.php(277): WC_Data->get_prop('regular_price', 'view')
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\list-tables\class-wc-admin-list-table-products.php(183): WC_Product->get_regular_price()
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\list-tables\abstract-class-wc-admin-list-t в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 447
+
+2020-10-13T16:37:10+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php:447
+Stack trace:
+#0 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class-wp-hook.php(289): wc_myprice_show('11820')
+#1 F:\WebPrjcts\wordpress\WP-test\www\wp-includes\plugin.php(206): WP_Hook->apply_filters('11820', Array)
+#2 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-data.php(751): apply_filters('woocommerce_pro...', '11820', Object(WC_Product_Simple))
+#3 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-product.php(277): WC_Data->get_prop('regular_price', 'view')
+#4 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\list-tables\class-wc-admin-list-table-products.php(183): WC_Product->get_regular_price()
+#5 F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\includes\admin\list-tables\abstract-class-wc-admin-list-t в F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php на строке 447
+
