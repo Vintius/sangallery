@@ -106,7 +106,7 @@ class DiscountCalculator extends Base
                                         if( $calculate_discount_from != 'sale_price' && Woocommerce::productTypeIs($product, array('variable')) && $discount_type == 'flat'){
                                             $discount_price = $this->mayHaveTax($product, $discount_price);
                                         }
-                                        $discounted_price = $product_price - $discount_price;
+                                        $discounted_price = floatval($product_price) - floatval($discount_price);
                                         if ($discounted_price < 0) {
                                             $discounted_price = 0;
                                         }

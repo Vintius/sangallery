@@ -456,4 +456,29 @@ class Validation
             return false;
         }
     }
+
+    /**
+     * validate state country condition
+     *
+     * @param $post_values
+     * @return bool
+     */
+    static function validateStateCountryCondition($post_values)
+    {
+        $state_country_validator = new Validator($post_values);
+        Validator::addRule('conditionValues', array(__CLASS__, 'validateConditionFields'), __('Invalid characters', WDR_TEXT_DOMAIN));
+        //Validation condition values
+        $state_country_validator->rule('conditionValues',
+            array(
+                'selected_country',
+                'selected_index',
+                'selected_state',
+            )
+        );
+        if ($state_country_validator->validate()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

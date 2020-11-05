@@ -93,7 +93,8 @@
                     <tr>
                         <td scope="row">
                             <label class="awdr-left-align"><?php _e('Suppress third party discount plugins', WDR_TEXT_DOMAIN) ?></label>
-                            <span class="wdr_settings_desc_text awdr-clear-both"><?php esc_attr_e('suppress third party plugins from modifying the prices. other discount plugins may not works!', WDR_TEXT_DOMAIN); ?></span>
+                            <span class="wdr_settings_desc_text awdr-clear-both"><?php esc_attr_e('Suppress third party plugins from modifying the prices. other discount plugins may not works!', WDR_TEXT_DOMAIN); ?></span>
+                            <span class="wdr_settings_desc_text awdr-clear-both text-warning"><?php esc_attr_e('Change this option only if recommended.', WDR_TEXT_DOMAIN); ?></span>
                         </td>
                         <td>
                             <input type="radio" name="suppress_other_discount_plugins" id="suppress_other_discount_plugins"

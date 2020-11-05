@@ -5,8 +5,8 @@ Contributors: ceylonthemes
 Donate link: https://www.ceylonthemes.com
 Tags: customize, woocommerce, woocommerce filters, woocommerce shop
 Requires at least: 4.0
-Tested up to: 5.3
-Version: 1.0.3
+Tested up to: 5.5.2
+Version: 1.0.5
 Stable tag: 1.1
 Requires PHP: 5.4
 WC tested up to: 4.5.2
@@ -346,12 +346,12 @@ class WooCustomizeSettingsPage
 		define('woo_customize_theme_uri', "");
 
         printf('<div class="notice  is-dismissible notice-success"><p>%1$s</p><strong><a href="https://www.ceylonthemes.com/product/wordpress-storefront-theme/" class="button button-primary" style="background-color:#099b20" target="new">%2$s</a></strong>
-		&nbsp;&nbsp;<strong><a href="https://wordpress.org/themes/ecommerce-star/" target="new">%3$s</a></strong>
+		&nbsp;&nbsp;<strong><a href="'.home_url().'/wp-admin/theme-install.php?theme=shopping-plus" >%3$s</a></strong>
 		&nbsp;&nbsp;<strong><a href="http://www.ceylonthemes.com" target="new">%4$s</a><span><span/><br />&nbsp;</div>',
 				esc_html('Enter your woocommerce settings such as for general products, free and virtual products, color and button text below.','customizer-for-woocommerce'),
 				esc_html('See our Modern Storefront Pro theme','customizer-for-woocommerce'),
-				esc_html('Our FREE eCommerce Themes in WordPress.org','customizer-for-woocommerce'),
-				esc_html('3 THEMES FOR SINGLE PURCHASE [LIMITED TIME OFFER]','customizer-for-woocommerce')			
+				esc_html('Switch to Our FREE Shopping Plus Theme in WordPress.org','customizer-for-woocommerce'),
+				esc_html('4 THEMES FOR SINGLE PURCHASE [LIMITED TIME OFFER]','customizer-for-woocommerce')			
 			  );
     }
 

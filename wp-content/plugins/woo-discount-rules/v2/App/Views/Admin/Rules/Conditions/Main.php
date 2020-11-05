@@ -91,7 +91,7 @@ if (!defined('ABSPATH')) {
                             $subtotal_promo = $config->getConfig("show_subtotal_promotion", '');
                             $type_promotion = isset($condition->type) ? $condition->type : NULL;
                             if($type_promotion == 'cart_subtotal' && $subtotal_promo == 1){
-                                $operator = isset($options->operator) ? $options->operator : 'less_than';?>
+                                $operator = isset($options->operator) ? $options->operator : 'greater_than_or_equal';?>
                                 <div class="wdr-grid wdr-conditions-container wdr-condition-group <?php echo 'promo_show_hide_'.$i; ?>" data-index="<?php echo $i; ?>" style="<?php echo ($operator == 'greater_than_or_equal' || $operator == 'greater_than') ? '': 'display: none'; ?>">
                                     <?php include(WDR_PLUGIN_PATH . 'App/Views/Admin/Rules/Others/SubtotalPromotion.php'); ?>
                                 </div>

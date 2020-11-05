@@ -32,6 +32,7 @@
                     action: 'awdr_get_product_discount',
                     product_id: this.product_id,
                     qty: this.quantity,
+                    awdr_nonce: awdr_params.nonce,
                 };
                 if (typeof this.options.custom_price !== 'undefined') {
                     data.custom_price = this.options.custom_price;

@@ -1427,5 +1427,7 @@ div.wdr {
 .awdr_normal_enable_check_box, .awdr_normal_exclusive_check_box{
     padding: 10px;
 }
-
+.wdr_settings_desc_text.text-warning{
+    color: #f0ad4e;
+}
 

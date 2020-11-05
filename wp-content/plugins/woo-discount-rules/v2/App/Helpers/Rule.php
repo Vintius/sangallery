@@ -389,7 +389,7 @@ class Rule
             $filter_helper = new Filter();
             $filter_passed = $filter_helper->matchFilters($product, $filters, $sale_badge, $product_table);
             $conditions = $this->getConditions();
-            $filter_passed_user_role = $filter_passed_user_list = $user_role_passed = $user_list_passed = $has_other_conditions = false;
+            $filter_passed_user_logged_in = $user_logged_in_passed = $filter_passed_user_role = $filter_passed_user_list = $user_role_passed = $user_list_passed = $has_other_conditions = false;
             $condition_relationship = $this->getRelationship('condition', 'and');
             if($filter_passed){
                 if(!empty($conditions)){
@@ -397,31 +397,47 @@ class Rule
                         $cart = array();
                         $options = isset($condition->options) ? $condition->options : array();
                         $condition_type = isset($condition->type) ? $condition->type : array();
-                        if( !empty($condition_type) && $condition_type == 'user_role' ){
-                            $user_role_passed = true;
-                            if (!empty($options) && isset($this->available_conditions[$condition_type]['object'])) {
+                        if( !empty($condition_type) ){
+                            if (!empty($options) && isset($this->available_conditions[$condition_type]['object']) && is_object($this->available_conditions[$condition_type]['object']) && method_exists($this->available_conditions[$condition_type]['object'], 'check')) {
                                 $this->available_conditions[$condition_type]['object']->rule = $this;
-                                if(method_exists($this->available_conditions[$condition_type]['object'], 'check')){
+                                if( $condition_type == 'user_role'){
+                                    $user_role_passed = true;
                                     $filter_passed_user_role = $this->available_conditions[$condition_type]['object']->check($cart, $options);
                                 }
-                            }
-                        }
-                        if( !empty($condition_type) && $condition_type == 'user_list'){
-                            $user_list_passed = true;
-                            if (!empty($options) && isset($this->available_conditions[$condition_type]['object'])) {
-                                $this->available_conditions[$condition_type]['object']->rule = $this;
-                                if(method_exists($this->available_conditions[$condition_type]['object'], 'check')){
+                                if( $condition_type == 'user_list'){
+                                    $user_list_passed = true;
                                     $filter_passed_user_list = $this->available_conditions[$condition_type]['object']->check($cart, $options);
+                                }
+                                if( $condition_type == 'user_logged_in'){
+                                    $user_logged_in_passed = true;
+                                    $filter_passed_user_logged_in = $this->available_conditions[$condition_type]['object']->check($cart, $options);
                                 }
                             }
                         }
-                        if( !empty($condition_type) && !in_array($condition_type, array('user_role', 'user_list'))){
+
+                        if( !empty($condition_type) && !in_array($condition_type, array('user_role', 'user_list', 'user_logged_in'))){
                             $has_other_conditions = true;
                         }
                     }
                 }
-                if($user_role_passed || $user_list_passed){
-                    if($filter_passed_user_role || $filter_passed_user_list){
+                if($user_role_passed || $user_list_passed || $user_logged_in_passed){
+                    if($filter_passed_user_role || $filter_passed_user_list || $filter_passed_user_logged_in){
+                        if($condition_relationship == 'and'){
+                            if($user_role_passed && $user_logged_in_passed){
+                                if($filter_passed_user_role && $filter_passed_user_logged_in){
+                                }else{
+                                    $filter_passed = false;
+                                }
+                            }
+                            if($user_list_passed && $user_logged_in_passed){
+                                if($filter_passed_user_list && $filter_passed_user_logged_in){
+                                }else{
+                                    $filter_passed = false;
+                                }
+                            }
+                            //$this -> rule
+                            $filter_passed = apply_filters('advanced_woo_discount_rules_customer_condition_filter_passed', $filter_passed, $this, $product, $sale_badge, $product_table, $conditions);
+                        }
                     } else {
                         if($condition_relationship == 'or'){
                             if($has_other_conditions){
@@ -433,6 +449,7 @@ class Rule
                         }
                     }
                 }
+
             }
         } else {
             $filter_passed = false;

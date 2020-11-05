@@ -156,10 +156,10 @@ class Helper
         <span style='width: 100%; display: flex;'>
             <span style='width: 45%; padding-right: 5px;'>
                 <ul  class='awdr-bullet-style'>
-                    <li ><a href=' https://docs.flycart.org/en/articles/3977542-subtotal-based-free-product-2-0?utm_source=woo-discount-rules-v2&utm_campaign=doc&utm_medium=text-click&utm_content=subtotal_documentation' target='_blank'>" . __('Subtotal', WDR_TEXT_DOMAIN) . "</a></li>
-                    <li ><a href=' https://docs.flycart.org/en/articles/4203313-user-role-based-discount-rules-discount-rules-2-0?utm_source=woo-discount-rules-v2&utm_campaign=doc&utm_medium=text-click&utm_content=user_role_documentation' target='_blank'>" . __('User role', WDR_TEXT_DOMAIN) . "</a></li>
+                    <li ><a href='https://docs.flycart.org/en/articles/3977542-subtotal-based-free-product-2-0?utm_source=woo-discount-rules-v2&utm_campaign=doc&utm_medium=text-click&utm_content=subtotal_documentation' target='_blank'>" . __('Subtotal', WDR_TEXT_DOMAIN) . "</a></li>
+                    <li ><a href='https://docs.flycart.org/en/articles/4203313-user-role-based-discount-rules-discount-rules-2-0?utm_source=woo-discount-rules-v2&utm_campaign=doc&utm_medium=text-click&utm_content=user_role_documentation' target='_blank'>" . __('User role', WDR_TEXT_DOMAIN) . "</a></li>
                     <li >" . __('Days & Time', WDR_TEXT_DOMAIN) . "</li>
-                    <li >" . __('Purchase History', WDR_TEXT_DOMAIN) . "</li>
+                    <li ><a href='https://docs.flycart.org/en/articles/4206683-how-to-provide-first-order-discount-2-0?utm_source=woo-discount-rules-v2&utm_campaign=doc&utm_medium=text-click&utm_content=purchase_history' target='_blank'>" . __('Purchase History', WDR_TEXT_DOMAIN) . "</a></li>
                     <li >" . __('Payment Method', WDR_TEXT_DOMAIN) . "</li>
                 </ul>
             </span>
@@ -167,9 +167,9 @@ class Helper
                 <ul  class='awdr-bullet-style'>
                     <li ><a href='https://docs.flycart.org/en/articles/4268595-activate-discount-rule-using-a-coupon-code-in-woocommerce-2-0?utm_source=woo-discount-rules-v2&utm_campaign=doc&utm_medium=text-click&utm_content=coupon_documentation' target='_blank'>" . __('Coupon', WDR_TEXT_DOMAIN) . "</a></li>
                     <li ><a href='https://docs.flycart.org/en/articles/4214869-customer-shipping-address-based-discount-2-0?utm_source=woo-discount-rules-v2&utm_campaign=doc&utm_medium=text-click&utm_content=shipping_address_documentation' target='_blank'>" . __('Shipping Address', WDR_TEXT_DOMAIN) . "</a></li>
-                    <li>" . __('Category Combination', WDR_TEXT_DOMAIN) . "</li>
+                    <li><a href='https://docs.flycart.org/en/articles/4279899-category-combination-get-discount-only-when-category-a-b-c-are-in-the-cart-2-0?utm_source=woo-discount-rules-v2&utm_campaign=doc&utm_medium=text-click&utm_content=category_combination' target='_blank'>" . __('Category Combination', WDR_TEXT_DOMAIN) . "</a></li>
                     <li><a href='https://docs.flycart.org/en/articles/4164153-buy-product-a-b-and-get-discount-in-product-c-discount-rules-2-0?utm_source=woo-discount-rules-v2&utm_campaign=doc&utm_medium=text-click&utm_content=product_combination' target='_blank'>" . __('Product Combination', WDR_TEXT_DOMAIN) . "</a></li>
-                    <li >" . __('Quantities/Line items', WDR_TEXT_DOMAIN) . "</li>
+                    <li ><a href='https://docs.flycart.org/en/articles/4280177-discounts-based-on-cart-line-items?utm_source=woo-discount-rules-v2&utm_campaign=doc&utm_medium=text-click&utm_content=quantity_or_line_items' target='_blank'>" . __('Quantities/Line items', WDR_TEXT_DOMAIN) . "</a></li>
                     
                     
                 </ul>
@@ -329,9 +329,9 @@ class Helper
 
     public static function displayCompatibleCheckMessages()
     {
-        if (version_compare(WDR_VERSION, '2.3.1', '>=')) {
+        if (version_compare(WDR_VERSION, '2.3.2', '>=')) {
             if (defined('WDR_PRO_VERSION')) {
-                if (version_compare(WDR_PRO_VERSION, '2.3.1', '<')) {
+                if (version_compare(WDR_PRO_VERSION, '2.3.2', '<')) {
                     $url = admin_url() . "plugins.php";
                     $plugin_page = '<a target="_blank" href="' . $url . '">' . __('Update now', WDR_TEXT_DOMAIN) . '</a>';
                     ?>

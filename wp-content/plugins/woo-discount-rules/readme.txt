@@ -4,7 +4,7 @@ Donate link: https://flycart.org/
 Tags: woocommerce, coupons, discounts, dynamic pricing, Buy One Get One Free, pricing deals, bulk discount, discount
 Requires at least: 4.4.1
 Tested up to: 5.5
-Stable tag: 2.3.1
+Stable tag: 2.3.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -301,7 +301,7 @@ In that case, the rule with the higher priority will be applied.
 
 = Are there any limit for the number of rules ? =
 
-While free version allows you up to 3 rules in each discount type, the PRO version helps you setup unlimited discount rules in your store.
+With free version and the PRO version, there is absolutely no limits. You can create unlimited discount rules for your store.
 
 = What happens after my PRO license expires ? =
 
@@ -317,10 +317,9 @@ Yes. It is possible to set discount rule based on the Customer city. Eg:Customer
 
 = How to setup BOGO (Buy ONE get ONE) deals ? =
 
-Under WooDiscount Rules,
-General -  Price Discount Rule -> Add new rule -> Enter Priority, Rule Name -> Next
-Condition - Apply to -> Select the Product -> Select Customers -> Next
-Discount - Enter minimum & Maximum quantity -> Adjustment Type -> Product Discount -> Value (Free products to be added) -> Save Rule
+Navigate to WooCommerce -> Woo Discount Rules -> Add New Rule.
+Choose the discount type as Buy X get X. Then choose the filter and quantity ranges.
+Note : Enable recursive checkbox if the discounts should be applied in sequential ranges.
 
 == Screenshots ==
 
@@ -337,6 +336,18 @@ Discount - Enter minimum & Maximum quantity -> Adjustment Type -> Product Discou
 * Dutch Translation - [@mvdburg1971](https://profiles.wordpress.org/mvdburg1971) - Michael van der Burg
 
 == Changelog ==
+
+= 2.3.2 - 05/11/20 =
+* Fix - Displaying discount table if user role based condition is false.
+* Fix - Discount fee doesn't works when Combine all discounts option enabled.
+* Fix - BOGO Cheapest doesn't works with WPML translation management.
+* Fix - BOGO Cheapest individual option not works when apply all matched rule is enabled.
+* Improvement - Added nonce for dynamic strikeout ajax method.
+* Improvement - Custom Coupon not added in some cases.
+* Improvement - Added country field in state condition.
+* Improvement - JQuery DragTable updated.
+* Improvement - BOGO Cheapest individual option improved.
+* Improvement - Optimized the purchase history based first order query.
 
 = 2.3.1 - 16/10/20 =
 * Fix - JS error

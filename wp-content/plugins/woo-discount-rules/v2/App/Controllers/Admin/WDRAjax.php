@@ -91,6 +91,7 @@ class WDRAjax extends Base
      * Get discount price for a product
      * */
     public function awdr_get_discount_of_a_product(){
+        Helper::validateRequest('awdr_ajax_front_end');
         $product_id = $this->input->post('product_id', '');
         $product_id = intval($product_id);
         $result = false;
@@ -363,7 +364,7 @@ class WDRAjax extends Base
             $rule_id = $rule_helper->save($post);
             if (isset($rule_id['coupon_exists'])) {
                 $coupon_message = $rule_id['coupon_exists'];
-                wp_send_json(array('coupon_message' => $coupon_message));
+                wp_send_json_error(array('coupon_message' => $coupon_message));
                 die;
             }
             $redirect_url = false;
@@ -599,6 +600,7 @@ class WDRAjax extends Base
      */
     public function wdr_ajax_get_price_html()
     {
+        Helper::validateRequest('awdr_ajax_front_end');
         $product = $this->input->post('product_id', '');
         $product = intval($product);
         $product_qty = $this->input->post('qty', '');
@@ -632,5 +634,44 @@ class WDRAjax extends Base
             wp_send_json_error();
         }
 
+    }
+
+    /**
+     * @return get state select box
+     */
+    public function wdr_ajax_get_state_details(){
+        Helper::validateRequest('wdr_ajax_select2');
+        $validation_result = Validation::validateStateCountryCondition($_POST);
+        if (!$validation_result) {
+            wp_send_json_error();
+        }
+        $state_options = '';
+        $selected_countries = $this->input->post('selected_country', '');
+        $selected_state = $this->input->post('selected_state', '');
+        $selected_index = $this->input->post('selected_index', '');
+        $getStatesList = self::$woocommerce_helper->getStatesList();
+        $state_options .= '<select multiple
+                   class="get_awdr_shipping_state append-preloaded-values edit-preloaded-values"
+                   data-list="states"
+                   data-field="preloaded"
+                   data-placeholder="Search State"
+                   name="conditions['.$selected_index.'][options][value][]">';
+        if(!empty($selected_countries)){
+            foreach ($selected_countries as $country) {
+                if(isset($getStatesList[$country])){
+                    $states = $getStatesList[$country];
+                    foreach ($states as $id => $text) {
+                        if( is_array($selected_state) && !empty($selected_state) && in_array($id, $selected_state)){
+                            $state_options .= "<option value={$id} selected>{$text}</option>";
+                        }else{
+                            $state_options .= "<option value={$id}>{$text}</option>";
+                        }
+
+                    }
+                }
+            }
+        }
+        $state_options .= "</select>";
+        return $state_options;
     }
 }

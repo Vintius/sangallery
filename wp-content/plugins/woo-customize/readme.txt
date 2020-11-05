@@ -4,9 +4,9 @@ Contributors: ceylonthemes
 Donate link: https://ceylonthemes.com
 Tags: customize, woocommerce, woocommerce filters, woocommerce shop
 Requires at least: 4.6
-Tested up to: 5.5
+Tested up to: 5.5.2
 Stable tag: trunk
-version: 1.0.3
+version: 1.0.5
 Requires PHP: 5.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html

@@ -497,6 +497,7 @@ If a customer buys  2 of Product A - Small,  4 of Product A - Medium,  6 of Prod
             'invalid_rule_limit' => __("<b>This rule is not running currently:</b> Rule reached maximum usage limit", WDR_TEXT_DOMAIN),
             'invalid_rule_limit_with_date_future' => __("<b>This rule is not running currently:</b> Start date and time is set in the future date", WDR_TEXT_DOMAIN),
             'invalid_rule_limit_with_date_expire' => __("<b>This rule is not running currently:</b> Validity expired", WDR_TEXT_DOMAIN),
+            'select_state' => __("Select State", WDR_TEXT_DOMAIN),
         );
     }
 }

@@ -979,3 +979,10 @@ Stack trace:
 [03-Nov-2020 16:09:49 UTC] PHP Notice:  Undefined index: _origin_sale_price in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php on line 472
 [03-Nov-2020 16:09:49 UTC] PHP Notice:  Undefined offset: 0 in F:\WebPrjcts\wordpress\WP-test\www\wp-content\themes\easy-storefront\functions.php on line 472
 [03-Nov-2020 16:12:41 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\ProductCategories.php on line 7
+[05-Nov-2020 12:23:59 UTC] 80.0006
+
+[05-Nov-2020 12:23:59 UTC] PHP Notice:  A non well formed numeric value encountered in F:\WebPrjcts\wordpress\WP-test\www\currency\get_currency.php on line 53
+[05-Nov-2020 12:23:59 UTC] PHP Warning:  A non-numeric value encountered in F:\WebPrjcts\wordpress\WP-test\www\currency\get_currency.php on line 54
+[05-Nov-2020 12:23:59 UTC] PHP Notice:  A non well formed numeric value encountered in F:\WebPrjcts\wordpress\WP-test\www\currency\get_currency.php on line 54
+[05-Nov-2020 12:23:59 UTC] PHP Notice:  A non well formed numeric value encountered in F:\WebPrjcts\wordpress\WP-test\www\currency\get_currency.php on line 53
+[05-Nov-2020 12:23:59 UTC] PHP Notice:  A non well formed numeric value encountered in F:\WebPrjcts\wordpress\WP-test\www\currency\get_currency.php on line 54

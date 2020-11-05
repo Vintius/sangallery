@@ -53,6 +53,39 @@
 
                             $price_place = $(target+' .price')
                         }
+                        if(!$product_id || $product_id == 0){
+                            if(awdr_params.custom_simple_product_id_selector != undefined){
+                                if(awdr_params.custom_simple_product_id_selector != ""){
+                                    let simple_product_id_selector = awdr_params.custom_simple_product_id_selector;
+                                    $product_id = $(simple_product_id_selector).val();
+                                    let target = 'div.product p.price';
+                                    if(awdr_params.custom_target_simple_product != undefined){
+                                        if(awdr_params.custom_target_simple_product != ""){
+                                            target = awdr_params.custom_target_simple_product;
+                                        }
+                                    }
+                                    $price_place = $(target).first();
+                                }
+                            }
+
+                            if(awdr_params.custom_variable_product_id_selector != undefined){
+                                if(awdr_params.custom_variable_product_id_selector != ""){
+                                    let variable_product_id_selector = awdr_params.custom_variable_product_id_selector;
+                                    $product_id = $(variable_product_id_selector).val();
+                                    let target = 'div.product .woocommerce-variation-price';
+                                    if(awdr_params.custom_target_variable_product != undefined){
+                                        if(awdr_params.custom_target_variable_product != ""){
+                                            target = awdr_params.custom_target_variable_product;
+                                        }
+                                    }
+                                    if (!$(target+' .price').length) {
+                                        $price_place.html("<div class='price'></div>");
+                                    }
+                                    $price_place = $(target+' .price')
+                                }
+                            }
+                        }
+
                         if (!$product_id || !$price_place || $product_id == 0) {
                             return;
                         }
@@ -62,6 +95,7 @@
                             method: 'get_price_html',
                             product_id: $product_id,
                             qty: $qty,
+                            awdr_nonce: awdr_params.nonce,
                         };
                         $.ajax({
                             url: awdr_params.ajaxurl,

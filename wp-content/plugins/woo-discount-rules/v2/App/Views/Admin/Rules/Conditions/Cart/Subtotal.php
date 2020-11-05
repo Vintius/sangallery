@@ -2,7 +2,7 @@
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
-$operator = isset($options->operator) ? $options->operator : 'less_than';
+$operator = isset($options->operator) ? $options->operator : 'greater_than_or_equal';
 $calculate_from = isset($options->calculate_from) ? $options->calculate_from : 'from_cart';
 echo ($render_saved_condition == true) ? '' : '<div class="cart_subtotal">';
 ?>

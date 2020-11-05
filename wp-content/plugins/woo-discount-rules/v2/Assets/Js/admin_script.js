@@ -94,6 +94,7 @@ jQuery(document).ready(function ($) {
             hideBlockId: ".wdr-filter-block, .wdr-discount-template, .wdr-advanced-layout-block",
             thisObject: this,
         });
+
     });
 
     /*Add Discount section*/
@@ -117,6 +118,7 @@ jQuery(document).ready(function ($) {
                 newIndex: last_index
             });
         }
+        $('.subtotal_operator').trigger('change');
     });
 
     $(document).on('change', '.subtotal_operator', function () {
@@ -181,6 +183,7 @@ jQuery(document).ready(function ($) {
                     newIndex: last_index
                 });
             }
+            $('.subtotal_operator').trigger('change');
         }
 
         //$('.wdr-condition-date').datetimepicker();
@@ -650,6 +653,7 @@ jQuery(document).ready(function ($) {
     /**
      * ajax edit pre_loaded search function in document ready
      */
+
     $('.edit-preloaded-values').each(function (index, el) {
         var $el = $(el);
         var data = wdr_data.lists[$el.data('list')];
@@ -672,6 +676,10 @@ jQuery(document).ready(function ($) {
         $el.parent().find('.select2-search__field').css('width', '100%');
     });
 
+    function run_preload_values(){
+        $('.append-preloaded-values').selectWoo();
+       // $('.append-preloaded-values').parent().find('.select2-search__field').css('width', '100%');
+    }
     /**
      * ajax edit pre_loaded search function in document ready
      */
@@ -801,20 +809,22 @@ jQuery(document).ready(function ($) {
                     if (data.redirect) {
                         window.location.href = data.redirect;
                         notify(wdr_data.localization_data.save_rule, 'success', alert_counter);
-                    } else if (data.coupon_message) {
-                        $(".coupon_name_msg").css("border", "1px solid #FF0000").focus();
-                        notify(wdr_data.localization_data.coupon_exists, 'error', alert_counter);
                     } else {
                         $('.wdr_desc_text.coupon_error_msg').hide();
                         $(".coupon_name_msg").css("border", "");
                         notify(wdr_data.localization_data.save_rule, 'success', alert_counter);
                     }
                 } else {
-                    for (const [key, value] of Object.entries(data)) {
-                        if (data.hasOwnProperty(key)) {
-                            value.forEach(function(message){
-                                notify(message, 'error',alert_counter);
-                            });
+                    if (data.coupon_message) {
+                        $(".coupon_name_msg").css("border", "1px solid #FF0000").focus();
+                        notify(wdr_data.localization_data.coupon_exists, 'error', alert_counter);
+                    }else{
+                        for (const [key, value] of Object.entries(data)) {
+                            if (data.hasOwnProperty(key)) {
+                                value.forEach(function(message){
+                                    notify(message, 'error',alert_counter);
+                                });
+                            }
                         }
                     }
                 }
@@ -1585,7 +1595,16 @@ jQuery(document).ready(function ($) {
                         break;
                     case 'shipping_state':
                         let shipping_state = $(element).find('.get_awdr_shipping_state').val();
+                        let shipping_state_based_country = $(element).find('.get_awdr_state_based_country').val();
                         if (!shipping_state) {
+                            condition_array.push("fails");
+                            $(element).find('.select2-selection').css("border", "1px solid red");
+                            $(element).find('.select2-selection').focus();
+                        } else {
+                            $(element).find('.select2-selection').css("border", "1px solid #7e8993");
+                        }
+
+                        if (!shipping_state_based_country) {
                             condition_array.push("fails");
                             $(element).find('.select2-selection').css("border", "1px solid red");
                             $(element).find('.select2-selection').focus();
@@ -2405,7 +2424,6 @@ jQuery(document).ready(function ($) {
                 }
                 awdrRemoveOnSaleCondition();
                 //$('.awdr_mode_of_operator').trigger('change');
-                console.log('yes');
                 $('.awdr-discount-heading').html(wdr_data.localization_data.two_column_bxgy_discount_heading);
                 make_wdr_select2_search($('.' + data_placement).find('[data-list="product_category"]'));
                 $('.adv-msg-min-qty, .adv-msg-max-qty, .adv-msg-discount, .adv-msg-discount-price').hide();
@@ -2593,4 +2611,46 @@ jQuery(document).ready(function ($) {
         }
         return true;
     });
+
+   $(document).on('change', '.get_awdr_state_based_country', function (){
+        let selected_country = $(this).val();
+        if(!selected_country){
+           return false;
+        }
+        let selected_index = $(this).parents('.wdr-conditions-container').attr('data-index');
+        let append_data = $(this).parents('.wdr_shipping_state_group');
+        let remove_data = $(this).parent().siblings('.wdr-shipping-state-value');
+        let loader = $('.woo_discount_loader');
+        let selected_state = $(this).parent().siblings('.wdr-shipping-state-value').find('.get_awdr_shipping_state').val();
+        var data = {
+            action: 'wdr_ajax',
+            method: 'get_state_details',
+            selected_country: selected_country,
+            selected_state: selected_state,
+            selected_index: selected_index,
+            awdr_nonce: $('input[name=wdr_ajax_select2]').val() || '',
+        };
+        $.ajax({
+            url: ajaxurl,
+            data: data,
+            type: 'POST',
+            beforeSend: function () {
+                loader.show();
+            },
+            complete: function () {
+                loader.hide();
+            },
+            success: function (response) {
+                remove_data.remove();
+                append_data.append("<div class='wdr-shipping-state-value wdr-select-filed-hight wdr-search-box' style='width: min-content;'>"+
+                   response.data +"<span class='wdr_select2_desc_text'>"+wdr_data.localization_data.select_state+"</span> </div>");
+                run_preload_values();
+
+            },
+            error: function (response) {
+                console.log('error');
+            }
+        });
+    });
+    $('.get_awdr_state_based_country').trigger('change');
 });

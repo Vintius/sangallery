@@ -58,6 +58,8 @@ class ManageDiscount extends Base
             'awdr_opacity_to_bulk_table' => apply_filters('advanced_woo_discount_rules_opacity_to_bulk_table', ""),
             'awdr_dynamic_bulk_table_status' => $bulk_table_on_off,
             'awdr_dynamic_bulk_table_off' => apply_filters('advanced_woo_discount_rules_disable_load_dynamic_bulk_table', "on"),
+            'custom_simple_product_id_selector' => apply_filters('advanced_woo_discount_rules_custom_simple_product_id_selector', ""),
+            'custom_variable_product_id_selector' => apply_filters('advanced_woo_discount_rules_custom_variable_product_id_selector', ""),
         );
         wp_enqueue_script('awdr-dynamic-price', WDR_PLUGIN_URL . 'Assets/Js/awdr-dynamic-price.js', array('jquery'), WDR_VERSION);
         wp_localize_script('awdr-main', 'awdr_params', $awdr_front_end_script);
@@ -128,6 +130,7 @@ class ManageDiscount extends Base
         $product_id = Woocommerce::getProductId($_product);
         if(self::isProductOnSale($product_id) || $use_sale_badge_customize){
             $on_sale_badge_html = self::$config->getConfig('on_sale_badge_html', '<span class="onsale">Sale!</span>');
+            $translate = __('<span class="onsale">Sale!</span>', 'woo-discount-rules');
             $on_sale_badge_html = Helper::getCleanHtml($on_sale_badge_html);
             $html = __($on_sale_badge_html, WDR_TEXT_DOMAIN);
             $html = apply_filters('advanced_woo_discount_rules_on_sale_badge_html', $html, $post, $_product);
@@ -899,7 +902,7 @@ class ManageDiscount extends Base
                 if(empty($label)){
                     $label = __('Cart discount', WDR_TEXT_DOMAIN);
                 }
-                self::setCartCouponValues($label, $discount_value, $combined_discounts_cart_items);
+                self::setCartCouponValues($label, $total_combined_discounts, $combined_discounts_cart_items);
                 $this->applyFakeCouponsForCartRules($label);
             }
             add_action('woocommerce_after_calculate_totals', array($this, 'applyVirtualCouponForCartRules'), 10);
@@ -1567,7 +1570,7 @@ class ManageDiscount extends Base
      */
     function showAppliedRulesMessages()
     {
-        $message = self::$config->getConfig('applied_rule_message', __('Discount <strong>{{title}}</strong> has been applied to your cart.', WDR_TEXT_DOMAIN));
+        $message = self::$config->getConfig('applied_rule_message', __('Discount <strong>{{title}}</strong> has been applied to your cart.', 'woo-discount-rules'));
         $message = Helper::getCleanHtml($message);
         $message = __($message, WDR_TEXT_DOMAIN);
         $calc = self::$calculator;
@@ -1692,7 +1695,7 @@ class ManageDiscount extends Base
     function getYouSavedText($discount)
     {
         if (!empty($discount)) {
-            $text = self::$config->getConfig('you_saved_text', __("You saved {{total_discount}}", WDR_TEXT_DOMAIN));
+            $text = self::$config->getConfig('you_saved_text', __("You saved {{total_discount}}", 'woo-discount-rules'));
             $text = __($text, WDR_TEXT_DOMAIN);
             $text = Helper::getCleanHtml($text);
             $message = str_replace('{{total_discount}}', $discount, $text);

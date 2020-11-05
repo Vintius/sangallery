@@ -124,7 +124,7 @@ class DBTable
         if(Woocommerce::is_ajax()){
             $is_front_end_request = true;
             if(isset($_REQUEST['action']) && $_REQUEST['action'] == 'wdr_ajax'){
-                $wdr_ajax_methods = array('get_price_html');
+                $wdr_ajax_methods = array('get_price_html', 'get_variable_product_bulk_table');
                 $wdr_ajax_methods = apply_filters('advanced_woo_discount_rules_wdr_ajax_methods_for_frontend', $wdr_ajax_methods);
                 if(isset($_REQUEST['method']) && is_array($wdr_ajax_methods) && !empty($wdr_ajax_methods)){
                     if(!in_array($_REQUEST['method'], $wdr_ajax_methods)){
