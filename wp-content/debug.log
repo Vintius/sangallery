@@ -986,3 +986,10 @@ Stack trace:
 [05-Nov-2020 12:23:59 UTC] PHP Notice:  A non well formed numeric value encountered in F:\WebPrjcts\wordpress\WP-test\www\currency\get_currency.php on line 54
 [05-Nov-2020 12:23:59 UTC] PHP Notice:  A non well formed numeric value encountered in F:\WebPrjcts\wordpress\WP-test\www\currency\get_currency.php on line 53
 [05-Nov-2020 12:23:59 UTC] PHP Notice:  A non well formed numeric value encountered in F:\WebPrjcts\wordpress\WP-test\www\currency\get_currency.php on line 54
+[08-Dec-2020 18:46:15 UTC] 74.2506
+
+[08-Dec-2020 18:46:15 UTC] PHP Notice:  A non well formed numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 53
+[08-Dec-2020 18:46:15 UTC] PHP Warning:  A non-numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 54
+[08-Dec-2020 18:46:15 UTC] PHP Notice:  A non well formed numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 54
+[08-Dec-2020 18:46:15 UTC] PHP Notice:  A non well formed numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 53
+[08-Dec-2020 18:46:15 UTC] PHP Notice:  A non well formed numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 54
