@@ -19,9 +19,9 @@
  */
 
 
-define('WP_HOME','http://test.local');
-define('WP_SITEURL','http://test.local');
- 
+define('WP_HOME','http://localhost:8888');
+define('WP_SITEURL','http://localhost:8888');
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'test' );
@@ -30,7 +30,7 @@ define( 'DB_NAME', 'test' );
 define( 'DB_USER', 'root' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'root' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
