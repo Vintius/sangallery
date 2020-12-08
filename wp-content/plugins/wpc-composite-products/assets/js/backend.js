@@ -1,22 +1,39 @@
 'use strict';
 
-jQuery(document).ready(function ($) {
-    // options page
-    wooco_active_options();
+(function ($) {
+    $(document).ready(function () {
+        wooco_active_options();
+        wooco_active_settings();
+        wooco_arrange();
 
-    $('select[name="_wooco_change_price"]').on('change', function () {
+        setInterval(function () {
+            $('.wooco-product-search').each(function () {
+                var _val = $(this).val();
+                if (Array.isArray(_val)) {
+                    $(this).closest('div').find('.wooco-product-search-input').val(_val.join());
+                } else {
+                    $(this).closest('div').find('.wooco-product-search-input').val(String(_val));
+                }
+            });
+        }, 1000);
+
+        $('.wooco_component_type').each(function () {
+            var _val = $(this).val();
+            $(this).closest('.wooco_component').find('.wooco_hide').hide();
+            $(this).closest('.wooco_component').find('.wooco_show_if_' + _val).show().css('display', 'flex');
+        });
+    });
+
+    $(document).on('change', 'select[name="_wooco_change_price"]', function () {
         wooco_active_options();
     });
 
-    wooco_active_settings();
-    wooco_arrange();
-
-    $('#product-type').on('change', function () {
+    $(document).on('change', '#product-type', function () {
         wooco_active_settings();
     });
 
     // product search
-    $('body').on('change', '.wooco-product-search', function () {
+    $(document).on('change', '.wooco-product-search', function () {
         var _val = $(this).val();
         if (Array.isArray(_val)) {
             $(this).closest('div').find('.wooco-product-search-input').val(_val.join());
@@ -25,19 +42,8 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    setInterval(function () {
-        $('.wooco-product-search').each(function () {
-            var _val = $(this).val();
-            if (Array.isArray(_val)) {
-                $(this).closest('div').find('.wooco-product-search-input').val(_val.join());
-            } else {
-                $(this).closest('div').find('.wooco-product-search-input').val(String(_val));
-            }
-        });
-    }, 1000);
-
     // category search
-    $('body').on('change', '.wooco-category-search', function () {
+    $(document).on('change', '.wooco-category-search', function () {
         var _val = $(this).val();
         if (Array.isArray(_val)) {
             $(this).closest('div').find('.wooco-category-search-input').val(_val.join());
@@ -46,7 +52,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    $('body').on('click', '.wooco_add_component', function (e) {
+    $(document).on('click touch', '.wooco_add_component', function (e) {
         var components = $('.wooco_component').length;
         var data = {
             action: 'wooco_add_component',
@@ -59,27 +65,21 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
     });
 
-    $('body').on('click', '.wooco_remove_component', function (e) {
+    $(document).on('click touch', '.wooco_remove_component', function (e) {
         $(this).closest('.wooco_component').remove();
         e.preventDefault();
     });
 
-    $('body').on('click', '.wooco_component_heading', function () {
+    $(document).on('click touch', '.wooco_component_heading', function () {
         $(this).closest('.wooco_component_inner').toggleClass('active');
     });
 
-    $('body').on('change, keyup', '.wooco_input_name', function () {
+    $(document).on('change, keyup', '.wooco_input_name', function () {
         var _val = $(this).val();
         $(this).closest('.wooco_component_inner').find('.wooco_component_name').html(_val);
     });
 
-    $('.wooco_component_type').each(function () {
-        var _val = $(this).val();
-        $(this).closest('.wooco_component').find('.wooco_hide').hide();
-        $(this).closest('.wooco_component').find('.wooco_show_if_' + _val).show().css('display', 'flex');
-    });
-
-    $('body').on('change', '.wooco_component_type', function () {
+    $(document).on('change', '.wooco_component_type', function () {
         var _val = $(this).val();
         $(this).closest('.wooco_component').find('.wooco_hide').hide();
         $(this).closest('.wooco_component').find('.wooco_show_if_' + _val).show().css('display', 'flex');
@@ -120,4 +120,4 @@ jQuery(document).ready(function ($) {
             $('.show_if_composite').hide();
         }
     }
-});
+})(jQuery);

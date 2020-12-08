@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit0e97ede8b376d4a4d1adb811cf3de3a5
+class ComposerStaticInit6abb4ac9039e267ae2ce88fd0eee37e8
 {
     public static $prefixLengthsPsr4 = array (
         'C' => 
@@ -21,15 +21,16 @@ class ComposerStaticInit0e97ede8b376d4a4d1adb811cf3de3a5
     );
 
     public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Woof_By_Category' => __DIR__ . '/../..' . '/classes/class-woof-by-category.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit0e97ede8b376d4a4d1adb811cf3de3a5::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit0e97ede8b376d4a4d1adb811cf3de3a5::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit0e97ede8b376d4a4d1adb811cf3de3a5::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6abb4ac9039e267ae2ce88fd0eee37e8::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6abb4ac9039e267ae2ce88fd0eee37e8::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit6abb4ac9039e267ae2ce88fd0eee37e8::$classMap;
 
         }, null, ClassLoader::class);
     }

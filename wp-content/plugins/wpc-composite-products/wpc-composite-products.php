@@ -3,20 +3,20 @@
 Plugin Name: WPC Composite Products for WooCommerce
 Plugin URI: https://wpclever.net/
 Description: WPC Composite Products provide a powerful kit-building solution for WooCommerce store.
-Version: 3.1.5
+Version: 3.1.7
 Author: WPClever.net
 Author URI: https://wpclever.net
 Text Domain: wpc-composite-products
 Domain Path: /languages/
 Requires at least: 4.0
-Tested up to: 5.5.1
+Tested up to: 5.5.3
 WC requires at least: 3.0
-WC tested up to: 4.6.1
+WC tested up to: 4.7.0
 */
 
 defined( 'ABSPATH' ) || exit;
 
-! defined( 'WOOCO_VERSION' ) && define( 'WOOCO_VERSION', '3.1.5' );
+! defined( 'WOOCO_VERSION' ) && define( 'WOOCO_VERSION', '3.1.7' );
 ! defined( 'WOOCO_URI' ) && define( 'WOOCO_URI', plugin_dir_url( __FILE__ ) );
 ! defined( 'WOOCO_DOCS' ) && define( 'WOOCO_DOCS', 'http://doc.wpclever.net/wooco/' );
 ! defined( 'WOOCO_SUPPORT' ) && define( 'WOOCO_SUPPORT', 'https://wpclever.net/support?utm_source=support&utm_medium=wooco&utm_campaign=wporg' );
@@ -1091,6 +1091,7 @@ if ( ! function_exists( 'wooco_init' ) ) {
 							'saved_text'               => $saved_text,
 							'selector'                 => get_option( '_wooco_selector', 'ddslick' ),
 							'change_price'             => get_option( '_wooco_change_price', 'yes' ),
+							'container_selector'       => apply_filters( 'wooco_container_selector', '' ),
 							'price_selector'           => get_option( '_wooco_change_price_custom', '' ),
 							'product_link'             => get_option( '_wooco_product_link', 'no' ),
 							'show_alert'               => get_option( '_wooco_show_alert', 'load' ),
@@ -1121,9 +1122,9 @@ if ( ! function_exists( 'wooco_init' ) ) {
 					}
 
 					if ( $plugin === $file ) {
-						$settings_link    = '<a href="' . admin_url( 'admin.php?page=wpclever-wooco&tab=settings' ) . '">' . esc_html__( 'Settings', 'wpc-composite-products' ) . '</a>';
+						$settings         = '<a href="' . admin_url( 'admin.php?page=wpclever-wooco&tab=settings' ) . '">' . esc_html__( 'Settings', 'wpc-composite-products' ) . '</a>';
 						$links['premium'] = '<a href="' . admin_url( 'admin.php?page=wpclever-wooco&tab=premium' ) . '">' . esc_html__( 'Premium Version', 'wpc-composite-products' ) . '</a>';
-						array_unshift( $links, $settings_link );
+						array_unshift( $links, $settings );
 					}
 
 					return (array) $links;
@@ -2309,6 +2310,10 @@ if ( ! function_exists( 'wooco_init' ) ) {
 									continue;
 								}
 
+								if ( ! apply_filters( 'wooco_product_visible', true, $_product ) ) {
+									continue;
+								}
+
 								if ( $_product->is_type( 'simple' ) || $_product->is_type( 'variation' ) || $_product->is_type( 'woosb' ) ) {
 									if ( ( get_option( '_wooco_exclude_unpurchasable', 'yes' ) === 'yes' ) && ! $this->wooco_is_purchasable( $_product, $qty ) ) {
 										continue;
@@ -2369,6 +2374,10 @@ if ( ! function_exists( 'wooco_init' ) ) {
 								$_product_id = $_product->get_id();
 
 								if ( in_array( $_product_id, $exclude_ids ) ) {
+									continue;
+								}
+
+								if ( ! apply_filters( 'wooco_product_visible', true, $_product ) ) {
 									continue;
 								}
 
@@ -2451,6 +2460,10 @@ if ( ! function_exists( 'wooco_init' ) ) {
 								$_product_id = $_product->get_id();
 
 								if ( in_array( $_product_id, $exclude_ids ) ) {
+									continue;
+								}
+
+								if ( ! apply_filters( 'wooco_product_visible', true, $_product ) ) {
 									continue;
 								}
 

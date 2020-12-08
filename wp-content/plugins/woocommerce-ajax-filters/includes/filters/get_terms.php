@@ -47,6 +47,7 @@ class BeRocket_AAPF_get_terms {
             'meta_query_limit'      => array(),
             'depth'                 => 0,
             'operator'              => 'OR',
+            'recount_tax_query'     => false,
             'additional_tax_query'  => false,
             'disable_recount'       => false,
             'disable_hide_empty'    => false,
@@ -121,7 +122,7 @@ class BeRocket_AAPF_get_terms {
             if( ! isset($terms_parent[$parent]) ) {
                 $terms_parent[$parent] = array();
             }
-            if( $parent == 0 || $parent == berocket_isset($args['child_of']) ) {
+            if( $parent == 0 || $parent == berocket_isset($args['child_of']) || ! array_key_exists($parent, $sorts) ) {
                 $terms_sorted[$term_id] = $parent;
             } else {
                 $terms_parent[$parent][$term_id] = $parent;
@@ -225,6 +226,7 @@ class BeRocket_AAPF_get_terms {
             'taxonomy'              => $args['taxonomy'],
             'operator'              => $additional['operator'],
             'use_filters'           => FALSE,
+            'tax_query'             => $additional['recount_tax_query'],
             'post__not_in'          => $post__not_in,
             'post__in'              => $post__in,
             'additional_tax_query'  => $additional['additional_tax_query']
@@ -251,6 +253,7 @@ class BeRocket_AAPF_get_terms {
             'taxonomy'              => $args['taxonomy'],
             'operator'              => $additional['operator'],
             'use_filters'           => TRUE,
+            'tax_query'             => $additional['recount_tax_query'],
             'post__not_in'          => $post__not_in,
             'post__in'              => $post__in,
             'additional_tax_query'  => $additional['additional_tax_query']

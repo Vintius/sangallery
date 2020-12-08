@@ -373,6 +373,7 @@ class BeRocket_AAPF_Widget {
 
         $woocommerce_hide_out_of_stock_items = BeRocket_AAPF_Widget_functions::woocommerce_hide_out_of_stock_items();
         if( $woocommerce_hide_out_of_stock_items == 'yes' && $filter_type == 'attribute' && $attribute == '_stock_status' ) {
+            braapf_is_filters_displayed_debug($instance['filter_id'], 'filter', 'option_restriction', 'Disabled by WooCommerce option "Hide out of stock items from the catalog"');
             $widget_error_log['return'] = 'stock_status';
             $this->filter_return($br_wc_query, $wp_the_query, $wp_query, $wc_query, $old_the_query, $old_query, $widget_error_log);
             return true;
@@ -539,6 +540,7 @@ class BeRocket_AAPF_Widget {
         $set_query_var_title['x']                           = time();
         $set_query_var_title['filter_type']                 = $filter_type;
         $set_query_var_title['show_product_count_per_attr'] = ! empty($show_product_count_per_attr);
+        $set_query_var_title['product_count_per_attr_style']= berocket_isset($product_count_per_attr_style);
         $set_query_var_title['hide_child_attributes']       = berocket_isset($hide_child_attributes);
         $set_query_var_title['cat_value_limit']             = ( isset($cat_value_limit) ? $cat_value_limit : null );
         $set_query_var_title['select_first_element_text']   = ( empty($select_first_element_text) ? __('Any', 'BeRocket_AJAX_domain') : $select_first_element_text );

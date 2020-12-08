@@ -3,8 +3,8 @@ Contributors: kaggdesign
 Donate link: https://www.paypal.me/kagg
 Tags: woocommerce, filter, woocommerce products filter, filter category
 Requires at least: 4.4
-Tested up to: 5.5
-Stable tag: 2.9.2
+Tested up to: 5.6
+Stable tag: 2.11
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -23,7 +23,7 @@ It is possible to set up any number of category->filters pairs.
 
 = Minimum Requirements =
 
-* PHP version 5.6 or greater (PHP 7.3 or greater is recommended)
+* PHP version 5.6 or greater (PHP 8.0 or greater is recommended)
 * MySQL version 5.0 or greater (MySQL 5.6 or greater is recommended)
 * WooCommerce 3.0 or greater
 * WooCommerce Product Filter (WOOF) plugin
@@ -69,6 +69,13 @@ If you get stuck, you can ask for help in the [WOOF by Category Plugin Forum](ht
 3. Plugin filters (Size and Weight) on a "Quisquam" category page.
 
 == Changelog ==
+
+= 2.11 =
+* Tested with WordPress 5.6
+* Tests added for PHP 8.0
+
+= 2.10 =
+* Tested with WooCommerce 4.7
 
 = 2.9.2 =
 * Fixed bug with auto_shortcode and additional taxonomies in woof widget.

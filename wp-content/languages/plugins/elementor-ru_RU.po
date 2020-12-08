@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Elementor Website Builder - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-01 00:42:52+0000\n"
+"PO-Revision-Date: 2020-11-28 11:13:19+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,6 +11,10 @@ msgstr ""
 "Language: ru\n"
 "Project-Id-Version: Plugins - Elementor Website Builder - Stable (latest release)\n"
 
+#: core/editor/data/globals/endpoints/base.php:31
+msgid "The Global value you are trying to use is not available."
+msgstr "Глобальное значение, которое вы пытаетесь использовать, недоступно."
+
 #: includes/controls/media.php:160
 msgid "Choose Svg"
 msgstr "Выбрать Svg"
@@ -18,10 +22,6 @@ msgstr "Выбрать Svg"
 #. Description of the plugin
 msgid "The Elementor Website Builder has it all: drag and drop page builder, pixel perfect design, mobile responsive editing, and more. Get started now!"
 msgstr "В конструкторе сайтов Elementor есть все: drag and drop конструктор страниц, идеальный дизайн, адаптивное редактирование для мобильных устройств и многое другое. Начните сейчас!"
-
-#: core/editor/data/globals/endpoints/base.php:31
-msgid "Global value was not found."
-msgstr "Глобальное значение не найдено."
 
 #: core/upgrade/elementor-3-re-migrate-globals.php:58
 msgid "Warning: This will reset your current Global Fonts and Colors, and will migrate your previous settings from v2.x versions."
@@ -70,7 +70,7 @@ msgstr "Заливка"
 msgid "Object Fit"
 msgstr "Подгонка"
 
-#: includes/frontend.php:1159
+#: includes/frontend.php:1165
 msgid "Download"
 msgstr "Скачать"
 
@@ -83,8 +83,8 @@ msgid "Optimized DOM Output"
 msgstr "Оптимизированный вывод DOM"
 
 #: includes/settings/settings.php:471
-msgid "The Style settings changed its location and can now be found within Elementor Editor's <b>Settings Panel > Hamburger Menu > Site Settings</b>.<br>You can use the Global Manager to make changes and see them live!"
-msgstr "Настройки стиля изменили свое местоположение, и теперь их можно найти в <b>Панели настроек > Бургер-меню > Настройки сайта</b> редактора Elementor. <br> Вы можете использовать менеджер глобальных настроек, чтобы вносить изменения и видеть их в реальном времени!"
+msgid "The Style settings changed its location and can now be found within Elementor Editor's <b>Panel > Hamburger Menu > Site Settings</b>.<br>You can use the Site Settings to make changes and see them live!"
+msgstr "Настройки стиля изменили свое местоположение и теперь их можно найти в <b>Панели настроек > Бургер-меню > Настройки сайта</b> редактора Elementor. <br> Вы можете использовать менеджер глобальных настроек, чтобы вносить изменения и видеть их в реальном времени!"
 
 #: includes/settings/settings.php:468
 msgid "Looking for the Style settings?"
@@ -324,19 +324,19 @@ msgstr "Включить загрузку подозрительных файл�
 msgid "If you are experiencing a loading issue, contact your site administrator to troubleshoot the problem using Safe Mode."
 msgstr "Если у вас возникла проблема с загрузкой, обратитесь к администратору сайта, чтобы устранить проблему с помощью безопасного режима."
 
-#: includes/frontend.php:1160
+#: includes/frontend.php:1166
 msgid "Download image"
 msgstr "Скачать изображение"
 
-#: includes/frontend.php:1158
+#: includes/frontend.php:1164
 msgid "Pin it"
 msgstr "Запинить"
 
-#: includes/frontend.php:1157
+#: includes/frontend.php:1163
 msgid "Share on Twitter"
 msgstr "Поделиться в Twitter"
 
-#: includes/frontend.php:1156
+#: includes/frontend.php:1162
 msgid "Share on Facebook"
 msgstr "Поделиться в Facebook"
 
@@ -409,11 +409,11 @@ msgstr "Размер иконок управления"
 msgid "Alt"
 msgstr "Alt"
 
-#: core/kits/documents/tabs/settings-lightbox.php:74 includes/frontend.php:1163
+#: core/kits/documents/tabs/settings-lightbox.php:74 includes/frontend.php:1169
 msgid "Share"
 msgstr "Поделиться"
 
-#: core/kits/documents/tabs/settings-lightbox.php:54 includes/frontend.php:1161
+#: core/kits/documents/tabs/settings-lightbox.php:54 includes/frontend.php:1167
 msgid "Fullscreen"
 msgstr "Во весь экран"
 
@@ -670,11 +670,11 @@ msgstr "Видео"
 msgid "Clear Log"
 msgstr "Очистить журнал"
 
-#: includes/frontend.php:1166 includes/widgets/image-carousel.php:779
+#: includes/frontend.php:1172 includes/widgets/image-carousel.php:779
 msgid "Next"
 msgstr "Далее"
 
-#: includes/frontend.php:1165 includes/widgets/image-carousel.php:775
+#: includes/frontend.php:1171 includes/widgets/image-carousel.php:775
 msgid "Previous"
 msgstr "Назад"
 
@@ -823,7 +823,7 @@ msgstr "Проиграть на мобильных"
 msgid "YouTube/Vimeo link, or link to video file (mp4 is recommended)."
 msgstr "Ссылка на YouTube / Vimeo или ссылка на видеофайл (рекомендуется mp4)."
 
-#: includes/settings/tools.php:285 includes/settings/tools.php:287
+#: includes/settings/tools.php:294 includes/settings/tools.php:296
 msgid "Reinstall"
 msgstr "Переустановить"
 
@@ -885,11 +885,11 @@ msgstr "Elementor попытается обезопасить подозрите
 msgid "Please note! Allowing uploads of any files (SVG & JSON included) is a potential security risk."
 msgstr "Внимание! Разрешение загрузки любых файлов (включая SVG и JSON) представляет потенциальную угрозу безопасности."
 
-#: includes/settings/tools.php:299
+#: includes/settings/tools.php:308
 msgid "<a id=\"beta-tester-first-to-know\" href=\"%s\">Click here</a> to join our first-to-know email updates."
 msgstr "<a id=\"beta-tester-first-to-know\" href=\"%s\">Нажмите</a> чтобы узнавать первыми об обновлениях по email."
 
-#: includes/template-library/sources/local.php:535
+#: includes/template-library/sources/local.php:534
 msgid "Template not exist."
 msgstr "Шаблон не существует."
 
@@ -979,11 +979,11 @@ msgstr "Отсутствуют некоторые файлы темы."
 msgid "Invalid %1$s Format, file not uploaded for security reasons"
 msgstr "Неверный формат %1$s, из соображенй безопасности файл не загружен"
 
-#: core/files/assets/files-upload-handler.php:82
+#: core/files/assets/files-upload-handler.php:84
 msgid "%1$s file is not allowed for security reasons"
 msgstr "%1$s файл не разрешен из соображенй безопасности"
 
-#: core/files/assets/files-upload-handler.php:77
+#: core/files/assets/files-upload-handler.php:79
 msgid "The uploaded %1$s file is not supported. Please upload a valid %2$s file"
 msgstr "Загруженный файл %1$s не поддерживается. Загрузите правильный файл %2$s"
 
@@ -1178,35 +1178,35 @@ msgid "Location"
 msgstr "Местонахождение"
 
 #. translators: %s: Name of current post
-#: includes/frontend.php:1276
+#: includes/frontend.php:1282
 msgid "Continue reading %s"
 msgstr "Продолжить чтение %s"
 
-#: includes/frontend.php:1269
+#: includes/frontend.php:1275
 msgid "(more&hellip;)"
 msgstr "(больше&hellip;)"
 
-#: includes/template-library/sources/local.php:1342
+#: includes/template-library/sources/local.php:1358
 msgctxt "Template Library"
 msgid "Filter by category"
 msgstr "Фильтр по рубрике"
 
-#: includes/template-library/sources/local.php:298
+#: includes/template-library/sources/local.php:297
 msgctxt "Template Library"
 msgid "All Categories"
 msgstr "Все рубрики"
 
-#: includes/template-library/sources/local.php:297
+#: includes/template-library/sources/local.php:296
 msgctxt "Template Library"
 msgid "Category"
 msgstr "Рубрика"
 
-#: includes/template-library/sources/local.php:296
+#: includes/template-library/sources/local.php:295
 msgctxt "Template Library"
 msgid "Categories"
 msgstr "Рубрики"
 
-#: includes/template-library/sources/local.php:230
+#: includes/template-library/sources/local.php:229
 msgctxt "Template Library"
 msgid "Templates"
 msgstr "Шаблоны"
@@ -1244,13 +1244,13 @@ msgid "Get Popup Builder"
 msgstr "Получить конструктор попапов"
 
 #: includes/settings/settings.php:161
-#: includes/template-library/sources/local.php:1640
+#: includes/template-library/sources/local.php:1656
 msgid "Popups"
 msgstr "Всплывающие окна"
 
 #: core/editor/editor.php:641 core/app/app.php:38 core/app/app.php:39
-#: includes/template-library/sources/local.php:1639
-#: assets/js/app-packages.js:9093
+#: includes/template-library/sources/local.php:1655
+#: assets/js/app-packages.js:9097
 msgid "Theme Builder"
 msgstr "Конструктор тем"
 
@@ -1460,7 +1460,7 @@ msgstr "Соединение успешно."
 msgid "Connect"
 msgstr "Подключить"
 
-#: core/base/document.php:1263
+#: core/base/document.php:1267
 msgid "Future"
 msgstr "Будущее"
 
@@ -1576,7 +1576,7 @@ msgstr "Вы создали более 10 страниц с Elementor. Отли�
 msgid "Congrats!"
 msgstr "Поздравляем!"
 
-#: core/kits/documents/tabs/settings-lightbox.php:64 includes/frontend.php:1162
+#: core/kits/documents/tabs/settings-lightbox.php:64 includes/frontend.php:1168
 #: includes/widgets/google-maps.php:128
 msgid "Zoom"
 msgstr "Увеличение"
@@ -1765,7 +1765,7 @@ msgstr "Elementor %s"
 #. translators: %s the title of the post type
 #. translators: %s: Template type label.
 #: core/common/modules/finder/categories/create.php:62
-#: includes/template-library/sources/local.php:1314
+#: includes/template-library/sources/local.php:1330
 msgid "Add New %s"
 msgstr "Добавить новый %s"
 
@@ -1853,7 +1853,7 @@ msgstr "Макет страницы"
 msgid "Current"
 msgstr "Текущая"
 
-#: includes/frontend.php:1164 includes/widgets/video.php:883
+#: includes/frontend.php:1170 includes/widgets/video.php:883
 msgid "Play Video"
 msgstr "Проиграть видео"
 
@@ -1866,20 +1866,20 @@ msgstr "Друг за другом"
 msgid "Separator"
 msgstr "Разделитель"
 
-#: includes/template-library/sources/local.php:1310
+#: includes/template-library/sources/local.php:1312
 msgid "Add templates and reuse them across your website. Easily export and import them to any other project, for an optimized workflow."
 msgstr "Добавьте шаблоны и используйте их повторно на всём сайте. С лёгкостью экспортируйте и импортируйте их в любой другой проект и оптимизируйте рабочий процесс."
 
 #. translators: %s: Template type label.
-#: includes/template-library/sources/local.php:1307
+#: includes/template-library/sources/local.php:1323
 msgid "Create Your First %s"
 msgstr "Создайте ваш первый %s"
 
-#: includes/template-library/sources/local.php:1218
+#: includes/template-library/sources/local.php:1217
 msgid "All"
 msgstr "Все"
 
-#: includes/template-library/sources/local.php:218
+#: includes/template-library/sources/local.php:217
 msgctxt "Template Library"
 msgid "My Templates"
 msgstr "Мои шаблоны"
@@ -1954,7 +1954,7 @@ msgid "Groove"
 msgstr "Выпуклость"
 
 #. translators: %s: Document title
-#: core/settings/page/model.php:126 core/base/document.php:891
+#: core/settings/page/model.php:126 core/base/document.php:895
 #: includes/editor-templates/panel.php:70
 msgid "%s Settings"
 msgstr "Настройки %s"
@@ -2106,16 +2106,16 @@ msgid "Active Icon"
 msgstr "Иконка активного"
 
 #. translators: 1: Editing date, 2: Author display name
-#: core/base/document.php:1134
+#: core/base/document.php:1138
 msgid "Last edited on %1$s by %2$s"
 msgstr "Отредактировано %1$s, автором %2$s"
 
 #. translators: 1: Saving date, 2: Author display name
-#: core/base/document.php:1131
+#: core/base/document.php:1135
 msgid "Draft saved on %1$s by %2$s"
 msgstr "Черновик сохранён %1$s, автор %2$s"
 
-#: core/base/document.php:1126
+#: core/base/document.php:1130
 msgctxt "revision date format"
 msgid "M j, H:i"
 msgstr "j M, H:i"
@@ -2193,7 +2193,7 @@ msgstr "Импорт параметров документа"
 msgid "Show Panel"
 msgstr "Показать панель"
 
-#: includes/editor-templates/templates.php:239 assets/js/app-packages.js:8637
+#: includes/editor-templates/templates.php:239 assets/js/app-packages.js:8641
 msgid "Select File"
 msgstr "Выберите файл"
 
@@ -2376,9 +2376,9 @@ msgid "Excerpt"
 msgstr "Анонс"
 
 #: modules/history/revisions-manager.php:247
-#: includes/template-library/sources/local.php:450
-#: includes/template-library/sources/local.php:529
-#: includes/template-library/sources/local.php:669
+#: includes/template-library/sources/local.php:449
+#: includes/template-library/sources/local.php:528
+#: includes/template-library/sources/local.php:668
 msgid "Access denied."
 msgstr "Доступ запрещён."
 
@@ -2507,7 +2507,7 @@ msgstr "Тень"
 msgid "Mute"
 msgstr "Без звука"
 
-#: includes/template-library/sources/local.php:952
+#: includes/template-library/sources/local.php:951
 msgid "Choose an Elementor template JSON file or a .zip archive of Elementor templates, and add them to the list of templates available in your library."
 msgstr "Выберите шаблон в формате JSON или .zip архив с шаблонами Elementor и добавьте их в вашу библиотеку."
 
@@ -2525,37 +2525,37 @@ msgstr "Открывать все изображения во всплывающ
 msgid "Image Lightbox"
 msgstr "Лайтбокс изображений"
 
-#: includes/settings/tools.php:314
+#: includes/settings/tools.php:323
 msgid "Please Note: We do not recommend updating to a beta version on production sites."
 msgstr "Обратите внимание: мы не рекомендуем обновляться до бета-версии на рабочих проектах."
 
-#: includes/settings/tools.php:306
+#: includes/settings/tools.php:315
 msgid "Beta Tester"
 msgstr "Бета-тестер"
 
-#: includes/settings/tools.php:297
+#: includes/settings/tools.php:306
 msgid "Turn-on Beta Tester, to get notified when a new beta version of Elementor or Elementor Pro is available. The Beta version will not install automatically. You always have the option to ignore it."
 msgstr "Включите режим бета-тестера, чтобы получать уведомления о появлении новой бета-версии Elementor или Elementor Pro. Бета-версия не будет установлена автоматически. У вас всегда есть возможность проигнорировать её."
 
-#: includes/settings/tools.php:295
+#: includes/settings/tools.php:304
 msgid "Become a Beta Tester"
 msgstr "Стать бета-тестером"
 
-#: includes/settings/tools.php:289
+#: includes/settings/tools.php:298
 msgid "Warning: Please backup your database before making the rollback."
 msgstr "Предупреждение: Пожалуйста, создайте резервную копию базы данных перед откатом."
 
-#: includes/settings/tools.php:281
+#: includes/settings/tools.php:290
 msgid "Rollback Version"
 msgstr "Откатить версию"
 
 #. translators: %s: Elementor version
-#: includes/settings/tools.php:272
+#: includes/settings/tools.php:281
 msgid "Experiencing an issue with Elementor version %s? Rollback to a previous version before the issue appeared."
 msgstr "Проблемы с Elementor версии %s? Откатитесь к предыдущей исправной версии."
 
 #: core/common/modules/finder/categories/tools.php:58
-#: includes/settings/tools.php:265
+#: includes/settings/tools.php:274
 msgid "Version Control"
 msgstr "Контроль версий"
 
@@ -2572,7 +2572,7 @@ msgid "Sets the default space between widgets (Default: 20)"
 msgstr "Устанавливает пространство между виджетами (по умолчанию: 20)"
 
 #: core/admin/admin.php:712 includes/settings/tools.php:120
-#: includes/settings/tools.php:268 includes/rollback.php:165
+#: includes/settings/tools.php:277 includes/rollback.php:165
 msgid "Rollback to Previous Version"
 msgstr "Откат к предыдущей версии"
 
@@ -2682,19 +2682,19 @@ msgid "For troubleshooting server configuration conflicts."
 msgstr "Для устранения конфликтов конфигурации сервера."
 
 #: core/debug/inspector.php:55 core/editor/editor.php:737
-#: modules/safe-mode/module.php:47 includes/settings/tools.php:312
+#: modules/safe-mode/module.php:47 includes/settings/tools.php:321
 #: includes/settings/settings.php:505 includes/settings/settings.php:517
 #: includes/settings/settings.php:528
 msgid "Enable"
 msgstr "Включить"
 
 #: core/debug/inspector.php:54 modules/safe-mode/module.php:46
-#: includes/settings/tools.php:311 includes/settings/settings.php:504
+#: includes/settings/tools.php:320 includes/settings/settings.php:504
 #: includes/settings/settings.php:516 includes/settings/settings.php:529
 msgid "Disable"
 msgstr "Отключить"
 
-#: core/base/document.php:1269
+#: core/base/document.php:1273
 msgid "Status"
 msgstr "Статус"
 
@@ -3021,22 +3021,22 @@ msgstr "URL-адреса `from` и `to` должны быть разными"
 msgid "The `from` and `to` URL's must be valid URL's"
 msgstr "URL-адреса `from` и `to` должны быть действительными"
 
-#: includes/settings/tools.php:257
+#: includes/settings/tools.php:266
 msgid "Enter your old and new URLs for your WordPress installation, to update all Elementor data (Relevant for domain transfers or move to 'HTTPS')."
 msgstr "Введите старый и новый URL-адреса установки WordPress, чтобы обновить все данные Elementor (для смены домена или перехода на 'HTTPS')."
 
-#: includes/settings/tools.php:253
+#: includes/settings/tools.php:262
 msgid "Update Site Address (URL)"
 msgstr "Обновить адрес сайта (URL)"
 
 #. translators: %s: Codex URL
-#: includes/settings/tools.php:243
+#: includes/settings/tools.php:252
 msgid "<strong>Important:</strong> It is strongly recommended that you <a target=\"_blank\" href=\"%s\">backup your database</a> before using Replace URL."
 msgstr "<strong>Важно:</strong> Настоятельно рекомендуется сделать <a target=\"_blank\" href=\"%s\">резервную копию базы данных</a> перед заменой URL."
 
 #: core/common/modules/finder/categories/tools.php:52
-#: includes/settings/tools.php:237 includes/settings/tools.php:248
-#: includes/settings/tools.php:256
+#: includes/settings/tools.php:246 includes/settings/tools.php:257
+#: includes/settings/tools.php:265
 msgid "Replace URL"
 msgstr "Сменить URL"
 
@@ -3133,8 +3133,8 @@ msgstr "Знакомьтесь с нашим глобальным виджето
 #: includes/editor-templates/templates.php:204
 #: includes/editor-templates/panel-elements.php:23
 #: includes/editor-templates/panel-elements.php:57
-#: includes/managers/controls.php:930 assets/js/app-packages.js:9955
-#: assets/js/app-packages.js:10253 assets/js/app-packages.js:10288
+#: includes/managers/controls.php:930 assets/js/app-packages.js:9959
+#: assets/js/app-packages.js:10257 assets/js/app-packages.js:10292
 msgid "Go Pro"
 msgstr "Перейти на Pro"
 
@@ -3164,15 +3164,15 @@ msgstr "Гигантский"
 msgid "Extra Small"
 msgstr "Мизерный"
 
-#: includes/settings/tools.php:221
+#: includes/settings/tools.php:230
 msgid "Styles set in Elementor are saved in CSS files in the uploads folder. Recreate those files, according to the most recent settings."
 msgstr "Стили, установленные в Elementor, сохраняются в файлах CSS в папке uploads. Пересоздайте эти файлы в соответствии с самыми последними настройками."
 
-#: includes/settings/tools.php:220
+#: includes/settings/tools.php:229
 msgid "Regenerate Files"
 msgstr "Пересоздать файлы"
 
-#: includes/settings/tools.php:217
+#: includes/settings/tools.php:226
 msgid "Regenerate CSS"
 msgstr "Пересоздать CSS"
 
@@ -3180,7 +3180,7 @@ msgstr "Пересоздать CSS"
 msgid "Improve Elementor"
 msgstr "Сделать Elementor лучше"
 
-#: includes/frontend.php:1025
+#: includes/frontend.php:1031
 msgid "Invalid Data: The Template ID cannot be the same as the currently edited template. Please choose a different one."
 msgstr "Недопустимые данные. Идентификатор шаблона (ID) не может совпадать с редактируемым шаблоном. Пожалуйста, выберите другой."
 
@@ -3270,86 +3270,86 @@ msgstr "Шорткод"
 msgid "Remote"
 msgstr "Удаленный"
 
-#: includes/template-library/sources/local.php:959
+#: includes/template-library/sources/local.php:958
 msgid "Import Now"
 msgstr "Импортировать"
 
-#: includes/template-library/sources/local.php:950
+#: includes/template-library/sources/local.php:949
 msgid "Import Templates"
 msgstr "Импортировать шаблоны"
 
-#: includes/template-library/sources/local.php:922
+#: includes/template-library/sources/local.php:921
 msgid "Export Template"
 msgstr "Экспорт шаблона"
 
-#: includes/template-library/sources/local.php:454
+#: includes/template-library/sources/local.php:453
 msgid "(no title)"
 msgstr "(без названия)"
 
-#: includes/template-library/sources/local.php:268
+#: includes/template-library/sources/local.php:267
 msgctxt "Template Library"
 msgid "Type"
 msgstr "Тип"
 
-#: includes/template-library/sources/local.php:228
+#: includes/template-library/sources/local.php:227
 msgctxt "Template Library"
 msgid "No Templates found in Trash"
 msgstr "Шаблонов в корзине не найдено"
 
-#: includes/template-library/sources/local.php:227
+#: includes/template-library/sources/local.php:226
 msgctxt "Template Library"
 msgid "No Templates found"
 msgstr "Шаблонов не найдено"
 
-#: includes/template-library/sources/local.php:226
+#: includes/template-library/sources/local.php:225
 msgctxt "Template Library"
 msgid "Search Template"
 msgstr "Найти шаблон"
 
-#: includes/template-library/sources/local.php:225
+#: includes/template-library/sources/local.php:224
 msgctxt "Template Library"
 msgid "View Template"
 msgstr "Просмотреть шаблон"
 
-#: includes/template-library/sources/local.php:224
+#: includes/template-library/sources/local.php:223
 msgctxt "Template Library"
 msgid "All Templates"
 msgstr "Все шаблоны"
 
-#: includes/template-library/sources/local.php:223
+#: includes/template-library/sources/local.php:222
 msgctxt "Template Library"
 msgid "New Template"
 msgstr "Новый шаблон"
 
-#: includes/template-library/sources/local.php:222
+#: includes/template-library/sources/local.php:221
 msgctxt "Template Library"
 msgid "Edit Template"
 msgstr "Редактировать шаблон"
 
-#: includes/template-library/sources/local.php:221
+#: includes/template-library/sources/local.php:220
 msgctxt "Template Library"
 msgid "Add New Template"
 msgstr "Добавление нового шаблона"
 
-#: includes/template-library/sources/local.php:220
+#: includes/template-library/sources/local.php:219
 msgctxt "Template Library"
 msgid "Add New"
 msgstr "Добавить новый"
 
-#: includes/template-library/sources/local.php:219
+#: includes/template-library/sources/local.php:218
 msgctxt "Template Library"
 msgid "Template"
 msgstr "Шаблон"
 
-#: includes/template-library/sources/local.php:200
+#: includes/template-library/sources/local.php:199
 msgid "Local"
 msgstr "Локальный"
 
-#: includes/settings/tools.php:229
+#: includes/settings/tools.php:238
 msgid "Elementor Library automatically updates on a daily basis. You can also manually update it by clicking on the sync button."
 msgstr "Библиотека Elementor обновляется ежедневно автоматически. Вы также можете обновить её вручную, нажав кнопку синхронизации."
 
-#: includes/settings/tools.php:225 includes/settings/tools.php:228
+#: includes/settings/tools.php:234 includes/settings/tools.php:237
 #: includes/editor-templates/templates.php:14
 #: includes/editor-templates/templates.php:15
 msgid "Sync Library"
@@ -3358,7 +3358,7 @@ msgstr "Синхронизировать библиотеку"
 #: core/common/modules/finder/categories/tools.php:28
 #: core/common/modules/finder/categories/tools.php:46
 #: includes/settings/tools.php:36 includes/settings/tools.php:37
-#: includes/settings/tools.php:335
+#: includes/settings/tools.php:344
 msgid "Tools"
 msgstr "Инструменты"
 
@@ -3404,7 +3404,7 @@ msgstr "Введите название шаблона"
 msgid "Your designs will be available for export and reuse on any page or website"
 msgstr "Ваши шаблоны будут доступны для экспорта и повторного использования на любой странице или сайте"
 
-#: includes/template-library/sources/local.php:1137
+#: includes/template-library/sources/local.php:1136
 #: includes/editor-templates/templates.php:187
 msgid "Export"
 msgstr "Экспорт"
@@ -3432,14 +3432,14 @@ msgstr "Библиотека"
 
 #: core/kits/manager.php:105 includes/editor-templates/global.php:18
 #: includes/editor-templates/library-layout.php:15
-#: includes/editor-templates/library-layout.php:16 includes/frontend.php:1167
-#: assets/js/app.js:6843 assets/js/app.js:7167 assets/js/app-packages.js:7579
-#: assets/js/app-packages.js:7903 assets/js/app-packages.js:8942
+#: includes/editor-templates/library-layout.php:16 includes/frontend.php:1173
+#: assets/js/app.js:6847 assets/js/app.js:7171 assets/js/app-packages.js:7583
+#: assets/js/app-packages.js:7907 assets/js/app-packages.js:8946
 msgid "Close"
 msgstr "Закрыть"
 
-#: includes/template-library/sources/local.php:363
-#: includes/template-library/sources/local.php:1638
+#: includes/template-library/sources/local.php:362
+#: includes/template-library/sources/local.php:1654
 msgid "Saved Templates"
 msgstr "Сохранённые шаблоны"
 
@@ -3468,9 +3468,9 @@ msgstr "Если вы хотите изменить код вашей темы, 
 #: modules/safe-mode/module.php:370
 #: modules/safe-mode/mu-plugin/elementor-safe-mode.php:103
 #: includes/settings/settings.php:471 includes/settings/settings.php:532
-#: includes/controls/url.php:76 assets/js/app.js:7102
-#: assets/js/app-packages.js:7838 assets/js/app-packages.js:9160
-#: assets/js/app-packages.js:9298
+#: includes/controls/url.php:76 assets/js/app.js:7106
+#: assets/js/app-packages.js:7842 assets/js/app-packages.js:9164
+#: assets/js/app-packages.js:9302
 msgid "Learn More"
 msgstr "Узнать больше"
 
@@ -3703,7 +3703,7 @@ msgid "Wider"
 msgstr "Широчайший"
 
 #: core/common/modules/finder/categories/general.php:28
-#: core/role-manager/role-manager.php:57 includes/settings/tools.php:212
+#: core/role-manager/role-manager.php:57 includes/settings/tools.php:221
 #: includes/settings/settings.php:407 includes/managers/elements.php:279
 msgid "General"
 msgstr "Общие"
@@ -4578,7 +4578,7 @@ msgstr "Скругление углов"
 msgid "Description"
 msgstr "Описание"
 
-#: core/base/document.php:1246
+#: core/base/document.php:1250
 #: core/kits/documents/tabs/settings-lightbox.php:84
 #: core/kits/documents/tabs/settings-lightbox.php:88
 #: core/kits/documents/tabs/settings-lightbox.php:105
@@ -4666,11 +4666,11 @@ msgid "Success"
 msgstr "Успех"
 
 #: includes/widgets/button.php:124 includes/widgets/alert.php:99
-#: includes/widgets/progress.php:114 assets/js/app-packages.js:9149
+#: includes/widgets/progress.php:114 assets/js/app-packages.js:9153
 msgid "Info"
 msgstr "Информация"
 
-#: includes/template-library/sources/local.php:1609
+#: includes/template-library/sources/local.php:1625
 #: includes/editor-templates/templates.php:113
 #: includes/elements/section.php:929 includes/widgets/button.php:119
 #: includes/widgets/alert.php:95 includes/widgets/progress.php:109
@@ -4801,7 +4801,7 @@ msgstr "Исключить роли"
 msgid "Post Types"
 msgstr "Типы материалов"
 
-#: core/base/document.php:1238
+#: core/base/document.php:1242
 #: core/common/modules/finder/categories/settings.php:46
 msgid "General Settings"
 msgstr "Основные настройки"
@@ -5105,8 +5105,8 @@ msgstr "Обратите внимание: все несохранённые и�
 msgid "Saved"
 msgstr "Сохранено"
 
-#: core/editor/editor.php:723 assets/js/app.js:7103
-#: assets/js/app-packages.js:7839 assets/js/app-packages.js:9299
+#: core/editor/editor.php:723 assets/js/app.js:7107
+#: assets/js/app-packages.js:7843 assets/js/app-packages.js:9303
 msgid "Go Back"
 msgstr "Вернуться"
 
@@ -5207,7 +5207,7 @@ msgstr "Добавить секцию"
 
 #: core/admin/admin.php:174 modules/gutenberg/module.php:115
 #: includes/editor-templates/editor-wrapper.php:50
-#: includes/editor-templates/templates.php:50 assets/js/app-packages.js:6885
+#: includes/editor-templates/templates.php:50 assets/js/app-packages.js:6889
 msgid "Loading"
 msgstr "Загрузка"
 
@@ -5218,7 +5218,7 @@ msgstr "Загрузка"
 #: includes/settings/settings.php:76 includes/settings/settings.php:77
 #: includes/settings/settings.php:553
 #: includes/editor-templates/editor-wrapper.php:30 includes/plugin.php:719
-#: assets/js/app.js:6776 assets/js/app-packages.js:7512
+#: assets/js/app.js:6780 assets/js/app-packages.js:7516
 msgid "Elementor"
 msgstr "Elementor"
 
@@ -5614,7 +5614,7 @@ msgid "Clear"
 msgstr "Очистить"
 
 #: core/base/document.php:427 core/admin/admin.php:155 core/admin/admin.php:163
-#: modules/admin-bar/module.php:107 modules/gutenberg/module.php:94
+#: modules/admin-bar/module.php:119 modules/gutenberg/module.php:94
 #: modules/gutenberg/module.php:104
 msgid "Edit with Elementor"
 msgstr "Редактировать в Elementor"

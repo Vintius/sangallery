@@ -35,7 +35,7 @@ if( ! class_exists( 'BeRocket_Framework' ) ) {
     include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
     load_plugin_textdomain('BeRocket_domain', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
     class BeRocket_Framework {
-        public static $framework_version = '2.6.0.4';
+        public static $framework_version = '2.6.0.5';
         public static $settings_name = '';
         public $addons;
         public $libraries;
@@ -801,6 +801,7 @@ if( ! class_exists( 'BeRocket_Framework' ) ) {
                         $meta_data = '?utm_source=free_plugin&utm_medium=settings&utm_campaign='.$this->info['plugin_name'];
                     }
                     echo "
+						<style>.notice:not(.berocket_admin_notice){display:none!important;}</style>
                         <header>
                             <div class='br_logo_white'>
                                 <a href='https://berocket.com/products/{$meta_data}' title='BeRocket' target='_blank'><img src='" . ( plugins_url( 'assets/images/br_logo_white.webp', __FILE__ ) ) . "' /></a>

@@ -287,7 +287,7 @@ braapf_checked_style_parent;
         berocket_show_element('.brsbs_style', '!braapf_any_widget_selected! == true');
         $(document).trigger('brsbs_style');
         berocket_show_element('.brsbs_attribute_setup', '{.braapf_widget_type input[type=radio]} == "filter"');
-        berocket_show_element('.braapf_filter_title_label', '({.braapf_widget_type input[type=radio]} == "filter" || {.braapf_widget_type input[type=radio]} == "selected_area" || {.braapf_widget_type input[type=radio]} == "")', true, braapf_filter_title_filters_placeholder);
+        berocket_show_element('.braapf_filter_title_label', '({.braapf_widget_type input[type=radio]} == "filter" || {.braapf_widget_type input[type=radio]} == "selected_area" || {.braapf_widget_type input[type=radio]} == "search_field" || {.braapf_widget_type input[type=radio]} == "")', true, braapf_filter_title_filters_placeholder);
         berocket_show_element('.braapf_filter_title_button', '({.braapf_widget_type input[type=radio]} == "update_button" || {.braapf_widget_type input[type=radio]} == "reset_button")', true, braapf_filter_title_buttons_placeholder);
         berocket_show_element('.braapf_attribute', '{#braapf_filter_type} == "attribute"');
         berocket_show_element('.braapf_custom_taxonomy', '{#braapf_filter_type} == "custom_taxonomy"');
