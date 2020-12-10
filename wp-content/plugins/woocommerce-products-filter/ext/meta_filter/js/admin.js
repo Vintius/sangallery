@@ -1,5 +1,5 @@
 jQuery(function ($) {
-    $('.woof_meta_delete').life('click', function () {
+    $('body').on('click','.woof_meta_delete', function () {
         $(this).parents('li').remove();
         return false;
     });
@@ -81,7 +81,7 @@ jQuery(function ($) {
 
     //***
 
-    $('.woof_meta_view_selector').life('change', function () {
+    $('body').on('change','.woof_meta_view_selector', function () {
         var value = $(this).val();
         var type_selector = $(this).parents('li').find('.woof_meta_type_selector');
         var show_options=$(this).find("option:selected").attr("data-show-options");
@@ -109,7 +109,7 @@ jQuery(function ($) {
         return true;
     });
 	
-	$('.woof_meta_type_selector').life('change', function () {
+	$('body').on('change','.woof_meta_type_selector', function () {
 		 var value = $(this).val();
 		 var type_selector = $(this).parents('li').find('.woof_meta_view_selector');
 		 var curr_type=$(type_selector).find("option:selected");

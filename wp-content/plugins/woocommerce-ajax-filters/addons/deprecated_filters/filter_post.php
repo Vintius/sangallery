@@ -48,8 +48,21 @@ if( ! empty($instance['version']) ) {
     </script>
     <?php
 }
+echo '<div style="text-align: center;">
+<p style="font-size: 24px;"><strong>!IMPORTANT!</strong> This filter is <strong>DEPRECATED</strong> and will be replaced with new filters in near future.</p> 
+<p style="font-size: 24px;">We recommend you to replace it manually on a staging/dev/local site first.</p>
+<p style="font-size: 24px;">You can disable "Deprecated filters" add-on in <a href="' . admin_url('admin.php?page=br-product-filters&tab=addons') . '">Plugin settings</a></p>
+<button class="berocket_aapf_widget_content_show" style="font-size: 24px;">OK, show filter settings</button>
+</div>
+<script>
+jQuery(document).on("click", ".berocket_aapf_widget_content_show", function(e) {
+    e.preventDefault();
+    jQuery(".berocket_aapf_widget_content").show();
+    jQuery(this).hide();
+});
+</script>';
 ?>
-<div class="berocket_aapf_widget_content">
+<div class="berocket_aapf_widget_content" style="display:none;">
     <div class="widget-liquid-right tab-item  current">
     <div class="berocketwizard_widget_type">
         <label class="br_admin_center"><?php _e('Widget Type', 'BeRocket_AJAX_domain') ?></label>

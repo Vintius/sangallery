@@ -162,7 +162,7 @@ function woof_stat_init_calendars() {
     jQuery(".woof_stat_calendar").datepicker("option", "dateFormat", woof_stat_vars.calendar_date_format);
     jQuery(".woof_stat_calendar").datepicker("option", "showAnim", 'fadeIn');
     //+++
-    jQuery(".woof_stat_calendar").life('keyup', function (e) {
+    jQuery('body').on('keyup',".woof_stat_calendar", function (e) {
         if (e.keyCode == 8 || e.keyCode == 46) {
             jQuery.datepicker._clearDate(this);
             jQuery(this).prev('input[type=hidden]').val("");

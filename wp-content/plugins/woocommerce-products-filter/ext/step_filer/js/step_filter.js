@@ -123,7 +123,7 @@ function check_next_prev_btn(){
             jQuery('.woof_step_filter_next').prop( "disabled", true );
         }        
     });
-     jQuery('.woof_step .woof_price_filter_txt').life('change', function () {
+     jQuery('body').on('change','.woof_step .woof_price_filter_txt', function () {
         if(woof_step_filter_check_state(jQuery(this).parents(".woof_step_filter_current")).has){
             jQuery('.woof_step_filter_next').prop( "disabled", false ); 
         }else{

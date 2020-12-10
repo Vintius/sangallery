@@ -7,14 +7,14 @@
   Tested up to: WP 5.4
   Author: realmag777
   Author URI: https://pluginus.net/
-  Version: 1.2.4.1
+  Version: 1.2.4.2
   Requires PHP: 5.4
   Tags: filter,search,woocommerce,woocommerce filter,woocommerce product filter,woocommerce products filter,products filter,product filter,filter of products,filter for products,filter for woocommerce
   Text Domain: woocommerce-products-filter
   Domain Path: /languages
   Forum URI: https://pluginus.net/support/forum/woof-woocommerce-products-filter/
   WC requires at least: 3.6.0
-  WC tested up to: 4.5
+  WC tested up to: 4.8
  */
 
 //update_option('woof_settings', '');//nearly absolute reset of the plugin settings
@@ -48,7 +48,7 @@ define('WOOF_PATH', plugin_dir_path(__FILE__));
 define('WOOF_LINK', plugin_dir_url(__FILE__));
 define('WOOF_PLUGIN_NAME', plugin_basename(__FILE__));
 define('WOOF_EXT_PATH', WOOF_PATH . 'ext/');
-define('WOOF_VERSION', '1.2.4');
+define('WOOF_VERSION', '1.2.4.2');
 define('WOOF_MIN_WOOCOMMERCE_VERSION', '3.6');
 //classes
 include WOOF_PATH . 'classes/storage.php';
@@ -80,7 +80,7 @@ include WOOF_PATH . 'classes/rate_alert.php';
   } */
 
 //***
-//16-04-2020
+//09-12-2020
 final class WOOF {
 
     public $settings = array();
@@ -788,7 +788,7 @@ final class WOOF {
 
             var woof_really_curr_tax = {};
             var woof_current_page_link = location.protocol + '//' + location.host + location.pathname;
-            //***lets remove pagination from woof_current_page_link
+            /*lets remove pagination from woof_current_page_link*/
             woof_current_page_link = woof_current_page_link.replace(/\page\/[0-9]+/, "");
         <?php
         if (!isset($wp_query->query_vars['taxonomy'])) {
@@ -809,9 +809,9 @@ final class WOOF {
         }
 
 
-//code bone when filter child categories on the category page of parent
-//like here: http://demo.pluginus.net/product-category/clothing/?swoof=1&product_cat=hoo1
-//+++
+/*code bone when filter child categories on the category page of parent*/
+/*like here: http://demo.pluginus.net/product-category/clothing/?swoof=1&product_cat=hoo1*/
+
         ?>
             var woof_link = '<?php echo WOOF_LINK ?>';
 
@@ -876,14 +876,11 @@ final class WOOF {
                 var woof_lang_custom = {};/*!!important*/
             }
 
-            //***
 
             var woof_is_mobile = 0;
         <?php if (WOOF_HELPER::is_mobile_device()): ?>
                 woof_is_mobile = 1;
         <?php endif; ?>
-
-
 
             var woof_show_price_search_button = 0;
             var woof_show_price_search_type = 0;
@@ -920,7 +917,7 @@ final class WOOF {
                 icheck_skin.skin = "<?php echo $icheck_skin[0] ?>";
                 icheck_skin.color = "<?php echo $icheck_skin[1] ?>";
                 if (window.navigator.msPointerEnabled && navigator.msMaxTouchPoints > 0) {
-                    //icheck_skin = 'none';
+                    /*icheck_skin = 'none';*/
                 }
         <?php else: ?>
                 icheck_skin = 'none';
@@ -932,7 +929,7 @@ final class WOOF {
 
 
             var woof_current_values = '<?php echo json_encode($this->get_request_data()); ?>';
-            //+++
+
             var woof_lang_loading = "<?php _e('Loading ...', 'woocommerce-products-filter') ?>";
 
         <?php if (isset($this->settings['default_overlay_skin_word']) AND ! empty($this->settings['default_overlay_skin_word'])): ?>
@@ -943,10 +940,9 @@ final class WOOF {
             var woof_lang_hide_products_filter = "<?php _e('hide products filter', 'woocommerce-products-filter') ?>";
             var woof_lang_pricerange = "<?php _e('price range', 'woocommerce-products-filter') ?>";
 
-            //+++
 
             var woof_use_beauty_scroll =<?php echo $woof_use_beauty_scroll ?>;
-            //+++
+
             var woof_autosubmit =<?php echo (int) get_option('woof_autosubmit', 0) ?>;
             var woof_ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
             /*var woof_submit_link = "";*/
@@ -957,7 +953,7 @@ final class WOOF {
             var woof_checkboxes_slide_flag = <?php echo(((int) get_option('woof_checkboxes_slide') == 1 ? 'true' : 'false')); ?>;
 
 
-            //toggles
+            /*toggles*/
             var woof_toggle_type = "<?php _e((isset($this->settings['toggle_type']) AND ! empty($this->settings['toggle_type'])) ? $this->settings['toggle_type'] : 'text') ?>";
 
             var woof_toggle_closed_text = "<?php _e((isset($this->settings['toggle_closed_text']) AND ! empty($this->settings['toggle_closed_text'])) ? trim(WOOF_HELPER::wpml_translate(null, $this->settings['toggle_closed_text'])) : '-') ?>";
@@ -967,7 +963,7 @@ final class WOOF {
             var woof_toggle_opened_image = "<?php _e((isset($this->settings['toggle_opened_image']) AND ! empty($this->settings['toggle_opened_image'])) ? $this->settings['toggle_opened_image'] : WOOF_LINK . 'img/minus3.png') ?>";
 
 
-            //indexes which can be displayed in red buttons panel
+
         <?php
         $taxonomies = $this->get_taxonomies();
         $taxonomies_keys = array_keys($taxonomies);
@@ -1009,10 +1005,7 @@ final class WOOF {
                 woof_really_curr_tax = {term_id:<?php echo intval($tmp[0]) ?>, taxonomy: "<?php echo WOOF_HELPER::escape($tmp[1]) ?>"};
         <?php endif; ?>
 
-
-
-            //***
-            //for extensions
+            /*for extensions*/
 
             var woof_ext_init_functions = null;
         <?php if (!empty(WOOF_EXT::$includes['js_init_functions'])) : ?>

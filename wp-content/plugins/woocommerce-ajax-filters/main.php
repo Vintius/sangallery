@@ -542,7 +542,7 @@ class BeRocket_AAPF extends BeRocket_Framework {
             wp_dequeue_style( 'font-awesome' );
         }
         global $wp_query;
-        if ( ! is_admin() && ! wp_doing_cron() && ! wp_doing_ajax() && ! session_id() ) {
+        if ( ! is_admin() && ! wp_doing_cron() && ! wp_doing_ajax() && ! session_id() && ! wp_is_json_request() ) {
             session_start();
         }
     }
@@ -3034,7 +3034,7 @@ jQuery(document).on('change', '.berocket_disable_ajax_loading', berocket_disable
         global $braapf_parameters;
         $braapf_parameters = array();
         $braapf_parameters['ajax_filtering'] = ! empty($_SERVER['HTTP_X_BRAAPF']);
-        $braapf_parameters['do_not_display_filters'] = ! empty($_SERVER['HTTP_X_BRAAPFDISABLE']);
+        $braapf_parameters['do_not_display_filters'] = false;//! empty($_SERVER['HTTP_X_BRAAPFDISABLE']);
     }
     public function no_products_block_before($teplate_name) {
         if( $teplate_name == 'loop/no-products-found.php' ) {

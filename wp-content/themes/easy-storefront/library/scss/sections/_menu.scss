@@ -1,0 +1,8 @@
+.main-navigation {
+  a {
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+  }
+}

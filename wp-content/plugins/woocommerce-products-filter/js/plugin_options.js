@@ -254,11 +254,6 @@ var woof_sort_order = [];
 (function ($) {
 
 
-    jQuery.fn.life = function (types, data, fn) {
-	jQuery(this.context).on(types, this.selector, data, fn);
-	return this;
-    };
-
     $.woof_mod = $.woof_mod || {};
 
     $.woof_mod.popup_prepare = function () {
@@ -365,7 +360,7 @@ var woof_sort_order = [];
 
 	//***
 
-	jQuery('.woof_select_image').life('click', function ()
+	jQuery('body').on('click','.woof_select_image', function ()
 	{
 	    var input_object = jQuery(this).prev('input[type=text]');
 	    window.send_to_editor = function (html)
@@ -384,7 +379,7 @@ var woof_sort_order = [];
 
 	//***
 
-	$('.woof_ext_remove').life('click', function () {
+	$('body').on('click','.woof_ext_remove', function () {
             
 	    if (confirm('Sure?')) {
 		woof_show_info_popup('Extension removing ...');

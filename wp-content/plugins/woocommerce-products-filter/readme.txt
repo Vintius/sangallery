@@ -3,9 +3,9 @@ Contributors: RealMag777
 Donate link: https://pluginus.net/affiliate/woocommerce-products-filter
 Tags: filter, products filter, woocommerce, products, ajax filter, woof, category filter, woocommerce products filter, woocommerce price filter, attributes filter, advanced product filters
 Requires at least: 4.1.0
-Tested up to: 5.5
+Tested up to: 5.6
 Requires PHP: 5.4
-Stable tag: 1.2.4.1
+Stable tag: trunk
 
 WooCommerce Products Filter – flexible, easy and robust professional filter for products in the WooCommerce store
 
@@ -18,7 +18,8 @@ Supports latest version of the WooCommerce plugin. A must have plugin for your W
 If you are WP+PHP developer and you want to create something unusual in the search form interface – Welcome: using WOOF extension API and default extensions as an examples you can create any html-items for the search form and even custom woo-products loop template for your own purposes.
 Also its possible to [create any connectors for layout plugins](https://products-filter.com/extensions/)
 
-Latest PHP 7.4.x - COMPATIBLE!
+
+Latest PHP 8.x - COMPATIBLE!
 
 Demo site 1: [demo.products-filter.com](https://demo.products-filter.com/)
 Demo site 2: [demo10k.products-filter.com/](https://demo10k.products-filter.com/)
@@ -107,6 +108,8 @@ https://www.youtube.com/watch?v=jZPtdWgAxKk
 
 &#9989;&nbsp;[WOOT - WooCommerce Active Product Table](https://products-tables.com/upgrading-to-premium/): is WooCommerce plugin for displaying shop products in table format. Tables makes focus for your buyers on the things they want to get, nothing superfluous, just what the client wants, and full attention to what is offered!
 
+&#9989;&nbsp;[TABLEON - WordPress Post Tables Filterable](https://wordpress.org/plugins/posts-table-filterable): WordPress plugin for displaying site posts and their custom post types in table format. Tables makes focus for your customers on the things they want to get, nothing superfluous, just what the client wants, and full attention to what is offered!
+
 &#9989;&nbsp;[WPCS - WordPress Currency Switcher](https://wordpress.org/plugins/currency-switcher/): is a WordPress plugin that allows to switch currencies and get their rates converted in the real time on your site!
 
 &#9989;&nbsp;[WPBE - WordPress Posts Bulk Editor Professional](https://wordpress.org/plugins/bulk-editor/): WordPress plugin for managing and bulk edit WordPress posts, pages and custom post types data in robust and flexible way! Be professionals with managing data of your site!
@@ -153,6 +156,9 @@ R: [https://products-filter.com/documentation/](https://products-filter.com/docu
 6. The plugin settings
 
 == Changelog ==
+
+= 1.2.4.2 =
+* jQuery code fix for WordPress 5.6 compatibility
 
 = 1.2.4 =
 * https://products-filter.com/update-woocommerce-products-filter-v-2-2-4/
