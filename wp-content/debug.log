@@ -986,3 +986,380 @@ Stack trace:
 [05-Nov-2020 12:23:59 UTC] PHP Notice:  A non well formed numeric value encountered in F:\WebPrjcts\wordpress\WP-test\www\currency\get_currency.php on line 54
 [05-Nov-2020 12:23:59 UTC] PHP Notice:  A non well formed numeric value encountered in F:\WebPrjcts\wordpress\WP-test\www\currency\get_currency.php on line 53
 [05-Nov-2020 12:23:59 UTC] PHP Notice:  A non well formed numeric value encountered in F:\WebPrjcts\wordpress\WP-test\www\currency\get_currency.php on line 54
+[08-Dec-2020 18:46:15 UTC] 74.2506
+
+[08-Dec-2020 18:46:15 UTC] PHP Notice:  A non well formed numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 53
+[08-Dec-2020 18:46:15 UTC] PHP Warning:  A non-numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 54
+[08-Dec-2020 18:46:15 UTC] PHP Notice:  A non well formed numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 54
+[08-Dec-2020 18:46:15 UTC] PHP Notice:  A non well formed numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 53
+[08-Dec-2020 18:46:15 UTC] PHP Notice:  A non well formed numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 54
+[10-Dec-2020 14:44:46 UTC] 73.3057
+
+[10-Dec-2020 14:44:46 UTC] PHP Notice:  A non well formed numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 53
+[10-Dec-2020 14:44:46 UTC] PHP Warning:  A non-numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 54
+[10-Dec-2020 14:44:46 UTC] PHP Notice:  A non well formed numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 54
+[10-Dec-2020 14:44:46 UTC] PHP Notice:  A non well formed numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 53
+[10-Dec-2020 14:44:46 UTC] PHP Notice:  A non well formed numeric value encountered in /Users/evgenyzhernoklev/Projects/sangallery/currency/get_currency.php on line 54
+[10-Dec-2020 15:03:01 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:03:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:03:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:03:01 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:03:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:03:01 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:03:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:13 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:03:22 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:03:22 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:03:22 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:03:22 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:03:22 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:03:22 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:03:22 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:04:01 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:04:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:04:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:04:01 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:04:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:04:01 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:04:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:05:01 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:05:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:05:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:05:01 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:05:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:05:01 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:05:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:03 UTC] PHP Notice:  Array to string conversion in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce-ajax-filters/templates/filter_post_simple.php on line 32
+[10-Dec-2020 15:05:05 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:05:05 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:05:05 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:05:05 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:05:05 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:05:05 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:05:05 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:05:33 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:05:33 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:05:33 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:05:33 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:05:33 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:05:33 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:05:33 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:06:08 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:06:08 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:06:08 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:06:08 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:06:08 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:06:08 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:06:08 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:06:49 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:06:49 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:06:49 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:06:49 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:06:49 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:06:49 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:06:49 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:06:49 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:06:49 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:06:49 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:06:49 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:06:49 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:06:49 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:06:49 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:07:45 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:07:45 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:07:45 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:07:45 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:07:45 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:07:45 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:07:45 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:07:45 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:07:45 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:07:45 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:07:45 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:07:45 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:07:45 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:07:45 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:14:55 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:14:55 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:14:55 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:14:55 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:14:55 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:14:55 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:14:55 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:14:55 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:14:55 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:14:55 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:14:55 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:14:55 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:14:55 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:14:55 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:15:47 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:15:47 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:15:47 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:15:47 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:15:47 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:15:47 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:15:47 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:15:47 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:15:47 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:15:47 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:15:47 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:15:47 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:15:47 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:15:47 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:17:50 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:17:50 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:17:50 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:17:50 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:17:50 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:17:50 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:17:50 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:17:51 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:17:51 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:17:51 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:17:51 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:17:51 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:17:51 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:17:51 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:17:51 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:17:51 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:17:51 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:17:51 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:17:51 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:17:51 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:17:51 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:18:53 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:18:53 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:18:53 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:18:53 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:18:53 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:18:53 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:18:53 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:18:53 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:18:53 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:18:53 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:18:53 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:18:53 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:18:53 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:18:53 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:09 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:27 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:30:27 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:27 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:27 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:30:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:30:27 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:30:27 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:30:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:31:43 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:31:43 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:31:43 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:31:43 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:31:43 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:31:43 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:31:43 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:32:27 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:32:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:32:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:32:27 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:32:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:32:27 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:32:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:32:27 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:32:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:32:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:32:27 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:32:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:32:27 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:32:27 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:35:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/plugins/woocommerce/includes/class-wc-checkout.php on line 267
+[10-Dec-2020 15:36:40 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:36:40 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:36:40 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:36:40 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:36:40 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:36:40 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:36:40 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:36:54 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:36:54 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:36:54 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:36:54 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:36:54 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:36:54 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:36:54 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:36:54 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:36:54 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:36:54 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:36:54 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:36:54 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:36:54 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:36:54 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:19 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:38:41 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:41:24 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:41:24 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:41:24 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:41:24 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:41:24 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:41:24 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:41:24 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:44:01 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:44:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:44:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:44:01 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:44:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:44:01 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:44:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:44:01 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:44:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:44:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:44:01 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:44:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:44:01 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:44:01 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:44:37 UTC] PHP Notice:  Undefined index: _currency_type in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:44:37 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 450
+[10-Dec-2020 15:44:37 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 463
+[10-Dec-2020 15:44:37 UTC] PHP Notice:  Undefined index: _origin_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:44:37 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 464
+[10-Dec-2020 15:44:37 UTC] PHP Notice:  Undefined index: _origin_sale_price in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472
+[10-Dec-2020 15:44:37 UTC] PHP Notice:  Undefined offset: 0 in /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/functions.php on line 472

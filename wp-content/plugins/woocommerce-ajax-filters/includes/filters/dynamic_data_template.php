@@ -124,11 +124,21 @@ class BeRocket_AAPF_dynamic_data_template {
     function products_count($element, $term, $i, $berocket_query_var_title) {
         if( $berocket_query_var_title['show_product_count_per_attr'] ) {
             $qty_text = $term->count;
+			$base_text = '(qty)';
+			if( strpos($berocket_query_var_title['product_count_per_attr_style'], 'space') !== false ) {
+				$base_text = str_replace('(', '&nbsp;(', $base_text);
+			}
+			if( strpos($berocket_query_var_title['product_count_per_attr_style'], 'value') !== false ) {
+				$base_text = str_replace(array('(', ')'), array('(&nbsp;', '&nbsp;)'), $base_text);
+			}
+			$count_style = array('', '');
             if($this->options['styles_input']['product_count'] == 'round') {
-                $qty_text = '('.$qty_text.')';
+				$count_style = array('(', ')');
             } elseif($this->options['styles_input']['product_count'] == 'quad') {
-                $qty_text = '['.$qty_text.']';
+				$count_style = array('[', ']');
             }
+			$base_text = str_replace(array('(', ')'), $count_style, $base_text);
+			$qty_text = str_replace('qty', $qty_text, $base_text);
             if( $berocket_query_var_title['new_template'] == 'checkbox' ) {
                 $element['content']['qty'] = array(
                     'type'          => 'tag',

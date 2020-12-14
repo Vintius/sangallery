@@ -380,17 +380,23 @@
 }
 
 .berocket_selected_image {
-    height: 90px;
-    width: 90px;
+    height: 60px;
+    width: 60px;
     display: inline-block;
-    line-height: 85px;
+    line-height: 55px;
     padding: 5px;
     vertical-align: bottom;
 }
 .berocket_selected_image img {
-    max-width: 90px;
-    max-height: 90px;
+    max-width: 60px;
+    max-height: 60px;
     vertical-align: middle;
+}
+.br_framework_settings .button.berocket_upload_image,
+.br_framework_settings .button.berocket_remove_image,
+.br_framework_settings .button.berocket_select_fa {
+    margin-top: 10px!important;
+    margin-bottom: 0!important;
 }
 
 /* FONT AWESOME SELECTOR */
@@ -1504,6 +1510,9 @@
 }
 .br_cond.br_cond_category > div ul {
     margin: 0;
+}
+.br_cond.br_cond_category > div ul ul {
+    margin-left: 10px;
 }
 .br_cond.br_cond_sale select,
 .br_cond.br_cond_bestsellers input,

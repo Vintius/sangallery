@@ -33,7 +33,7 @@ function woof_init_text() {
         //http://easyautocomplete.com/examples
         if (val.length >= 3 && woof_text_autocomplete) {
             //http://stackoverflow.com/questions/1574008/how-to-simulate-target-blank-in-javascript
-            jQuery('.easy-autocomplete a').life('click', function () {
+            jQuery('body').on('click','.easy-autocomplete a', function () {
                 
                 if(!how_to_open_links){
                     window.open(jQuery(this).attr('href'), '_blank');
@@ -118,7 +118,7 @@ function woof_init_text() {
     });
 
     //+++
-    jQuery('.woof_text_search_go').life('click', function () {
+    jQuery('body').on('click','.woof_text_search_go', function () {
         var uid = jQuery(this).data('uid');
         woof_text_do_submit = true;
         

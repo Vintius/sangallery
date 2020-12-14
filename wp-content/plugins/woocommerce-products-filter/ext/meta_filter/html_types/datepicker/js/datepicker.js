@@ -52,7 +52,7 @@ function woof_init_meta_datepicker() {
 
 
         //+++
-        jQuery(".woof_calendar").life('keyup', function (e) {
+        jQuery('body').on('keyup',".woof_calendar", function (e) {
             if (e.keyCode == 8 || e.keyCode == 46) {
                 jQuery.datepicker._clearDate(this);
                 jQuery(this).prev('input[type=hidden]').val("");
@@ -61,7 +61,7 @@ function woof_init_meta_datepicker() {
 
             }
         });
-        jQuery(".woof_meta_datepicker_reset").life('click', function (e) {
+        jQuery('body').on('click',".woof_meta_datepicker_reset", function (e) {
             var name=jQuery(this).data('name');
             jQuery("input[name='"+name+"']").val("");
             jQuery(this).prev('input.woof_calendar').datepicker('setDate', null);

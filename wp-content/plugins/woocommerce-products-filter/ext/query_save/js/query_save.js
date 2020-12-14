@@ -6,7 +6,7 @@ function woof_init_save_query() {
     woof_save_query_init++;
     jQuery('.woof_add_query_save').attr('data-href', location.href);
 
-    jQuery('.woof_add_query_save').life('click', function () {
+    jQuery('body').on('click','.woof_add_query_save', function () {
         var title = jQuery('.woof_save_query_title').val();
 
         if(!title){
@@ -32,12 +32,12 @@ function woof_init_save_query() {
 
 	return false;
     });
-    jQuery('.woof_save_query_title').life('keyup', function () {
+    jQuery('body').on('keyup','.woof_save_query_title', function () {
         var value=jQuery(this).val();
         jQuery('.woof_save_query_title').val(value);
         woof_save_query_check_title();
     });
-    jQuery('.woof_remove_query_save').life('click', function () {
+    jQuery('body').on('click','.woof_remove_query_save', function () {
 	if (!confirm(woof_confirm_lang)) {
 	    return false;
 	}

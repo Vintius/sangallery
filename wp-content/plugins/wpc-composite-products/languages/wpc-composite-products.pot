@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the WPC Composite Products for WooCommerce plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPC Composite Products for WooCommerce 3.1.5\n"
+"Project-Id-Version: WPC Composite Products for WooCommerce 3.1.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpc-composite-products\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-10-26T07:47:50+00:00\n"
+"POT-Creation-Date: 2020-11-19T03:09:17+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.2.0\n"
 "X-Domain: wpc-composite-products\n"
@@ -193,7 +193,7 @@ msgid "Set a new price using a number (eg. \"49\" for $49) or a percentage (eg. 
 msgstr ""
 
 #: wpc-composite-products.php:578
-#: wpc-composite-products.php:1770
+#: wpc-composite-products.php:1771
 msgid "Quantity"
 msgstr ""
 
@@ -239,17 +239,17 @@ msgid "How to use?"
 msgstr ""
 
 #: wpc-composite-products.php:660
-#: wpc-composite-products.php:1124
+#: wpc-composite-products.php:1125
 msgid "Settings"
 msgstr ""
 
 #: wpc-composite-products.php:664
-#: wpc-composite-products.php:1141
+#: wpc-composite-products.php:1142
 msgid "Docs"
 msgstr ""
 
 #: wpc-composite-products.php:669
-#: wpc-composite-products.php:1125
+#: wpc-composite-products.php:1126
 msgid "Premium Version"
 msgstr ""
 
@@ -355,7 +355,7 @@ msgid "Option none"
 msgstr ""
 
 #: wpc-composite-products.php:807
-#: wpc-composite-products.php:2210
+#: wpc-composite-products.php:2211
 msgid "No, thanks. I don't need this"
 msgstr ""
 
@@ -515,160 +515,160 @@ msgstr ""
 msgid "Update Options"
 msgstr ""
 
-#: wpc-composite-products.php:1097
+#: wpc-composite-products.php:1098
 msgid "Please choose at least [min] of the whole products before adding to the cart."
 msgstr ""
 
-#: wpc-composite-products.php:1098
+#: wpc-composite-products.php:1099
 msgid "Please choose maximum [max] of the whole products before adding to the cart."
 msgstr ""
 
-#: wpc-composite-products.php:1099
+#: wpc-composite-products.php:1100
 msgid "Please select different product for each component."
 msgstr ""
 
-#: wpc-composite-products.php:1100
+#: wpc-composite-products.php:1101
 msgid "Please select a purchasable product in the component [name] before adding to the cart."
 msgstr ""
 
-#: wpc-composite-products.php:1142
+#: wpc-composite-products.php:1143
 msgid "Support"
 msgstr ""
 
-#: wpc-composite-products.php:1332
+#: wpc-composite-products.php:1333
 msgid "One of the component products is unavailable."
 msgstr ""
 
-#: wpc-composite-products.php:1333
-#: wpc-composite-products.php:1340
-#: wpc-composite-products.php:1347
-#: wpc-composite-products.php:1354
-#: wpc-composite-products.php:1361
-#: wpc-composite-products.php:1371
-#: wpc-composite-products.php:1379
+#: wpc-composite-products.php:1334
+#: wpc-composite-products.php:1341
+#: wpc-composite-products.php:1348
+#: wpc-composite-products.php:1355
+#: wpc-composite-products.php:1362
+#: wpc-composite-products.php:1372
+#: wpc-composite-products.php:1380
 msgid "You cannot add this composite products to the cart."
 msgstr ""
 
-#: wpc-composite-products.php:1339
-#: wpc-composite-products.php:1346
+#: wpc-composite-products.php:1340
+#: wpc-composite-products.php:1347
 msgid "\"%s\" is un-purchasable."
 msgstr ""
 
-#: wpc-composite-products.php:1353
-#: wpc-composite-products.php:1370
+#: wpc-composite-products.php:1354
+#: wpc-composite-products.php:1371
 msgid "\"%s\" has not enough stock."
 msgstr ""
 
-#: wpc-composite-products.php:1360
+#: wpc-composite-products.php:1361
 msgid "You cannot add another \"%s\" to your cart."
 msgstr ""
 
-#: wpc-composite-products.php:1378
+#: wpc-composite-products.php:1379
 msgid "\"%s\" is protected and cannot be purchased."
 msgstr ""
 
-#: wpc-composite-products.php:1558
-#: wpc-composite-products.php:1579
-#: wpc-composite-products.php:1683
-#: wpc-composite-products.php:2562
-#: wpc-composite-products.php:2574
+#: wpc-composite-products.php:1559
+#: wpc-composite-products.php:1580
+#: wpc-composite-products.php:1684
+#: wpc-composite-products.php:2575
+#: wpc-composite-products.php:2587
 msgid "Components"
 msgstr ""
 
-#: wpc-composite-products.php:1617
+#: wpc-composite-products.php:1618
 msgid "(in %s)"
 msgstr ""
 
-#: wpc-composite-products.php:1647
+#: wpc-composite-products.php:1648
 msgid "Composite (%s)"
 msgstr ""
 
-#: wpc-composite-products.php:1676
+#: wpc-composite-products.php:1677
 msgid "Composite product"
 msgstr ""
 
-#: wpc-composite-products.php:1715
+#: wpc-composite-products.php:1716
 msgid "+ Add component"
 msgstr ""
 
-#: wpc-composite-products.php:1725
+#: wpc-composite-products.php:1726
 msgid "Always put a price in the General tab to display the Add to Cart button. This is also the base price."
 msgstr ""
 
-#: wpc-composite-products.php:1729
+#: wpc-composite-products.php:1730
 msgid "Pricing"
 msgstr ""
 
-#: wpc-composite-products.php:1732
+#: wpc-composite-products.php:1733
 msgid "Only base price"
 msgstr ""
 
-#: wpc-composite-products.php:1733
+#: wpc-composite-products.php:1734
 msgid "Include base price"
 msgstr ""
 
-#: wpc-composite-products.php:1734
+#: wpc-composite-products.php:1735
 msgid "Exclude base price"
 msgstr ""
 
-#: wpc-composite-products.php:1737
+#: wpc-composite-products.php:1738
 msgid "\"Base price\" is the price set in the General tab. When \"Only base price\" is chosen, the total price won't change despite the price changes in variable components."
 msgstr ""
 
-#: wpc-composite-products.php:1741
+#: wpc-composite-products.php:1742
 msgid "Discount"
 msgstr ""
 
-#: wpc-composite-products.php:1748
+#: wpc-composite-products.php:1749
 msgid "The universal percentage discount will be applied equally on each component's price, not on the total."
 msgstr ""
 
-#: wpc-composite-products.php:1783
+#: wpc-composite-products.php:1784
 msgid "Same products"
 msgstr ""
 
-#: wpc-composite-products.php:1786
+#: wpc-composite-products.php:1787
 msgid "Allow"
 msgstr ""
 
-#: wpc-composite-products.php:1787
+#: wpc-composite-products.php:1788
 msgid "Do not allow"
 msgstr ""
 
-#: wpc-composite-products.php:1789
+#: wpc-composite-products.php:1790
 msgid "Allow/Do not allow the buyer to choose the same products in the components."
 msgstr ""
 
-#: wpc-composite-products.php:1793
+#: wpc-composite-products.php:1794
 msgid "Shipping fee"
 msgstr ""
 
-#: wpc-composite-products.php:1796
+#: wpc-composite-products.php:1797
 msgid "Apply to the whole composite"
 msgstr ""
 
-#: wpc-composite-products.php:1797
+#: wpc-composite-products.php:1798
 msgid "Apply to each component product"
 msgstr ""
 
-#: wpc-composite-products.php:1802
+#: wpc-composite-products.php:1803
 msgid "Custom display price"
 msgstr ""
 
-#: wpc-composite-products.php:1810
+#: wpc-composite-products.php:1811
 msgid "Above text"
 msgstr ""
 
-#: wpc-composite-products.php:1819
+#: wpc-composite-products.php:1820
 msgid "Under text"
 msgstr ""
 
-#: wpc-composite-products.php:1939
-#: wpc-composite-products.php:1942
+#: wpc-composite-products.php:1940
+#: wpc-composite-products.php:1943
 msgid "From"
 msgstr ""
 
-#: wpc-composite-products.php:2164
-#: wpc-composite-products.php:2250
+#: wpc-composite-products.php:2165
+#: wpc-composite-products.php:2251
 msgid "Qty:"
 msgstr ""

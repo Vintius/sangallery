@@ -4,8 +4,8 @@ Contributors: dholovnia, berocket
 Donate link: https://berocket.com/product/woocommerce-ajax-products-filter?utm_source=wordpress_org&utm_medium=donate&utm_campaign=ajax_filters
 Tags: filters, product filters, ajax product filters, ajax filter, ajax filter widget, color filter, size filter, product onsale filter, product preview, product category filter, product reset filter, product sort by filter, stock filter, product tag filter, price range filter, price box filter, advanced product filters, woocommerce filters, woocommerce product filters, woocommerce products filter, woocommerce ajax product filters, widget, plugin, woocommerce item filters, filters plugin, ajax filters plugin, filter woocommerce products, filter woocommerce products plugin, wc filters, wc filters products, wc products filters, wc ajax products filters, wc product filters, wc advanced product filters, woocommerce layered nav, woocommerce layered navigation, ajax filtered nav, ajax filtered navigation, price filter, ajax price filter, woocommerce product sorting, sidebar filter, sidebar ajax filter, taxonomy filter, category filter, attribute filter, attributes filter, woocommerce product sort, ajax products filter plugin for woocommerce, rocket, berocket, berocket woocommerce ajax products filter
 Requires at least: 5.0
-Tested up to: 5.5
-Stable tag: 1.5.1.7
+Tested up to: 5.6
+Stable tag: 1.5.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -184,6 +184,28 @@ You can try this plugin's admin side [here](https://berocket.com/product/woocomm
 ---
 
 == Changelog ==
+
+= 1.5.2.3 =
+* Fix - Issue with Divi Builder
+
+= 1.5.2.2 =
+* Fix - Incompatibility with WordPress 5.6
+* Fix - Issue with filters disappearing
+
+= 1.5.2.1 =
+* Fix - Issue with pagination
+* Fix - Categories not displayed in conditions
+* Fix - Error with Elementor Popup
+
+= 1.5.2 =
+* Enhancement - Better compatibility with other plugins and themes
+* Enhancement - Possibility to translate some text in URL with WPML
+* Enhancement - Option to disable panel in admin bar
+* Fix - Remove inline JavaScript that cause error with some caching plugins
+* Fix - Change variable to disable AJAX pagination. Prevent disabling on some sites
+* Fix - Use default rewrite values, when wp_rewrite not exist
+* Fix - Add JavaScript variable only once for page
+* Fix - Incompatibility with latest version of product table
 
 = 1.5.1.7 =
 * Enhancement - Option to filter products by variation price

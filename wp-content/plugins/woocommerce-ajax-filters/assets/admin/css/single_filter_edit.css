@@ -193,10 +193,12 @@
 .braapf_attribute_setup_flex .braapf_full_select_full.braapf_include_exclude_list  label {
     text-align: left;
 }
+.braapf_attribute_setup_flex .braapf_half_select_full .braapf_flex_elements,
 .braapf_attribute_setup_flex .braapf_half_select_full select,
 .braapf_attribute_setup_flex .braapf_half_select_full input[type=text],
 .braapf_attribute_setup_flex .braapf_half_select_full input[type=number],
 .braapf_attribute_setup_flex .braapf_half_select_full textarea,
+.braapf_attribute_setup_flex .braapf_full_select_full .braapf_flex_elements,
 .braapf_attribute_setup_flex .braapf_full_select_full select,
 .braapf_attribute_setup_flex .braapf_full_select_full input[type=text],
 .braapf_attribute_setup_flex .braapf_full_select_full input[type=number],
@@ -216,6 +218,23 @@
     margin-left: 5%;
     margin-right: 5%;
     flex-basis: 40%;
+}
+.braapf_half_select_full .braapf_flex_elements {
+    display: flex;
+    align-items: center;
+}
+.braapf_half_select_full .braapf_flex_elements select,
+.braapf_half_select_full .braapf_flex_elements input[type=text],
+.braapf_half_select_full .braapf_flex_elements input[type=number],
+.braapf_half_select_full .braapf_flex_elements textarea,
+.braapf_full_select_full .braapf_flex_elements select,
+.braapf_full_select_full .braapf_flex_elements input[type=text],
+.braapf_full_select_full .braapf_flex_elements input[type=number],
+.braapf_full_select_full .braapf_flex_elements textarea {
+    flex-basis: 100%;
+}
+.braapf_flex_elements .braapf_size_ext {
+    margin-left: 5px;
 }
 .braapf_attribute_setup_flex .braapf_parent_product_cat > div {
     width: 100%;

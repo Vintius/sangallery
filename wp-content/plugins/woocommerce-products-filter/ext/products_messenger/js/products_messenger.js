@@ -6,7 +6,7 @@ function woof_init_products_messenger() {
     woof_messenger_init++;
     jQuery('#woof_add_subscr').attr('data-href', location.href);
 
-    jQuery('#woof_add_subscr').life('click', function () {
+    jQuery('body').on('click','#woof_add_subscr', function () {
 	var data = {
 	    action: "woof_messenger_add_subscr",
 	    user_id: jQuery(this).attr('data-user'),
@@ -24,7 +24,7 @@ function woof_init_products_messenger() {
 
 	return false;
     });
-    jQuery('.woof_remove_subscr').life('click', function () {
+    jQuery('body').on('click','.woof_remove_subscr', function () {
 	if (!confirm(woof_confirm_lang)) {
 	    return false;
 	}

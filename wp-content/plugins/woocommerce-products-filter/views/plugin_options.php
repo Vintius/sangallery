@@ -1991,7 +1991,7 @@
                             <?php if (!$this->is_free_ver): ?>
                                 <tr>
                                     <td colspan="2">
-                                        <div id="plugin_warning" style="padding: 9px; border: solid red 3px; background: #eee; ">
+                                        <div id="plugin_warning" style="padding: 9px; border: solid red 3px; background: #eee; display: none; ">
                                             <div class="plugin_warning_head"><strong style="color: red;">ATTENTION MESSAGE FROM THE PLUGIN AUTHOR TO ALL USERS WHO USES PIRATE VERSION OF THE PLUGIN! IF YOU BOUGHT IT - DO NOT READ AND IGNORE IT!!</strong>!<br></div>
                                             <br />
                                             GET YOUR COPY OF THE PLUGIN <em> <span style="text-decoration: underline;"><span style="color: #ff0000;"><strong>ONLY</strong></span></span></em> FROM <a href="https://pluginus.net/affiliate/woocommerce-products-filter" target="_blank"><span style="color: #008000;"><strong>CODECANYON.NET</strong></span></a> OR <span style="color: #008000;"><strong><a href="https://wordpress.org/plugins/woocommerce-products-filter/" target="_blank">WORDPRESS.ORG</a></strong></span> IF YOU DO NOT WANT TO BE AN AFFILIATE OF PORNO VIRUS SITE.<br>
@@ -2025,6 +2025,11 @@
                                         <li>
                                             <a href="https://bulk-editor.com/downloads/" target="_blank"><img width="300" alt="" src="<?php echo WOOF_LINK ?>img/plugin_options/woobe_banner.jpg" /></a>
                                             <p class="description"><?php _e("WordPress plugin for managing and bulk edit WooCommerce Products data in robust and flexible way! Be professionals with managing data of your woocommerce e-shop!", 'woocommerce-products-filter') ?></p>
+                                        </li>
+                                        
+                                         <li>
+                                             <a href="https://products-tables.com/" width="300" alt="" target="_blank"><img width="300" src="<?php echo WOOF_LINK ?>img/plugin_options/woot-banner.png" /></a>
+                                            <p class="description"><?php _e("WooCommerce Active Products Table - WOOT - (new name is PROTAS) WooCommerce plugin for displaying shop products in table format. Woo Products Tables makes focus for your buyers on the things they want to get, nothing superfluous, just what the client wants, and full attention to what is offered!", 'woocommerce-products-filter') ?></p>
                                         </li>
 
                                         <li>
@@ -2629,19 +2634,24 @@
 
     <table style="width: 100%;">
         <tr>
-            <td style="width: 33%;">
+            <td style="width: 25%;">
                 <h3 style="color: tomato"><?php _e("WOOF FULL VERSION", 'woocommerce-products-filter') ?>:</h3>
-                <a href="https://pluginus.net/affiliate/woocommerce-products-filter" target="_blank"><img width="300" src="<?php echo WOOF_LINK ?>img/plugin_options/woof_banner.jpg" alt="<?php _e("full version of the plugin", 'woocommerce-products-filter'); ?>" /></a>
+                <a href="https://pluginus.net/affiliate/woocommerce-products-filter" target="_blank"><img width="250" src="<?php echo WOOF_LINK ?>img/plugin_options/woof_banner.jpg" alt="<?php _e("full version of the plugin", 'woocommerce-products-filter'); ?>" /></a>
             </td>
 
-            <td style="width: 33%;">
-                <h3><?php _e("Get WooCommerce Bulk Editor", 'woocommerce-products-filter') ?>:</h3>
-                <a href="https://pluginus.net/affiliate/woocommerce-bulk-editor" target="_blank"><img width="300" src="<?php echo WOOF_LINK ?>img/plugin_options/woobe_banner.jpg" alt="<?php _e("WOOBE", 'woocommerce-products-filter'); ?>" /></a>
+            <td style="width: 25%;">
+                <h3><?php _e("WooCommerce Bulk Editor", 'woocommerce-products-filter') ?>:</h3>
+                <a href="https://pluginus.net/affiliate/woocommerce-bulk-editor" target="_blank"><img width="250" src="<?php echo WOOF_LINK ?>img/plugin_options/woobe_banner.jpg" alt="<?php _e("WOOBE", 'woocommerce-products-filter'); ?>" /></a>
             </td>
 
-            <td style="width: 33%;">
-                <h3><?php _e("Get WooCommerce Currency Swither", 'woocommerce-products-filter') ?>:</h3>
-                <a href="https://pluginus.net/affiliate/woocommerce-currency-switcher" target="_blank"><img width="300" src="<?php echo WOOF_LINK ?>img/plugin_options/woocs_banner.jpg" alt="<?php _e("WOOCS", 'woocommerce-products-filter'); ?>" /></a>
+            <td style="width: 25%;">
+                <h3><?php _e("WooCommerce Currency Swither", 'woocommerce-products-filter') ?>:</h3>
+                <a href="https://pluginus.net/affiliate/woocommerce-currency-switcher" target="_blank"><img width="250" src="<?php echo WOOF_LINK ?>img/plugin_options/woocs_banner.jpg" alt="<?php _e("WOOCS", 'woocommerce-products-filter'); ?>" /></a>
+            </td>
+            
+            <td style="width: 25%;">
+                <h3><?php _e("WooCommerce Products Tables", 'woocommerce-products-filter') ?>:</h3>
+                <a href="https://codecanyon.pluginus.net/item/woot-woocommerce-products-tables/27928580" target="_blank"><img width="250" src="<?php echo WOOF_LINK ?>img/plugin_options/woot-banner.png" alt="<?php _e("WOOT", 'woocommerce-products-filter'); ?>" /></a>
             </td>
         </tr>
 

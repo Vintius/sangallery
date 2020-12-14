@@ -165,8 +165,8 @@ function new_york_business_fonts_url() {
 	if ( 'off' !== $typography ) {
 		$font_families = array();
 
-		$font_families[] = get_theme_mod('header_fontfamily','Google Sans').':300,400,500';
-		$font_families[] = get_theme_mod('body_fontfamily','Lora').':300,400,500';
+		$font_families[] = get_theme_mod('header_fontfamily','Montserrat').':300,400,500';
+		$font_families[] = get_theme_mod('body_fontfamily','Montserrat').':300,400,500';
 
 
 		$query_args = array(
@@ -257,11 +257,11 @@ function new_york_business_footer_foreground_css(){
 	 */
 
 	$css                = '
-	
+
 	.footer-foreground {}
-	.footer-foreground .widget-title, 
-	.footer-foreground a, 
-	.footer-foreground p, 
+	.footer-foreground .widget-title,
+	.footer-foreground a,
+	.footer-foreground p,
 	.footer-foreground td,
 	.footer-foreground th,
 	.footer-foreground caption,
@@ -276,18 +276,18 @@ function new_york_business_footer_foreground_css(){
 	{
 	  color:'.$color.';
 	}
-	
+
 	.footer-foreground #today {
-		font-weight: 600;	
-		background-color: #3ba0f4;	
+		font-weight: 600;
+		background-color: #3ba0f4;
 		padding: 5px;
 	}
-	
-	.footer-foreground a:hover, 
+
+	.footer-foreground a:hover,
 	.footer-foreground a:active {
 		color:#ccc ;
 	}
-	
+
 	';
 
 return $css;

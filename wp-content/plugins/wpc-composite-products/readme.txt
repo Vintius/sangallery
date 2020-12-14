@@ -3,7 +3,7 @@ Contributors: wpclever
 Donate link: https://wpclever.net
 Tags: woocommerce, woo, product, composite, component, kits, kit-building, wpc
 Requires at least: 4.0
-Tested up to: 5.5.1
+Tested up to: 5.5.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -75,6 +75,12 @@ Visit [plugin documentation website](https://wpclever.net?utm_source=doc&utm_med
 5. Almost done! click Save and see the result
 
 == Changelog ==
+
+= 3.1.7 =
+* Added: Filter hook: wooco_product_visible
+
+= 3.1.6 =
+* Fixed: Some minor CSS & JS issues
 
 = 3.1.5 =
 * Updated: Compatible with WooCommerce 4.6.1

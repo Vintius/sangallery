@@ -39,7 +39,6 @@ $terms_content['element_any'] = array(
     'attributes'    => array(
         'data-name'     => '',
         'id'            => $element_unique,
-        'type'          => 'checkbox',
         'value'         => ''
     ),
     'content'       => array(
@@ -54,7 +53,6 @@ foreach( $terms as $i => $term ) {
         'attributes'    => array(
             'data-name'     => $term->name,
             'id'            => $element_unique,
-            'type'          => 'checkbox',
             'value'         => $term->value
         ),
         'content'       => array(

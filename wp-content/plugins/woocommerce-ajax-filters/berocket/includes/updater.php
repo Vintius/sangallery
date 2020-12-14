@@ -633,6 +633,7 @@ if ( ! class_exists( 'BeRocket_updater' ) ) {
                     }
                 });
             </script>
+			<style>.notice:not(.berocket_admin_notice){display:none!important;}</style>
             <?php
         }
 

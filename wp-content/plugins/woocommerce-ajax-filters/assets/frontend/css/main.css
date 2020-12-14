@@ -674,7 +674,7 @@ body.berocket_ajax_filters_sidebar_active {
     background-color: rgba(255,255,255, 0.5);
     z-index: 9999;
 }
-.bapf_loader_page .bapf_lcontainer {
+.bapf_lcontainer {
     position: absolute;
     top: 50%;
     margin: 0;
@@ -776,7 +776,9 @@ body.berocket_ajax_filters_sidebar_active {
     margin-right: 5px;
 }
 .bapf_sfilter.bapf_ckbox input[type=checkbox],
-.bapf_sfilter.bapf_ckbox label {
+.bapf_sfilter.bapf_ckbox label,
+.bapf_sfilter.bapf_ckbox label > span,
+.bapf_sfilter.bapf_ckbox label + span{
     vertical-align: middle;
 }
 .select2-container--classic input[type='search'],

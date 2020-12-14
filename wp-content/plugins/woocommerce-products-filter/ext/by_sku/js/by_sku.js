@@ -27,7 +27,7 @@ function woof_init_sku() {
         //}
     });
     //+++
-    jQuery('.woof_sku_search_go').life('click', function () {
+    jQuery('body').on('click','.woof_sku_search_go', function () {
         var uid = jQuery(this).data('uid');
         woof_sku_do_submit = true;
         woof_sku_direct_search('woof_sku', jQuery('.woof_show_sku_search.' + uid).val());

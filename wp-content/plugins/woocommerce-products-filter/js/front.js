@@ -4,10 +4,7 @@ var woof_reset_btn_action=false;
 
 jQuery(function ($) {
     jQuery('body').append('<div id="woof_html_buffer" class="woof_info_popup" style="display: none;"></div>');
-    jQuery.fn.life = function (types, data, fn) {
-	jQuery(this.context).on(types, this.selector, data, fn);
-	return this;
-    };
+
 //http://stackoverflow.com/questions/2389540/jquery-hasparent
     jQuery.extend(jQuery.fn, {
 	within: function (pSelector) {
@@ -53,7 +50,7 @@ jQuery(function ($) {
 	}
     });
 
-    jQuery('.woof_price_filter_dropdown').life('change', function () {
+    jQuery('body').on('change','.woof_price_filter_dropdown', function () {
 	var val = jQuery(this).val();
 	if (parseInt(val, 10) == -1) {
 	    delete woof_current_values.min_price;
@@ -76,7 +73,7 @@ jQuery(function ($) {
     //change value in textinput price filter if WOOCS is installed
     woof_recount_text_price_filter();
     //+++
-    jQuery('.woof_price_filter_txt').life('change', function () {
+    jQuery('body').on('change','.woof_price_filter_txt', function () {
 
 	var from = parseInt(jQuery(this).parent().find('.woof_price_filter_txt_from').val(), 10);
 	var to = parseInt(jQuery(this).parent().find('.woof_price_filter_txt_to').val(), 10);
@@ -102,7 +99,7 @@ jQuery(function ($) {
 
     //***
 
-    jQuery('.woof_open_hidden_li_btn').life('click', function () {
+    jQuery('body').on('click','.woof_open_hidden_li_btn', function () {
 	var state = jQuery(this).data('state');
 	var type = jQuery(this).data('type');
 
@@ -160,7 +157,7 @@ jQuery(function ($) {
     });
 
     //WOOF start filtering button action
-    jQuery('.woof_start_filtering_btn').life('click', function () {
+    jQuery('body').on('click','.woof_start_filtering_btn', function () {
 
 	var shortcode = jQuery(this).parents('.woof').data('shortcode');
 	jQuery(this).html(woof_lang_loading);
@@ -299,14 +296,14 @@ function woof_redirect_init() {
 }
 
 function woof_init_orderby() {
-    jQuery('form.woocommerce-ordering').life('submit', function () {
+    jQuery('body').on('submit','form.woocommerce-ordering', function () {
         /* woo3.3 */
         if(!jQuery("#is_woo_shortcode").length){ 
             return false;
         }
         /* +++ */
     });
-    jQuery('form.woocommerce-ordering select.orderby').life('change', function () {
+    jQuery('body').on('change','form.woocommerce-ordering select.orderby', function () {
         /* woo3.3 */
         if(!jQuery("#is_woo_shortcode").length){
             woof_current_values.orderby = jQuery(this).val();
@@ -319,7 +316,7 @@ function woof_init_orderby() {
 }
 
 function woof_init_reset_button() {
-    jQuery('.woof_reset_search_form').life('click', function () {       
+    jQuery('body').on('click','.woof_reset_search_form', function () {       
 	//var link = jQuery(this).data('link');
 	woof_ajax_page_num = 1;
         woof_ajax_redraw = 0; 
@@ -352,8 +349,8 @@ function woof_init_reset_button() {
 function woof_init_pagination() {
 
     if (woof_is_ajax === 1) {
-	//jQuery('.woocommerce-pagination ul.page-numbers a.page-numbers').life('click', function () {
-	jQuery('a.page-numbers').life('click', function () {
+	//jQuery('body').on('click','.woocommerce-pagination ul.page-numbers a.page-numbers', function () {
+	jQuery('body').on('click','a.page-numbers', function () {
 	    var l = jQuery(this).attr('href');
 
 	    if (woof_ajax_first_done) {
@@ -1267,7 +1264,7 @@ function woof_recount_text_price_filter() {
 }
 
 function woof_init_toggles() {
-    jQuery('.woof_front_toggle').life('click', function () {
+    jQuery('body').on('click','.woof_front_toggle', function () {
 	if (jQuery(this).data('condition') == 'opened') {
 	    jQuery(this).removeClass('woof_front_toggle_opened');
 	    jQuery(this).addClass('woof_front_toggle_closed');
@@ -1363,7 +1360,7 @@ function woof_price_filter_radio_init() {
 	});
 
     } else {
-	jQuery('.woof_price_filter_radio').life('change', function () {
+	jQuery('body').on('change','.woof_price_filter_radio', function () {
 	    var val = jQuery(this).val();
 	    jQuery('.woof_radio_price_reset').removeClass('woof_radio_term_reset_visible');
 	    if (parseInt(val, 10) == -1) {

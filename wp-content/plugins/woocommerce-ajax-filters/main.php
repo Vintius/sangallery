@@ -24,6 +24,7 @@ class BeRocket_AAPF extends BeRocket_Framework {
     protected static $instance;
     public static $debug_mode = false;
     public static $error_log = array();
+    public static $the_ajax_script_initialized = false;
     public $default_permalink = array (
         'variable' => 'filters',
         'value'    => '/values',
@@ -528,12 +529,12 @@ class BeRocket_AAPF extends BeRocket_Framework {
         }
     }
     public function init () {
-        self::$user_can_manage = current_user_can( 'manage_berocket_aapf' );
-        if( self::$user_can_manage && ! is_admin() ) {
-            include_once(plugin_dir_path( __FILE__ ) . "includes/admin/admin_bar.php");
-        }
         parent::init();
         $option = $this->get_option();
+        self::$user_can_manage = current_user_can( 'manage_berocket_aapf' );
+        if( self::$user_can_manage && ! is_admin() && empty($option['disable_admin_bar']) ) {
+            include_once(plugin_dir_path( __FILE__ ) . "includes/admin/admin_bar.php");
+        }
         if( ! empty($option['use_tax_for_price']) ) {
             include_once(plugin_dir_path( __FILE__ ) . "includes/addons/price_include_tax.php");
         }
@@ -541,7 +542,7 @@ class BeRocket_AAPF extends BeRocket_Framework {
             wp_dequeue_style( 'font-awesome' );
         }
         global $wp_query;
-        if ( ! is_admin() && ! wp_doing_cron() && ! wp_doing_ajax() && ! session_id() ) {
+        if ( ! is_admin() && ! wp_doing_cron() && ! wp_doing_ajax() && ! session_id() && ! wp_is_json_request() ) {
             session_start();
         }
     }
@@ -1021,6 +1022,13 @@ class BeRocket_AAPF extends BeRocket_Framework {
                         "name"      => "filters_turn_off",
                         "value"     => '1',
                         'label_for' => __("If you want to hide filters without losing current configuration just turn them off", 'BeRocket_AJAX_domain'),
+                    ),
+                    'disable_admin_bar' => array(
+                        "label"     => __( 'Disable admin bar', "BeRocket_AJAX_domain" ),
+                        "type"      => "checkbox",
+                        "name"      => "disable_admin_bar",
+                        "value"     => '1',
+                        'label_for' => __("Disable panel in WordPress Admin Bar", 'BeRocket_AJAX_domain'),
                     ),
                     'purge_cache' => array(
                         "section"   => "purge_cache",
@@ -1567,130 +1575,136 @@ jQuery(document).on('change', '.berocket_disable_ajax_loading', berocket_disable
     }
     public function include_all_scripts() {
         /* theme scripts */
-        if( defined('THE7_VERSION') && THE7_VERSION ) {
-            add_filter('berocket_aapf_time_to_fix_products_style', '__return_false');
-            BeRocket_AAPF::wp_enqueue_script( 'berocket_ajax_fix-the7', plugins_url( 'assets/themes/the7.js', __FILE__ ), array( 'jquery' ), BeRocket_AJAX_filters_version );
-        }
-        global $wp_query, $wp, $sitepress, $wp_rewrite;
-        $br_options = apply_filters( 'berocket_aapf_listener_br_options', $this->get_option() );
+        if( ! self::$the_ajax_script_initialized ) {
+            if( defined('THE7_VERSION') && THE7_VERSION ) {
+                add_filter('berocket_aapf_time_to_fix_products_style', '__return_false');
+                BeRocket_AAPF::wp_enqueue_script( 'berocket_ajax_fix-the7', plugins_url( 'assets/themes/the7.js', __FILE__ ), array( 'jquery' ), BeRocket_AJAX_filters_version );
+            }
+            global $wp_query, $wp, $sitepress, $wp_rewrite;
+            $br_options = apply_filters( 'berocket_aapf_listener_br_options', $this->get_option() );
 
-        $wp_query_product_cat     = '-1';
-        $wp_check_product_cat     = '1q1main_shop1q1';
-        if ( ! empty($wp_query->query['product_cat']) ) {
-            $wp_query_product_cat = explode( "/", $wp_query->query['product_cat'] );
-            $wp_query_product_cat = $wp_query_product_cat[ count( $wp_query_product_cat ) - 1 ];
-            $wp_check_product_cat = $wp_query_product_cat;
-        }
+            $wp_query_product_cat     = '-1';
+            $wp_check_product_cat     = '1q1main_shop1q1';
+            if ( ! empty($wp_query->query['product_cat']) ) {
+                $wp_query_product_cat = explode( "/", $wp_query->query['product_cat'] );
+                $wp_query_product_cat = $wp_query_product_cat[ count( $wp_query_product_cat ) - 1 ];
+                $wp_check_product_cat = $wp_query_product_cat;
+            }
 
-        $post_temrs = "[]";
-        if ( ! empty($_POST['terms']) ) {
-            $post_temrs = json_encode( $_POST['terms'] );
-        }
+            $post_temrs = "[]";
+            if ( ! empty($_POST['terms']) ) {
+                $post_temrs = json_encode( $_POST['terms'] );
+            }
 
-        if ( method_exists($sitepress, 'get_current_language') ) {
-            $current_language = $sitepress->get_current_language();
-        } else {
-            $current_language = '';
-        }
+            if ( method_exists($sitepress, 'get_current_language') ) {
+                $current_language = $sitepress->get_current_language();
+            } else {
+                $current_language = '';
+            }
 
-        $current_page_url = preg_replace( "~paged?/[0-9]+/?~", "", home_url( $wp->request ) );
-        $current_page_url = apply_filters('berocket_aapf_current_page_url', $current_page_url, $br_options);
-        if( strpos($current_page_url, '?') !== FALSE ) {
-            $current_page_url = explode('?', $current_page_url);
-            $current_page_url = $current_page_url[0];
-        }
+            $current_page_url = preg_replace( "~paged?/[0-9]+/?~", "", home_url( $wp->request ) );
+            $current_page_url = apply_filters('berocket_aapf_current_page_url', $current_page_url, $br_options);
+            if( strpos($current_page_url, '?') !== FALSE ) {
+                $current_page_url = explode('?', $current_page_url);
+                $current_page_url = $current_page_url[0];
+            }
 
-        $permalink_structure = get_option('permalink_structure');
-        if ( $permalink_structure ) {
-            $permalink_structure = substr($permalink_structure, -1);
-            if ( $permalink_structure == '/' ) {
-                $permalink_structure = true;
+            $permalink_structure = get_option('permalink_structure');
+            if ( $permalink_structure ) {
+                $permalink_structure = substr($permalink_structure, -1);
+                if ( $permalink_structure == '/' ) {
+                    $permalink_structure = true;
+                } else {
+                    $permalink_structure = false;
+                }
             } else {
                 $permalink_structure = false;
             }
-        } else {
-            $permalink_structure = false;
+
+            $product_taxonomy = '-1';
+            if ( is_product_taxonomy() ) {
+                $product_taxonomy = (empty($wp_query->query_vars['taxonomy']) ? '' : $wp_query->query_vars['taxonomy']).'|'.(empty($wp_query->query_vars['term']) ? '' : $wp_query->query_vars['term']);
+            }
+            $default_sorting = get_option('woocommerce_default_catalog_orderby');
+            $default_sorting = (empty($default_sorting) ? "menu_order" : $default_sorting);
+
+            ob_start();
+            wc_no_products_found();
+            $no_products = ob_get_clean();
+
+            $localized = wp_localize_script(
+                'berocket_aapf_widget-script',
+                'the_ajax_script',
+                apply_filters('aapf_localize_widget_script', array(
+                    'disable_ajax_loading'                 => ! empty($br_options['disable_ajax_loading']),
+                    'url_variable'                         => 'filters',
+                    'url_mask'                             => '%t%[%v%]',
+                    'url_split'                            => '|',
+                    'nice_url_variable'                    => '',
+                    'nice_url_value_1'                     => '',
+                    'nice_url_value_2'                     => '',
+                    'nice_url_split'                       => '',
+                    'version'                              => BeRocket_AJAX_filters_version,
+                    'number_style'                         => array('', '.', '2'),
+                    'current_language'                     => $current_language,
+                    'current_page_url'                     => $current_page_url,
+                    'ajaxurl'                              => admin_url( 'admin-ajax.php' ),
+                    'product_cat'                          => $wp_query_product_cat,
+                    'product_taxonomy'                     => $product_taxonomy,
+                    's'                                    => ( ! empty( $_GET['s'] ) ? $_GET['s'] : '' ),
+                    'products_holder_id'                   => ( empty($br_options['products_holder_id']) ? 'ul.products' : $br_options['products_holder_id'] ),
+                    'result_count_class'                   => ( ! empty($br_options['woocommerce_result_count_class']) ? $br_options['woocommerce_result_count_class'] : $this->defaults['woocommerce_result_count_class'] ),
+                    'ordering_class'                       => ( ! empty($br_options['woocommerce_ordering_class']) ? $br_options['woocommerce_ordering_class'] : $this->defaults['woocommerce_ordering_class'] ),
+                    'pagination_class'                     => ( ! empty($br_options['woocommerce_pagination_class']) ? $br_options['woocommerce_pagination_class'] : $this->defaults['woocommerce_pagination_class'] ),
+                    'control_sorting'                      => ( empty($br_options['control_sorting']) ? '' : $br_options['control_sorting'] ),
+                    'seo_friendly_urls'                    => ( empty($br_options['seo_friendly_urls']) ? '' : $br_options['seo_friendly_urls'] ),
+                    'seo_uri_decode'                       => ( empty($br_options['seo_uri_decode']) ? '' : $br_options['seo_uri_decode'] ),
+                    'slug_urls'                            => ( empty($br_options['slug_urls']) ? '' : $br_options['slug_urls'] ),
+                    'nice_urls'                            => '',
+                    'ub_product_count'                     => '',
+                    'ub_product_text'                      => '',
+                    'ub_product_button_text'               => '',
+                    'berocket_aapf_widget_product_filters' => $post_temrs,
+                    'default_sorting'                      => $default_sorting,
+                    'first_page'                           => '1',
+                    'scroll_shop_top'                      => ( empty($br_options['scroll_shop_top']) ? '' : $br_options['scroll_shop_top'] ),
+                    'ajax_request_load'                    => '1',
+                    'ajax_request_load_style'              => 'jquery',
+                    'use_request_method'                   => 'get',
+                    'no_products'                          => $no_products,
+                    'recount_products'                     => braapf_filters_must_be_recounted(),
+                    'pos_relative'                         => ( empty($br_options['pos_relative']) ? '' : $br_options['pos_relative'] ),
+                    'woocommerce_removes'                  => array(
+                        'result_count' => ( empty($br_options['woocommerce_removes']['result_count']) ? '' : $br_options['woocommerce_removes']['result_count'] ),
+                        'ordering'     => ( empty($br_options['woocommerce_removes']['ordering']) ? '' : $br_options['woocommerce_removes']['ordering'] ),
+                        'pagination'   => ( empty($br_options['woocommerce_removes']['pagination']) ? '' : $br_options['woocommerce_removes']['pagination'] ),
+                        'pagination_ajax'   => empty($br_options['woocommerce_removes']['pagination_ajax']),
+                    ),
+                    'pagination_ajax'                      => empty($br_options['woocommerce_removes']['pagination_ajax']),
+                    'description_show'                     => ( ! empty($br_options['description']['show']) ? $br_options['description']['show'] : 'click' ),
+                    'description_hide'                     => ( ! empty($br_options['description']['hide']) ? $br_options['description']['hide'] : 'click' ),
+                    'hide_sel_value'                       => ( empty($br_options['hide_value']['sel']) ? '' : $br_options['hide_value']['sel'] ),
+                    'hide_o_value'                         => ( empty($br_options['hide_value']['o']) ? '' : $br_options['hide_value']['o'] ),
+                    'use_select2'                          => ! empty($br_options['use_select2']),
+                    'hide_empty_value'                     => ( empty($br_options['hide_value']['empty']) ? '' : $br_options['hide_value']['empty'] ),
+                    'hide_button_value'                    => '',
+                    'scroll_shop_top_px'                   => ( ! empty( $br_options['scroll_shop_top_px'] ) ? $br_options['scroll_shop_top_px'] : $this->defaults['scroll_shop_top_px'] ),
+                    'load_image'                           => braapf_get_loader_element(),
+                    'translate'                            => array(
+                        'show_value'        => __('Show value(s)', 'BeRocket_AJAX_domain'),
+                        'hide_value'        => __('Hide value(s)', 'BeRocket_AJAX_domain'),
+                        'unselect_all'      => __('Unselect all', 'BeRocket_AJAX_domain'),
+                        'nothing_selected'  => __('Nothing is selected', 'BeRocket_AJAX_domain'),
+                        'products'          => __('products', 'BeRocket_AJAX_domain'),
+                    ),
+                    'trailing_slash'                       => $permalink_structure,
+                    'pagination_base'                      => $wp_rewrite->pagination_base,
+                ) )
+            );
+            if ( $localized !== FALSE ) {
+                self::$the_ajax_script_initialized = TRUE;
+            }
         }
-
-        $product_taxonomy = '-1';
-        if ( is_product_taxonomy() ) {
-            $product_taxonomy = (empty($wp_query->query_vars['taxonomy']) ? '' : $wp_query->query_vars['taxonomy']).'|'.(empty($wp_query->query_vars['term']) ? '' : $wp_query->query_vars['term']);
-        }
-        $default_sorting = get_option('woocommerce_default_catalog_orderby');
-        $default_sorting = (empty($default_sorting) ? "menu_order" : $default_sorting);
-
-        ob_start();
-        wc_no_products_found();
-        $no_products = ob_get_clean();
-
-        wp_localize_script(
-            'berocket_aapf_widget-script',
-            'the_ajax_script',
-            apply_filters('aapf_localize_widget_script', array(
-                'disable_ajax_loading'                 => ! empty($br_options['disable_ajax_loading']),
-                'url_variable'                         => 'filters',
-                'url_mask'                             => '%t%[%v%]',
-                'url_split'                            => '|',
-                'nice_url_variable'                    => '',
-                'nice_url_value_1'                     => '',
-                'nice_url_value_2'                     => '',
-                'nice_url_split'                       => '',
-                'version'                              => BeRocket_AJAX_filters_version,
-                'number_style'                         => array('', '.', '2'),
-                'current_language'                     => $current_language,
-                'current_page_url'                     => $current_page_url,
-                'ajaxurl'                              => admin_url( 'admin-ajax.php' ),
-                'product_cat'                          => $wp_query_product_cat,
-                'product_taxonomy'                     => $product_taxonomy,
-                's'                                    => ( ! empty( $_GET['s'] ) ? $_GET['s'] : '' ),
-                'products_holder_id'                   => ( empty($br_options['products_holder_id']) ? 'ul.products' : $br_options['products_holder_id'] ),
-                'result_count_class'                   => ( ! empty($br_options['woocommerce_result_count_class']) ? $br_options['woocommerce_result_count_class'] : $this->defaults['woocommerce_result_count_class'] ),
-                'ordering_class'                       => ( ! empty($br_options['woocommerce_ordering_class']) ? $br_options['woocommerce_ordering_class'] : $this->defaults['woocommerce_ordering_class'] ),
-                'pagination_class'                     => ( ! empty($br_options['woocommerce_pagination_class']) ? $br_options['woocommerce_pagination_class'] : $this->defaults['woocommerce_pagination_class'] ),
-                'control_sorting'                      => ( empty($br_options['control_sorting']) ? '' : $br_options['control_sorting'] ),
-                'seo_friendly_urls'                    => ( empty($br_options['seo_friendly_urls']) ? '' : $br_options['seo_friendly_urls'] ),
-                'seo_uri_decode'                       => ( empty($br_options['seo_uri_decode']) ? '' : $br_options['seo_uri_decode'] ),
-                'slug_urls'                            => ( empty($br_options['slug_urls']) ? '' : $br_options['slug_urls'] ),
-                'nice_urls'                            => '',
-                'ub_product_count'                     => '',
-                'ub_product_text'                      => '',
-                'ub_product_button_text'               => '',
-                'berocket_aapf_widget_product_filters' => $post_temrs,
-                'default_sorting'                      => $default_sorting,
-                'first_page'                           => '1',
-                'scroll_shop_top'                      => ( empty($br_options['scroll_shop_top']) ? '' : $br_options['scroll_shop_top'] ),
-                'ajax_request_load'                    => '1',
-                'ajax_request_load_style'              => 'jquery',
-                'use_request_method'                   => 'get',
-                'no_products'                          => $no_products,
-                'recount_products'                     => braapf_filters_must_be_recounted(),
-                'pos_relative'                         => ( empty($br_options['pos_relative']) ? '' : $br_options['pos_relative'] ),
-                'woocommerce_removes'                  => array(
-                    'result_count' => ( empty($br_options['woocommerce_removes']['result_count']) ? '' : $br_options['woocommerce_removes']['result_count'] ),
-                    'ordering'     => ( empty($br_options['woocommerce_removes']['ordering']) ? '' : $br_options['woocommerce_removes']['ordering'] ),
-                    'pagination'   => ( empty($br_options['woocommerce_removes']['pagination']) ? '' : $br_options['woocommerce_removes']['pagination'] ),
-                    'pagination_ajax'   => empty($br_options['woocommerce_removes']['pagination_ajax']),
-                ),
-                'description_show'                     => ( ! empty($br_options['description']['show']) ? $br_options['description']['show'] : 'click' ),
-                'description_hide'                     => ( ! empty($br_options['description']['hide']) ? $br_options['description']['hide'] : 'click' ),
-                'hide_sel_value'                       => ( empty($br_options['hide_value']['sel']) ? '' : $br_options['hide_value']['sel'] ),
-                'hide_o_value'                         => ( empty($br_options['hide_value']['o']) ? '' : $br_options['hide_value']['o'] ),
-                'use_select2'                          => ! empty($br_options['use_select2']),
-                'hide_empty_value'                     => ( empty($br_options['hide_value']['empty']) ? '' : $br_options['hide_value']['empty'] ),
-                'hide_button_value'                    => '',
-                'scroll_shop_top_px'                   => ( ! empty( $br_options['scroll_shop_top_px'] ) ? $br_options['scroll_shop_top_px'] : $this->defaults['scroll_shop_top_px'] ),
-                'load_image'                           => braapf_get_loader_element(),
-                'translate'                            => array(
-                    'show_value'        => __('Show value(s)', 'BeRocket_AJAX_domain'),
-                    'hide_value'        => __('Hide value(s)', 'BeRocket_AJAX_domain'),
-                    'unselect_all'      => __('Unselect all', 'BeRocket_AJAX_domain'),
-                    'nothing_selected'  => __('Nothing is selected', 'BeRocket_AJAX_domain'),
-                    'products'          => __('products', 'BeRocket_AJAX_domain'),
-                ),
-                'trailing_slash'                       => $permalink_structure,
-                'pagination_base'                      => $wp_rewrite->pagination_base,
-            ) )
-        );
     }
     public function select2_load() {
         if( ! empty($br_options['fixed_select2']) ) {
@@ -1958,7 +1972,7 @@ jQuery(document).on('change', '.berocket_disable_ajax_loading', berocket_disable
         $br_shortcode_query = $query;
         global $wp_query;
         $args = $this->get_filter_args($wp_query, true);
-        $args_fields = array( 'meta_key', 'tax_query', 'fields', 'where', 'join', 'meta_query', 'date_query' );
+        $args_fields = array( 'meta_key', 'tax_query', 'fields', 'where', 'join', 'meta_query', 'date_query', 's' );
         foreach ( $args_fields as $args_field ) {
             if ( ! empty($args[ $args_field ]) ) {
                 if( ! empty($query_vars[ $args_field ]) && is_array($query_vars[ $args_field ]) ) {
@@ -2096,7 +2110,7 @@ jQuery(document).on('change', '.berocket_disable_ajax_loading', berocket_disable
                 $query_vars_post__in = $query->get( 'post__in' );
                 $query_vars_post__in = apply_filters( 'bapf_loop_shop_post_in', $query_vars_post__in);
                 $query->set( 'post__in', $query_vars_post__in );
-                $args_fields = array( 'meta_key', 'tax_query', 'fields', 'where', 'join', 'meta_query', 'date_query' );
+                $args_fields = array( 'meta_key', 'tax_query', 'fields', 'where', 'join', 'meta_query', 'date_query', 's' );
                 foreach ( $args_fields as $args_field ) {
                     if ( ! empty($args[ $args_field ]) ) {
                         $variable = $query->get( $args_field );
@@ -2891,16 +2905,6 @@ jQuery(document).on('change', '.berocket_disable_ajax_loading', berocket_disable
     public function option_page_capability($capability = '') {
         return 'manage_berocket_aapf';
     }
-    public function set_scripts() {
-        if( apply_filters('berocket_aapf_time_to_fix_products_style', true) ) {
-            echo '<script>
-            jQuery(document).on("berocket_aapf_time_to_fix_products_style", function() {
-                jQuery(the_ajax_script.products_holder_id).find("*").filter(function() {return jQuery(this).css("opacity") == "0";}).css("opacity", 1);
-            });
-            </script>';
-        }
-        parent::set_scripts();
-    }
     public function update_version($previous, $current) {
         $options = $this->get_option();
         if( $previous === '0' ) {
@@ -3030,7 +3034,7 @@ jQuery(document).on('change', '.berocket_disable_ajax_loading', berocket_disable
         global $braapf_parameters;
         $braapf_parameters = array();
         $braapf_parameters['ajax_filtering'] = ! empty($_SERVER['HTTP_X_BRAAPF']);
-        $braapf_parameters['do_not_display_filters'] = ! empty($_SERVER['HTTP_X_BRAAPFDISABLE']);
+        $braapf_parameters['do_not_display_filters'] = false;//! empty($_SERVER['HTTP_X_BRAAPFDISABLE']);
     }
     public function no_products_block_before($teplate_name) {
         if( $teplate_name == 'loop/no-products-found.php' ) {

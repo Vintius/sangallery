@@ -297,7 +297,10 @@ class BeRocket_AAPF_Widget {
         extract( $instance );
 
         if( ! empty($style) ) {
-            echo 'This Filter cannot be displayed as deprecated';
+            echo 'This Filter cannot be displayed as deprecated.';
+			if ( current_user_can( 'manage_woocommerce' ) ) {
+				echo ' You can disable "Deprecated filters" add-on in <a href="' . admin_url('admin.php?page=br-product-filters&tab=addons') . '">Plugin settings</a>';
+			}
             return false;
         }
 
