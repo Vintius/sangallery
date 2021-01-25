@@ -115,7 +115,7 @@ function wad_get_existing_user_roles() {
     }
     return $roles_arr;
 }
-    
+
 /**
  * Returns the list of users in the current installation
  * @return array
@@ -186,12 +186,12 @@ function wad_get_active_discounts($group_by_types = false) {
         );
     else
         $valid_discounts = array();
-    
+
     $date_format='Y-m-d H:i';
     $raw_today = current_time($date_format, false);
     $today = date($date_format, strtotime($raw_today));
     $product_based_actions = wad_get_product_based_actions();
-    
+
     $all_discounts=  wad_get_all_discounts();
     foreach ($all_discounts as $discount)
     {
@@ -215,7 +215,7 @@ function wad_get_active_discounts($group_by_types = false) {
             $end_date = $today;
         else
             $end_date = date($date_format, strtotime($metas["end-date"]));
-            
+
         //We check the limit if needed
         $limit = get_proper_value($metas, "users-limit");
         if ($limit) {
@@ -329,12 +329,12 @@ function wad_get_cart_total($inc_taxes = false) {
        if ($wad_cart_total_inc_taxes !== FALSE && $wad_cart_total_inc_taxes !== 0 && !is_null($wad_cart_total_inc_taxes))
            $cart_total = $wad_cart_total_inc_taxes;
        else {
-           
+
            if( version_compare( $wc_version, "3.2.1", "<" ) )
                 $taxes=$woocommerce->cart->taxes;
            else
                $taxes=$woocommerce->cart->get_cart_contents_taxes();
-           
+
             $cart_total = $woocommerce->cart->subtotal_ex_tax + array_sum($taxes);
             if(isset($woocommerce->cart->tax_total) && $woocommerce->cart->tax_total>0 && empty($taxes))
             {
@@ -343,24 +343,42 @@ function wad_get_cart_total($inc_taxes = false) {
             if ($inc_shipping_in_taxes == 'Yes')
                 $cart_total += $woocommerce->cart->shipping_total;
            }
-               
+
        }
    return $cart_total;
 }
-    
-    function wad_evaluate_conditions($condition,$operator,$value){
-        switch($operator){
-            case'<': return $condition < $value;
-                break;
-            case'>': return $condition > $value;
-                break;
-            case'==': return $condition == $value;
-                break;
-            case'>=': return $condition >= $value;
-                break;
-            case'<=': return $condition <= $value;
-                break;
-            default:  return false;
-                break;
-        };
+
+function wad_evaluate_conditions($condition,$operator,$value){
+    switch($operator){
+        case'<': return $condition < $value;
+            break;
+        case'>': return $condition > $value;
+            break;
+        case'==': return $condition == $value;
+            break;
+        case'>=': return $condition >= $value;
+            break;
+        case'<=': return $condition <= $value;
+            break;
+        default:  return false;
+            break;
+    };
+}
+
+function wad_filter_on_sale_products( $product_list, $discount_object ) {
+
+    if( empty( $product_list ) || !is_array( $product_list ) || !is_object( $discount_object ) ) {
+        return array();
     }
+
+    $wad_on_sale_products = array();
+
+    foreach( $product_list as $pid ) {
+
+            if( $discount_object->is_applicable( $pid ) ) {
+                array_push( $wad_on_sale_products, $pid );
+            }
+    }
+
+    return $wad_on_sale_products;
+}

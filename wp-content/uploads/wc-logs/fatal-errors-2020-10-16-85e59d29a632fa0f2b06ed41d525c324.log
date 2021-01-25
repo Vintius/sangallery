@@ -1,8 +1,0 @@
-2020-10-16T12:56:55+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\elementor\core\schemes\base-ui.php на строке 5
-
-2020-10-16T12:56:59+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\elementor\core\files\assets\manager.php на строке 6
-
-2020-10-16T12:58:56+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в F:\WebPrjcts\wordpress\WP-test\www\wp-includes\class.wp-scripts.php на строке 492
-
-2020-10-16T13:00:56+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\advanced-custom-fields\includes\fields\class-acf-field-number.php на строке 3
-

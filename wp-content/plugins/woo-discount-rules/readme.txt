@@ -4,7 +4,7 @@ Donate link: https://flycart.org/
 Tags: woocommerce, coupons, discounts, dynamic pricing, Buy One Get One Free, pricing deals, bulk discount, discount
 Requires at least: 4.4.1
 Tested up to: 5.5
-Stable tag: 2.3.2
+Stable tag: 2.3.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -336,6 +336,25 @@ Note : Enable recursive checkbox if the discounts should be applied in sequentia
 * Dutch Translation - [@mvdburg1971](https://profiles.wordpress.org/mvdburg1971) - Michael van der Burg
 
 == Changelog ==
+
+= 2.3.3 - 16/12/20 =
+* Fix - Attribute doesn't loads for few language.
+* Fix - Show Discount bar for 0 price product.
+* Fix - Duplicate rule is not generated when title has '.
+* Fix - Exclusive option for free shipping is not working.
+* Fix - Set discount not applies for few cases.
+* Fix - Warning message for empty variants.
+* Fix - Customer chosen product is not updating for variant together option.
+* Improvement - Product addon compatible improvement.
+* Improvement - Product addon by themehigh compatible improvement.
+* Improvement - Display parent name of category while select child.
+* Improvement - Translation for discount label, rule title, Free shipping.
+* Improvement - Event: advanced_woo_discount_rules_recalculate_discount_before_apply_coupon.
+* Improvement - Calculating tax with fee.
+* Improvement - Removing jquery-ui-datepicker script on our pages as it making conflict in few sites.
+* Improvement - Improved query for purchase history rules.
+* Improvement - Shipping state and country condition.
+* Improvement - Event: advanced_woo_discount_rules_set_cheapest_item_key_as_product_id_for_product_page.
 
 = 2.3.2 - 05/11/20 =
 * Fix - Displaying discount table if user role based condition is false.

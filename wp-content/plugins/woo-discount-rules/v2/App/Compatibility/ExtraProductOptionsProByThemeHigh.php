@@ -27,7 +27,7 @@ class ExtraProductOptionsProByThemeHigh extends Base
                         $price = str_replace($replace_strings, '', $prices[0]);
                         $price = (float)$price;
                         if($original_price != $price){
-                            $result = apply_filters('advanced_woo_discount_rules_get_product_discount_price_from_custom_price', $price, $product, 1, $price);
+                            $result = apply_filters('advanced_woo_discount_rules_get_product_discount_price_from_custom_price', $price, $product, 1, $price, 'discounted_price', true, true);
                             if($result !== false){
                                 $price_html = "<del>".$price_html."</del><ins>".wc_price($result)."</ins>";
                             }

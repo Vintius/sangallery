@@ -389,9 +389,10 @@ class Woocommerce
      * format the price //range
      * @param $min_price
      * @param $max_price
+     * @param $original_html
      * @return string
      */
-    static function formatPriceRange($min_price, $max_price)
+    static function formatPriceRange($min_price, $max_price, $original_html = false)
     {
         if (function_exists('wc_format_price_range')) {
             $html = wc_format_price_range($min_price, $max_price);
@@ -399,7 +400,7 @@ class Woocommerce
             $html = self::formatPrice($min_price) . ' - ' . self::formatPrice($max_price);
         }
 
-        return apply_filters('advanced_woo_discount_rules_format_sale_price_range', $html, $min_price, $max_price);
+        return apply_filters('advanced_woo_discount_rules_format_sale_price_range', $html, $min_price, $max_price, $original_html);
     }
 
     /**
@@ -730,10 +731,19 @@ class Woocommerce
                     }, 10, 3);
                 }
                 $fee = apply_filters('advanced_discount_rules_discount_fee_amount', $fee, $name, $cart);
+                $name = __($name, WDR_TEXT_DOMAIN);
                 return $cart->add_fee($name, $fee);
             }
         }
         return array();
+    }
+
+    static function isTaxEnabled(){
+        if(get_option( 'woocommerce_calc_taxes' ) === 'yes'){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     static function isEnteredPriceIncludeTax(){

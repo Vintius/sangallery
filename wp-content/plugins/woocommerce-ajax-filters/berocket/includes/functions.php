@@ -507,7 +507,7 @@ if( ! function_exists( 'berocket_sanitize_array' ) ){
             }
             while ($old_data !== $filtered);
 
-            $filtered = str_replace('fromCharCode', 'fr0mCharC0de', $filtered);
+            $filtered = str_replace('fromCharCode', '', $filtered);
 
             $found = false;
             while ( preg_match('/%[a-f0-9]{2}/i', $filtered, $match) ) {

@@ -236,6 +236,12 @@ class Settings extends Base
             'rule_id' =>  $this->input->get('task', 'create'),
         );
         wp_localize_script(WDR_SLUG . '-admin', 'wdr_data', $wdr_data);
+
+        //Remove UI Date picker which making conflict in some websites
+        wp_dequeue_script( 'jquery-ui-datepicker' );
+        wp_deregister_script( 'jquery-ui-datepicker' );
+        wp_dequeue_script( 'jquery-datetimepicker' );
+        wp_deregister_script( 'jquery-datetimepicker' );
     }
 
     /**

@@ -1,0 +1,10 @@
+2021-01-23T18:30:58+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в F:\WebPrjcts\wordpress\WP-test\www\wp-includes\assets\script-loader-packages.php на строке 1
+
+2021-01-23T18:32:59+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в F:\WebPrjcts\wordpress\WP-test\www\wp-includes\pomo\streams.php на строке 173
+
+2021-01-23T18:35:04+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в F:\WebPrjcts\wordpress\WP-test\www\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\StoreApi\Schemas\CartItemSchema.php на строке 13
+
+2021-01-23T18:37:00+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в F:\WebPrjcts\wordpress\WP-test\www\wp-admin\includes\class-wp-privacy-policy-content.php на строке 10
+
+2021-01-23T18:39:00+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в F:\WebPrjcts\wordpress\WP-test\www\wp-includes\pomo\streams.php на строке 173
+

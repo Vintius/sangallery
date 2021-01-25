@@ -151,22 +151,12 @@ Yes, of course you can. To avoid Wishlist page to show product prices, you can h
 
 ## Changelog
 
-### 3.0.16 - Released on 10 November 2020
+### 3.0.18 - Released on 13 January 2021
 
-* New: support for WordPress 5.6
-* New: support for WooCommerce 4.7
-* New: possibility to update plugin via WP-CLI
+* New: support for WooCommerce 4.9
 * Update: plugin framework
-* Update: french translation
-* Tweak: search view now shows matching wishlists instead of all the lists of matching customers
-* Tweak: default wishlist sorting now places last added item as trailing item
-* Fix: avoid using localized string as param name for bulk action on wishlists table
-* Fix: prevent possible fatal errors due to missing email classes
-* Dev: added yith_wcwl_reload_on_found_variation filter to allow dev programmatically disable ATW reload on found_variation
-* Dev: added yith_wcwl_wishlist_view_images_after_thumbnail action
-* Dev: added yith_wcwl_modern_wishlist_empty_message filter
-* Dev: added yith_wcwl_ask_estimate_email_wishlist_name filter
-* Dev: removed deprecated .ready method from scripts
+* Tweak: improved product name sanitization on wishlist template
+* Dev: added fifth parameter for yith_wcwl_add_to_wishlist_button_html filter
 
 ## Support
 

@@ -197,6 +197,7 @@ class Filter
             $product_variation = Woocommerce::getProduct(Woocommerce::getProductParentId($product));
             foreach ($attrs as $taxonomy => $value) {
                 if ($value) {
+                    $taxonomy = apply_filters('advanced_woo_discount_rules_attribute_slug', urldecode($taxonomy), $taxonomy, $value);
                     $term_obj = get_term_by('slug', $value, $taxonomy);
                     if (!is_wp_error($term_obj) && $term_obj && $term_obj->name) {
                         $attr_ids = array_merge($attr_ids, (array)($term_obj->term_id));

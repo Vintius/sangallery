@@ -541,10 +541,6 @@ class BeRocket_AAPF extends BeRocket_Framework {
         if( ! empty($option['disable_font_awesome']) ) {
             wp_dequeue_style( 'font-awesome' );
         }
-        global $wp_query;
-        if ( ! is_admin() && ! wp_doing_cron() && ! wp_doing_ajax() && ! session_id() && ! wp_is_json_request() ) {
-            session_start();
-        }
     }
     public function plugins_loaded() {
         include_once(plugin_dir_path( __FILE__ ) . "includes/compatibility/divi-theme-builder.php");
@@ -1596,7 +1592,7 @@ jQuery(document).on('change', '.berocket_disable_ajax_loading', berocket_disable
                 $post_temrs = json_encode( $_POST['terms'] );
             }
 
-            if ( method_exists($sitepress, 'get_current_language') ) {
+            if ( ! empty($sitepress) && method_exists($sitepress, 'get_current_language') ) {
                 $current_language = $sitepress->get_current_language();
             } else {
                 $current_language = '';
@@ -2148,7 +2144,7 @@ jQuery(document).on('change', '.berocket_disable_ajax_loading', berocket_disable
             $query = apply_filters('berocket_filters_query_already_filtered', $query, br_get_value_from_array($_POST, 'terms'), br_get_value_from_array($_POST, 'limits_arr'));
         }
 
-        if ( ( ! is_admin() && $query->is_main_query() ) || $is_shortcode ) {
+        if ( (( ! is_admin() && $query->is_main_query() ) || $is_shortcode) && isset($query->query_vars['post_type']) && $query->query_vars['post_type'] == 'product' ) {
             global $br_wc_query;
             $br_wc_query = $query;
         }
@@ -2800,7 +2796,7 @@ jQuery(document).on('change', '.berocket_disable_ajax_loading', berocket_disable
     }
     public function WPML_fix() {
         global $sitepress;
-        if ( method_exists( $sitepress, 'switch_lang' )
+        if ( ! empty($sitepress) && method_exists( $sitepress, 'switch_lang' )
              && isset( $_POST['current_language'] )
              && $_POST['current_language'] !== $sitepress->get_default_language()
         ) {
@@ -3021,6 +3017,9 @@ jQuery(document).on('change', '.berocket_disable_ajax_loading', berocket_disable
         update_option( 'br_filters_options', $options );
         if( $previous !== '0' && ( version_compare($previous, '1.4.9.9', '<') || (version_compare($previous, '2.0', '>') && version_compare($previous, '2.9', '<') ) ) ) {
             $this->replace_deprecated_with_new();
+        }
+        if( $previous !== '0' && ( version_compare($previous, '1.5.2.4', '<') || (version_compare($previous, '2.0', '>') && version_compare($previous, '3.0.2.4', '<') ) ) ) {
+            do_action('braapf_slider_data_update');
         }
     }
     public function save_settings_callback( $settings ) {

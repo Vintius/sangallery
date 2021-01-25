@@ -579,10 +579,7 @@ if( ! function_exists( 'br_aapf_args_converter' ) ) {
                 $attribute = berocket_wpml_attribute_untranslate($attribute);
                 $value = html_entity_decode($value);
                 
-                $braapf_sliders = br_get_value_from_array($_SESSION, 'braapf_sliders');
-                if( ! is_array($braapf_sliders) ) {
-                    $braapf_sliders = array();
-                }
+                $braapf_sliders = apply_filters('braapf_slider_data', array());
                 $parse_type = 'default';
                 if( (! empty($braapf_sliders['pa_'.$attribute]) || ! empty($braapf_sliders[$attribute])) && preg_match( "~\_~", $value ) ) {
                     $parse_type = 'slider';
@@ -2200,7 +2197,7 @@ if ( ! function_exists( 'br_filters_query' ) ) {
             );
         }
         $meta_query = new WP_Meta_Query( $meta_query );
-        $tax_query  = new WP_Tax_Query( $tax_query );
+        $tax_query  = new WP_Tax_Query( ( empty($tax_query) || ! is_array($tax_query) ? array() : $tax_query ) );
 
         if ( $for == 'price' ) {
             foreach ( $meta_query->queries as $mkey => $mquery ) {
@@ -2369,7 +2366,7 @@ if( ! function_exists('berocket_add_filter_to_link') ) {
                     if ( count( $filter_values ) ) {
                         $filter_str                    = $attribute . $strip_symbols['before_val'] . implode( $implode, $filter_values ) . $strip_symbols['after_val'];
                         $filter_array[ $filter_str_i ] = $filter_str;
-                    } else {
+                    } elseif(is_array($filter_array) && isset($filter_array[ $filter_str_i ])) {
                         unset( $filter_array[ $filter_str_i ] );
                     }
 

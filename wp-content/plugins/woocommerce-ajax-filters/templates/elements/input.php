@@ -5,9 +5,9 @@ $template_content = BeRocket_AAPF_Template_Build_default();
 unset($template_content['template']['attributes']['data-op']);
 unset($template_content['template']['attributes']['data-taxonomy']);
 //Set name for selected filters area and other siilar place
-$template_content['template']['attributes']['data-name']                                    = $title;
+$template_content['template']['attributes']['data-name']                                    = berocket_isset($title);
 //Set widget title
-$template_content['template']['content']['header']['content']['title']['content']['title']  = $title;
+$template_content['template']['content']['header']['content']['title']['content']['title']  = berocket_isset($title);
 $template_content['template']['content']['filter']['content']['form'] = array(
     'type'          => 'tag',
     'tag'           => 'form',

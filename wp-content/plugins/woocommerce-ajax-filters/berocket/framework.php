@@ -437,7 +437,7 @@ if( ! class_exists( 'BeRocket_Framework' ) ) {
                 'berocket_framework_admin',
                 plugins_url( 'assets/js/admin.js', __FILE__ ),
                 array( 'jquery' ),
-                $this->cc->info[ 'version' ]
+                BeRocket_Framework::$framework_version
             );
             wp_localize_script(
                 'berocket_framework_admin',
@@ -452,25 +452,28 @@ if( ! class_exists( 'BeRocket_Framework' ) ) {
                 'berocket_framework_admin_style',
                 plugins_url( 'assets/css/admin.css', __FILE__ ),
                 "",
-                $this->cc->info[ 'version' ]
+                BeRocket_Framework::$framework_version
             );
 
             wp_register_style(
                 'berocket_framework_global_admin_style',
                 plugins_url( 'assets/css/global-admin.css', __FILE__ ),
                 "",
-                $this->cc->info[ 'version' ]
+                BeRocket_Framework::$framework_version
             );
 
             wp_register_script(
                 'berocket_widget-colorpicker',
                 plugins_url( 'assets/js/colpick.js', __FILE__ ),
-                array( 'jquery' )
+                array( 'jquery' ),
+                BeRocket_Framework::$framework_version
             );
 
             wp_register_style(
                 'berocket_widget-colorpicker-style',
-                plugins_url( 'assets/css/colpick.css', __FILE__ )
+                plugins_url( 'assets/css/colpick.css', __FILE__ ),
+                "",
+                BeRocket_Framework::$framework_version
             );
 
             wp_register_style(

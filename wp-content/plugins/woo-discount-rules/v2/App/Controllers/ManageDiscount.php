@@ -466,14 +466,14 @@ class ManageDiscount extends Base
             if ($min_original_price == $max_original_price) {
                 $price_html = self::$woocommerce_helper->formatPrice($min_original_price) . $price_range_suffix;
             } elseif ($min_original_price < $max_original_price) {
-                $price_html = self::$woocommerce_helper->formatPriceRange($min_original_price, $max_original_price) . $price_range_suffix;
+                $price_html = self::$woocommerce_helper->formatPriceRange($min_original_price, $max_original_price, true) . $price_range_suffix;
             }
 
             if ($min_price == $max_price) {
                 $price_html_discounted = self::$woocommerce_helper->formatPrice($min_price) . $price_range_suffix;
                 return $this->getStrikeoutPrice($price_html, $price_html_discounted, false, true);
             } elseif ($min_price < $max_price) {
-                $price_html_discounted = self::$woocommerce_helper->formatPriceRange($min_price, $max_price) . $price_range_suffix;
+                $price_html_discounted = self::$woocommerce_helper->formatPriceRange($min_price, $max_price, false) . $price_range_suffix;
                 return $this->getStrikeoutPrice($price_html, $price_html_discounted, false, true);
             }
         }
@@ -510,7 +510,7 @@ class ManageDiscount extends Base
                 $html = '<del>' . $original_price . '</del>' . $separator . '<ins>' . $discounted_price . '</ins>';
             }
         }
-        return apply_filters('advanced_woo_discount_rules_strikeout_price_html', $html, $original_price, $discounted_price);
+        return apply_filters('advanced_woo_discount_rules_strikeout_price_html', $html, $original_price, $discounted_price, $is_variable_product);
     }
 
     /**
@@ -845,7 +845,9 @@ class ManageDiscount extends Base
             $total_combined_discounts = 0;
             $combined_discounts_cart_items = array();
             if(function_exists('WC')){
-                $this->applyCartProductDiscount(WC()->cart);
+                if(apply_filters('advanced_woo_discount_rules_recalculate_discount_before_apply_coupon', true)){
+                    $this->applyCartProductDiscount(WC()->cart);
+                }
             }
             $apply_as_cart_fee_details = DiscountCalculator::$price_discount_apply_as_cart_discount;
             DiscountCalculator::$price_discount_apply_as_cart_discount = array();
@@ -871,6 +873,7 @@ class ManageDiscount extends Base
                     if ($discount_value > 0) {
                         if (empty($combine_all_discounts)) {
                             $discount_value = $discount_value;
+                            $label = __($label, WDR_TEXT_DOMAIN);
                             self::setCartCouponValues($label, $discount_value, $cart_item_keys);
                             $this->applyFakeCouponsForCartRules($label);
                         }else{
@@ -886,6 +889,7 @@ class ManageDiscount extends Base
                     if(empty($combine_all_discounts)){
                         $discount_value = $discount['value'];
                         $label = $discount['label'];
+                        $label = __($label, WDR_TEXT_DOMAIN);
                         self::setCartCouponValues($label, $discount_value, $discount['cart_item_keys']);
                         $this->applyFakeCouponsForCartRules($label);
                     }else{
@@ -902,6 +906,7 @@ class ManageDiscount extends Base
                 if(empty($label)){
                     $label = __('Cart discount', WDR_TEXT_DOMAIN);
                 }
+                $label = __($label, WDR_TEXT_DOMAIN);
                 self::setCartCouponValues($label, $total_combined_discounts, $combined_discounts_cart_items);
                 $this->applyFakeCouponsForCartRules($label);
             }
@@ -1199,11 +1204,11 @@ class ManageDiscount extends Base
                         if (array_key_exists($key, self::$calculated_cart_item_discount)) {
                             $processed_rule = true;
                             $product_id = isset($cart_item['product_id']) ? $cart_item['product_id'] : 0;
-                            if (empty($product_id)) {
-                                return false;
-                            }
                             if (isset($cart_item['variation_id']) && !empty($cart_item['variation_id'])) {
                                 $product_id = $cart_item['variation_id'];
+                            }
+                            if (empty($product_id)) {
+                                return false;
                             }
                             $product_obj = isset($cart_item['data']) ? $cart_item['data'] : $cart_item;
                             $item_quantity = isset($cart_item['quantity']) ? $cart_item['quantity'] : 0;
@@ -2453,12 +2458,14 @@ class ManageDiscount extends Base
      * Include tax in fee
      * */
     public function applyTaxInFee($fee, $cart){
-        if(Woocommerce::isEnteredPriceIncludeTax()){
-            if(class_exists('\WC_Tax')){
-                $fee_taxs = \WC_Tax::calc_tax( $fee, \WC_Tax::get_rates( '', \WC()->cart->get_customer() ), true );
-                if(!empty($fee_taxs)){
-                    foreach ($fee_taxs as $key => $val){
-                        $fee = $fee - $val;
+        if(Woocommerce::isTaxEnabled()){
+            if(Woocommerce::isEnteredPriceIncludeTax()){
+                if(class_exists('\WC_Tax')){
+                    $fee_taxs = \WC_Tax::calc_tax( $fee, \WC_Tax::get_rates( '', \WC()->cart->get_customer() ), true );
+                    if(!empty($fee_taxs)){
+                        foreach ($fee_taxs as $key => $val){
+                            $fee = $fee - $val;
+                        }
                     }
                 }
             }

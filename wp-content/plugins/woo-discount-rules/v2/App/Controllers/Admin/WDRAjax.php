@@ -154,6 +154,17 @@ class WDRAjax extends Base
                 if (function_exists('get_the_category_by_ID')) {
                     $parant_names = get_the_category_by_ID((int)$term->parent);
                     $parant_name = $parant_names . ' -> ';
+                    $parant_category = get_term( (int)$term->parent );
+                    if(is_object($parant_category) && !empty($parant_category->parent)){
+                        $grant_parant_names = get_the_category_by_ID((int)$parant_category->parent);
+                        $parant_name = $grant_parant_names . ' -> '.$parant_names .  ' -> ';
+                        $grant_parant_category = get_term( (int)$parant_category->parent );
+                        if(is_object($grant_parant_category) && !empty($grant_parant_category->parent)){
+                            $grant_grant_parant_names = get_the_category_by_ID((int)$grant_parant_category->parent);
+                            $parant_name = $grant_grant_parant_names. ' -> '.$grant_parant_names . ' -> '.$parant_names . ' -> ';
+                        }
+                    }
+
                 }
             }
             return array(
@@ -430,6 +441,7 @@ class WDRAjax extends Base
                 $priority = intval($rule_priority->priority) + 1;
             }
             $rule_title = !empty($rule_title) && isset($rule_title->title) ? $rule_title->title : '';
+            $rule_title = addslashes($rule_title);
             $sql = "INSERT INTO " . $wpdb->prefix . self::$wdr_rules_table . " (enabled, exclusive, title, priority, filters, conditions, product_adjustments, cart_adjustments, buy_x_get_x_adjustments, buy_x_get_y_adjustments, bulk_adjustments, set_adjustments, other_discounts, date_from, date_to, usage_limits, rule_language, additional, max_discount_sum, advanced_discount_message, discount_type, used_coupons ) 
                     SELECT 0, exclusive, '" . $rule_title . " - copy'," . $priority . ", filters, conditions, product_adjustments, cart_adjustments, buy_x_get_x_adjustments, buy_x_get_y_adjustments, bulk_adjustments, set_adjustments, other_discounts, date_from, date_to, usage_limits, rule_language,  additional, max_discount_sum, advanced_discount_message, discount_type, used_coupons   
                     FROM " . $wpdb->prefix . self::$wdr_rules_table . " 

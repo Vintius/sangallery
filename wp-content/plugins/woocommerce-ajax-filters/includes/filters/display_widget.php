@@ -401,6 +401,13 @@ class BeRocket_AAPF_Widget {
             if ( $filter_type == 'attribute' && $attribute == 'price' && $type == 'slider' ) {
                 if ( ! empty($price_values) ) {
                     $price_range = explode( ",", $price_values );
+                    if( is_array($price_range) && count($price_range) ) {
+                        foreach($price_range as &$price_range_value) {
+                            $price_range_value = floatval(trim($price_range_value));
+                        }
+                        sort($price_range, SORT_NUMERIC);
+                        $price_values = implode(',', $price_range);
+                    }
                 } elseif( (! empty($min_price) || $min_price == '0') && ! empty($max_price) ) {
                     $price_range = array($min_price, $max_price);
                 } else {

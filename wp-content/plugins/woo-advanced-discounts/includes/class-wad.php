@@ -151,7 +151,7 @@ class Wad {
 	private function define_admin_hooks() {
 
 		$plugin_admin = new Wad_Admin( $this->get_plugin_name() );
-                
+
 		$this->loader->add_action( 'init', $plugin_admin, 'init_sessions', 1);
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles',100 );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts',100 );
@@ -177,13 +177,13 @@ class Wad {
 		//hide subscription hook
 		$this->loader->add_action( 'wp_ajax_wad_hide_notice', $plugin_admin, 'wad_hide_notice');
 		$this->loader->add_action( 'wp_ajax_nopriv_wad_hide_notice', $plugin_admin, 'wad_hide_notice');
-			
+
 		$this->loader->add_action( 'wp_ajax_wad_hide_review', $plugin_admin, 'hide_review');
 		$this->loader->add_action( 'wp_ajax_nopriv_wad_hide_review', $plugin_admin, 'hide_review');
-		
+
 		$this->loader->add_action( 'wp_ajax_wad_submit_a_review', $plugin_admin, 'hide_review');
 		$this->loader->add_action( 'wp_ajax_nopriv_submit_a_review', $plugin_admin, 'hide_review');
-		
+
 		$discount=new WAD_Discount(FALSE);
 		$this->loader->add_action( 'init', $discount, 'register_cpt_discount' );
 		$this->loader->add_action( 'add_meta_boxes', $discount, 'get_discount_metabox');
@@ -218,7 +218,7 @@ class Wad {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 		$this->loader->add_action( 'wp_loaded', $plugin_public, 'init_globals' );
-		
+
 		$discount=new WAD_Discount(false);
                 $this->loader->add_filter( 'woocommerce_product_get_sale_price', $discount, 'get_sale_price', 99, 2 );
                 $this->loader->add_filter( 'woocommerce_product_get_price', $discount, 'get_sale_price', 99, 2 );
@@ -226,21 +226,21 @@ class Wad {
                 //Variations prices
                 $this->loader->add_filter( 'woocommerce_product_variation_get_sale_price', $discount, 'get_sale_price', 99, 2 );
                 $this->loader->add_filter( 'woocommerce_product_variation_get_price', $discount, 'get_sale_price', 99, 2 );
-		
+
 
                 //subtotal in mini-cart review
                 $this->loader->add_filter( 'woocommerce_cart_subtotal', $discount, 'get_cart_subtotal',99, 1 );
-//		$this->loader->add_action( 'woocommerce_before_mini_cart_contents', $discount, 'update_items_prices');	
+//		$this->loader->add_action( 'woocommerce_before_mini_cart_contents', $discount, 'update_items_prices');
 		//Saves the used discounts in the order
 		$this->loader->add_action( 'woocommerce_checkout_update_order_meta', $discount, 'save_used_discounts' );
-		
+
 		//Makes sure the discounts id to save are initialized on the checkout page
 		$this->loader->add_action( 'posts_selection', $discount, 'initialize_used_discounts_array' );
-		
+
 		//Variations prices(sale icon for variable products)
 		$this->loader->add_filter( 'woocommerce_variation_prices_sale_price', $discount, 'get_sale_price', 99, 2 );
 		$this->loader->add_filter( 'woocommerce_variation_prices', $discount, 'get_variations_prices', 99, 2 );
-		
+
 		$this->loader->add_action( 'woocommerce_cart_calculate_fees', $discount, 'woocommerce_custom_surcharge' );
 
 		$this->loader->add_action( 'loop_start', $discount, 'get_loop_data', 99, 2 );
@@ -248,15 +248,17 @@ class Wad {
 		$this->loader->add_action( 'woocommerce_before_mini_cart_contents', $discount, 'get_mini_cart_loop_data' );
 		$this->loader->add_action( 'woocommerce_checkout_update_order_review', $discount, 'get_loop_data' );
 		$this->loader->add_action( 'woocommerce_before_shop_loop', $discount, 'get_loop_data' );
-		
+
 		//Related products
-		$this->loader->add_action( 'woocommerce_before_template_part', $discount, 'prepare_related_products_loop_data', 99, 4 );
-		
+		$this->loader->add_action( 'woocommerce_before_template_part', $discount, 'prepare_product_template_loop_data', 99, 4 );
+
 		//Use new algorithm extration in woocommerce shotcodes pages
-		$this->loader->add_filter( 'woocommerce_shortcode_products_query', $discount, 'wad_shortcode_products_pages' );
+		$this->loader->add_filter( 'woocommerce_shortcode_products_query', $discount, 'shortcode_products_query', 99, 3 );
+		$this->loader->add_filter( 'woocommerce_shortcode_products_query_results', $discount, 'shortcode_products_query_results', 10, 2 );
+
 		//update product lists when processing to checkout
 		$this->loader->add_action( 'woocommerce_checkout_process', $discount, 'update_product_lists' );
-							
+
 	}
 
 	/**

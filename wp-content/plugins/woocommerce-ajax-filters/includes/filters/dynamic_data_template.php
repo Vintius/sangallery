@@ -32,7 +32,8 @@ class BeRocket_AAPF_dynamic_data_template {
         add_filter('BeRocket_AAPF_template_full_content', array($this, 'text_before_after'), 700, 4);
         add_filter('BeRocket_AAPF_template_full_content', array($this, 'value_icon_new_slider'), 800, 4);
         //Color/Image
-        add_filter('BeRocket_AAPF_template_full_content', array($this, 'color_image_text'), 1100, 4);
+        add_filter('BeRocket_AAPF_template_full_content', array($this, 'color_image_text'), 1100, 3);
+        add_filter('BeRocket_AAPF_template_full_content', array($this, 'color_image_custom_checked'), 1300, 3);
         add_filter('BeRocket_AAPF_template_single_item', array($this, 'color_size'), 1050, 4);
         add_filter('BeRocket_AAPF_template_single_item', array($this, 'color_image_text_single'), 1100, 4);
         add_filter('BeRocket_AAPF_template_single_item', array($this, 'color_image_text_single_tooltip'), 1101, 4);
@@ -548,7 +549,7 @@ class BeRocket_AAPF_dynamic_data_template {
     function number_style($template_content, $terms, $berocket_query_var_title) {
         if( in_array($berocket_query_var_title['new_template'], array('slider', 'new_slider')) ) {
             foreach($terms as $term){break;}
-            if( ! empty($berocket_query_var_title['number_style']) && count($terms) == 1 && isset($term->min) && isset($term->max) ) {
+            if( ! empty($berocket_query_var_title['number_style']) && ( (count($terms) == 1 && isset($term->min) && isset($term->max)) || $term->taxonomy == 'price' ) ) {
                 $template_content['template']['content']['filter']['content']['slider_all']['content']['slider']['attributes']['data-number_style'] = json_encode($berocket_query_var_title['number_style']);
             }
         }
@@ -773,6 +774,27 @@ class BeRocket_AAPF_dynamic_data_template {
             $template_content['template']['attributes']['class']['text_position'] = 'bapf_clr_txt_'.$text_position;
             if( in_array($text_position, array('left', 'right')) ) {
                 unset($template_content['template']['attributes']['class']['inline_color']);
+            }
+        }
+        return $template_content;
+    }
+    function color_image_custom_checked($template_content, $terms, $berocket_query_var_title) {
+        if( ! empty($berocket_query_var_title['new_style']) && in_array(berocket_isset($berocket_query_var_title['new_style']['specific']), array('color', 'image')) ) {
+            if( berocket_isset($berocket_query_var_title['color_image_checked']) == 'brchecked_custom' ) {
+                $template_content['template']['attributes']['class']['checked_type'] = 'brchecked_custom_'.$berocket_query_var_title['unique_filter_id'];
+                if( ! empty($berocket_query_var_title['color_image_checked_custom_css']) ) {
+                    $styles = '.bapf_sfilter.bapf_stylecolor.brchecked_custom_' . $berocket_query_var_title['unique_filter_id'] . ' input[type="checkbox"]:checked + label .bapf_clr_span {'
+                    . $berocket_query_var_title['color_image_checked_custom_css'] . '}';
+                    $template_content['template']['content']['checkboxstyle'] = array(
+                        'type'          => 'tag',
+                        'tag'           => 'style',
+                        'content'       => array(
+                            $styles
+                        )
+                    );
+                }
+            } else {
+                $template_content['template']['attributes']['class']['checked_type'] = (empty($berocket_query_var_title['color_image_checked']) ? 'brchecked_default' : $berocket_query_var_title['color_image_checked']);
             }
         }
         return $template_content;

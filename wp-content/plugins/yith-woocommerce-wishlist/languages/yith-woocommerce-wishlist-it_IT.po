@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Wishlist\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/init\n"
-"POT-Creation-Date: 2020-11-10 10:37:11+00:00\n"
+"POT-Creation-Date: 2021-01-13 16:23:11+00:00\n"
 "PO-Revision-Date: 2020-10-16 14:05+0200\n"
 "Last-Translator: Nicola Mustone <mail@nicolamustone.it>\n"
 "Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
@@ -62,22 +62,22 @@ msgstr ""
 "Permette ai tuoi clienti di creare e condividere delle liste di prodotti che "
 "desiderano acquistare sul tuo e-commerce."
 
-#: includes/class.yith-wcwl-ajax-handler.php:67
+#: includes/class.yith-wcwl-ajax-handler.php:71
 #: templates/add-to-wishlist-remove.php:51
 msgid "View &rsaquo;"
 msgstr "Vedi &rsaquo;"
 
-#: includes/class.yith-wcwl-ajax-handler.php:68
+#: includes/class.yith-wcwl-ajax-handler.php:72
 #: templates/add-to-wishlist-remove.php:50
 msgid "or"
 msgstr "oppure"
 
-#: includes/class.yith-wcwl-ajax-handler.php:69
+#: includes/class.yith-wcwl-ajax-handler.php:73
 msgid "Close"
 msgstr ""
 
-#: includes/class.yith-wcwl-ajax-handler.php:134
-#: includes/class.yith-wcwl-ajax-handler.php:167
+#: includes/class.yith-wcwl-ajax-handler.php:143
+#: includes/class.yith-wcwl-ajax-handler.php:179
 msgid "Product successfully removed."
 msgstr "Prodotto rimosso con successo."
 
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Product added to cart successfully"
 msgstr "Prodotto aggiunto al carrello con successo"
 
-#: includes/class.yith-wcwl-frontend.php:652
+#: includes/class.yith-wcwl-frontend.php:653
 #: includes/class.yith-wcwl-shortcode.php:237
 #: plugin-options/wishlist_page-options.php:237
 #: templates/wishlist-view-footer-mobile.php:44
@@ -581,15 +581,15 @@ msgctxt "yith-woocommerce-wishlist"
 msgid "Items per page"
 msgstr "Articoli aggiunti"
 
-#: init.php:141
-msgid "is enabled but not effective. It requires WooCommerce in order to work."
+#: init.php:160
+msgid "is enabled but not effective. It requires WooCommerce to work."
 msgstr ""
 
-#: init.php:151
+#: init.php:176
 msgid "You can't activate the free version of"
 msgstr ""
 
-#: init.php:151
+#: init.php:176
 msgid "while you are using the premium one."
 msgstr ""
 
@@ -1605,23 +1605,23 @@ msgstr "Pinterest"
 msgid "Email"
 msgstr "Email"
 
-#: templates/share.php:78
+#: templates/share.php:77
 msgid "WhatsApp"
 msgstr "WhatsApp"
 
-#: templates/share.php:79
+#: templates/share.php:78
 msgid "Whatsapp"
 msgstr "Whatsapp"
 
-#: templates/share.php:89
+#: templates/share.php:87
 msgid "(Now"
 msgstr "(Ora"
 
-#: templates/share.php:89
+#: templates/share.php:87
 msgid "copy"
 msgstr "copia"
 
-#: templates/share.php:89
+#: templates/share.php:87
 msgid "this wishlist link and share it anywhere)"
 msgstr "questo URL e condividilo dove vuoi)"
 
@@ -1656,85 +1656,77 @@ msgstr "Aggiorna"
 msgid "Add all to cart"
 msgstr "Aggiungi tutti al carrello"
 
-#: templates/wishlist-view-header.php:41
+#: templates/wishlist-view-header.php:42
 msgid "Edit title"
 msgstr "Modifica titolo"
 
-#: templates/wishlist-view-header.php:48
-msgid "Save"
-msgstr "Salva"
-
-#: templates/wishlist-view-header.php:51
-msgid "Cancel"
-msgstr "Annulla"
-
-#: templates/wishlist-view-mobile.php:126
+#: templates/wishlist-view-mobile.php:136
 msgid "Added on:"
 msgstr "Aggiunto il:"
 
-#: templates/wishlist-view-mobile.php:137
+#: templates/wishlist-view-mobile.php:147
 msgid "Price:"
 msgstr "Prezzo:"
 
-#: templates/wishlist-view-mobile.php:164
+#: templates/wishlist-view-mobile.php:174
 msgid "Quantity:"
 msgstr "Quantità:"
 
-#: templates/wishlist-view-mobile.php:179
+#: templates/wishlist-view-mobile.php:189
 msgid "Stock:"
 msgstr "Disponibilità in magazzino:"
 
-#: templates/wishlist-view-mobile.php:182 templates/wishlist-view.php:224
+#: templates/wishlist-view-mobile.php:192 templates/wishlist-view.php:227
 msgid "Out of stock"
 msgstr "Esaurito"
 
-#: templates/wishlist-view-mobile.php:182 templates/wishlist-view.php:224
+#: templates/wishlist-view-mobile.php:192 templates/wishlist-view.php:227
 msgid "In Stock"
 msgstr "Disponibile"
 
-#: templates/wishlist-view-mobile.php:201 templates/wishlist-view.php:257
+#: templates/wishlist-view-mobile.php:211 templates/wishlist-view.php:260
 msgid "Move"
 msgstr "Sposta"
 
-#: templates/wishlist-view-mobile.php:220 templates/wishlist-view.php:277
+#: templates/wishlist-view-mobile.php:232 templates/wishlist-view.php:280
 msgid "Move to another list &rsaquo;"
 msgstr "Sposta in un'altra lista &rsaquo;"
 
-#: templates/wishlist-view-mobile.php:228 templates/wishlist-view.php:155
-#: templates/wishlist-view.php:287
+#: templates/wishlist-view-mobile.php:240 templates/wishlist-view.php:156
+#: templates/wishlist-view.php:290
 msgid "Remove this product"
 msgstr "Rimuovi questo prodotto"
 
-#: templates/wishlist-view-mobile.php:238 templates/wishlist-view.php:307
+#: templates/wishlist-view-mobile.php:251 templates/wishlist-view.php:310
 msgid "No products added to the wishlist"
 msgstr "Non è stato ancora aggiunto nessun prodotto alla lista"
 
-#: templates/wishlist-view.php:78
+#: templates/wishlist-view.php:79
 msgid "Product name"
 msgstr "Nome prodotto"
 
-#: templates/wishlist-view.php:86
+#: templates/wishlist-view.php:87
 msgid "Unit price"
 msgstr "Prezzo unitario"
 
-#: templates/wishlist-view.php:95
+#: templates/wishlist-view.php:96
 msgid "Quantity"
 msgstr "Quantità"
 
-#: templates/wishlist-view.php:104
+#: templates/wishlist-view.php:105
 msgid "Stock status"
 msgstr "Disponibilità in magazzino"
 
-#: templates/wishlist-view.php:122
+#: templates/wishlist-view.php:123
 msgid "Arrange"
 msgstr "Riordina"
 
 #. translators: date added label: 1 date added.
-#: templates/wishlist-view.php:238
+#: templates/wishlist-view.php:241
 msgid "Added on: %s"
 msgstr "Aggiunto il: %s"
 
-#: templates/wishlist-view.php:287
+#: templates/wishlist-view.php:290
 msgid "Remove"
 msgstr "Rimuovi"
 
@@ -1758,6 +1750,12 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://yithemes.com/"
 msgstr ""
+
+#~ msgid "Save"
+#~ msgstr "Salva"
+
+#~ msgid "Cancel"
+#~ msgstr "Annulla"
 
 #~ msgid "Ask for an estimate"
 #~ msgstr "Richiedi un preventivo"

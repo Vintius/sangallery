@@ -389,7 +389,7 @@ class Rule
             $filter_helper = new Filter();
             $filter_passed = $filter_helper->matchFilters($product, $filters, $sale_badge, $product_table);
             $conditions = $this->getConditions();
-            $filter_passed_user_logged_in = $user_logged_in_passed = $filter_passed_user_role = $filter_passed_user_list = $user_role_passed = $user_list_passed = $has_other_conditions = false;
+            $purchase_first_order_passed = $filter_passed_purchase_first_order = $filter_passed_user_logged_in = $user_logged_in_passed = $filter_passed_user_role = $filter_passed_user_list = $user_role_passed = $user_list_passed = $has_other_conditions = false;
             $condition_relationship = $this->getRelationship('condition', 'and');
             if($filter_passed){
                 if(!empty($conditions)){
@@ -400,28 +400,34 @@ class Rule
                         if( !empty($condition_type) ){
                             if (!empty($options) && isset($this->available_conditions[$condition_type]['object']) && is_object($this->available_conditions[$condition_type]['object']) && method_exists($this->available_conditions[$condition_type]['object'], 'check')) {
                                 $this->available_conditions[$condition_type]['object']->rule = $this;
-                                if( $condition_type == 'user_role'){
-                                    $user_role_passed = true;
-                                    $filter_passed_user_role = $this->available_conditions[$condition_type]['object']->check($cart, $options);
-                                }
-                                if( $condition_type == 'user_list'){
-                                    $user_list_passed = true;
-                                    $filter_passed_user_list = $this->available_conditions[$condition_type]['object']->check($cart, $options);
-                                }
-                                if( $condition_type == 'user_logged_in'){
-                                    $user_logged_in_passed = true;
-                                    $filter_passed_user_logged_in = $this->available_conditions[$condition_type]['object']->check($cart, $options);
+                                switch ($condition_type){
+                                    case 'user_role':
+                                        $user_role_passed = true;
+                                        $filter_passed_user_role = $this->available_conditions[$condition_type]['object']->check($cart, $options);
+                                        break;
+                                    case 'user_list':
+                                        $user_list_passed = true;
+                                        $filter_passed_user_list = $this->available_conditions[$condition_type]['object']->check($cart, $options);
+                                        break;
+                                    case 'user_logged_in':
+                                        $user_logged_in_passed = true;
+                                        $filter_passed_user_logged_in = $this->available_conditions[$condition_type]['object']->check($cart, $options);
+                                        break;
+                                    case 'purchase_first_order':
+                                        $purchase_first_order_passed = true;
+                                        $filter_passed_purchase_first_order = $this->available_conditions[$condition_type]['object']->check($cart, $options);
+                                        break;
                                 }
                             }
                         }
 
-                        if( !empty($condition_type) && !in_array($condition_type, array('user_role', 'user_list', 'user_logged_in'))){
+                        if( !empty($condition_type) && !in_array($condition_type, array('user_role', 'user_list', 'user_logged_in', 'purchase_first_order'))){
                             $has_other_conditions = true;
                         }
                     }
                 }
-                if($user_role_passed || $user_list_passed || $user_logged_in_passed){
-                    if($filter_passed_user_role || $filter_passed_user_list || $filter_passed_user_logged_in){
+                if($user_role_passed || $user_list_passed || $user_logged_in_passed || $purchase_first_order_passed){
+                    if($filter_passed_user_role || $filter_passed_user_list || $filter_passed_user_logged_in || $filter_passed_purchase_first_order){
                         if($condition_relationship == 'and'){
                             if($user_role_passed && $user_logged_in_passed){
                                 if($filter_passed_user_role && $filter_passed_user_logged_in){
@@ -431,6 +437,12 @@ class Rule
                             }
                             if($user_list_passed && $user_logged_in_passed){
                                 if($filter_passed_user_list && $filter_passed_user_logged_in){
+                                }else{
+                                    $filter_passed = false;
+                                }
+                            }
+                            if($purchase_first_order_passed && $user_logged_in_passed){
+                                if($filter_passed_purchase_first_order && $filter_passed_user_logged_in){
                                 }else{
                                     $filter_passed = false;
                                 }
@@ -723,6 +735,7 @@ class Rule
             }else if($price_display_condition == "show_after_matched" || $is_cart){
                 if(!empty($cart_items)){
                     foreach ($cart_items as $cart_item){
+                        $cart_product_parent_id = isset($cart_item['data']) ? self::$woocommerce_helper->getProductParentId($cart_item['data']) : '';
                         $current_product_parent_id = self::$woocommerce_helper->getProductParentId($product);
                         $cart_product_id = isset($cart_item['product_id']) ? $cart_item['product_id'] : 0;
                         $cart_variation_id = isset($cart_item['variation_id']) ? $cart_item['variation_id'] : 0;
@@ -733,6 +746,8 @@ class Rule
                         }
                         if(!empty($cart_variation_id)){
                             if(!empty($cart_product_id) && $cart_product_id == $current_product_parent_id){
+                                $cart_quantity = isset($cart_item['quantity']) ? $cart_item['quantity'] : 0;
+                            }elseif (empty($cart_product_id) && $cart_product_parent_id == $current_product_parent_id){
                                 $cart_quantity = isset($cart_item['quantity']) ? $cart_item['quantity'] : 0;
                             }
                         }
@@ -1017,7 +1032,7 @@ class Rule
     function calculator($type, $original_value, $value)
     {
         $discount = 0;
-        if (empty($value)) {
+        if (empty($value) || empty($original_value)) {
             return $discount;
         }
         $original_value = floatval($original_value);

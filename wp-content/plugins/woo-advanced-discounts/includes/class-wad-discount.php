@@ -811,11 +811,15 @@ class WAD_Discount {
             $quantity_pricing = get_post_meta($id_to_check, "o-discount", true);
         }
 
+        if ( empty($quantity_pricing) || !isset($quantity_pricing["enable"]) )
+        {
+            return $normal_price;
+        }
 
         $products_qties = $this->get_cart_item_quantities();
         $rules_type = get_proper_value($quantity_pricing, "rules-type", "intervals");
 
-        if (!isset($products_qties[$id_to_check]) || empty($quantity_pricing) || !isset($quantity_pricing["enable"]))
+        if ( !isset($products_qties[$id_to_check]) )
         {
             return $normal_price;
         }
@@ -1250,9 +1254,16 @@ class WAD_Discount {
 
     public function get_loop_data($wp_query) {
         global $wad_last_products_fetch;
+        global $post;
+
+        if( has_shortcode( $post->post_content, 'products' ) || has_shortcode( $post->post_content, 'sale_products' ) ) {
+                    return;
+            }
 
         if(empty($wp_query))
             global $wp_query;
+
+
         if (is_cart() || is_checkout()) {
             $cart_products = wad_get_cart_products();
             if ($cart_products)
@@ -1284,25 +1295,67 @@ class WAD_Discount {
         $wad_last_products_fetch = wad_get_cart_products();
     }
 
-    function prepare_related_products_loop_data($template_name, $template_path, $located, $args)
-    {
-        if($template_name=="single-product/related.php")
-        {
-            global $wad_last_products_fetch;
-            extract( $args );
-            $wad_last_products_fetch = array_map(function($o){ return $o->get_id();}, $related_products);
-        }
+    public static function prepare_product_template_loop_data( $template_name, $template_path, $located, $args ) {
+  			global $wad_last_products_fetch;
 
-    }
+  			if ( 'single-product/related.php' == $template_name ) {
+  				$wad_last_products_fetch = array_map(
+  					function( $o ) {
+  						return $o->get_id();
+  					},
+  					$args['related_products']
+  				);
+  			} elseif ( 'single-product/up-sells.php' == $template_name ) {
+  					$wad_last_products_fetch = array_map(
+  						function( $o ){
+  							return $o->get_id();
+  						},
+  						$args['upsells']
+  					);
+  			} elseif ( 'cart/cross-sells.php' == $template_name ) {
+  					$wad_last_products_fetch = array_map(
+  						function( $o ){ return $o->get_id();
+  						},
+  						$args['cross_sells']
+  					);
+  			}
+  	}
 
-    function wad_shortcode_products_pages($args){
-        global $wad_last_products_fetch;
+    public function shortcode_products_query( $args, $attribute, $type ) {
+  			  global $wad_discounts;
+  			  $wad_on_sale_products = array();
 
-        $related_products = get_posts($args);
-        $wad_last_products_fetch = array_map(function($o){ return $o->ID;}, $related_products);
+  				if( isset( $attribute['ids'] ) && ! empty( $attribute['ids'] ) ) {
+  						return $args;
+  				}
 
-        return $args;
-    }
+  			  if( 'sale_products' === $type ) {
+  			          foreach ( $wad_discounts['product'] as $discount_obj ) {
+
+  			                  $product_list         = $discount_obj->products_list->get_products(true);
+  			                  $discounted_products  = wad_filter_on_sale_products( $product_list, $discount_obj );
+  			                  $wad_on_sale_products = array_merge( $wad_on_sale_products, $discounted_products );
+  			          }
+  			  }
+
+  				if( empty( $wad_on_sale_products ) ) {
+  						return $args;
+  				}
+
+  				$args['post__in'] = array_merge( $args['post__in'], $wad_on_sale_products );
+
+  				return $args;
+  	}
+
+    public function shortcode_products_query_results( $results, $wc_product ){
+  			global $wad_last_products_fetch;
+
+  			if( 'products' == $wc_product->get_type() || 'sale_products' == $wc_product->get_type() ) {
+  					$wad_last_products_fetch = $results->ids;
+  			}
+
+  			return $results;
+  	}
 
     function update_product_lists(){
         global $wad_last_products_fetch;

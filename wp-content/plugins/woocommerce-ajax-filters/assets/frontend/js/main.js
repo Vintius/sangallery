@@ -615,6 +615,7 @@ function braapf_filtered_filters_set() {
     }
     braapf_replace_each_filter = function(html) {
         var $html = $('<div><div>'+html+'</div></div>');
+        $html = braapf_sngl_hd_loaded_filters($html);
         $('.berocket_single_filter_widget').each(function() {
             var data_id = $(this).data('id');
             $('.berocket_single_filter_widget_'+data_id).html($html.find('.berocket_single_filter_widget_'+data_id).last().html());
@@ -723,6 +724,20 @@ function braapf_filtered_filters_set() {
     function braapf_additional_header(xhr) {
         xhr.setRequestHeader('X-Braapf', '1');
         return xhr;
+    }
+    function braapf_sngl_hd_loaded_filters($elements) {
+        var mobile_width = berocket_apply_filters('filter_mobile_width', 767); 
+        var tablet_width = berocket_apply_filters('filter_tablet_width', 1024); 
+        if( $(window).width() <= mobile_width ) {
+            $elements.find('.bapf_sngl_hd_mobile').remove();
+        }
+        if( $(window).width() > mobile_width && $(window).width() <= tablet_width ) {
+            $elements.find('.bapf_sngl_hd_tablet').remove();
+        }
+        if( $(window).width() > tablet_width ) {
+            $elements.find('.bapf_sngl_hd_desktop').remove();
+        }
+        return $elements;
     }
     //INIT filters
     braapf_init_load = function() {
@@ -916,9 +931,7 @@ braapf_hierarhical_set,
 braapf_collapse_status_save,
 braapf_collapse_status_set,
 braapf_show_hide_values_save,
-braapf_show_hide_values_set,
-berocket_custom_sidebar_close,
-berocket_custom_sidebar_open;
+braapf_show_hide_values_set;
 (function ($){
     //default filters
     braapf_get_current_filters = function (url_data) {
@@ -1117,30 +1130,6 @@ berocket_custom_sidebar_open;
             is_active = 'active';
         }
         $(document).trigger('berocket_element_above_products_'+is_active);
-    });
-    berocket_custom_sidebar_close = function () {
-        $('.berocket_ajax_filters_sidebar_toggle').removeClass( "active" );
-        $('#berocket-ajax-filters-sidebar').removeClass('active');
-        $('body').removeClass('berocket_ajax_filters_sidebar_active');
-    }
-    berocket_custom_sidebar_open = function () {
-        $('.berocket_ajax_filters_sidebar_toggle').addClass( "active" );
-        $('#berocket-ajax-filters-sidebar').addClass('active');
-        $('body').addClass('berocket_ajax_filters_sidebar_active');
-    }
-    $(document).on('berocket_custom_sidebar_close', berocket_custom_sidebar_close);
-    $(document).on('berocket_custom_sidebar_open', berocket_custom_sidebar_open);
-    $(document).on('click', '.berocket_ajax_filters_sidebar_toggle', function (e){
-        e.preventDefault();
-        if( $(this).is('.active') && $('#berocket-ajax-filters-sidebar').is('.active') ) {
-            berocket_custom_sidebar_close();
-        } else {
-            berocket_custom_sidebar_open();
-        }
-    });
-    $(document).on('click', '#berocket-ajax-filters-sidebar-shadow, #berocket-ajax-filters-sidebar-close', function (e) {
-        e.preventDefault();
-        berocket_custom_sidebar_close();
     });
     //Compatibility scripts
 
@@ -1388,8 +1377,11 @@ braapf_jqrui_slidr_ion_values_link_arr_attr;
     berocket_add_filter('braapf_init_for_parent', braapf_init_ion_slidr_for_parent);
     berocket_add_filter('grab_single_filter_default', braapf_grab_single_ion);
     berocket_add_filter('jqrui_slidr_ion_link_arr_attr', braapf_jqrui_slidr_ion_values_link_arr_attr);
+    berocket_add_filter('jqrui_slidr_ion_link_arr_attr_price', braapf_jqrui_slidr_ion_values_link_arr_attr);
     berocket_add_filter('jqrui_slidr_ion_wc_price', braapf_jqrui_slidr_ion_value_wc_price);
     berocket_add_filter('jqrui_slidr_ion_arr_attr', braapf_jqrui_slidr_ion_value_arr_attr);
+    berocket_add_filter('jqrui_slidr_ion_arr_attr_price', braapf_jqrui_slidr_ion_value_arr_attr, 10);
+    berocket_add_filter('jqrui_slidr_ion_arr_attr_price', braapf_jqrui_slidr_ion_value_wc_price, 20);
 })(jQuery);
 
 var braapf_grab_single_select;
@@ -1680,7 +1672,10 @@ braapf_jqrui_slidr_values_link_arr_attr;
     });
     berocket_add_filter('jqrui_slidr_wc_price', braapf_jqrui_slidr_values_wc_price);
     berocket_add_filter('jqrui_slidr_arr_attr', braapf_jqrui_slidr_values_arr_attr);
+    berocket_add_filter('jqrui_slidr_arr_attr_price', braapf_jqrui_slidr_values_arr_attr, 10);
+    berocket_add_filter('jqrui_slidr_arr_attr_price', braapf_jqrui_slidr_values_wc_price, 20);
     berocket_add_filter('jqrui_slidr_link_arr_attr', braapf_jqrui_slidr_values_link_arr_attr);
+    berocket_add_filter('jqrui_slidr_link_arr_attr_price', braapf_jqrui_slidr_values_link_arr_attr);
     berocket_add_filter('grab_single_filter_default', braapf_grab_single_jqrui);
     berocket_add_filter('braapf_init', braapf_init_jqrui_slidr);
     berocket_add_filter('braapf_init_for_parent', braapf_init_jqrui_slidr_for_parent);

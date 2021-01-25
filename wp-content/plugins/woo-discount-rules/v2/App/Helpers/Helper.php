@@ -329,9 +329,9 @@ class Helper
 
     public static function displayCompatibleCheckMessages()
     {
-        if (version_compare(WDR_VERSION, '2.3.2', '>=')) {
+        if (version_compare(WDR_VERSION, '2.3.3', '>=')) {
             if (defined('WDR_PRO_VERSION')) {
-                if (version_compare(WDR_PRO_VERSION, '2.3.2', '<')) {
+                if (version_compare(WDR_PRO_VERSION, '2.3.3', '<')) {
                     $url = admin_url() . "plugins.php";
                     $plugin_page = '<a target="_blank" href="' . $url . '">' . __('Update now', WDR_TEXT_DOMAIN) . '</a>';
                     ?>

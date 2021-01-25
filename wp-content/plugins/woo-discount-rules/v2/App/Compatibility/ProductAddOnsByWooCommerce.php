@@ -36,12 +36,14 @@ class ProductAddOnsByWooCommerce extends Base
                                 }
                                 if($lock == false){
                                     var price = newText = $(this).text().replace(currency_string, '');
-                                    var option = {
-                                        custom_price: price,
-                                        original_price: price
-                                    };
-                                    $targets.attr('data-lock', true);
-                                    $.AdvanceWooDiscountRules.getDynamicDiscountPriceFromCartForm($form, $targets, option);
+                                    if(price != '' && price != "-"){
+                                        var option = {
+                                            custom_price: price,
+                                            original_price: price
+                                        };
+                                        $targets.attr('data-lock', true);
+                                        $.AdvanceWooDiscountRules.getDynamicDiscountPriceFromCartForm($form, $targets, option);
+                                    }
                                 }
                             });
 
@@ -72,12 +74,14 @@ class ProductAddOnsByWooCommerce extends Base
                                         }
                                         if($lock == false){
                                             var price = newText = $(this).text().replace(currency_string, '');
-                                            var option = {
-                                                custom_price: price,
-                                                original_price: price
-                                            };
-                                            $targets.attr('data-lock', true);
-                                            $.AdvanceWooDiscountRules.getDynamicDiscountPriceFromCartForm($form, $targets, option);
+                                            if(price != '' && price != "-"){
+                                                var option = {
+                                                    custom_price: price,
+                                                    original_price: price
+                                                };
+                                                $targets.attr('data-lock', true);
+                                                $.AdvanceWooDiscountRules.getDynamicDiscountPriceFromCartForm($form, $targets, option);
+                                            }
                                         }
                                     });
                                 }, 0);

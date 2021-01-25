@@ -1,3 +1,19 @@
+= 2.21 =
+* Fix warning error in checkout page
+
+= 2.20 =
+* Add compatibility with WooCommerce 4.8
+* Add compatibility with WordPress 5.6
+* Fix discount not showing on up-sells and cross-sells products
+* Fix discounted products not showing on the sale_products shortcode page
+* Improve plugin performance
+
+= 2.18 =
+* Add new contributor
+
+= 2.17 =
+* Add new contributor
+
 = 2.16 =
 * Add compatibility with WooCommerce 4.5
 * Fixed issue regarding the wrong price in pricing table on product page
