@@ -1,0 +1,103 @@
+.mini-header {
+  padding: 15px 0;
+
+  &-cols {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  &-contacts {
+    flex-basis: calc(100% - 450px);
+  }
+
+  &-menu {
+    position: relative;
+    flex-basis: 430px;
+    flex-shrink: 1;
+    margin-right: -10px;
+    padding-bottom: 30px;
+  }
+
+  &-user-menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-right: 7px;
+    text-align: right;
+    color: $black;
+
+    & > div {
+      display: inline-block;
+    }
+
+    a {
+      font: 500 18px/24px $font-montserrat;
+
+      &:hover {
+        color: $blue-hover;
+      }
+    }
+  }
+}
+
+.mimi-header-social-icon {
+  display: block;
+}
+.mimi-header-social-item {
+  display: inline-block !important;
+  font-size: 0;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    margin-right: 20px;
+  }
+
+  a {
+    font: 500 16px/24px $font-montserrat;
+    text-transform: uppercase;
+  }
+}
+
+.contact-list-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font: 500 18px/24px $font-montserrat;
+
+  &-phone {
+    flex-basis: 200px;
+    flex-shrink: 1;
+  }
+
+  &-mail {
+    flex-basis: 270px;
+    flex-shrink: 1;
+  }
+
+  &-address {
+    flex-basis: 100%;
+  }
+
+  &-clock {
+    flex-basis: 80px;
+    flex-shrink: 1;
+  }
+
+  & > li:not(:last-child) {
+    margin: 0 25px 10px 0;
+  }
+
+  a {
+    color: $blue-dark;
+
+    &:hover {
+      color: $blue-hover;
+    }
+  }
+}

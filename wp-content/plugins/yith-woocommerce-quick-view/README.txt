@@ -2,8 +2,8 @@
 Contributors: yithemes
 Tags: woocommerce, quick view, woocommerce quick view, products quick view
 Requires at least: 5.3
-Tested up to: 5.6
-Stable tag: 1.4.8
+Tested up to: 5.7
+Stable tag: 1.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,22 @@ Full documentation is available [here](https://docs.yithemes.com/yith-woocommerc
 3. The quick view modal.
 
 == Changelog ==
+
+= 1.5.1 = Released 05 March 2021
+
+* Fix: compatibility issue with YITH WooCommerce Wishlist
+
+= 1.5.0 = Released 02 March 2021
+
+* New: Support for WordPress 5.7
+* New: support for WooCommerce 5.0
+* Update: YITH plugin framework
+* Fix: issue with YITH Proteo and button "add to cart" position on image hover
+
+= 1.4.9 = Released 04 February 2021
+
+* New: support for WooCommerce 5.0
+* Update: YITH plugin framework
 
 = 1.4.8 = Released 12 January 2021
 
@@ -312,7 +328,6 @@ Or, if you have created your own language pack, or have an update for an existin
 
 == Upgrade notice ==
 
-= 1.4.8 = Released 12 January 2021
+= 1.5.1 = Released 05 March 2021
 
-* New: Support for WooCommerce 4.9
-* Update: Plugin framework
+* Fix: compatibility issue with YITH WooCommerce Wishlist

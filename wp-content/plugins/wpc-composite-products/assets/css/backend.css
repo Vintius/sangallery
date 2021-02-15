@@ -59,7 +59,7 @@
     position: relative;
     height: 40px;
     line-height: 40px;
-    padding: 0 10px 0 40px;
+    padding: 0 150px 0 40px;
     cursor: pointer;
     border: none;
     -webkit-touch-callout: none;
@@ -225,12 +225,12 @@
 .wooco_table table tr th {
     font-size: 12px;
     font-weight: 400;
-    text-align: left;
+    text-align: -webkit-auto;
     width: 150px;
 }
 
 .wooco_table table tr td {
-    text-align: left;
+    text-align: -webkit-auto;
 }
 
 #wooco_set_regular_price, #wooco_set_sale_price, #wooco_set_shipping_class {

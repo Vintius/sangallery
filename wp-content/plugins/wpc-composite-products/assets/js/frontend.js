@@ -124,6 +124,8 @@ function wooco_init($wrap, context = null) {
       wooco_vars.show_alert) {
     wooco_show_alert($container);
   }
+
+  jQuery(document).trigger('wooco_init', [$wrap, $container]);
 }
 
 function wooco_check_ready($wrap) {

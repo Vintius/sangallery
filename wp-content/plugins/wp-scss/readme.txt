@@ -3,8 +3,8 @@ Contributors: connectthink
 Tags: sass, scss, css
 Plugin URI: https://github.com/ConnectThink/WP-SCSS
 Requires at least: 3.0.1
-Tested up to: 5.3
-Stable tag: 1.2.5
+tested up to: 5.6.1
+Stable tag: 2.1.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/copyleft/gpl.html
 
@@ -12,7 +12,7 @@ Compiles .scss files to .css and enqueues them.
 
 == Description ==
 
-Compiles .scss files on your wordpress install using [lefo's scssphp](https://github.com/leafo/scssphp). Includes settings page for configuring directories, error reporting, compiling options, and auto enqueuing.
+Compiles .scss files on your wordpress install using [ScssPhp](https://github.com/scssphp/scssphp/). Includes settings page for configuring directories, error reporting, compiling options, and auto enqueuing.
 
 The plugin only compiles when changes have been made to the scss files. Compiles are made to the matching css file, so disabling this plugin will not take down your stylesheets. In the instance where a matching css file does not exist yet, the plugin will create the appropriate css file in the css directory.
 
@@ -29,6 +29,12 @@ The plugin only compiles when changes have been made to the scss files. Compiles
 = Can I use a child theme? =
 
 Yes, absolutely. Make sure you define your directories relative to your child theme and that your child theme is active. Otherwise you'll see an error regarding missing directories.
+
+
+= What version of PHP is required? =
+
+PHP 5.6 is required to run WP-SCSS
+
 
 = How do I @import subfiles =
 
@@ -62,6 +68,34 @@ Make sure your directories are properly defined in the settings. Paths are defin
 If you are having issues with the plugin, create an issue on [github](https://github.com/ConnectThink/WP-SCSS), and we'll do our best to help.
 
 == Changelog ==
+= 2.1.3 =
+* Must declare global to use it for $base_compiling_folder.
+
+= 2.1.2 =
+* Correction for enqueueing styles not defaulting to get_stylesheet_directory() [Issue](https://github.com/ConnectThink/WP-SCSS/issues/168)
+
+= 2.1.1 =
+* Bug fixes after merging 2.0.2 and 2.1.0 defaults worked, but new options did not. [Shadoath](https://github.com/ConnectThink/WP-SCSS/issues/165)
+
+= 2.1.0 =
+* Settings dropdown added for choosing additional base compile locations outside of current theme. Suggestion by [pixeldesignstudio ](https://github.com/ConnectThink/WP-SCSS/issues/127)
+
+= 2.0.2 =
+* Added option in settings to enable an 'always recompile' flag. Suggestion by [bick](https://github.com/ConnectThink/WP-SCSS/issues/151)
+
+= 2.0.1 =
+* Bugfix to add filter for option_wpscss_options to remove Leafo if stored in DB. Thanks to [kinky-org](https://github.com/ConnectThink/WP-SCSS/issues/157) for pointing this out
+* Saving plugin settings will update DB with the correct value.
+
+= 2.0.0 =
+* Requires PHP 5.6
+* Update src to use [ScssPHP github repo at 1.0.2](https://github.com/scssphp/scssphp/tree/1.0.2)
+* Added check to make sure 'compiler' function was not already defined. [Shadoath](https://github.com/ConnectThink/WP-SCSS/pull/155)
+
+= 1.2.6 =
+* Create cache dir if it doesn't exist [@XNBlank](https://github.com/ConnectThink/WP-SCSS/pull/135
+* Add cache dir as default [@mhbapcc](https://github.com/ConnectThink/WP-SCSS/pull/144)
+
 = 1.2.5 =
 * Fix error when ".*" folders exist [@chameron](https://github.com/ConnectThink/WP-SCSS/pull/111)
 * Add detailed error description for the directory settings [@andreyc0d3r](https://github.com/ConnectThink/WP-SCSS/pull/121)

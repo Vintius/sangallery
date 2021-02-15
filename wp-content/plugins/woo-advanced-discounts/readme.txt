@@ -5,7 +5,7 @@ Tags: WooCommerce dynamic pricing, WooCommerce bulk discount, WooCommerce quanti
 Requires at least: 3.5
 Requires PHP: 5.2.4
 Tested up to: 5.6
-Stable tag: 2.21
+Stable tag: 2.22
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -298,6 +298,11 @@ Woocommerce All Discounts works with any theme, including the default WordPress 
 3. Product quantity based pricing page
 
 == Changelog ==
+
+= 2.22 =
+* Fix wrong product price displayed on shop and category page
+* Fix discounted products not showing for Product categories shortcode page
+* Add compatibility with WooCommerce 4.9
 
 = 2.21 =
 * Fix warning error in checkout page

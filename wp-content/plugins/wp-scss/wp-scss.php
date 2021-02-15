@@ -3,7 +3,7 @@
  * Plugin Name: WP-SCSS
  * Plugin URI: https://github.com/ConnectThink/WP-SCSS
  * Description: Compiles scss files live on WordPress.
- * Version: 1.2.5
+ * Version: 2.1.3
  * Author: Connect Think
  * Author URI: http://connectthink.com
  * License: GPLv3
@@ -17,10 +17,11 @@
  *        b. wp-scss class - manages compiling
  *        c. options class - builds settings page
  *    3. Registering Settings Page and Options
- *    4. Assign plugin settings
- *    5. Instantiate wp_scss object and run compiler
- *    6. Handle Errors
- *    7. Enqueue Styles
+ *    4. Read correct DB values for version 2.0.1 (Leafo => ScssPhp)
+ *    5. Assign plugin settings
+ *    6. Instantiate wp_scss object and run compiler
+ *    7. Handle Errors
+ *    8. Enqueue Styles
  */
 
 
@@ -29,37 +30,34 @@
  */
 
 // Plugin Paths
-if (!defined('WPSCSS_THEME_DIR'))
-    define('WPSCSS_THEME_DIR', get_stylesheet_directory());
-
 if (!defined('WPSCSS_PLUGIN_NAME'))
-    define('WPSCSS_PLUGIN_NAME', trim(dirname(plugin_basename(__FILE__)), '/'));
+  define('WPSCSS_PLUGIN_NAME', trim(dirname(plugin_basename(__FILE__)), '/'));
 
 if (!defined('WPSCSS_PLUGIN_DIR'))
-    define('WPSCSS_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . WPSCSS_PLUGIN_NAME);
+  define('WPSCSS_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . WPSCSS_PLUGIN_NAME);
 
 if (!defined('WPSCSS_PLUGIN_URL'))
-    define('WPSCSS_PLUGIN_URL', WP_PLUGIN_URL . '/' . WPSCSS_PLUGIN_NAME);
+  define('WPSCSS_PLUGIN_URL', WP_PLUGIN_URL . '/' . WPSCSS_PLUGIN_NAME);
 
 // Plugin Version
 if (!defined('WPSCSS_VERSION_KEY'))
-    define('WPSCSS_VERSION_KEY', 'wpscss_version');
+  define('WPSCSS_VERSION_KEY', 'wpscss_version');
 
 if (!defined('WPSCSS_VERSION_NUM'))
-    define('WPSCSS_VERSION_NUM', '1.2.4');
+  define('WPSCSS_VERSION_NUM', '2.1.3');
 
 // Add version to options table
 if ( get_option( WPSCSS_VERSION_KEY ) !== false ) {
 
-    // The option already exists, so we just update it.
-    update_option( WPSCSS_VERSION_KEY, WPSCSS_VERSION_NUM );
+  // The option already exists, so we just update it.
+  update_option( WPSCSS_VERSION_KEY, WPSCSS_VERSION_NUM );
 
 } else {
 
-    // The option hasn't been added yet. We'll add it with $autoload set to 'no'.
-    $deprecated = null;
-    $autoload = 'no';
-    add_option( WPSCSS_VERSION_KEY, WPSCSS_VERSION_NUM, $deprecated, $autoload );
+  // The option hasn't been added yet. We'll add it with $autoload set to 'no'.
+  $deprecated = null;
+  $autoload = 'no';
+  add_option( WPSCSS_VERSION_KEY, WPSCSS_VERSION_NUM, $deprecated, $autoload );
 }
 
 
@@ -84,7 +82,7 @@ include_once WPSCSS_PLUGIN_DIR . '/options.php'; // Options page class
  */
 
 if( is_admin() ) {
-    $wpscss_settings = new Wp_Scss_Settings();
+  $wpscss_settings = new Wp_Scss_Settings();
 }
 
 add_filter('plugin_action_links', 'wpscss_plugin_action_links', 10, 2);
@@ -96,16 +94,29 @@ function wpscss_plugin_action_links($links, $file) {
   }
 
   if ($file == $this_plugin) {
-        $settings_link = '<a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=wpscss_options">Settings</a>';
-        array_unshift($links, $settings_link);
-    }
+    $settings_link = '<a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=wpscss_options">Settings</a>';
+    array_unshift($links, $settings_link);
+  }
 
-    return $links;
+  return $links;
 }
 
+/**
+ * 4. UPDATE DATABASE VALUES
+ *
+ * Correction for when Leafo is stored in DB
+ * as a value in compiling_options
+ *
+ */
+
+add_filter('option_wpscss_options', 'wpscss_plugin_db_cleanup');
+function wpscss_plugin_db_cleanup($option_values){
+  $option_values['compiling_options'] = str_replace("Leafo", "ScssPhp", $option_values['compiling_options']);
+  return $option_values;
+}
 
 /**
- * 4. PLUGIN SETTINGS
+ * 5. PLUGIN SETTINGS
  *
  * Pull settings from options table
  * Scrub empty fields or directories that don't exists
@@ -113,51 +124,53 @@ function wpscss_plugin_action_links($links, $file) {
  */
 
 $wpscss_options = get_option( 'wpscss_options' );
+$base_compiling_folder = isset($wpscss_options['base_compiling_folder']) ? $wpscss_options['base_compiling_folder'] : get_stylesheet_directory();
 $scss_dir_setting = isset($wpscss_options['scss_dir']) ? $wpscss_options['scss_dir'] : '';
 $css_dir_setting = isset($wpscss_options['css_dir']) ? $wpscss_options['css_dir'] : '';
 
-// Checks if directories are empty
+// Checks if directories are not yet defined
 if( $scss_dir_setting == false || $css_dir_setting == false ) {
   function wpscss_settings_error() {
-      echo '<div class="error">
-        <p><strong>Wp-Scss</strong> requires both directories be specified. <a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=wpscss_options">Please update your settings.</a></p>
+    echo '<div class="error">
+      <p><strong>WP-SCSS</strong> requires both directories be specified. <a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=wpscss_options">Please update your settings.</a></p>
       </div>';
   }
   add_action('admin_notices', 'wpscss_settings_error');
   return 0; //exits
 
-// Checks if directory exists
-} elseif ( !is_dir(WPSCSS_THEME_DIR . $scss_dir_setting) ) {
-  function wpscss_settings_error() {
-      echo '<div class="error">
-        <p><strong>Wp-Scss:</strong> SCSS directory does not exist (' . WPSCSS_THEME_DIR . $scss_dir_setting . '). Please create the directory or <a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=wpscss_options">update your settings.</a></p>
+  // Checks if SCSS directory exists
+} elseif ( !is_dir($base_compiling_folder . $scss_dir_setting) ) {
+  add_action('admin_notices', function() use ($base_compiling_folder, $scss_dir_setting){
+    echo '<div class="error">
+      <p><strong>WP-SCSS:</strong> The SCSS directory does not exist (' . $base_compiling_folder . $scss_dir_setting . '). Please create the directory or <a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=wpscss_options">update your settings.</a></p>
       </div>';
-  }
-  add_action('admin_notices', 'wpscss_settings_error');
+  });
   return 0; //exits
-} elseif ( !is_dir(WPSCSS_THEME_DIR . $css_dir_setting) ) {
-  function wpscss_settings_error() {
-      echo '<div class="error">
-        <p><strong>Wp-Scss:</strong> CSS directory does not exist (' . WPSCSS_THEME_DIR . $css_dir_setting . '). Please create the directory or <a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=wpscss_options">update your settings.</a></p>
+
+  // Checks if CSS directory exists
+} elseif ( !is_dir($base_compiling_folder . $css_dir_setting) ) {
+  add_action('admin_notices', function() use ($base_compiling_folder, $css_dir_setting){
+    echo '<div class="error">
+      <p><strong>WP-SCSS:</strong> The CSS directory does not exist (' . $base_compiling_folder . $css_dir_setting . '). Please create the directory or <a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=wpscss_options">update your settings.</a></p>
       </div>';
-  }
-  add_action('admin_notices', 'wpscss_settings_error');
+  });
   return 0; //exits
 }
 
 // Plugin Settings
 $wpscss_settings = array(
-  'scss_dir'   =>  WPSCSS_THEME_DIR . $scss_dir_setting,
-  'css_dir'    =>  WPSCSS_THEME_DIR . $css_dir_setting,
-  'compiling'  =>  isset($wpscss_options['compiling_options']) ? $wpscss_options['compiling_options'] : 'Leafo\ScssPhp\Formatter\Expanded',
-  'errors'     =>  isset($wpscss_options['errors']) ? $wpscss_options['errors'] : 'show',
-  'sourcemaps' =>  isset($wpscss_options['sourcemap_options']) ? $wpscss_options['sourcemap_options'] : 'SOURCE_MAP_NONE',
-  'enqueue'    =>  isset($wpscss_options['enqueue']) ? $wpscss_options['enqueue'] : 0
+  'scss_dir'         => $base_compiling_folder . $scss_dir_setting,
+  'css_dir'          => $base_compiling_folder . $css_dir_setting,
+  'compiling'        => isset($wpscss_options['compiling_options']) ? $wpscss_options['compiling_options'] : 'ScssPhp\ScssPhp\Formatter\Expanded',
+  'always_recompile' => isset($wpscss_options['always_recompile'])  ? $wpscss_options['always_recompile']  : false,
+  'errors'           => isset($wpscss_options['errors'])            ? $wpscss_options['errors']            : 'show',
+  'sourcemaps'       => isset($wpscss_options['sourcemap_options']) ? $wpscss_options['sourcemap_options'] : 'SOURCE_MAP_NONE',
+  'enqueue'          => isset($wpscss_options['enqueue'])           ? $wpscss_options['enqueue']           : 0
 );
 
 
 /**
- * 5. INSTANTIATE & EXECUTE COMPILER
+ * 6. INSTANTIATE & EXECUTE COMPILER
  *
  * Passes settings to the object
  * If needs_compiling passes, runs compile method
@@ -197,7 +210,7 @@ function wp_scss_compile() {
 }
 
 /**
- * 6. HANDLE COMPILING ERRORS
+ * 7. HANDLE COMPILING ERRORS
  *
  * First block handles print errors to front end.
  * This adds a small style block the header to help errors get noticed
@@ -206,32 +219,33 @@ function wp_scss_compile() {
  * After the file gets over 1MB it does a purge and deletes the first
  * half of entries in the file.
  */
+
 $log_file = $wpscss_compiler->scss_dir.'error_log.log';
 
 function wpscss_error_styles() {
   echo
-  '<style>
-    .scss_errors {
-      position: fixed;
-      top: 0px;
-      z-index: 99999;
-      width: 100%;
-    }
-    .scss_errors pre {
-      background: #f5f5f5;
-      border-left: 5px solid #DD3D36;
-      box-shadow: 0 2px 3px rgba(51,51,51, .4);
-      color: #666;
-      font-family: monospace;
-      font-size: 14px;
-      margin: 20px 0;
-      overflow: auto;
-      padding: 20px;
-      white-space: pre;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-    }
-  </style>';
+    '<style>
+      .scss_errors {
+        position: fixed;
+        top: 0px;
+        z-index: 99999;
+        width: 100%;
+      }
+      .scss_errors pre {
+        background: #f5f5f5;
+        border-left: 5px solid #DD3D36;
+        box-shadow: 0 2px 3px rgba(51,51,51, .4);
+        color: #666;
+        font-family: monospace;
+        font-size: 14px;
+        margin: 20px 0;
+        overflow: auto;
+        padding: 20px;
+        white-space: pre;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+    </style>';
 }
 
 function wpscss_settings_show_errors($errors) {
@@ -250,44 +264,43 @@ function wpscss_settings_show_errors($errors) {
 }
 
 function wpscss_handle_errors() {
-    global $wpscss_settings, $log_file, $wpscss_compiler;
-    // Show to logged in users: All the methods for checking user login are set up later in the WP flow, so this only checks that there is a cookie
-    if ( !is_admin() && $wpscss_settings['errors'] === 'show-logged-in' && !empty($_COOKIE[LOGGED_IN_COOKIE]) && count($wpscss_compiler->compile_errors) > 0) {
-        wpscss_settings_show_errors($wpscss_compiler->compile_errors);
-// Show in the header to anyone
-    } else if ( !is_admin() && $wpscss_settings['errors'] === 'show' && count($wpscss_compiler->compile_errors) > 0) {
-        wpscss_settings_show_errors($wpscss_compiler->compile_errors);
-    } else { // Hide errors and print them to a log file.
-        foreach ($wpscss_compiler->compile_errors as $error) {
-            $error_string = date('m/d/y g:i:s', time()) .': ';
-            $error_string .= $error['file'] .' - '. $error['message'] . PHP_EOL;
-            file_put_contents($log_file, $error_string, FILE_APPEND);
-            $error_string = "";
-        }
+  global $wpscss_settings, $log_file, $wpscss_compiler;
+  // Show to logged in users: All the methods for checking user login are set up later in the WP flow, so this only checks that there is a cookie
+  if ( !is_admin() && $wpscss_settings['errors'] === 'show-logged-in' && !empty($_COOKIE[LOGGED_IN_COOKIE]) && count($wpscss_compiler->compile_errors) > 0) {
+    wpscss_settings_show_errors($wpscss_compiler->compile_errors);
+    // Show in the header to anyone
+  } else if ( !is_admin() && $wpscss_settings['errors'] === 'show' && count($wpscss_compiler->compile_errors) > 0) {
+    wpscss_settings_show_errors($wpscss_compiler->compile_errors);
+  } else { // Hide errors and print them to a log file.
+    foreach ($wpscss_compiler->compile_errors as $error) {
+      $error_string = date('m/d/y g:i:s', time()) .': ';
+      $error_string .= $error['file'] .' - '. $error['message'] . PHP_EOL;
+      file_put_contents($log_file, $error_string, FILE_APPEND);
+      $error_string = "";
     }
+  }
 
-// Clean out log file if it get's too large
-    if ( file_exists($log_file) ) {
-        if ( filesize($log_file) > 1000000) {
-            $log_contents = file_get_contents($log_file);
-            $log_arr = explode("\n", $log_contents);
-            $new_contents_arr = array_slice($log_arr, count($log_arr)/2);
-            $new_contents = implode(PHP_EOL, $new_contents_arr) . 'LOG FILE CLEANED ' . date('n/j/y g:i:s', time());
-            file_put_contents($log_file, $new_contents);
-        }
+  // Clean out log file if it get's too large
+  if ( file_exists($log_file) ) {
+    if ( filesize($log_file) > 1000000) {
+      $log_contents = file_get_contents($log_file);
+      $log_arr = explode("\n", $log_contents);
+      $new_contents_arr = array_slice($log_arr, count($log_arr)/2);
+      $new_contents = implode(PHP_EOL, $new_contents_arr) . 'LOG FILE CLEANED ' . date('n/j/y g:i:s', time());
+      file_put_contents($log_file, $new_contents);
     }
-
+  }
 }
 
 
 /**
- * 7. ENQUEUE STYLES
+ * 8. ENQUEUE STYLES
  */
 
 if ( $wpscss_settings['enqueue'] == '1' ) {
   function wpscss_enqueue_styles() {
-    global $wpscss_compiler, $wpscss_options;
-    $wpscss_compiler->enqueue_files($wpscss_options['css_dir']);
+    global $wpscss_compiler, $wpscss_options, $base_compiling_folder;
+    $wpscss_compiler->enqueue_files($base_compiling_folder, $wpscss_options['css_dir']);
   }
   add_action('wp_enqueue_scripts', 'wpscss_enqueue_styles', 50);
 }

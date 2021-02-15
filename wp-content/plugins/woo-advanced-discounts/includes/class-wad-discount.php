@@ -783,7 +783,7 @@ class WAD_Discount {
 
         //We ignore the inclusion of the quantity based pricing (QBP) on the product page where the product price is displayed.
         //The price is still ok with the QBP included in the mini cart and cart widget
-        if($include_quantity_based_pricing &&!is_product())
+        if ( $include_quantity_based_pricing && ( is_cart() || is_checkout() || did_action('woocommerce_before_mini_cart_contents') ) )
             $sale_price = $this->apply_quantity_based_discount_if_needed($product, $sale_price);
             // If product's sale price changed, we must update the product too,
             // so that other parties can access it
@@ -1256,9 +1256,20 @@ class WAD_Discount {
         global $wad_last_products_fetch;
         global $post;
 
-        if( has_shortcode( $post->post_content, 'products' ) || has_shortcode( $post->post_content, 'sale_products' ) ) {
-                    return;
-            }
+        if ( is_a( $post, 'WP_Post' ) &&
+    					(
+    						has_shortcode( $post->post_content, 'products' )
+    						|| has_shortcode( $post->post_content, 'sale_products' )
+    						|| has_shortcode( $post->post_content, 'best_selling_products' )
+    						|| has_shortcode( $post->post_content, 'recent_products' )
+    						|| has_shortcode( $post->post_content, 'product_attribute' )
+    						|| has_shortcode( $post->post_content, 'top_rated_products' )
+    						|| has_shortcode( $post->post_content, 'product_categories' )
+    					)
+    			)
+    			{
+    	          return;
+    			}
 
         if(empty($wp_query))
             global $wp_query;
@@ -1347,11 +1358,20 @@ class WAD_Discount {
   				return $args;
   	}
 
-    public function shortcode_products_query_results( $results, $wc_product ){
+    public function shortcode_products_query_results( $results, $wc_shortcode ){
   			global $wad_last_products_fetch;
+        $woo_shortcode_list = array(
+					'products',
+					'sale_products',
+					'best_selling_products',
+					'recent_products',
+					'product_attribute',
+					'top_rated_products',
+					'product_categories'
+				);
 
-  			if( 'products' == $wc_product->get_type() || 'sale_products' == $wc_product->get_type() ) {
-  					$wad_last_products_fetch = $results->ids;
+				if ( in_array( $wc_shortcode->get_type(), $woo_shortcode_list ) ) {
+            $wad_last_products_fetch = $results->ids;
   			}
 
   			return $results;

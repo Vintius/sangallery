@@ -1,0 +1,9 @@
+.current_page_item {
+  a {
+    color: $blue;
+
+    &:hover {
+      color: $blue-hover;
+    }
+  }
+}

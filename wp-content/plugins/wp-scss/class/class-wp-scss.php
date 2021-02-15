@@ -1,7 +1,8 @@
 <?php
-
-include_once( WPSCSS_PLUGIN_DIR . '/scssphp/scss.inc.php' );
-use Leafo\ScssPhp\Compiler;
+//Required to use get_home_path()
+require_once(ABSPATH . 'wp-admin/includes/file.php');
+include_once(WPSCSS_PLUGIN_DIR . '/scssphp/scss.inc.php');
+use ScssPhp\ScssPhp\Compiler;
 
 class Wp_Scss {
   /**
@@ -25,19 +26,19 @@ class Wp_Scss {
    */
   public function __construct ($scss_dir, $css_dir, $compile_method, $sourcemaps) {
     global $scssc;
-    $this->scss_dir       = $scss_dir;
-    $this->css_dir        = $css_dir;
-    $this->compile_method = $compile_method;
-    $this->compile_errors = array();
-    $scssc                = new Compiler();
+    $this->scss_dir         = $scss_dir;
+    $this->css_dir          = $css_dir;
+    $this->compile_method   = $compile_method;
+    $this->compile_errors   = array();
+    $scssc                  = new Compiler();
 
     $scssc->setFormatter( $compile_method );
     $scssc->setImportPaths( $this->scss_dir );
-    
+
     $this->sourcemaps = $sourcemaps;
   }
 
- /**
+  /**
    * METHOD COMPILE
    * Loops through scss directory and compilers files that end
    * with .scss and do not have '_' in front.
@@ -53,34 +54,38 @@ class Wp_Scss {
    * @access public
    */
   public function compile() {
-      global $scssc, $cache;
-      $cache = WPSCSS_PLUGIN_DIR . '/cache/';
+    global $scssc, $cache;
+    $cache = WPSCSS_PLUGIN_DIR . '/cache/';
 
-      //Compiler - Takes scss $in and writes compiled css to $out file
-      // catches errors and puts them the object's compiled_errors property
+    //Compiler - Takes scss $in and writes compiled css to $out file
+    // catches errors and puts them the object's compiled_errors property
+    if (!function_exists( 'compiler' )) {
       function compiler($in, $out, $instance) {
         global $scssc, $cache;
 
+        if (!file_exists($cache)) {
+          mkdir($cache, 0644);
+        }
         if (is_writable($cache)) {
           try {
-	          $map = basename($out) . '.map';
-			  $scssc->setSourceMap(constant('Leafo\ScssPhp\Compiler::' . $instance->sourcemaps));
-			  $scssc->setSourceMapOptions(array(
-			  	'sourceMapWriteTo' => $instance->css_dir . $map, // absolute path to a file to write the map to
-				'sourceMapURL' => $map, // url of the map
-				'sourceMapBasepath' => rtrim(ABSPATH, '/'), // base path for filename normalization
-				'sourceRoot' => '/', // This value is prepended to the individual entries in the 'source' field.
-			  ));
-			  
-			  $css = $scssc->compile(file_get_contents($in), $in);
+            $map = basename($out) . '.map';
+            $scssc->setSourceMap(constant('ScssPhp\ScssPhp\Compiler::' . $instance->sourcemaps));
+            $scssc->setSourceMapOptions(array(
+              'sourceMapWriteTo' => $instance->css_dir . $map, // absolute path to a file to write the map to
+              'sourceMapURL' => $map, // url of the map
+              'sourceMapBasepath' => rtrim(ABSPATH, '/'), // base path for filename normalization
+              'sourceRoot' => '/', // This value is prepended to the individual entries in the 'source' field.
+            ));
 
-              file_put_contents($cache.basename($out), $css);
+            $css = $scssc->compile(file_get_contents($in), $in);
+
+            file_put_contents($cache.basename($out), $css);
           } catch (Exception $e) {
-              $errors = array (
-                'file' => basename($in),
-                'message' => $e->getMessage(),
-                );
-              array_push($instance->compile_errors, $errors);
+            $errors = array (
+              'file' => basename($in),
+              'message' => $e->getMessage(),
+            );
+            array_push($instance->compile_errors, $errors);
           }
         } else {
           $errors = array (
@@ -98,7 +103,7 @@ class Wp_Scss {
           array_push($input_files, $file->getFilename());
         }
       }
-      
+
       // For each input file, find matching css file and compile
       foreach ($input_files as $scss_file) {
         $input = $this->scss_dir.$scss_file;
@@ -124,6 +129,13 @@ class Wp_Scss {
           array_push($this->compile_errors, $errors);
         }
       }
+    }else{
+      $errors = array (
+        'file' => 'SCSS compiler',
+        'message' => "Compiling Error, function 'compiler' already exists."
+      );
+      array_push($this->compile_errors, $errors);
+    }
   }
 
 
@@ -145,40 +157,41 @@ class Wp_Scss {
    *
    * @return bool - true if compiling is needed
    */
-    public function needs_compiling() {
-      if (defined('WP_SCSS_ALWAYS_RECOMPILE') && WP_SCSS_ALWAYS_RECOMPILE) {
-        return true;
-      }
+  public function needs_compiling() {
+    global $wpscss_settings;
+    if (defined('WP_SCSS_ALWAYS_RECOMPILE') && WP_SCSS_ALWAYS_RECOMPILE || $wpscss_settings['always_recompile'] === "1") {
+      return true;
+    }
 
-      $latest_scss = 0;
-      $latest_css = 0;
+    $latest_scss = 0;
+    $latest_css = 0;
 
-      foreach ( new RecursiveIteratorIterator(new RecursiveDirectoryIterator($this->scss_dir), FilesystemIterator::SKIP_DOTS) as $sfile ) {
-        if (pathinfo($sfile->getFilename(), PATHINFO_EXTENSION) == 'scss') {
-          $file_time = $sfile->getMTime();
+    foreach ( new RecursiveIteratorIterator(new RecursiveDirectoryIterator($this->scss_dir), FilesystemIterator::SKIP_DOTS) as $sfile ) {
+      if (pathinfo($sfile->getFilename(), PATHINFO_EXTENSION) == 'scss') {
+        $file_time = $sfile->getMTime();
 
-          if ( (int) $file_time > $latest_scss) {
-            $latest_scss = $file_time;
-          }
+        if ( (int) $file_time > $latest_scss) {
+          $latest_scss = $file_time;
         }
-      }
-
-      foreach ( new RecursiveIteratorIterator(new RecursiveDirectoryIterator($this->css_dir), FilesystemIterator::SKIP_DOTS) as $cfile ) {
-        if (pathinfo($cfile->getFilename(), PATHINFO_EXTENSION) == 'css') {
-          $file_time = $cfile->getMTime();
-
-          if ( (int) $file_time > $latest_css) {
-            $latest_css = $file_time;
-          }
-        }
-      }
-
-      if ($latest_scss > $latest_css) {
-        return true;
-      } else {
-        return false;
       }
     }
+
+    foreach ( new RecursiveIteratorIterator(new RecursiveDirectoryIterator($this->css_dir), FilesystemIterator::SKIP_DOTS) as $cfile ) {
+      if (pathinfo($cfile->getFilename(), PATHINFO_EXTENSION) == 'css') {
+        $file_time = $cfile->getMTime();
+
+        if ( (int) $file_time > $latest_css) {
+          $latest_css = $file_time;
+        }
+      }
+    }
+
+    if ($latest_scss > $latest_css) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   public function style_url_enqueued($url){
     global $wp_styles;
@@ -197,32 +210,32 @@ class Wp_Scss {
    * @param $css_folder - directory from theme root. We need this passed in separately
    *                      so it can be used in a url, not path
    */
-  public function enqueue_files($css_folder) {
+  public function enqueue_files($base_folder_path, $css_folder) {
 
-      foreach( new DirectoryIterator($this->css_dir) as $stylesheet ) {
-        if ( pathinfo($stylesheet->getFilename(), PATHINFO_EXTENSION) == 'css' ) {
-          $name = $stylesheet->getBasename('.css') . '-style';
-          $uri = get_stylesheet_directory_uri().$css_folder.$stylesheet->getFilename();
-          $ver = $stylesheet->getMTime();
+    $relative_path = explode(get_home_path(), $base_folder_path)[1];
+    foreach( new DirectoryIterator($this->css_dir) as $stylesheet ) {
+      if ( pathinfo($stylesheet->getFilename(), PATHINFO_EXTENSION) == 'css' ) {
+        $name = $stylesheet->getBasename('.css') . '-style';
+        $uri = '/'.$relative_path.$css_folder.$stylesheet->getFilename();
+        $ver = $stylesheet->getMTime();
 
 
-          wp_register_style(
-            $name,
-            $uri,
-            array(),
-            $ver,
-            $media = 'all' );
+        wp_register_style(
+          $name,
+          $uri,
+          array(),
+          $ver,
+          $media = 'all' );
 
-          if(!$this->style_url_enqueued($uri)){
-            wp_enqueue_style($name);
-          }
+        if(!$this->style_url_enqueued($uri)){
+          wp_enqueue_style($name);
         }
       }
+    }
   }
 
   public function set_variables(array $variables) {
-		global $scssc;
-		$scssc->setVariables($variables);
+    global $scssc;
+    $scssc->setVariables($variables);
   }
-
 } // End Wp_Scss Class

@@ -1,23 +1,19 @@
 <?php
 /**
- * Main admin class
+ * Premium tab settings array
  *
  * @author YITH
  * @package YITH Woocommerce Compare
- * @version 1.1.1
+ * @version 1.1.4
  */
 
-if ( ! defined( 'YITH_WOOCOMPARE' ) ) {
-	exit;
-} // Exit if accessed directly
+defined( 'YITH_WOOCOMPARE' ) || exit; // Exit if accessed directly.
 
-$options = array(
-    'premium' => array(
-	    'landing' => array(
-		    'type' => 'custom_tab',
-		    'action' => 'yith_woocompare_premium'
-	    )
-    )
+return array(
+	'premium' => array(
+		'landing' => array(
+			'type'   => 'custom_tab',
+			'action' => 'yith_woocompare_premium',
+		),
+	),
 );
-
-return $options;

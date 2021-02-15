@@ -35,7 +35,7 @@ if( ! class_exists( 'BeRocket_Framework' ) ) {
     include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
     load_plugin_textdomain('BeRocket_domain', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
     class BeRocket_Framework {
-        public static $framework_version = '2.6.0.5';
+        public static $framework_version = '2.6.0.6';
         public static $settings_name = '';
         public $addons;
         public $libraries;
@@ -50,6 +50,7 @@ if( ! class_exists( 'BeRocket_Framework' ) ) {
         protected $global_settings = array(
             'fontawesome_frontend_disable',
             'fontawesome_frontend_version',
+            'framework_products_per_page'
         );
         public $check_lib = null;
         protected $check_init_array = array();
@@ -321,8 +322,13 @@ if( ! class_exists( 'BeRocket_Framework' ) ) {
             wp_enqueue_script( "jquery" );
             if( is_admin() ) {
                 $this->register_font_awesome('fa5live');
-            } elseif( ! empty($this->framework_data['fontawesome_frontend']) ) {
-                $this->enqueue_fontawesome();
+            } else {
+                if ( ! empty($global_option['framework_products_per_page']) && intval($global_option['framework_products_per_page']) > 0 ) {
+                    add_filter( 'loop_shop_per_page', array($this, 'framework_products_per_page_set'), 999999999 );
+                }
+                if( ! empty($this->framework_data['fontawesome_frontend']) ) {
+                    $this->enqueue_fontawesome();
+                }
             }
 
             wp_add_inline_script(
@@ -367,6 +373,10 @@ if( ! class_exists( 'BeRocket_Framework' ) ) {
                     wp_enqueue_style( 'font-awesome-5-compat' );
                 }
             }
+        }
+        public function framework_products_per_page_set() {
+            $global_option = $this->get_global_option();
+            return intval($global_option['framework_products_per_page']);
         }
 
         /**

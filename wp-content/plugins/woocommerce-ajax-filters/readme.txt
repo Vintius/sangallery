@@ -4,8 +4,8 @@ Contributors: dholovnia, berocket
 Donate link: https://berocket.com/product/woocommerce-ajax-products-filter?utm_source=wordpress_org&utm_medium=donate&utm_campaign=ajax_filters
 Tags: filters, product filters, ajax product filters, ajax filter, ajax filter widget, color filter, size filter, product onsale filter, product preview, product category filter, product reset filter, product sort by filter, stock filter, product tag filter, price range filter, price box filter, advanced product filters, woocommerce filters, woocommerce product filters, woocommerce products filter, woocommerce ajax product filters, widget, plugin, woocommerce item filters, filters plugin, ajax filters plugin, filter woocommerce products, filter woocommerce products plugin, wc filters, wc filters products, wc products filters, wc ajax products filters, wc product filters, wc advanced product filters, woocommerce layered nav, woocommerce layered navigation, ajax filtered nav, ajax filtered navigation, price filter, ajax price filter, woocommerce product sorting, sidebar filter, sidebar ajax filter, taxonomy filter, category filter, attribute filter, attributes filter, woocommerce product sort, ajax products filter plugin for woocommerce, rocket, berocket, berocket woocommerce ajax products filter
 Requires at least: 5.0
-Tested up to: 5.6
-Stable tag: 1.5.2.7
+Tested up to: 5.6.1
+Stable tag: 1.5.2.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -184,6 +184,24 @@ You can try this plugin's admin side [here](https://berocket.com/product/woocomm
 ---
 
 == Changelog ==
+
+= 1.5.2.10 =
+* Fix - Error on old WooCommerce
+* Fix - Text align for some themes
+* Fix - Link like WooCommerce on search page and other page with GET parameters
+
+= 1.5.2.9 =
+* Enhancement - Compatibility version: WooCommerce 5.0
+* Fix - Issues with some optimization plugins
+* Fix - Admin bar error duplicates
+
+= 1.5.2.8 =
+* Enhancement - Remove empty header
+* Enhancement - Move some options to another tabs
+* Enhancement - Add explanation for some options
+* Enhancement - More information in admin bar panel
+* Fix - Some symbols in URL
+* Fix - Other fixes
 
 = 1.5.2.7 =
 * Enhancement - Compatibility version: PHP 8 and WooCommerce 4.9

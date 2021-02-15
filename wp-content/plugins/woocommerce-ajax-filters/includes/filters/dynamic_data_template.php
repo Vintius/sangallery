@@ -11,6 +11,7 @@ class BeRocket_AAPF_dynamic_data_template {
         add_filter('BeRocket_AAPF_template_full_content', array($this, 'title_icon'), 1200, 4);
         add_filter('BeRocket_AAPF_template_full_content', array($this, 'css_class'), 1300, 4);
         add_filter('BeRocket_AAPF_template_full_content', array($this, 'child_parent'), 1500, 4);
+        add_filter('BeRocket_AAPF_template_full_content', array($this, 'remove_empty_header'), 9900, 1);
         //Checkbox data
         add_filter('BeRocket_AAPF_template_single_item', array($this, 'checkbox_checked'), 10, 4);
         add_filter('BeRocket_AAPF_template_single_item', array($this, 'value_icon'), 500, 4);
@@ -45,6 +46,7 @@ class BeRocket_AAPF_dynamic_data_template {
         add_filter('BeRocket_AAPF_template_full_element_content', array($this, 'element_custom_scroll'), 700, 2);
         add_filter('BeRocket_AAPF_template_full_element_content', array($this, 'element_title_icon'), 1200, 2);
         add_filter('BeRocket_AAPF_template_full_element_content', array($this, 'element_css_class'), 1300, 2);
+        add_filter('BeRocket_AAPF_template_full_element_content', array($this, 'remove_empty_header'), 9900, 1);
         //Selected Filters Area
         add_filter('BeRocket_AAPF_template_full_element_content', array($this, 'selected_filters_hide_empty'), 1100, 2);
         //Fix issues
@@ -492,6 +494,30 @@ class BeRocket_AAPF_dynamic_data_template {
             }
             $template_content['template']['attributes']['class']['child_parent'] = 'bapf_child_'.$child_position;
             $template_content['template']['attributes']['data-child'] = $child_position;
+        }
+        return $template_content;
+    }
+    function remove_empty_header($template_content) {
+        if( isset($template_content['template']['content']['header'])
+            && (
+                empty($template_content['template']['content']['header']['content'])
+                || (
+                    count($template_content['template']['content']['header']['content']) == 1
+                    && isset($template_content['template']['content']['header']['content']['title'])
+                    && (
+                        empty($template_content['template']['content']['header']['content']['title'])
+                        || ! is_array($template_content['template']['content']['header']['content']['title']) 
+                        || empty($template_content['template']['content']['header']['content']['title']['content']) 
+                        ||(
+                            count($template_content['template']['content']['header']['content']['title']['content']) == 1
+                            && isset($template_content['template']['content']['header']['content']['title']['content']['title'])
+                            && $template_content['template']['content']['header']['content']['title']['content']['title'] == ''
+                        )
+                    )
+                )
+            )
+        ) {
+            unset($template_content['template']['content']['header']);
         }
         return $template_content;
     }
