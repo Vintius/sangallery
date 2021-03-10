@@ -3,20 +3,20 @@
 Plugin Name: WPC Composite Products for WooCommerce
 Plugin URI: https://wpclever.net/
 Description: WPC Composite Products provide a powerful kit-building solution for WooCommerce store.
-Version: 3.2.1
+Version: 3.3.0
 Author: WPClever.net
 Author URI: https://wpclever.net
 Text Domain: wpc-composite-products
 Domain Path: /languages/
 Requires at least: 4.0
-Tested up to: 5.6.0
+Tested up to: 5.7
 WC requires at least: 3.0
-WC tested up to: 4.8.0
+WC tested up to: 5.1
 */
 
 defined( 'ABSPATH' ) || exit;
 
-! defined( 'WOOCO_VERSION' ) && define( 'WOOCO_VERSION', '3.2.1' );
+! defined( 'WOOCO_VERSION' ) && define( 'WOOCO_VERSION', '3.3.0' );
 ! defined( 'WOOCO_URI' ) && define( 'WOOCO_URI', plugin_dir_url( __FILE__ ) );
 ! defined( 'WOOCO_DOCS' ) && define( 'WOOCO_DOCS', 'http://doc.wpclever.net/wooco/' );
 ! defined( 'WOOCO_SUPPORT' ) && define( 'WOOCO_SUPPORT', 'https://wpclever.net/support?utm_source=support&utm_medium=wooco&utm_campaign=wporg' );
@@ -36,7 +36,7 @@ if ( ! function_exists( 'wooco_init' ) ) {
 		// load text-domain
 		load_plugin_textdomain( 'wpc-composite-products', false, basename( __DIR__ ) . '/languages/' );
 
-		if ( ! function_exists( 'WC' ) || ! version_compare( WC()->version, '3.0.0', '>=' ) ) {
+		if ( ! function_exists( 'WC' ) || ! version_compare( WC()->version, '3.0', '>=' ) ) {
 			add_action( 'admin_notices', 'wooco_notice_wc' );
 
 			return;
@@ -1170,12 +1170,18 @@ if ( ! function_exists( 'wooco_init' ) ) {
 				}
 
 				function wooco_cart_item_name( $name, $item ) {
-					if ( isset( $item['wooco_parent_id'] ) && ! empty( $item['wooco_parent_id'] ) && ( get_option( '_wooco_hide_composite_name', 'no' ) === 'no' ) ) {
-						if ( strpos( $name, '</a>' ) !== false ) {
-							return '<a href="' . get_permalink( $item['wooco_parent_id'] ) . '">' . get_the_title( $item['wooco_parent_id'] ) . '</a> &rarr; ' . $name;
+					if ( isset( $item['wooco_parent_id'] ) && ! empty( $item['wooco_parent_id'] ) ) {
+						if ( get_option( '_wooco_hide_composite_name', 'no' ) === 'no' ) {
+							if ( strpos( $name, '</a>' ) !== false ) {
+								$_name = '<a href="' . get_permalink( $item['wooco_parent_id'] ) . '">' . get_the_title( $item['wooco_parent_id'] ) . '</a> &rarr; ' . $name;
+							} else {
+								$_name = get_the_title( $item['wooco_parent_id'] ) . ' &rarr; ' . strip_tags( $name );
+							}
+						} else {
+							$_name = $name;
 						}
 
-						return get_the_title( $item['wooco_parent_id'] ) . ' &rarr; ' . strip_tags( $name );
+						return apply_filters( 'wooco_cart_item_name', $_name, $name, $item );
 					}
 
 					return $name;
@@ -1545,19 +1551,18 @@ if ( ! function_exists( 'wooco_init' ) ) {
 						return $item_data;
 					}
 
-					$items_str = '';
+					$items_str = array();
 
 					if ( $items = $this->wooco_get_items( $cart_item['wooco_ids'] ) ) {
 						foreach ( $items as $item ) {
-							$items_str .= ( $item['qty'] * $cart_item['quantity'] ) . ' × ' . get_the_title( $item['id'] ) . '; ';
+							$items_str[] = apply_filters( 'wooco_order_component_product_name', $item['qty'] * $cart_item['quantity'] . ' × ' . get_the_title( $item['id'] ), $item );
 						}
 					}
 
-					if ( $items_str !== '' ) {
-						$items_str   = trim( $items_str, '; ' );
+					if ( ! empty( $items_str ) ) {
 						$item_data[] = array(
 							'key'     => esc_html__( 'Components', 'wpc-composite-products' ),
-							'value'   => $items_str,
+							'value'   => apply_filters( 'wooco_order_component_product_names', implode( '; ', $items_str ) ),
 							'display' => '',
 						);
 					}
@@ -1570,14 +1575,14 @@ if ( ! function_exists( 'wooco_init' ) ) {
 						return;
 					}
 
-					$items_arr = array();
+					$items_str = array();
 
 					if ( $items = $this->wooco_get_items( $values['wooco_ids'] ) ) {
 						foreach ( $items as $item ) {
-							$items_arr[] = $item['qty'] . ' × ' . get_the_title( $item['id'] );
+							$items_str[] = apply_filters( 'wooco_order_component_product_name', $item['qty'] . ' × ' . get_the_title( $item['id'] ), $item );
 						}
 
-						$cart_item->add_meta_data( esc_html__( 'Components', 'wpc-composite-products' ), implode( '; ', $items_arr ) );
+						$cart_item->add_meta_data( esc_html__( 'Components', 'wpc-composite-products' ), apply_filters( 'wooco_order_component_product_names', implode( '; ', $items_str ) ) );
 					}
 				}
 
@@ -2686,7 +2691,7 @@ if ( ! function_exists( 'wooco_notice_wc' ) ) {
 	function wooco_notice_wc() {
 		?>
         <div class="error">
-            <p><strong>WPC Composite Products</strong> requires WooCommerce version 3.0.0 or greater.</p>
+            <p><strong>WPC Composite Products</strong> requires WooCommerce version 3.0 or greater.</p>
         </div>
 		<?php
 	}

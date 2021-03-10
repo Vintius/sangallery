@@ -1,0 +1,10 @@
+input, select, textarea, label {
+  color: $black;
+}
+
+label {
+  margin: 0;
+  transition: color $transition-normal,
+              background-color $transition-normal,
+              box-shadow $transition-normal;
+}

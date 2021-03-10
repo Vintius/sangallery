@@ -14,3 +14,8 @@ node_modules
 dist
 yarn.lock
 package-lock.json
+
+wp-config.php
+currency/currency.txt
+*.log
+wp-content/uploads/wc-logs

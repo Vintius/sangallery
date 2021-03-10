@@ -1,3 +1,8 @@
+= 2.22 =
+* Fix wrong product price displayed on shop and category page
+* Fix discounted products not showing for Product categories shortcode page
+* Add compatibility with WooCommerce 4.9
+
 = 2.21 =
 * Fix warning error in checkout page
 

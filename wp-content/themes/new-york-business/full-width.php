@@ -11,42 +11,24 @@
 
 get_header(); ?>
 
-<div class="container">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<main id="main" class="content__in" role="main">
+	<?php while (have_posts()): the_post(); ?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class('content__article article'); ?>>
+			<div class="entry-content">
+				<h1 class="entry-title article__title"><?php the_title(); ?></h1>
+				<?php
+					the_content();
 
-			<?php
-			while ( have_posts() ) :
-				the_post();
-            ?>
-			
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<div class="entry-content">
-						<?php
-							the_content();
-				
-							wp_link_pages(
-								array(
-									'before' => '<div class="page-links">' . __( 'Pages:', 'new-york-business' ),
-									'after'  => '</div>',
-								)
-							);
-						?>
-					</div><!-- .entry-content -->
-				</article><!-- #post-## -->
+					wp_link_pages(
+						array(
+							'before' => '<div class="page-links">' . __('Pages:', 'new-york-business'),
+							'after'  => '</div>',
+						)
+					);
+				?>
+			</div>
+		</article>
+	<?php endwhile; ?>
+</main>
 
-            <?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
-			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .container -->
-
-<?php
-get_footer();
+<?php get_footer(); ?>

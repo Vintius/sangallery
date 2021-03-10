@@ -1,10 +1,10 @@
 === WPC Composite Products for WooCommerce ===
 Contributors: wpclever
 Donate link: https://wpclever.net
-Tags: woocommerce, woo, product, composite, component, kits, kit-building, wpc
+Tags: woocommerce, woo, wpc, product, composite, component, kits, kit-building
 Requires at least: 4.0
-Tested up to: 5.6.0
-Stable tag: trunk
+Tested up to: 5.7
+Stable tag: 3.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,7 @@ Visit our [live demo](https://demo.wpclever.net/wooco/ "live demo") here to see 
 - Adjustable Before/ After texts
 - Auto-calculate the price based on changes in quantity
 - Component products are inventory-managed just like standalone sales
+- RTL support
 - WPML integration for building multilingual sites
 
 = Premium Version =
@@ -41,7 +42,7 @@ Visit our [live demo](https://demo.wpclever.net/wooco/ "live demo") here to see 
 
 = Translators =
 
-Available languages: English (Default), Russian, German, Turkey, Italian, Spanish (Mexico), Portuguese (Brazil)
+Available languages: English (Default), Russian, German, Turkey, Italian, Spanish (Mexico), Portuguese (Brazil), Dutch
 
 If you have created your own language pack, or have an update for an existing one, you can send [gettext PO and MO file](http://codex.wordpress.org/Translating_WordPress "Translating WordPress") to [us](https://wpclever.net/contact?utm_source=pot&utm_medium=wooco&utm_campaign=wporg "WPClever.net") so we can bundle it into WPC Composite Products.
 
@@ -76,11 +77,23 @@ Visit [plugin documentation website](https://wpclever.net?utm_source=doc&utm_med
 
 == Changelog ==
 
+= 3.3.0 =
+* Updated: Compatible with WordPress 5.7 & WooCommerce 5.1
+
+= 3.2.3 =
+* Fixed: Minor CSS issues
+* Added: Filter hook 'wooco_order_component_product_names' & 'wooco_order_component_product_name'
+
+= 3.2.2 =
+* Added: RTL support
+* Added: JS trigger 'wooco_init'
+* Added: Dutch (thanks to Roel Mehlkopf)
+
 = 3.2.1 =
 * Fixed: The update checker URL
 
 = 3.2.0 =
-* Updated: Compatible with WordPress 5.6.0 & WooCommerce 4.8.0
+* Updated: Compatible with WordPress 5.6 & WooCommerce 4.8
 
 = 3.1.7 =
 * Added: Filter hook: wooco_product_visible
@@ -108,14 +121,14 @@ Visit [plugin documentation website](https://wpclever.net?utm_source=doc&utm_med
 * Updated: Compatible with WordPress 5.5 & WooCommerce 4.3.2
 
 = 3.0.8 =
-* Updated: Compatible with WooCommerce 4.3.0
+* Updated: Compatible with WooCommerce 4.3
 
 = 3.0.7 =
 * Fixed: Remove limit 100 products for category/tag
 * Fixed: Compatible with Elementor
 
 = 3.0.6 =
-* Updated: Compatible with WooCommerce 4.2.0
+* Updated: Compatible with WooCommerce 4.2
 * Updated: Optimized the code
 
 = 3.0.5 =
@@ -158,7 +171,7 @@ Visit [plugin documentation website](https://wpclever.net?utm_source=doc&utm_med
 * Updated: Optimized the code
 
 = 2.0.0 =
-* Updated: Compatible with WordPress 5.3.2 & WooCommerce 4.0.0
+* Updated: Compatible with WordPress 5.3.2 & WooCommerce 4.0
 
 = 1.4.3 =
 * Fixed: Min/max quantity
@@ -194,7 +207,7 @@ Visit [plugin documentation website](https://wpclever.net?utm_source=doc&utm_med
 
 = 1.3.4 =
 * Added: New price in percentage or amount for each component
-* Updated: Compatible with WordPress 5.3 & WooCommerce 3.8.0
+* Updated: Compatible with WordPress 5.3 & WooCommerce 3.8
 
 = 1.3.3 =
 * Fixed: Default option
@@ -229,7 +242,7 @@ Visit [plugin documentation website](https://wpclever.net?utm_source=doc&utm_med
 * Fixed: Price with tax
 
 = 1.1.8 =
-* Updated: Compatible with WooCommerce 3.7.0
+* Updated: Compatible with WooCommerce 3.7
 
 = 1.1.7 =
 * Added: Show image and price for HTML select tag
@@ -261,7 +274,7 @@ Visit [plugin documentation website](https://wpclever.net?utm_source=doc&utm_med
 * Fixed: Error when adding to cart
 
 = 1.1.0 =
-* Updated: Compatible with WooCommerce 3.6.x
+* Updated: Compatible with WooCommerce 3.6
 
 = 1.0.3 =
 * Updated: Optimized the code

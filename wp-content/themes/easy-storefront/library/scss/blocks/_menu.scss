@@ -1,0 +1,31 @@
+#sticky-nav {
+  background-color: $blue-hover;
+
+  &.woocommerce-layout {
+    margin: 0;
+    border: 0;
+  }
+}
+
+#top-menu {
+  display: flex;
+
+  a {
+    padding: 14px 15px;
+    font: 500 16px/20px $font-montserrat;
+    color: $white;
+  }
+
+  .current-menu-item a {
+    background-color: $blue-dark;
+  }
+
+  & > li > a {
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $blue-dark;
+      border-radius: 0;
+    }
+  }
+}

@@ -3,13 +3,13 @@
 Contributors: yithemes
 Tags: yith, woocommerce compare, compare products, product compare, product comparison
 Requires at least: 4.0
-Tested up to: 5.6
-Stable tag: 2.4.4
+Tested up to: 5.7
+Stable tag: 2.4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 YITH WooCommerce Compare allows you to compare more products of your shop in one complete table.
-WooCommerce Compatible up to 4.9.x
+WooCommerce Compatible up to 5.1
 
 == Description ==
 
@@ -19,7 +19,7 @@ set with the woocommerce attributes in the product configuration.
 You can also add a simple widget with the list of products the users have added, where you can manage them.
 Also you can simply customize the compare table with your style, by editing the specific template.
 
-Full documentation is available [here](https://yithemes.com/docs-plugins/yith-woocommerce-compare).
+Full documentation is available [here](https://docs.yithemes.com/yith-woocommerce-compare/).
 
 This plugin is 100% compatible with [WPML](http://wpml.org/?aid=24889&affiliate_key=Qn1wDeBNTcZV)
 
@@ -45,10 +45,10 @@ You can also add the widget with the product list of compare table, in Appearanc
 Yes, you can copy the template from the plugin folder and paste it inside the folder "woocommerce" of your theme folder.
 
 = Can I select what fields show inside the compare table? =
-Yes, you can choose what fields to show in the compare table. You can do it in YIT Plugins -> Compare.
+Yes, you can choose what fields to show in the compare table. You can do it in YITH -> Compare.
 
 = Can I order the fields in the compare table? =
-Yes, you can sort the fields in the compare table. You can do it in YIT Plugins -> Compare.
+Yes, you can sort the fields in the compare table. You can do it in YITH -> Compare.
 
 = What are the main changes in plugin translation? =
 Recently YITH WooCommerce Compare has been selected to be included in the "translate.wordpress.org" translate programme.
@@ -65,6 +65,17 @@ yith-woocommerce-compare-<WORDPRESS LOCALE >.mo
 3. The settings of plugin
 
 == Changelog ==
+
+= 2.4.6 = Released on 04 March 2021
+
+* New: support for WordPress 5.7
+* New: support for WooCommerce 5.1
+* Update: YITH plugin framework
+
+= 2.4.5 = Released on 04 February 2021
+
+* New: support for WooCommerce 5.0
+* Update: YITH plugin framework
 
 = 2.4.4 = Released on 12 January 2021
 
@@ -429,7 +440,8 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woo
 
 == Upgrade notice ==
 
-= 2.4.4 = Released on 12 January 2021
+= 2.4.6 = Released on 04 March 2021
 
-* New: Support for WooCommerce 4.9
-* Update: Plugin framework
+* New: support for WordPress 5.7
+* New: support for WooCommerce 5.1
+* Update: YITH plugin framework

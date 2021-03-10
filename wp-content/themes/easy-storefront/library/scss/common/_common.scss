@@ -1,0 +1,26 @@
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font: 16px/1.5 $font-open-sans;
+  color: $black;
+  background-color: $white;
+}
+
+a,
+button {
+  color: $black;
+  transition: color $transition-normal,
+              border-color $transition-normal,
+              background-color $transition-normal,
+              box-shadow $transition-normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $black;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}

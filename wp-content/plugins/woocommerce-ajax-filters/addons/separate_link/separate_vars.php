@@ -510,10 +510,11 @@ braapf_compat_filters_result_separate_link;
     braapf_set_filters_to_link_separate_link = function(url, url_data, parameters, url_without_query, query_get) {
         if(url_data.filter.length) {
             if( query_get.length ) {
-                query_get = '&'+query_get;
+                query_get = query_get+'&'+url_data.filter;
+            } else {
+                query_get = '?'+url_data.filter;
             }
-            query_get = url_data.filter+query_get;
-            url = url_without_query+'?'+query_get;
+            url = url_without_query+query_get;
         }
         return url;
     }

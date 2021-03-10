@@ -33,6 +33,13 @@ class Woof_By_Category {
 	const CACHE_GROUP = __CLASS__;
 
 	/**
+	 * Default filters key.
+	 *
+	 * @var string
+	 */
+	const DEFAULT_FILTERS_KEY = '*';
+
+	/**
 	 * Required plugins.
 	 *
 	 * @var array
@@ -345,12 +352,23 @@ class Woof_By_Category {
 
 		$allowed_filters = [];
 		foreach ( $cats as $current_cat ) {
-			$allowed_filters = array_merge(
-				$allowed_filters,
-				$this->get_allowed_filters_for_single_category( $category_filters, $current_cat )
-			);
+			$allowed_filters[] = $this->get_allowed_filters_for_single_category( $category_filters, $current_cat );
 		}
+		$allowed_filters = array_merge( [], ...$allowed_filters );
+
 		$allowed_filters = array_values( array_unique( $allowed_filters ) );
+
+		/**
+		 * Filters the array of allowed filters.
+		 *
+		 * @param array $allowed_filters The array of allowed filters for the given set of categories.
+		 * @param string[] $cats The array of categories.
+		 */
+		$allowed_filters = apply_filters( 'wbc_allowed_filters', $allowed_filters, $cats );
+
+		if ( empty( $allowed_filters ) ) {
+			$allowed_filters = $this->get_default_filters();
+		}
 
 		wp_cache_set( $cache_key, $allowed_filters, self::CACHE_GROUP );
 
@@ -370,15 +388,41 @@ class Woof_By_Category {
 		$max_distance_to_parent = PHP_INT_MAX;
 		foreach ( $category_filters as $filter_cat => $filters ) {
 			$distance_to_parent = $this->has_parent( $filter_cat, $current_cat );
-			if ( 0 <= $distance_to_parent ) {
-				if ( $distance_to_parent < $max_distance_to_parent ) {
-					$max_distance_to_parent = $distance_to_parent;
-					$allowed_filters        = $filters ? $filters : [];
-				}
+			if (
+				0 <= $distance_to_parent &&
+				$distance_to_parent < $max_distance_to_parent
+			) {
+				$max_distance_to_parent = $distance_to_parent;
+				$allowed_filters        = $filters ?: [];
 			}
 		}
 
 		return $allowed_filters;
+	}
+
+	/**
+	 * Get default filters.
+	 *
+	 * @return array
+	 */
+	protected function get_default_filters() {
+		// Get current settings.
+		$options = get_option( self::OPTION_NAME );
+
+		if ( ! $options ) {
+			return [];
+		}
+
+		foreach ( $options as $option ) {
+			if (
+				isset( $option['category'] ) &&
+				self::DEFAULT_FILTERS_KEY === $option['category']
+			) {
+				return $option['filters'];
+			}
+		}
+
+		return [];
 	}
 
 	/**
@@ -399,11 +443,9 @@ class Woof_By_Category {
 		}
 
 		if ( is_tax() ) {
-			$queried_object   = get_queried_object();
-			$current_taxonomy = get_taxonomy( $queried_object->taxonomy );
-			$object_types     = $current_taxonomy->object_type;
-			if ( ! empty( $object_types ) && in_array( 'product', $object_types, true ) ) {
-				return $queried_object->slug;
+			$slug = $this->get_current_taxonomy_slug();
+			if ( $slug ) {
+				return $slug;
 			}
 		}
 
@@ -412,6 +454,30 @@ class Woof_By_Category {
 		}
 
 		return null;
+	}
+
+	/**
+	 * Get slug of current taxonomy.
+	 *
+	 * @return string
+	 */
+	private function get_current_taxonomy_slug() {
+		$queried_object = get_queried_object();
+		if ( null === $queried_object || ! isset( $queried_object->taxonomy ) ) {
+			return '';
+		}
+
+		$current_taxonomy = get_taxonomy( $queried_object->taxonomy );
+		if ( false === $current_taxonomy ) {
+			return '';
+		}
+
+		$object_types = $current_taxonomy->object_type;
+		if ( ! empty( $object_types ) && in_array( 'product', $object_types, true ) ) {
+			return $queried_object->slug;
+		}
+
+		return '';
 	}
 
 	/**
@@ -510,11 +576,11 @@ class Woof_By_Category {
 			return false;
 		}
 
-		$additional_taxes = explode( '+', $additional_taxes );
+		$additional_taxes_array = explode( '+', $additional_taxes );
 
 		$slugs = [];
 
-		foreach ( $additional_taxes as $taxes ) {
+		foreach ( $additional_taxes_array as $taxes ) {
 			$taxes = explode( ':', $taxes );
 			if ( 2 !== count( $taxes ) ) {
 				continue;
@@ -522,7 +588,7 @@ class Woof_By_Category {
 			$tax_slug  = $taxes[0];
 			$tax_terms = explode( ',', $taxes[1] );
 			foreach ( $tax_terms as $term_id ) {
-				$term = get_term( intval( $term_id ), $tax_slug );
+				$term = get_term( (int) $term_id, $tax_slug );
 				if ( ! is_wp_error( $term ) ) {
 					$slugs[] = $term->slug;
 				}
@@ -579,10 +645,11 @@ class Woof_By_Category {
 		// phpcs:disable WordPress.Security.NonceVerification.Recommended
 		foreach ( $_GET as $key => $value ) {
 			$key = filter_var( $key, FILTER_SANITIZE_STRING );
-			if ( false !== strpos( $key, 'pa_' ) ) {
-				if ( ! in_array( $key, $allowed_filters, true ) ) {
-					$keys_to_delete[] = $key;
-				}
+			if (
+				false !== strpos( $key, 'pa_' ) &&
+				! in_array( $key, $allowed_filters, true )
+			) {
+				$keys_to_delete[] = $key;
 			}
 		}
 		// phpcs:enable WordPress.Security.NonceVerification.Recommended
@@ -613,7 +680,7 @@ class Woof_By_Category {
 			return $terms;
 		}
 
-		$allowed_filters = $allowed_filters ? $allowed_filters : [];
+		$allowed_filters = $allowed_filters ?: [];
 		foreach ( $terms as $id => $term ) {
 			if ( ! in_array( $term['taxonomy'], $allowed_filters, true ) ) {
 				unset( $terms[ $id ] );
@@ -722,8 +789,9 @@ class Woof_By_Category {
 
 		$product_categories = array_merge(
 			[
-				''  => __( '--Select Category--', 'woof-by-category' ),
-				'/' => __( '-Shop Page-', 'woof-by-category' ),
+				''                        => __( '--Select Category--', 'woof-by-category' ),
+				self::DEFAULT_FILTERS_KEY => __( '-Default filters-', 'woof-by-category' ),
+				'/'                       => __( '-Shop Page-', 'woof-by-category' ),
 			],
 			$this->get_product_categories()
 		);
@@ -770,28 +838,22 @@ class Woof_By_Category {
 		for ( $i = 0; $i < $count; $i ++ ) {
 			$fields = [
 				[
-					'group'        => $i,
-					'uid'          => 'category',
-					'label'        => __( 'Product Category', 'woof-by-category' ),
-					'section'      => 'first_section',
-					'type'         => 'select',
-					'options'      => $product_categories,
-					'placeholder'  => 'Text goes here',
-					'helper'       => '',
-					'supplemental' => '',
-					'default'      => '',
+					'group'   => $i,
+					'uid'     => 'category',
+					'label'   => __( 'Product Category', 'woof-by-category' ),
+					'section' => 'first_section',
+					'type'    => 'select',
+					'options' => $product_categories,
+					'default' => '',
 				],
 				[
-					'group'        => $i,
-					'uid'          => 'filters',
-					'label'        => __( 'Filters', 'woof-by-category' ),
-					'section'      => 'first_section',
-					'type'         => 'multiple',
-					'options'      => $woof_filters,
-					'placeholder'  => 'Text goes here',
-					'helper'       => '',
-					'supplemental' => '',
-					'default'      => '',
+					'group'   => $i,
+					'uid'     => 'filters',
+					'label'   => __( 'Filters', 'woof-by-category' ),
+					'section' => 'first_section',
+					'type'    => 'multiple',
+					'options' => $woof_filters,
+					'default' => '',
 				],
 			];
 			add_settings_section(
@@ -885,10 +947,11 @@ class Woof_By_Category {
 					$options_markup = '';
 					foreach ( $arguments['options'] as $key => $label ) {
 						$selected = '';
-						if ( is_array( $value ) ) {
-							if ( in_array( $key, $value, true ) ) {
-								$selected = selected( $key, $key, false );
-							}
+						if (
+							is_array( $value ) &&
+							in_array( $key, $value, true )
+						) {
+							$selected = selected( $key, $key, false );
 						}
 						/**
 						 * %s is not an attribute
@@ -917,13 +980,13 @@ class Woof_By_Category {
 		}
 
 		// If there is help text.
-		$helper = $arguments['helper'];
+		$helper = isset( $arguments['helper'] ) ? $arguments['helper'] : '';
 		if ( $helper ) {
 			printf( '<span class="helper"> %s</span>', esc_html( $helper ) ); // Show it.
 		}
 
 		// If there is supplemental text.
-		$supplemental = $arguments['supplemental'];
+		$supplemental = isset( $arguments['supplemental'] ) ? $arguments['supplemental'] : '';
 		if ( $supplemental ) {
 			printf( '<p class="description">%s</p>', esc_html( $supplemental ) ); // Show it.
 		}

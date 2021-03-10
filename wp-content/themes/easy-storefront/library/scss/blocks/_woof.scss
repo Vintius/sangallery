@@ -1,0 +1,136 @@
+.woof {
+  .woof_container {
+    // display: none;
+    padding-bottom: 0;
+    margin-bottom: 35px;
+  }
+  .woof_container_product_cat,
+  .woof_container_pa_производитель,
+  .woof_container_pa_стиль {
+    display: block;
+  }
+
+  &_container_inner {
+    h4 {
+      margin: 0 0 20px;
+      font: 500 21px/24px $font-montserrat;
+      text-align: center;
+    }
+  }
+
+  &_list {
+    li {
+      margin: 0 15px 7px 0px !important;
+    }
+
+    &_checkbox li div {
+      margin-top: 0;
+    }
+  }
+
+  &_checkbox {
+    &_label {
+      margin-left: 3px;
+    }
+    &_count {
+      display: none;
+    }
+  }
+
+  .article &_childs_list_opener {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    border: 0;
+
+    span {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .widget_price_filter .ui-slider {
+    .ui-slider-range {
+      background-color: $blue;
+    }
+
+    .ui-slider-handle {
+      background-color: $blue;
+      border-color: transparent;
+      box-shadow: 0px 0 2px 1px rgba($black, 0.5);
+    }
+  }
+}
+
+.woof_container_product_cat {
+  .woof_list {
+    font-size: 0;
+
+    li {
+      position: relative;
+      display: inline-block;
+      margin: 0 8px 8px 0 !important;
+      padding: 0 !important;
+      border: 0;
+    }
+
+    label {
+      margin: 0;
+      padding: 12px 18px;
+      font: 600 16px/24px $font-open-sans;
+      color: $white;
+      background-color: $blue;
+      border-radius: 3px;
+      box-shadow: 0 1px 4px 1px rgba(107,163,239,0.40);
+
+      &:hover {
+        background-color: $blue-hover;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .woof_childs_list_li {
+    .woof_checkbox_label {
+      padding-right: 40px !important;
+    }
+  }
+
+  .woof_childs_list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    margin: 0 !important;
+    border: 1px solid $gray;
+    border-radius: 3px;
+
+    li {
+      margin: 0 !important;
+      width: 100%;
+    }
+
+    label {
+      display: block !important;
+      padding: 10px 15px;
+      color: #181818;
+      background: #fff;
+      border-radius: 0;
+      box-shadow: none;
+
+      &:hover {
+        background-color: rgba($blue-hover, 0.2);
+      }
+    }
+  }
+
+  .icheckbox_flat-blue {
+    display: none;
+  }
+}
+
+.woof_container_pa_стиль {
+  text-align: center;
+}

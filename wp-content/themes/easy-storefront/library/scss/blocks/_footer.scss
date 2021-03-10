@@ -1,0 +1,98 @@
+.footer {
+  margin: 60px auto 0;
+  border-top: 1px solid rgba($gray-light, 0.5);
+
+  &__in {
+    @extend .content__in;
+    position: relative;
+    padding-top: 30px;
+
+    &:not(:first-child) {
+      padding-top: 20px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 20px;
+        border-top: 1px solid rgba($gray-light, 0.5);
+      }
+    }
+  }
+
+  &__widgets {
+
+  }
+
+  &__widget {
+    .menu {
+      text-align: center;
+    }
+
+    &--social {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__title,
+  .widget-title {
+    margin-bottom: 15px;
+    font: 500 21px/24px $font-montserrat;
+    text-transform: uppercase;
+  }
+
+  &__contacts {
+    p {
+      margin-bottom: 20px;
+    }
+
+    a {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 5px;
+      padding-left: 20px;
+      font: 500 16px/24px $font-montserrat;
+      color: $blue;
+
+      &:hover {
+        color: $blue-hover;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+      }
+
+      &[href^='mailto'] {
+        &:before {
+          content: "\f0e0";
+        }
+      }
+      &[href^='tel'] {
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+
+        &:before {
+          content: "\f095";
+        }
+      }
+    }
+  }
+
+  &__button {
+    padding: 12px 30px;
+  }
+
+  &__copyright {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+}

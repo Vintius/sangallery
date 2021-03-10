@@ -1,0 +1,18 @@
+.wc-block-sort-select {
+  margin-bottom: 24px;
+
+  select {
+    width: 200px;
+  }
+}
+
+select {
+  position: relative;
+  height: auto;
+  padding: 13px 40px 13px 10px;
+  font-size: 16px;
+  line-height: 20px;
+  background: url('/wp-content/uploads/2021/02/arrow-dropdown.svg') no-repeat 91% center;
+  border: 1px solid $gray-form;
+  border-radius: 6px;
+}

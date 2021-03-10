@@ -32,7 +32,7 @@ function berocket_throw_error(error_name) {
     error_exist = true;
     if( typeof(berocket_filters[filter_name]) !== 'undefined' ) {
         var array_args = [error_exist];
-        for(var i; i < arguments.length; i++) {
+        for(var i = 0; i < arguments.length; i++) {
             array_args.push(arguments[i]);
         }
         jQuery.each(berocket_filters[filter_name], function(i, callback_data) {
@@ -173,7 +173,7 @@ function braapf_filtered_filters_set() {
     });
     braapf_checkbox_same = function (taxonomy, value, checked) {
         $('.bapf_sfilter[data-taxonomy="'+taxonomy+'"] input[value="'+value+'"]').prop('checked', checked);
-        if( $('.bapf_sfilter[data-taxonomy="'+taxonomy+'"]').length < $('.bapf_sfilter.bapf_ckbox[data-taxonomy="'+taxonomy+'"]').length ) {
+        if( $('.bapf_sfilter[data-taxonomy="'+taxonomy+'"]').length > $('.bapf_sfilter.bapf_ckbox[data-taxonomy="'+taxonomy+'"]').length ) {
             berocket_throw_error('multiple_filters_for_same_taxonomy', taxonomy);
         }
     }
@@ -233,59 +233,63 @@ function braapf_filtered_filters_set() {
     berocket_add_filter('braapf_init', braapf_reset_buttons_hide, 1500);
     berocket_add_filter('braapf_init_filtered_set', braapf_reset_buttons_hide, 1500);
     //Pagination page
-    var pagination_links = the_ajax_script.pagination_class;
-    pagination_links = pagination_links.replace(',', ' a,');
-    pagination_links = berocket_apply_filters('pagination_links_a_tags', pagination_links+' a', the_ajax_script.pagination_class);
-    if( !the_ajax_script.disable_ajax_loading && the_ajax_script.pagination_ajax ) {
-        $(document).on('click', pagination_links, function(event) {
-            event.preventDefault();
-            var href = $(this).attr('href');
-            href = berocket_apply_filters('pagination_href_from_clicked_a', decodeURI(href), $(this));
-            braapf_change_url_history_api(href, {replace:the_ajax_script.seo_friendly_urls});
-            berocket_add_filter('ajax_load_from_url_beforeSend', braapf_pagination_prevent_filters_load);
-            braapf_ajax_load_from_url(href, {}, berocket_apply_filters('ajax_load_from_pagination', {done:[braapf_replace_products, braapf_replace_pagination, braapf_replace_result_count, braapf_init_load, braapf_update_data_from_current]}, href));
-        });
-    }
+    jQuery(document).ready( function() {
+        var pagination_links = the_ajax_script.pagination_class;
+        pagination_links = pagination_links.replace(',', ' a,');
+        pagination_links = berocket_apply_filters('pagination_links_a_tags', pagination_links+' a', the_ajax_script.pagination_class);
+        if( !the_ajax_script.disable_ajax_loading && the_ajax_script.pagination_ajax ) {
+            $(document).on('click', pagination_links, function(event) {
+                event.preventDefault();
+                var href = $(this).attr('href');
+                href = berocket_apply_filters('pagination_href_from_clicked_a', decodeURI(href), $(this));
+                braapf_change_url_history_api(href, {replace:the_ajax_script.seo_friendly_urls});
+                berocket_add_filter('ajax_load_from_url_beforeSend', braapf_pagination_prevent_filters_load);
+                braapf_ajax_load_from_url(href, {}, berocket_apply_filters('ajax_load_from_pagination', {done:[braapf_replace_products, braapf_replace_pagination, braapf_replace_result_count, braapf_init_load, braapf_update_data_from_current]}, href));
+            });
+        }
+    });
     function braapf_pagination_prevent_filters_load(xhr) {
         berocket_remove_filter('ajax_load_from_url_beforeSend', braapf_pagination_prevent_filters_load);
         xhr.setRequestHeader('X-Braapfdisable', '1');
         return xhr;
     }
     //Order By override
-    if( !the_ajax_script.disable_ajax_loading && the_ajax_script.control_sorting ) {
-        $(document).on('submit', the_ajax_script.ordering_class, function(event) {
-            event.preventDefault();
-            var current_url_data = braapf_get_current_url_data();
-            current_url_data = braapf_remove_pages_from_url_data(current_url_data);
-            if( Array.isArray(current_url_data.queryargs) ) {
-                var newqueryargs = [];
-                $.each(current_url_data.queryargs, function(i, val) {
-                    if(val.name != 'orderby') {
-                        newqueryargs.push(val);
-                    }
-                });
-                current_url_data.queryargs = newqueryargs;
-            } else {
-                current_url_data.queryargs = [];
-            }
-            var form_data = $(this).serializeArray();
-            if( Array.isArray(form_data) ) {
-                $.each(form_data, function(i, val) {
-                    if(val.name == 'paged') {
-                        current_url_data.page = parseInt(val.value);
-                    } else if( val.name == 'orderby' ) {
-                        if( the_ajax_script.default_sorting != val.value ) {
+    jQuery(document).ready( function() {
+        if( !the_ajax_script.disable_ajax_loading && the_ajax_script.control_sorting ) {
+            $(document).on('submit', the_ajax_script.ordering_class, function(event) {
+                event.preventDefault();
+                var current_url_data = braapf_get_current_url_data();
+                current_url_data = braapf_remove_pages_from_url_data(current_url_data);
+                if( Array.isArray(current_url_data.queryargs) ) {
+                    var newqueryargs = [];
+                    $.each(current_url_data.queryargs, function(i, val) {
+                        if(val.name != 'orderby') {
+                            newqueryargs.push(val);
+                        }
+                    });
+                    current_url_data.queryargs = newqueryargs;
+                } else {
+                    current_url_data.queryargs = [];
+                }
+                var form_data = $(this).serializeArray();
+                if( Array.isArray(form_data) ) {
+                    $.each(form_data, function(i, val) {
+                        if(val.name == 'paged') {
+                            current_url_data.page = parseInt(val.value);
+                        } else if( val.name == 'orderby' ) {
+                            if( the_ajax_script.default_sorting != val.value ) {
+                                current_url_data.queryargs.push(val);
+                            }
+                        } else {
                             current_url_data.queryargs.push(val);
                         }
-                    } else {
-                        current_url_data.queryargs.push(val);
-                    }
-                });
-            }
-            var url_filtered = braapf_build_url_from_urldata(current_url_data);
-            braapf_filter_products_by_url(url_filtered);
-        });
-    }
+                    });
+                }
+                var url_filtered = braapf_build_url_from_urldata(current_url_data);
+                braapf_filter_products_by_url(url_filtered);
+            });
+        }
+    });
     
     //default update products
     braapf_get_url_with_filters_selected = function() {
@@ -759,6 +763,7 @@ function braapf_filtered_filters_set() {
             var data_id = $(this).data('id');
             if( berocket_apply_filters('remove_same_filters_to_prevent_errors', ($('.berocket_single_filter_widget_'+data_id).length > 1), $(this), data_id ) ) {
                 $('.berocket_single_filter_widget_'+data_id).not($('.berocket_single_filter_widget_'+data_id).first()).remove();
+                berocket_throw_error('same_filters_multiple_times', data_id);
             }
         });
         $('body').on('click', '.bapf_desci', function(e) {
@@ -905,9 +910,11 @@ function braapf_filtered_filters_set() {
     braapf_disable_ajax_loading = function($has_product) {
         return true;
     }
-    if( the_ajax_script.disable_ajax_loading) {
-        berocket_add_filter('page_has_products_holder', braapf_disable_ajax_loading);
-    }
+    $(document).ready(function() {
+        if( the_ajax_script.disable_ajax_loading) {
+            berocket_add_filter('page_has_products_holder', braapf_disable_ajax_loading);
+        }
+    });
     braapf_close_tippy = function () {
         try{
             if( $('.tippy-box').length ) {

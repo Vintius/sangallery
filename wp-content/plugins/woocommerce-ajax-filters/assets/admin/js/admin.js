@@ -773,6 +773,16 @@ var berocket_admin_filter_types_by_attr = {
         berocket_change_seo_friendly_urls();
         berocket_change_seo_meta_title();
         berocket_change_use_links_filters();
+        $(document).on('click', '.bapf_incompatibility_fixes_header', function() {
+            $(this).find('.fa').removeClass('fa-chevron-down').removeClass('fa-chevron-up');
+            if( $('.bapf_incompatibility_fixes_hide').length ) {
+                $('.bapf_incompatibility_fixes_hide').removeClass('bapf_incompatibility_fixes_hide');
+                $(this).find('.fa').addClass('fa-chevron-up');
+            } else {
+                $('.bapf_incompatibility_fixes').addClass('bapf_incompatibility_fixes_hide');
+                $(this).find('.fa').addClass('fa-chevron-down');
+            }
+        });
     })
 })(jQuery);
 function berocket_change_seo_friendly_urls() {

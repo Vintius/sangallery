@@ -1,11 +1,37 @@
 #yith-quick-view-modal {
-	z-index: 100000;
+	z-index: 10001;
 }
 
 .select2-container--open {
 	z-index: 10000;
 }
 
-.stockTip {
-	//display: none;
-}
+@import 'helpers/reset';
+@import 'helpers/fonts';
+@import 'helpers/variables';
+
+@import 'common/common';
+@import 'common/buttons';
+@import 'common/links';
+@import 'common/cols-flex';
+
+@import 'blocks/article';
+@import 'blocks/cols-icon';
+@import 'blocks/company-history';
+@import 'blocks/content';
+@import 'blocks/footer';
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/product';
+@import 'blocks/requisites';
+@import 'blocks/reviews';
+@import 'blocks/search';
+@import 'blocks/social';
+@import 'blocks/widget';
+@import 'blocks/woocommerce-shop';
+@import 'blocks/woocommerce-tabs';
+@import 'blocks/woof';
+
+@import 'forms/reset';
+@import 'forms/common';
+@import 'forms/select';

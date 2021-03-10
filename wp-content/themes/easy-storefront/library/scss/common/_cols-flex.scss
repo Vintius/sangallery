@@ -1,0 +1,56 @@
+.colsFlex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &--left {
+    justify-content: flex-start;
+  }
+
+  &--vtop {
+    align-items: flex-start;
+  }
+
+  &__col {
+    flex-basis: 100%;
+
+    &--2 {
+      flex-basis: 48%;
+    }
+
+    &--3 {
+      flex-basis: 31%;
+    }
+
+    &--4 {
+      flex-basis: 23%;
+    }
+
+    &--5 {
+      flex-basis: 18%;
+    }
+
+    &--6 {
+      flex-basis: 15%;
+    }
+  }
+}
+
+@media ($tablet) {
+
+}
+
+@media ($mobile) {
+  .colsFlex {
+    &__col {
+      &--2,
+      &--3,
+      &--4,
+      &--5,
+      &--6 {
+        flex-basis: 100%;
+      }
+    }
+  }
+}

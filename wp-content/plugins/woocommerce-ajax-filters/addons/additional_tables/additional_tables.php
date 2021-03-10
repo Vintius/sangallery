@@ -121,7 +121,7 @@ class BeRocket_aapf_variations_tables_addon extends BeRocket_framework_addon_lib
         }
     }
     function activate_hooks() {
-        if( ! wc_update_product_lookup_tables_is_running() ) {
+        if( function_exists('wc_update_product_lookup_tables_is_running') && ! wc_update_product_lookup_tables_is_running() ) {
             add_action('berocket_create_table_braapf_product_stock_status_parent', array($this, 'insert_table_braapf_product_stock_status_parent'), 10, 3);
             add_action('berocket_create_table_braapf_product_variation_attributes', array($this, 'insert_table_braapf_product_variation_attributes'), 10, 3);
             add_action('berocket_create_table_braapf_variation_attributes', array($this, 'insert_table_braapf_variation_attributes'), 10);
@@ -570,7 +570,7 @@ class BeRocket_aapf_variations_tables_addon extends BeRocket_framework_addon_lib
         ));
     }
     function destroy_table_wc_regeneration() {
-        if ( wc_update_product_lookup_tables_is_running() ) {
+        if ( function_exists('wc_update_product_lookup_tables_is_running') && wc_update_product_lookup_tables_is_running() ) {
             delete_option('BeRocket_aapf_additional_tables_addon_position');
             delete_option('BeRocket_aapf_additional_tables_addon_position_data');
             $this->deactivate();

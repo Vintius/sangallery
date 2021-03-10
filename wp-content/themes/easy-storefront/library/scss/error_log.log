@@ -6,3 +6,4 @@
 10/27/20 5:52:25: /var/www/u1167784/data/www/test.sangallery.ru/wp-content/plugins/wp-scss/cache/ - File Permission Error, permission denied. Please make the cache directory writable.
 10/27/20 5:54:08: /var/www/u1167784/data/www/test.sangallery.ru/wp-content/plugins/wp-scss/cache/ - File Permission Error, permission denied. Please make the cache directory writable.
 10/27/20 5:54:26: /var/www/u1167784/data/www/test.sangallery.ru/wp-content/plugins/wp-scss/cache/ - File Permission Error, permission denied. Please make the cache directory writable.
+03/10/21 11:45:16: style.scss - Missing argument green: /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/library/scss/blocks/_product.scss on line 29, at column 5: /Users/evgenyzhernoklev/Projects/sangallery/wp-content/themes/easy-storefront/library/scss/blocks/_product.scss on line 29, at column 5

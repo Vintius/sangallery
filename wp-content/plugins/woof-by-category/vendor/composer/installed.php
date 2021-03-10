@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
+    'pretty_version' => '2.14',
+    'version' => '2.14.0.0',
     'aliases' => 
     array (
     ),
-    'reference' => '31c15cbee0b52e317aaf4b1caeb29daa5a2f5b59',
+    'reference' => 'e13d6073e14baf68e516f81b459e4187a82089b7',
     'name' => 'kagg-design/woof-by-category',
   ),
   'versions' => 
@@ -22,12 +22,12 @@
     ),
     'kagg-design/woof-by-category' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => '2.14',
+      'version' => '2.14.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '31c15cbee0b52e317aaf4b1caeb29daa5a2f5b59',
+      'reference' => 'e13d6073e14baf68e516f81b459e4187a82089b7',
     ),
     'roundcube/plugin-installer' => 
     array (

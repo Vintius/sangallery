@@ -1,0 +1,17 @@
+.woocommerce-tabs {
+  .tabs {
+    li:not(.active) {
+      border: 1px solid $gray !important;
+      background-color: $blue !important;
+      transition: background-color $transition-normal;
+
+      &:hover {
+        background-color: $blue-hover !important;
+      }
+
+      a {
+        color: $white !important;
+      }
+    }
+  }
+}

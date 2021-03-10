@@ -1,0 +1,112 @@
+// products list
+.products {
+  ul& {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: stretch;
+
+    .product {
+      margin: 0 !important;
+      padding: 0 20px 160px !important;
+      width: 33.33% !important;
+      flex-basis: 33.33%;
+      border: 1px solid $blue-hover;
+      border-width: 0 1px 1px;
+      float: none !important;
+      transition: box-shadow $transition-normal,
+                  z-index $transition-normal;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        border-top-width: 1px;
+      }
+
+      &:nth-child(3n),
+      &:nth-child(3n+2) {
+        margin-left: -1px !important;
+      }
+
+      &:hover {
+        z-index: 10;
+        box-shadow: 0 0 4px 3px rgba(107,163,239,0.40);
+      }
+
+      img {
+        margin-bottom: 20px !important;
+        border-bottom: 1px solid $gray-form;
+      }
+
+      .woocommerce-loop-product__link {
+        display: block;
+        margin: 0 -20px;
+      }
+
+      .woocommerce-loop-product__title {
+        margin-bottom: 20px !important;
+        padding: 0 20px !important;
+        font: 500 16px/21px $font-montserrat !important;
+      }
+
+      .price {
+        margin: 0 0 15px !important;
+        padding: 0 20px;
+        font: 500 18px/24px $font-montserrat !important;
+        color: $black !important;
+      }
+
+      .woocommerce-Price-currencySymbol {
+        margin-left: 3px;
+      }
+
+      .button {
+        position: absolute !important;
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+        max-width: calc(100% - 60px);
+        margin: 0;
+
+        &.add_to_cart_button {
+          bottom: 93px;
+        }
+      }
+
+      .star-rating {
+        margin: -12px auto 20px !important;
+        color: $blue;
+      }
+    }
+  }
+
+  &.related {
+    & > h2 {
+      margin-bottom: 15px;
+      font: 500 24px/1.5 $font-montserrat;
+    }
+  }
+}
+
+
+
+// single product
+.product {
+  .price {
+    font: 500 24px/30px $font-montserrat !important;
+    color: $blue !important;
+  }
+
+  .stock {
+    font-weight: 600;
+    color: $green !important;
+  }
+
+  .button {
+    max-width: 200px;
+  }
+}
+
+.entry-summary .product_meta {
+  padding-top: 0;
+}

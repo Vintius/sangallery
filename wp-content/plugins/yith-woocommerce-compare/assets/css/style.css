@@ -211,10 +211,8 @@ table.compare-list td img {
     background: none repeat scroll 0 0 #FFFFFF;
     border: 1px solid #DADADA;
     height: auto;
-    max-width: 100%;
     padding: 3px;
     margin-bottom: 20px;
-    max-width: none;
 }
 
 @media( max-width: 767px ) {

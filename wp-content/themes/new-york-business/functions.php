@@ -76,10 +76,10 @@ function new_york_business_setup() {
 	/*
 	 * Make theme available for translation.
 	 */
-	
+
 	load_theme_textdomain( 'new-york-business', get_template_directory() . '/languages'  );
-	
-	if ( ! isset( $content_width ) ) $content_width = 1600; 
+
+	if ( ! isset( $content_width ) ) $content_width = 1600;
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -98,34 +98,34 @@ function new_york_business_setup() {
 		'admin-head-callback'    => '',
 		'admin-preview-callback' => ''
 	);
-	
+
 	add_theme_support( 'custom-background', $defaults );
-	
+
 	add_theme_support( 'title-tag' );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 */
-	 
+
 	add_theme_support( 'post-thumbnails' );
-	
+
 	set_post_thumbnail_size( 200, 200 );
 
 	// This theme uses wp_nav_menu()
 	register_nav_menus(
 		array(
-			'top'    => __( 'Top Menu', 'new-york-business' ),			
+			'top'    => __( 'Top Menu', 'new-york-business' ),
 		)
 	);
-	
+
 	// This theme uses wp_nav_menu()
 	register_nav_menus(
 		array(
-			'footer'    => __( 'Footer Menu', 'new-york-business' ),			
+			'footer'    => __( 'Footer Menu', 'new-york-business' ),
 		)
-	);	
-	
-				
+	);
+
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -146,10 +146,10 @@ function new_york_business_setup() {
 			'width'      => 200,
 			'height'     => 200,
 			'flex-width' => true,
-			'flex-height' => true,		
+			'flex-height' => true,
 		)
 	);
-	
+
 
 	$args = array(
 		'width'         => 1600,
@@ -159,16 +159,16 @@ function new_york_business_setup() {
 		'default-image' => new_york_business_TEMPLATE_DIR_URI.'/images/header.jpg',
 		// Header text
 		'uploads'         => true,
-		'random-default'  => true,	
+		'random-default'  => true,
 		'header-text'     => false,
-		
+
 	);
-	
+
 	add_theme_support( 'custom-header', $args );
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
-	
+
 	// Define and register starter content to showcase the theme on new sites.
 	$starter_content = array(
 		'widgets'     => array(
@@ -186,19 +186,19 @@ function new_york_business_setup() {
 
 			// Put widgets in the footer 2 area.
 			'footer-sidebar-2' => array(
-				'recent-posts',				
+				'recent-posts',
 			),
 			// Putwidgets in the footer 3 area.
 			'footer-sidebar-3' => array(
-				'categories',				
+				'categories',
 			),
 			// Put widgets in the footer 4 area.
-			'footer-sidebar-4' => array(				
-				'search',				
+			'footer-sidebar-4' => array(
+				'search',
 			),
-											
+
 		),
-		
+
 		// Set up nav menus for each of the two areas registered in the theme.
 		'nav_menus'   => array(
 			// Assign a menu to the "top" location.
@@ -215,7 +215,7 @@ function new_york_business_setup() {
 				'items' => array(
 					'link_home', // "home" page is actually a link in case a static front page is not used.
 				),
-			),		
+			),
 	);
 
 
@@ -227,14 +227,14 @@ function new_york_business_setup() {
 	 * @param array $starter_content Array of starter content.
 	 */
 	$starter_content = apply_filters( 'new_york_business_starter_content', $starter_content );
-	 
+
 	add_theme_support( 'starter-content', $starter_content );
 }
 add_action( 'after_setup_theme', 'new_york_business_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
- * 
+ *
  * Priority 0 to make it available to lower priority callbacks.
  *
  * $content_width = $GLOBALS['content_width'];
@@ -245,7 +245,7 @@ add_action( 'after_setup_theme', 'new_york_business_setup' );
  * Register custom fonts.
  */
 if(!function_exists('new_york_business_fonts_url')){
- 
+
 function new_york_business_fonts_url() {
 	$fonts_url = '';
 
@@ -258,20 +258,20 @@ function new_york_business_fonts_url() {
 
 	if ( 'off' !== $typography ) {
 		$font_families = array();
-		
+
 		$font_families[] = wp_strip_all_tags(get_theme_mod('header_fontfamily', 'Oxygen')).':300,400,500';
 		$font_families[] = wp_strip_all_tags(get_theme_mod('body_fontfamily', 'PT Sans')).':300,400,500';
-		
- 
+
+
 		$query_args = array(
 		'family' => urlencode( implode( '|', $font_families ) ),
 		'subset' => urlencode( 'latin,latin-ext' ),
 		);
-        
+
 		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-		
+
 	}
-   
+
 	return esc_url( $fonts_url );
 	}
 }
@@ -279,12 +279,12 @@ function new_york_business_fonts_url() {
 /**
  * Display custom font CSS.
  */
-if(!function_exists('new_york_business_fonts_css_container')) { 
+if(!function_exists('new_york_business_fonts_css_container')) {
 
-	function new_york_business_fonts_css_container() {   
-	
+	function new_york_business_fonts_css_container() {
+
 		require( get_parent_theme_file_path( '/inc/custom-fonts.php' ) );
-	
+
 	?>
 		<style type="text/css" id="custom-fonts" >
 			<?php echo new_york_business_custom_fonts_css(); ?>
@@ -323,16 +323,16 @@ $new_york_business_allowed_html = array(
 		'a'          => array(
 			'href'  => true,
 			'title' => true,
-			'class'  => true,			
+			'class'  => true,
 		),
 		'option'          => array(
 			'selected'  => true,
 			'value' => true,
-			'class'  => true,			
-		),		
+			'class'  => true,
+		),
 		'p'          => array(
 			'class'  => true,
-		),		
+		),
 		'abbr'       => array(
 			'title' => true,
 		),
@@ -359,7 +359,7 @@ $new_york_business_allowed_html = array(
 	);
 
 /**
-* display notice 
+* display notice
 **/
 if(!function_exists('new_york_business_general_admin_notice')){
 
@@ -368,17 +368,17 @@ if(!function_exists('new_york_business_general_admin_notice')){
 					<a href=%1$s target="_blank" class="button button-primary" style="margin-left:5px;">%2$s</a>
 					<a href=%3$s target="_blank"  >%4$s</a>
 					<a href="?new_york_business_notice_dismissed" target="_self" style="float:right">%5$s</a>
-					<span>%6$s</span></p></div>',			
+					<span>%6$s</span></p></div>',
 					esc_url(new_york_business_THEME_URL),
 					esc_html__('Pro Features','new-york-business'),
-					esc_url(new_york_business_THEME_DOC),	
+					esc_url(new_york_business_THEME_DOC),
 					esc_html__('See tutorials','new-york-business'),
-					esc_html__('Dismiss this notice','new-york-business'),					
+					esc_html__('Dismiss this notice','new-york-business'),
 					esc_html__('Install Page Builder Plugin and drag and drop, THEME:Product Category Grids | Slider Widgets to pages. See Appearance - Customize - Themes Options for customization.', 'new-york-business')
 					);
 			 echo wp_kses_post($msg);
 	}
-	
+
 }
 
 if ( isset( $_GET['new_york_business_notice_dismissed'] ) ){
@@ -407,8 +407,8 @@ function new_york_business_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
-	
-	
+
+
 	register_sidebar(
 		array(
 			'name'          => __( 'Woocommerce Sidebar', 'new-york-business' ),
@@ -419,7 +419,7 @@ function new_york_business_widgets_init() {
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		)
-	);	
+	);
 
 	register_sidebar(
 		array(
@@ -444,7 +444,7 @@ function new_york_business_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
-	
+
 	register_sidebar(
 		array(
 			'name'          => __( 'Footer 3', 'new-york-business' ),
@@ -455,8 +455,8 @@ function new_york_business_widgets_init() {
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		)
-	);	
-	
+	);
+
 	register_sidebar(
 		array(
 			'name'          => __( 'Footer 4', 'new-york-business' ),
@@ -468,7 +468,7 @@ function new_york_business_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
-	
+
 
 	/* blog section sidebar */
 	register_sidebar(
@@ -540,13 +540,13 @@ function new_york_business_scripts() {
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'new-york-business-fonts', new_york_business_fonts_url(), array(), null );
 
-	wp_enqueue_style( 'boostrap', get_theme_file_uri( '/css/bootstrap.css' ), array(), '3.3.6'); 
-	
+	wp_enqueue_style( 'boostrap', get_theme_file_uri( '/css/bootstrap.css' ), array(), '3.3.6');
+
 	// Theme stylesheet.
-	wp_enqueue_style( 'new-york-business-style', get_stylesheet_uri() );	
+	wp_enqueue_style( 'new-york-business-style', get_stylesheet_uri() );
 
 	//fonsawesome
-	wp_enqueue_style( 'font-awesome', get_theme_file_uri( '/fonts/font-awesome/css/font-awesome.css' ), array(), '4.7'); 
+	wp_enqueue_style( 'font-awesome', get_theme_file_uri( '/fonts/font-awesome/css/font-awesome.css' ), array(), '4.7');
 
 	// Load the html5 shiv.
 	wp_enqueue_script( 'html5', get_theme_file_uri( '/js/html5.js' ), array(), '3.7.3' );
@@ -555,9 +555,9 @@ function new_york_business_scripts() {
 	wp_enqueue_script( 'new-york-business-skip-link-focus-fix', get_theme_file_uri( '/js/skip-link-focus-fix.js' ), array(), '1.0', true );
 
 	wp_enqueue_script( 'boostrap', get_theme_file_uri( '/js/bootstrap.min.js' ), array( 'jquery' ), '3.3.7', true);
-		
+
 	wp_enqueue_script( 'new-york-business-scroll-top', get_theme_file_uri( '/js/scrollTop.js' ), array( 'jquery' ), '2.1.2', false);
-	
+
 	$new_york_business_l10n = array(
 		'quote' => new_york_business_get_fo( array( 'icon' => 'quote-right' ) ),
 	);
@@ -598,22 +598,22 @@ add_action( 'wp_head', 'new_york_business_footer_css_container' );
 if(!function_exists('new_york_business_footer_foreground_css')){
 
 	function new_york_business_footer_foreground_css(){
-	
+
 		$color =  esc_attr(get_theme_mod( 'footer_foreground_color','#fff')) ;
 		$theme_color = '#000';
-			
+
 		/**
 		 *
 		 * @since new-york-business-pro 1.0
 		 *
 		 */
-	
+
 	$css                = '
-	
+
 	.footer-foreground {}
-	.footer-foreground .widget-title, 
-	.footer-foreground a, 
-	.footer-foreground p, 
+	.footer-foreground .widget-title,
+	.footer-foreground a,
+	.footer-foreground p,
 	.footer-foreground td,
 	.footer-foreground th,
 	.footer-foreground caption,
@@ -627,22 +627,22 @@ if(!function_exists('new_york_business_footer_foreground_css')){
 	{
 	  color:'.$color.';
 	}
-	
+
 	.footer-foreground #today {
-		font-weight: 600;	
-		background-color: #3ba0f4;	
+		font-weight: 600;
+		background-color: #3ba0f4;
 		padding: 5px;
 	}
-	
-	.footer-foreground a:hover, 
+
+	.footer-foreground a:hover,
 	.footer-foreground a:active {
 		color:#ccc ;
 	}
-	
+
 	';
-	
+
 	return $css;
-	
+
 	}
 
 }
@@ -674,16 +674,16 @@ add_filter( 'get_header_image_tag', 'new_york_business_header_image_tag', 10, 3 
  * Return rgb value of a $hex - hexadecimal color value with given $a - alpha value
  * Ex:- new_york_business_rgba('#11ffee',15) // return rgba(17,255,238,15)
  *
- * @since new-york-business 1.0 
+ * @since new-york-business 1.0
 **/
- 
+
 function new_york_business_rgba($hex,$a){
- 
+
 	$r = hexdec(substr($hex,1,2));
 	$g = hexdec(substr($hex,3,2));
 	$b = hexdec(substr($hex,5,2));
 	$result = 'rgba('.$r.','.$g.','.$b.','.$a.')';
-	
+
 	return $result;
 }
 
@@ -723,7 +723,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 	// Inlcude the Alpha Color Picker control file.
 	require new_york_business_TEMPLATE_DIR.'/inc/color-picker/alpha-color-picker.php';
- 
+
 }
 
 /**
@@ -739,9 +739,9 @@ require new_york_business_TEMPLATE_DIR.'/inc/icon-functions.php';
 /**
  * Customizer additions.
  */
- 
+
 require new_york_business_TEMPLATE_DIR.'/inc/customizer.php';
- 
+
 
 /**
  * This function adds some styles to the WordPress Customizer
@@ -761,29 +761,29 @@ add_action( 'customize_controls_print_styles', 'new_york_business_customizer_sty
 
 add_filter('wp_nav_menu_items', 'new_york_business_add_search_form_to_menu', 10, 2);
 function new_york_business_add_search_form_to_menu($items, $args) {
-  // If this isn't the main navbar menu, do nothing
-  if(  !($args->theme_location == 'top') )
-    return $items;
-	
-  // add edd cart icon
-    if (function_exists('edd_get_checkout_uri')) {
- 
-        // Add cart icon
-        $items = $items . '<li id="cart-menu-item"><a class="dashicons-before dashicons-cart edd-cart-menu" href="' . esc_url(edd_get_checkout_uri()). '">';
-        if ( $qty = edd_get_cart_quantity() ) {
- 
-            $items = $items . '(<span id="header-cart" class="edd-cart-quantity">' . absint(edd_get_cart_quantity()) . '</span>)';            
-        } 
+	// If this isn't the main navbar menu, do nothing
+	if (!($args->theme_location == 'top'))
+	return $items;
+
+	// add edd cart icon
+	if (function_exists('edd_get_checkout_uri')) {
+		// Add cart icon
+		$items = $items . '<li id="cart-menu-item"><a class="dashicons-before dashicons-cart edd-cart-menu" href="' . esc_url(edd_get_checkout_uri()). '">';
+
+		if ($qty = edd_get_cart_quantity()) {
+			$items = $items . '(<span id="header-cart" class="edd-cart-quantity">' . absint(edd_get_cart_quantity()) . '</span>)';
+		}
+
 		$items = $items .' </a></li>';
-    }  
-	
-	
-  // On main menu: put styling around search and append it to the menu items
-  return $items . '<li style="color:#eee;" class="my-nav-menu-search"><a id="myBtn" href="#"><i class="fa fa-search" style="color:#eee; font-size:18px;"></i>
-  </a></li>';
+	}
+
+
+	// On main menu: put styling around search and append it to the menu items
+	// return $items . '<li style="color:#eee;" class="my-nav-menu-search"><a id="myBtn" href="#"><i class="fa fa-search" style="color:#eee; font-size:18px;"></i></a></li>';
+	return $items;
 }
 
-if(!class_exists('new_york_business_Product_Item')) { 
+if(!class_exists('new_york_business_Product_Item')) {
 class new_york_business_product_item	{
 	public $id;
 	public $image_url;
@@ -809,27 +809,27 @@ function new_york_business_hide_shop_title()
 }
 add_filter( 'woocommerce_show_page_title', 'new_york_business_hide_shop_title' );
 
-/* 
- * Get sidebar 
+/*
+ * Get sidebar
  */
 function new_york_business_sidebar_css(){
-	
+
 	$new_york_business_sidebar = '';
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		$new_york_business_sidebar = 'hide-content';	
+		$new_york_business_sidebar = 'hide-content';
 	}
-	
+
 	return $new_york_business_sidebar;
 
 }
 
 function new_york_business_content_css(){
-	
+
 	$new_york_business_content = 'col-sm-8 col-lg-8 col-xs-12';
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		$new_york_business_content = 'col-sm-12 col-lg-12 col-xs-12';
 	}
-	
+
 	return $new_york_business_content;
 
 }
@@ -844,8 +844,8 @@ function new_york_business_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
-	add_theme_support( 'wc-product-gallery-slider' );	
-	
+	add_theme_support( 'wc-product-gallery-slider' );
+
 }
 
 
@@ -860,6 +860,3 @@ require  new_york_business_TEMPLATE_DIR.'/inc/widget-search.php';
 $new_york_business_uniqueue_id = 1234;
 
 require  new_york_business_TEMPLATE_DIR.'/inc/widget-product-categories.php';
-
-
-

@@ -203,6 +203,7 @@
 					} );
 
 					$image_gallery_ids.val( attachment_ids );
+					$image_gallery_ids.trigger( 'change' );
 				} );
 
 				image_gallery_frame.open();
@@ -425,8 +426,13 @@
 
 	/* on-off */
 	$( document ).on( 'click', '.yith-plugin-fw-onoff-container span', function () {
-		var input   = $( this ).prev( 'input' ),
-			checked = input.prop( 'checked' );
+		var input    = $( this ).prev( 'input' ),
+			checked  = input.prop( 'checked' ),
+			disabled = input.prop( 'disabled' );
+
+		if ( disabled ) {
+			return;
+		}
 
 		if ( checked ) {
 			input.prop( 'checked', false ).attr( 'value', 'no' ).removeClass( 'onoffchecked' );
@@ -604,12 +610,12 @@
 			counter        = 0,
 			hidden_obj     = $( '<input type="hidden">' );
 
-		toggle_element.find( '.yith-toggle-row' ).each( function() {
+		toggle_element.find( '.yith-toggle-row' ).each( function () {
 			var key = parseInt( $( this ).data( 'item_key' ) );
-			if( counter <= key ) {
+			if ( counter <= key ) {
 				counter = key + 1;
 			}
-		});
+		} );
 
 		hidden_obj.val( counter );
 
@@ -807,5 +813,42 @@
 		}
 	};
 	fw_dimensions.init();
+
+	/**
+	 * Copy to clip-board
+	 */
+	var clearSelection         = function () {
+		var selection = 'getSelection' in window ? window.getSelection() : false;
+		if ( selection ) {
+			if ( 'empty' in selection ) {  // Chrome.
+				selection.empty();
+			} else if ( 'removeAllRanges' in selection ) {  // Firefox.
+				selection.removeAllRanges();
+			}
+		} else if ( 'selection' in document ) {  // IE.
+			document.selection.empty();
+		}
+	}
+
+	$( document ).on( 'click', '.yith-plugin-fw-copy-to-clipboard__copy', function () {
+		var wrap    = $( this ).closest( '.yith-plugin-fw-copy-to-clipboard' ),
+			input   = wrap.find( '.yith-plugin-fw-copy-to-clipboard__field' ),
+			tip     = wrap.find( '.yith-plugin-fw-copy-to-clipboard__tip' ),
+			timeout = wrap.data( 'tip-timeout' );
+
+		timeout && clearTimeout( timeout );
+
+		input.select();
+		document.execCommand( 'copy' );
+		clearSelection();
+
+		tip.fadeIn( 400 );
+
+		// Use timeout instead of delay to prevent issues with multiple clicks.
+		timeout = setTimeout( function () {
+			tip.fadeOut( 400 );
+		}, 1500 );
+		wrap.data( 'tip-timeout', timeout );
+	} )
 
 } )( jQuery );
