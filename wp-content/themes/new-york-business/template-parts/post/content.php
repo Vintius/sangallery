@@ -13,71 +13,70 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
-	if ( is_sticky() && is_home() ) :
-		echo new_york_business_get_fo( array( 'icon' => 'thumb-tack' ) );
-	endif;
+		if (is_sticky() && is_home()):
+			echo new_york_business_get_fo(array('icon' => 'thumb-tack'));
+		endif;
 	?>
-	
+
 	<header class="entry-header">
 		<?php
-		if ( 'post' === get_post_type() ) {
-			echo '<div class="entry-meta">';
-			if ( is_single() ) {
-				new_york_business_posted_on();
-			} else {
-				echo new_york_business_time_link();
-				new_york_business_edit_link();
-			};
-			echo '</div><!-- .entry-meta -->';
-		};
+			if ('post' === get_post_type()) {
+				echo '<div class="entry-meta">';
 
-		if ( is_single() ) {
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		} elseif ( is_front_page() && is_home() ) {
-			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-		} else {
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		}
+				if (is_single()) {
+					new_york_business_posted_on();
+				} else {
+					echo new_york_business_time_link();
+					new_york_business_edit_link();
+				};
+
+				echo '</div>';
+			};
+
+			if (is_single()) {
+				the_title('<h1 class="entry-title">', '</h1>');
+			} elseif (is_front_page() && is_home()) {
+				the_title('<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>');
+			} else {
+				the_title('<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>');
+			}
 		?>
-	</header><!-- .entry-header -->	
-	
-		<?php if( has_post_thumbnail() ): ?>
+	</header>
+
+	<?php if (has_post_thumbnail()): ?>
 		<div class="post-thumbnail" >
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail('full'); ?>
 			</a>
-		</div><!-- .post-thumbnail -->
-		<?php endif; ?>		
+		</div>
+	<?php endif; ?>
 
 	<div class="entry-container">
+		<div class="entry-content">
+			<?php
+				/* translators: %s: Name of current post */
+				the_content(
+					sprintf(
+						__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'new-york-business'),
+						esc_html(get_the_title())
+					)
+				);
 
-	
-	<div class="entry-content">
-		<?php
-		/* translators: %s: Name of current post */
-		the_content(
-			sprintf(
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'new-york-business' ),
-				esc_html(get_the_title())
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before'      => '<div class="page-links">' . __( 'Pages:', 'new-york-business' ),
-				'after'       => '</div>',
-				'link_before' => '<span class="page-number">',
-				'link_after'  => '</span>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
+				wp_link_pages(
+					array(
+						'before'      => '<div class="page-links">' . __('Pages:', 'new-york-business'),
+						'after'       => '</div>',
+						'link_before' => '<span class="page-number">',
+						'link_after'  => '</span>',
+					)
+				);
+			?>
+		</div>
 	</div>
 
 	<?php
-	if ( is_single() ) {
-		new_york_business_entry_footer();
-	}
+		if (is_single()) {
+			new_york_business_entry_footer();
+		}
 	?>
-
-</article><!-- #post-## -->
+</article>

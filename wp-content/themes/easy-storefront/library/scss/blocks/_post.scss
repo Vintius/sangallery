@@ -1,0 +1,31 @@
+.post {
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  transition: box-shadow $transition-normal,
+              z-index $transition-normal;
+
+  .entry-header {
+    padding: 0;
+  }
+
+  .entry-meta {
+    font: 400 14px/20px $font-montserrat;
+    color: $gray;
+  }
+
+  .entry-title {
+    margin: 10px 0 30px;
+    font: 500 32px/40px $font-montserrat;
+    text-align: center;
+  }
+
+  .entry-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .entry-footer {
+
+  }
+}

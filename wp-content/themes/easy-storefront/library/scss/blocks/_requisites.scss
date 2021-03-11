@@ -1,22 +1,32 @@
 .requisites {
   &__name {
-
+    margin-bottom: 20px;
+    font: 500 18px/21px $font-montserrat;
+    text-align: center;
   }
 
   &__cols {
-
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 10% 30px;
+    padding: 25px;
+    border: 2px solid $blue-hover;
   }
 
   &__col {
-
+    flex-basis: 45%;
   }
 
   &__title {
-
+    margin-bottom: 3px;
+    font: 500 21px/1.5 $font-montserrat;
   }
 
   &__text {
-
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 
   a {
