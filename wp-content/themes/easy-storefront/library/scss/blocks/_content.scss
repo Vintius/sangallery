@@ -1,5 +1,5 @@
 .content {
-  .page &#content {
+  &#content {
     padding-bottom: 60px;
   }
 
@@ -15,6 +15,10 @@
       max-width: 878px;
     }
 
+    &--pt45 {
+      padding-top: 45px;
+    }
+
     &.background {
       margin-top: 20px;
       padding-top: 20px;
@@ -23,5 +27,31 @@
 
   &__article {
 
+  }
+
+  &__title {
+    margin: 35px 0 30px;
+    font: 700 48px/1.5 $font-montserrat;
+    text-align: center;
+  }
+
+  &__description {
+    position: relative;
+    max-width: 740px;
+    margin: 0 auto 30px;
+    padding: 0 0 30px;
+    text-align: center;
+    font: 600 18px/1.5 $font-open-sans;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 2px;
+      background-color: $blue-hover;
+    }
   }
 }

@@ -36,8 +36,11 @@ a {
 a img {
   border: 0;
 }
-article, aside, figcaption, figure, footer, header, hgroup, nav, section, time {
+article, aside, figcaption, figure, footer, header, hgroup, nav, section {
   display: block;
+}
+time {
+  display: inline-block;
 }
 address, dl, ol, ul, p, pre {
   margin: 0;
@@ -172,22 +175,17 @@ h1, h2, h3, h4, h5, h6 {
     flex-basis: 100%;
   }
 }
-.article__title, .woocommerce-shop h1.has-text-align-center, .article h1.article__title, .article .woocommerce-shop h1.has-text-align-center, .woocommerce-shop .article h1.has-text-align-center {
-  margin: 30px 0;
-  font: 700 48px/1.5 'Montserrat', sans-serif;
-  text-align: center;
-}
 .article .entry-content > h1:not(.article__title) {
   margin-bottom: 25px;
-  font: 700 30px/1.5 'Montserrat', sans-serif;
+  font: 700 32px/1.5 'Montserrat', sans-serif;
   text-align: center;
 }
-.article .entry-content > h2:not(.article__title) {
+.article .entry-content > h2:not(.article__title), .article .entry-content > h3:not(.article__title) {
   margin-bottom: 20px;
-  font: 500 24px/1.5 'Montserrat', sans-serif;
+  font: 500 27px/1.5 'Montserrat', sans-serif;
   text-align: center;
 }
-.article .entry-content > p {
+.article .entry-content > p:not(.content__description) {
   margin-bottom: 20px;
   font: 400 16px/1.5 "Open sans", sans-serif;
 }
@@ -208,13 +206,14 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
+  margin: 50px auto -5%;
 }
 .colsIcon__col {
   flex-basis: 31%;
-  margin: 0 2% 30px 0;
+  margin: 0 3.5% 5% 0;
   text-align: center;
 }
-.colsIcon__col:nth-child(3n) {
+.colsIcon__col:nth-child(3n), .colsIcon__col:last-child {
   margin-right: 0;
 }
 .colsIcon__iconWrapper {
@@ -229,16 +228,58 @@ h1, h2, h3, h4, h5, h6 {
 }
 .colsIcon__title {
   margin-bottom: 15px;
-  font: 500 21px/27px 'Montserrat', sans-serif;
+  padding: 0 15px;
+  font: 500 18px/26px 'Montserrat', sans-serif;
   text-transform: uppercase;
 }
 .colsIcon__text {
+  padding: 0 15px;
   font: 400 16px/24px "Open sans", sans-serif;
 }
 .colsIcon__text:not(:last-child) {
   margin-bottom: 15px;
 }
-.page .content#content {
+.colsIcon .linkButton, .colsIcon .wp-block-button__link, .colsIcon .woocommerce a.button, .woocommerce .colsIcon a.button, .colsIcon .woocommerce button.button, .woocommerce .colsIcon button.button {
+  margin-top: 11px;
+}
+.companyHistory {
+  margin: 60px auto 0;
+  padding: 58px 0;
+  border-top: 1px solid rgba(61, 151, 246, 0.5);
+}
+.companyHistory__cols {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+.companyHistory__col {
+  flex-basis: 31%;
+  margin-right: 3.5%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.companyHistory__col:nth-child(2n) {
+  margin-right: 0;
+}
+.companyHistory__col:nth-child(2n) .companyHistory__title {
+  color: #1aa94e;
+}
+.companyHistory__title {
+  margin-bottom: 10px;
+  font: 500 60px/1 'Montserrat', sans-serif;
+  color: #3d97f6;
+}
+.companyHistory__text {
+  font: 400 21px/1.5 "Open sans", sans-serif;
+  color: #272d44;
+}
+.companyHistory__about {
+  padding: 30px 20px 30px 50%;
+  font: 400 18px/1.5 "Open sans", sans-serif;
+  background: url('/wp-content/uploads/2021/03/about-company-success-1.jpg') no-repeat -85px center/cover;
+}
+.content#content {
   padding-bottom: 60px;
 }
 .content .container, .content__in, .footer__in {
@@ -251,12 +292,38 @@ h1, h2, h3, h4, h5, h6 {
 .content .container--small, .content__in--small {
   max-width: 878px;
 }
+.content .container--pt45, .content__in--pt45 {
+  padding-top: 45px;
+}
 .content .container.background, .content__in.background, .footer__in.background {
   margin-top: 20px;
   padding-top: 20px;
 }
+.content__title, .article__title, .woocommerce-shop h1.has-text-align-center, .article h1.article__title, .article .woocommerce-shop h1.has-text-align-center, .woocommerce-shop .article h1.has-text-align-center {
+  margin: 35px 0 30px;
+  font: 700 48px/1.5 'Montserrat', sans-serif;
+  text-align: center;
+}
+.content__description {
+  position: relative;
+  max-width: 740px;
+  margin: 0 auto 30px;
+  padding: 0 0 30px;
+  text-align: center;
+  font: 600 18px/1.5 "Open sans", sans-serif;
+}
+.content__description:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #3d97f6;
+}
 .footer {
-  margin: 60px auto 0;
+  margin: 0 auto;
   border-top: 1px solid rgba(165, 173, 186, 0.5);
 }
 .footer__in {
@@ -433,6 +500,49 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #272d44;
   border-radius: 0;
 }
+.colsFlex--posts .post {
+  flex-basis: 33.33%;
+  margin: 0;
+  padding: 20px 20px 20px;
+  border: 1px solid #3d97f6;
+  border-width: 0 1px 1px;
+}
+.colsFlex--posts .post:nth-child(1), .colsFlex--posts .post:nth-child(2), .colsFlex--posts .post:nth-child(3) {
+  border-top-width: 1px;
+}
+.colsFlex--posts .post:nth-child(3n), .colsFlex--posts .post:nth-child(3n+2) {
+  margin-left: -1px !important;
+}
+.colsFlex--posts .post:hover {
+  z-index: 10;
+  box-shadow: 0 0 4px 3px rgba(107, 163, 239, 0.4);
+}
+.colsFlex--posts .post .entry-title {
+  margin: 10px 0 20px;
+  font: 500 24px/30px 'Montserrat', sans-serif;
+}
+.post {
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  transition: box-shadow 0.3s linear, z-index 0.3s linear;
+}
+.post .entry-header {
+  padding: 0;
+}
+.post .entry-meta {
+  font: 400 14px/20px 'Montserrat', sans-serif;
+  color: #787c82;
+}
+.post .entry-title {
+  margin: 10px 0 30px;
+  font: 500 32px/40px 'Montserrat', sans-serif;
+  text-align: center;
+}
+.post .entry-container {
+  margin: 0;
+  padding: 0;
+}
 ul.products {
   display: flex;
   flex-wrap: wrap;
@@ -513,6 +623,29 @@ ul.products .product .star-rating {
 }
 .entry-summary .product_meta {
   padding-top: 0;
+}
+.requisites__name {
+  margin-bottom: 20px;
+  font: 500 18px/21px 'Montserrat', sans-serif;
+  text-align: center;
+}
+.requisites__cols {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 10% 30px;
+  padding: 25px;
+  border: 2px solid #3d97f6;
+}
+.requisites__col {
+  flex-basis: 45%;
+}
+.requisites__title {
+  margin-bottom: 3px;
+  font: 500 21px/1.5 'Montserrat', sans-serif;
+}
+.requisites__text:not(:last-child) {
+  margin-bottom: 20px;
 }
 .wc-block-review-list-item__item {
   position: relative;

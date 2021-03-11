@@ -8,12 +8,12 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
- 
-if ( ! function_exists( 'new_york_business_featured_areas' ) ) : 
+
+if ( ! function_exists( 'new_york_business_featured_areas' ) ) :
 /**
  * new-york-business featured areas
  */
- 
+
 function new_york_business_featured_areas(){
 	return  array(
 				'slider'=>__('Home Slider', 'new-york-business'),
@@ -22,7 +22,7 @@ function new_york_business_featured_areas(){
 				'onsale-product'=>__('Onsale Products', 'new-york-business'),
 				'shop'=>__('Home Shop', 'new-york-business'),
 				'bestselling-product'=>__('Best Selling Products', 'new-york-business'),
-				'toprated-product'=>__('Top Rated Products', 'new-york-business'),				
+				'toprated-product'=>__('Top Rated Products', 'new-york-business'),
 				'service'=>__('Service', 'new-york-business'),
 				'news'=>__('News~Events', 'new-york-business'),
 				'team'=>__('Team', 'new-york-business'),
@@ -33,22 +33,22 @@ function new_york_business_featured_areas(){
 
 endif;
 
-if ( ! function_exists( 'new_york_business_color_codes' ) ) : 
+if ( ! function_exists( 'new_york_business_color_codes' ) ) :
 /**
  * new-york-business color codes
  */
- 
+
 function new_york_business_color_codes(){
 	return array('#000000','#ffffff','#ED0A70','#e7ad24','#FFD700','#81d742','#0053f9','#8224e3');
 }
 
 endif;
 
-if ( ! function_exists( 'new_york_business_background_style' ) ) : 
+if ( ! function_exists( 'new_york_business_background_style' ) ) :
 /**
  * new-york-business color codes
  */
- 
+
 function new_york_business_background_style(){
 	return array(
 					'no-repeat'  => __('No Repeat', 'new-york-business'),
@@ -64,18 +64,18 @@ endif;
  * @package twentyseventeen
  * @sub-package new-york-business
  * @since 1.0
- */ 
-if ( ! function_exists( 'new_york_business_posted_on' ) ) : 
+ */
+if ( ! function_exists( 'new_york_business_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
 	function new_york_business_posted_on() {
-		
+
 		$byline = sprintf(
 			// Get the author name; wrap it in a link.
 			esc_html_x( 'By %s', 'post author', 'new-york-business' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-		);		
+		);
 
 		// Finally, let's write all of this to the page.
 		echo '<span class="posted-on">' . new_york_business_time_link() . '</span><span class="byline"> ' . $byline . '</span>';
@@ -86,7 +86,7 @@ endif;
  * @package twentyseventeen
  * @sub-package new-york-business
  * @since 1.0
- */ 
+ */
 if ( ! function_exists( 'new_york_business_time_link' ) ) :
 	/**
 	 * Gets a nicely formatted string for the published date.
@@ -106,7 +106,7 @@ if ( ! function_exists( 'new_york_business_time_link' ) ) :
 		);
 
 		$args = array( 'time'=> array('class'=> array(),'datetime'=>array()));
-		
+
 		// Wrap the time string in a link, and preface it with 'Posted on'.
 		return sprintf(
 			/* translators: %s: post date */
@@ -121,37 +121,37 @@ endif;
  * @package twentyseventeen
  * @sub-package new-york-business
  * @since 1.0
- */ 
+ */
 if ( ! function_exists( 'new_york_business_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
 	function new_york_business_entry_footer() {
 
-	
+
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'new-york-business') );
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'new-york-business') );
-				
+
 		// We don't want to output .entry-footer if it will be empty, so make sure its not.
 		if ( ( ( new_york_business_categorized_blog() && $categories_list ) || $tags_list ) || get_edit_post_link() ) {
 
 			echo '<footer class="entry-footer">';
 
 			if ( 'post' === get_post_type() ) {
-				
+
 				if ( ( $categories_list && new_york_business_categorized_blog() ) || $tags_list ) {
 					echo '<span class="cat-tags-links">';
 
 					// Make sure there's more than one category before displaying.
 					if ( $categories_list && new_york_business_categorized_blog() ) {
-						
+
 						echo '<span class="cat-links">' . new_york_business_get_fo( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . esc_html__( 'Categories', 'new-york-business') . '</span>' .$categories_list. '</span>';
 					}
-					
+
 					if ( $tags_list && ! is_wp_error( $tags_list ) ) {
-					
+
 						echo '<span class="tags-links">' . new_york_business_get_fo( array( 'icon' => 'hashtag' ) ) . '<span class="screen-reader-text">' . esc_html__( 'Tags', 'new-york-business') . '</span>' .$tags_list. '</span>';
 					}
 
@@ -171,7 +171,7 @@ endif;
  * @package twentyseventeen
  * @sub-package new-york-business
  * @since 1.0
- */ 
+ */
 if ( ! function_exists( 'new_york_business_edit_link' ) ) :
 	/**
 	 * Returns an accessibility-friendly link to edit a post or page.
@@ -243,11 +243,11 @@ add_action( 'edit_category', 'new_york_business_category_transient_flusher' );
 add_action( 'save_post', 'new_york_business_category_transient_flusher' );
 
 
-/* 
- * check valid font has been selected 
+/*
+ * check valid font has been selected
  */
 function new_york_business_sanitize_font_family( $value ) {
-    if ( array_key_exists($value, new_york_business_font_family()) )  {   
+    if ( array_key_exists($value, new_york_business_font_family()) )  {
     	return $value;
 	} else {
 		return "Times New Roman, Sans Serif";
@@ -273,7 +273,7 @@ function new_york_business_font_family(){
 							"Oxygen" => "Oxygen",
 							"Work Sans" => "Work Sans",
 						);
-						
+
 	return ($google_fonts);
 }
 
@@ -286,13 +286,13 @@ function new_york_business_font_family(){
  */
 if ( ! function_exists( 'new_york_business_add_to_cart' ) ) {
 	function new_york_business_add_to_cart( $id = '') {
-		
+
 		if(!class_exists( 'WooCommerce' )){return;}
 		global $product;
-		
+
 		if( $id ) {
 			$product = wc_get_product( $id );
-		}			
+		}
 
 		if ( function_exists( 'method_exists' ) && method_exists( $product, 'get_type' ) ) {
 			$prod_type = $product->get_type();
@@ -348,15 +348,15 @@ add_filter( 'woocommerce_get_price_html', 'new_york_business_wc_custom_get_price
  * Add Cart icon and count to header if WC is active
  */
 function new_york_business_wc_cart_count() {
- 
+
     if(!class_exists('woocommerce')) return;
-	global $woocommerce; 
+	global $woocommerce;
 	?>
     <a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('Cart View', 'new-york-business'); ?>">
 	<span class="cart-contents-count fa fa-shopping-bag">&nbsp;(<?php echo esc_html($woocommerce->cart->cart_contents_count); ?>)</span>
-    </a> 
+    </a>
     <?php
- 
+
 }
 add_action( 'new_york_business_woocommerce_cart_top', 'new_york_business_wc_cart_count' );
 
@@ -372,11 +372,11 @@ function new_york_business_add_to_cart_fragment( $fragments ) {
 	?>
     <a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('Cart View', 'new-york-business'); ?>">
     <span class="cart-contents-count fa fa-shopping-bag">&nbsp;(<?php echo esc_html($woocommerce->cart->cart_contents_count); ?>)&nbsp;</span>
-    </a> 
+    </a>
     <?php
 	$cart_fragments['a.cart-contents'] = ob_get_clean();
 	return $cart_fragments;
-	
+
 }
 add_filter( 'woocommerce_add_to_cart_fragments', 'new_york_business_add_to_cart_fragment' );
 
@@ -396,4 +396,3 @@ function new_york_business_wishlist_count( ) {
 	<span class="wishlist-contents-count fa fa-heart"></span></a>
 	<?php
 }
-

@@ -19,7 +19,7 @@ if (class_exists('WP_Customize_Control')) {
 ?>
 
 <main id="main" class="site-main content__in" role="main">
-  <div class="content__article article">
+  <div class="content__article article article--contacts">
     <h1 class="entry-title article__title"><?php the_title(); ?></h1>
     <?php while (have_posts()): the_post(); ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

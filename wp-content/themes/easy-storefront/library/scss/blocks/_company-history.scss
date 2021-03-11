@@ -1,21 +1,44 @@
 .companyHistory {
-  &__cols {
+  margin: 60px auto 0;
+  padding: 58px 0;
+  border-top: 1px solid rgba($blue-hover, 0.5);
 
+  &__cols {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 50px;
   }
 
   &__col {
+    flex-basis: 31%;
+    margin-right: 3.5%;
+    text-align: center;
+    text-transform: uppercase;
 
+    &:nth-child(2n) {
+      margin-right: 0;
+
+      .companyHistory__title {
+        color: $green;
+      }
+    }
   }
 
   &__title {
-
+    margin-bottom: 10px;
+    font: 500 60px/1 $font-montserrat;
+    color: $blue-hover;
   }
 
   &__text {
-
+    font: 400 21px/1.5 $font-open-sans;
+    color: $blue-dark;
   }
 
   &__about {
-
+    padding: 30px 20px 30px 50%;
+    font: 400 18px/1.5 $font-open-sans;
+    background: url('/wp-content/uploads/2021/03/about-company-success-1.jpg') no-repeat -85px center/cover;
   }
 }

@@ -1,25 +1,24 @@
 .article {
   &__title,
   h1.article__title {
-    margin: 30px 0;
-    font: 700 48px/1.5 $font-montserrat;
-    text-align: center;
+    @extend .content__title;
   }
 
   .entry-content {
     & > h1:not(.article__title) {
       margin-bottom: 25px;
-      font: 700 30px/1.5 $font-montserrat;
+      font: 700 32px/1.5 $font-montserrat;
       text-align: center;
     }
 
-    & > h2:not(.article__title) {
+    & > h2:not(.article__title),
+    & > h3:not(.article__title) {
       margin-bottom: 20px;
-      font: 500 24px/1.5 $font-montserrat;
+      font: 500 27px/1.5 $font-montserrat;
       text-align: center;
     }
 
-    & > p {
+    & > p:not(.content__description) {
       margin-bottom: 20px;
       font: 400 16px/1.5 $font-open-sans;
     }
@@ -47,5 +46,9 @@
     & > li {
 
     }
+  }
+
+  &--contacts {
+
   }
 }
